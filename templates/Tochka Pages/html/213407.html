@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a class="item header-logo header" href="/">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg version="1.1" width="25" height="29" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a href="/settings/user" class="item">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a href="/referrals" class="item">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input name="csrf_token" value="" type="hidden" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a class="ui button fluid green tiny" href="/app/download">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a class="item" href="/feed">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a href="/settings/language/de" class="item fluid">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a class="item fluid" href="/settings/language/en">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a href="/settings/language/es" class="item fluid">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a class="item fluid" href="/settings/language/tr">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/dersandmann?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@dersandmann</h2>
+								<p>SHIPPING FROM GERMANY!     Es ist soweit die Sandmännchen sind da und verstreuen feines Pulver im ganzen Land...jeder der diesen Stein feinster Qualität erhält wird den Sandmännchen treu sein...Wir verherrlichen unser Produkt nicht als das beste denn das wäre zu einfach, diesen Genuss und dieses Vergnügen lassen wir jedem Kunde einzeln.</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 2 weeks ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 11 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/dersandmann">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item active" href="/store/dersandmann">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/dersandmann/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">1</span>
+									</a>
+									<a class="item" href="/store/dersandmann/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">1</span>
+									</a>
+									<a class="item" href="/store/dersandmann/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui grid divided top-aligned">
+							<div class="twelve wide column">
+								<div class="segment ui">
+									<h3 class="ui dividing header">About</h3>
+									<div class="ui container">
+
+<p>Es ist soweit die Sandmännchen sind da und verstreuen feines Pulver im ganzen Land…jeder der diesen Stein feinster Qualität erhält wird den Sandmännchen treu sein…Wir verherrlichen unser Produkt nicht als das beste denn das wäre zu einfach, diesen Genuss und dieses Vergnügen lassen wir jedem Kunde einzeln.</p>
+
+
+
+<p>UPDATE 21.04.2019</p>
+
+<p>Hallo liebe Kunden,</p>
+
+<p>WallStreet hat einen Exit Scam gemacht, sie haben alle Gelder geklaut. Es ist nur noch eine Frage der Zeit, bis die Seite down geht,</p>
+
+<p>Ab sofort findet ihr uns auf:</p>
+
+<p>Tocka Market</p>
+
+<p>unter : dersandamann findet ihr uns dort oder einfach die überschrift ein geben so findet ihr uns viel leichter :                                         (91%+/-)COLUMBIA PLATIN Kokain/Cocaine Flakes</p>
+
+<p>Um einem weiteren Diebstahl andere Märkten vorzubeugen, könnt ihr auch gerne bei mir direkt bestellen unter:</p>
+
+<p>wicker name: dersandmann1</p>
+
+<p>Sendet mir dazu ausgefüllt nachstehendes Formular zu:</p>
+
+<p>Bestellung: XXXXXX Coca</p>
+
+<p>Zahlart: BTC</p>
+
+<p>Lieferadresse;
+Max Mustermann
+Musterstrasse 22
+77777 Berlin
+Country</p>
+
+<p>alle bestellungen von den letzten 7 tagen kam des geld bei uns nicht an. haben gut geld verloren was sehr ärrgerlich ist .</p>
+
+<p>UPDATE 13.04.2019</p>
+
+<p>Hallo ihr Lieben, uns gibt es jetzt auch bei Wallstreet market ein sehr toller market wir freuen uns auch dort auf euch ;)
+hier unten steht auch unser link dafür.</p>
+
+<p>http://wallstyizjhkrvmj.onion/signup?ref=876002</p>
+
+<p>Viel Spaß :)</p>
+
+<p>EUER SANDMANN TEAM :-)</p>
+
+<p>UPDATE 10.03.2019</p>
+
+<p>Liebe Kunden,</p>
+
+<p>wir bekommen jeden Tag neue Kunden und das ist sehr erfreulich. Jetzt möchten wir euch noch mehr entgegenkommen und den Preis unseres C reduzieren. Die Ware ist immer dieselbe, doch sie wird konstant günstiger für euch sein. Ab heute kostet 1g C nur noch 90€ statt 95€. Es werden alle auf Ihre Kosten kommen . Ab heute gibt es auch 20,30,40,50 &amp; 60g in unserem Sortiment + eine komplett neue Preisliste.</p>
+
+<p>Wegen der instabilen Währung, wäre es fair wenn Ihr FE zahlen würdet (ES IST KEIN MUSS). Wir können uns nur keine Verluste erlauben und ihr wollt schließich eure Ware immer pünktlich bekommen. Jeder der bei uns FE bestellt bekommt noch ein “EXTRA BONUS” oben drauf. Es ist nur eine Geste des entgegenkommen euer seits. Unsere 250 erfolgreichen Transaktionen und die
+Bewertung von 4.98* spricht für sich.</p>
+
+<p>Wir DANKEN euch und bitten um euer Verständnis.</p>
+
+<p>EUER SANDMANN TEAM :-)</p>
+
+<p>UPDATE 24.02.2019</p>
+
+<p>Liebe Kunden/Leser,</p>
+
+<p>wir möchten uns bei jedem Kunden der bis heute bei uns bestellt hat und uns treu geblieben ist HERZLICH BEDANKEN.
+WIr haben innerhalb drei Monate 200 Verkäufe mit einer Bewertung von 4.98* geschafft. Ohne euch wäre das nicht
+möglich gewesen. Jeder der bei uns bestellt weiß was er für sein Geld bekommt. Es wird bei 300 Verkäufe ein neues Gewinn-
+spiel geben. Wir überlegen uns momentan was GROßES. Wenn wir uns entschieden haben werden wir ein neues Update
+veröffentichlen. Wir hoffen weiterhin auf eine gute Zusammenarbeit und das ihr alle immer zufrieden seid.</p>
+
+<p>EUER SANDMANN-TEAM ;)</p>
+
+<p>UPDATE 11.01.2019</p>
+
+<p>Liebe Kunden,</p>
+
+<p>wir möchten uns bei euch bedanken. Wir wachsen schnell und wir bekommen weiterhin erfreuliche Nachrichten von euch.
+Ab HEUTE den 11.01.2019 liefern wir auch nach ÖSTERREICH! Nach (AT) versenden wir allerdings ohne Tracking damit auch der Brief
+sicher, zuverlässig und schnell bei euch ankommt. RESHIP/REFUND sind ausgeschlossen das heißt IHR bestellt auf EIGENES RISIKO!
+Bei jedem Anliegen könnt Ihr uns anschreiben und wir werden umgehend antworten.</p>
+
+<p>EUER SANDMANN-TEAM!</p>
+
+<p>Update 16.12.2018</p>
+
+<p>Liebe Kunden,</p>
+
+<p>Bisher haben wir sehr positive Rückmeldungen und erfreuhliche Nachrichten bekommen.
+Doch es hat auch mit Neid/Hate Nachrichten, Drohungen und konstrukivlose Kritik auf Lügen basierend begonnen.
+Wir geben weiterhin unser bestes und lassen uns nicht einschüchtern, denn unser Service/Produkt besteht aus Präzision und Qualität.</p>
+
+<p>Update 26.11 : Liebe Kunden wir bitten euch nach erhalt der Ware die Bestellung schnellstmöglich zu finalisieren. Der Kurs ist stark am schwanken! Wir sollten schnellstmöglich aggieren können um Verluste zu vermeiden. Wer das mit Absicht ausreizen tut, kommt automatisch auf unsere Blacklist und wird nicht mehr von uns beliefert. Bitte um euer Verständnis. EUER SANDMANN-TEAM!</p>
+
+<p>(91%+/-)COLUMBIA PLATIN Kokain/Cocaine Flakes
+Preise:
+0,5 = 55€
+1,0 = 90€
+1,5 = 134€
+2,0 = 179€
+2,5 = 223€
+3,0 = 268€
+3,5 = 312€
+4,0 = 357€
+4,5 = 401€
+5,0 = 445€
+10 = 850€
+20 = 1500€
+30 = 2160€
+40 = 2720€
+50 = 3250€
+60 = 3700€</p>
+
+<p>Versendet wird von Montag bis Freitag…</p>
+
+<p>Alle Produkte die hier zum Verkauf von uns angeboten werden, werden von unserem Labor untersucht den wir achten natürlich darauf das die eingekaufte Ware absolut rein ist. Dementsprechend spiegelt sich das aber auch im Preis wieder. Das sind die aktuellen Laborwerte Cocainhydrochlorid mit einem gemessenen Wirkstoffgehalt von 91,76 +/- 1,43% an Cocainbase.
+Nach jeder neuen Lieferung die wir bekommen wird ein neuer Wirkstoffgehalt direkt vom Labor gemacht. Es folgt daher dann immer ein neues Update auf unserer Seite. Aus Sicherheitsgründen können wir die originalen Laborpapiere nicht hochladen.</p>
+
+<p>Die Preise stellen sich aus Service, Laboruntersuchungen, Stealth und Qualität zusammen. Wem es zu teuer ist sollte sich von Anfang an fragen was ihm den wichtiger ist da unser Motto klar “Qualität vor Quantität” ist, wer nicht Wert auf Qualität legt soll bitte von vorne rein bei uns nicht bestellen.</p>
+
+<p>Unsere Verantwortung und Ziel ist jedem Kunde ein Lächeln zu schenken mit qualitativer Ware, daher erwarten wir dasselbe von euch. Wer bei uns bestellt und nicht konstruktiv bewertet, also der Kommentar auf Hate/Neid/Lügen basiert ohne irgend welche Anhaltspunkte oder sonstiges wird auf unsere Blacklist gesetzt und darf bei uns nicht mehr bestellen. Jeder Kunde wird dankbar sein das er bei uns bestellen darf und mit guter Ware beliefert wird. Konstruktive Kritik/ Ratschläge oder Verbesserungen sind gerne erwünscht!
+Bitte kontaktiert uns bei Problemen umgehend, wir finden sofort eine Lösung da uns jeder Kunde wichtig ist und wir auf Zufriedenheit des Kunden Wert legen da der “Kunde König ist”. Sobald ein negatives Feedback hinterlassen wurde, können wir nicht mehr helfen.</p>
+
+<p>Ein Reship kommt nur in Frage wenn dein Account eine Bewertung von fünf Sternen hat. Das ist die Voraussetzung, ihr verlasst euch auf uns aber wir müssen uns auch auf euch verlassen können. Denn es passiert wirklich sehr sehr selten das ein Brief verloren geht.</p>
+
+<p>Lieferzeit:
+innerhalb Deutschland 1-3 Tagen</p>
+
+<p>Eure Adresse bitte immer verschlüsselt (PGP) an uns schicken und in folgendem Format:</p>
+
+<p>Vorname/Name
+Straße/Hausnr.
+PLZ + Stadt
+Land</p>
+
+<p>In diesem Geschäft ist es ein Geben und Nehmen. Ihr erwartet gutes Stealth, spitzen Qualität und einen zuverlässigen Versand. Auf den Versand haben wir aber keinen
+Einfluss, denn sobald es unser Haus verlassen hat liegt es nicht mehr in unserer Hand. Erwünscht ist das nur Leute bei uns bestellen die in der Vergangenheit min. zwei erfolgreiche Transaktionen geführt haben mit positiver Bewertung. (Falls euer Account nicht bewertet ist, sollte man sich bitte immer bewerten lassen!)
+Neue Accounts werden abgehlent, da SCAM Versuche auf diesen Portal nichts neues sind.</p>
+
+<p>Wer nicht zu sich nach Hause bestellt sondern an Packstationen, Postfächer oder postlagernd liefern lässt, soll das bei seiner Bestellung bitte dazu schreiben und mich darauf aufmerksam machen! Deine Ware wird dann als Maxibrief(größerer Luftpolsterumschlag) verschickt, weil Packstationen/Postfächer/postlagernd nur Pakete, Päckchen und Maxibriefe OHNE Einschreiben/Einwurfeinschreiben annehmen können sonst wird deine Sendung an die Postfiliale weitergeleitet
+und da muss man es dann selber abholen.</p>
+
+<p>Diese speziellen Lieferungen an den oben genannten ORTEN wie zum Beispiel Packstation etc. sind vom Reship oder Refund definitiv ausgeschlossen!</p>
+
+<p>Wir möchten das IHR eure Ware so schnell wie möglich erhalten tut, jeder von uns muss sich schützen und schaut nach seiner Sicherheit und wir sorgen dafür das Ihr einen sauberen und sicheren Service von uns bekommt. Wir schauen auch danach das IHR TOP WARE bekommt, aber bitte schaut dann auch ihr das ihr gleich finalisiert und nicht auf unsere Kosten ihr euch nur um euch selber kümmert und schützen tut.</p>
+
+<p>Wir bitten um euer Verständnis und hoffen auf eine lange und treue Zusammenarbeit! EUER SandMannTEAM!</p>
+
+<p>—–BEGIN PGP PUBLIC KEY BLOCK—–</p>
+
+<p>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
+IMNgMwWzPw==
+=lUNJ
+—–END PGP PUBLIC KEY BLOCK—–</p>
+</div>
+								</div>
+							</div>
+							<div class="four wide column t-left-menu-items">
+								<div class="ui fluid menu vertical secondary">
+									<a class="item active" href="?section=info">About</a>
+									<a class="item" href="?section=contacts">Contact Information</a>
+									<a href="?section=vendor_statistics" class="item">Statistics</a>
+									<a class="item" href="?section=staff">Staff</a>
+									<a class="item" href="?section=agreement">Agreement</a>
+									<a class="item" href="?section=shipping_options">Shipping options</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 4324 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/norcoscart?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@norcoscart</h2>
+								<p></p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 20 minutes ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/norcoscart">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/norcoscart">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/norcoscart/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">21</span>
+									</a>
+									<a class="item active" href="/store/norcoscart/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">37</span>
+									</a>
+									<a class="item" href="/store/norcoscart/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/4db64c092b8044c250b9835de59bb203">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ritalin</span>
+								Ritalin LA 20mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/4db64c092b8044c250b9835de59bb203">
+											<img src="/item-image/4db64c092b8044c250b9835de59bb203?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/4db64c092b8044c250b9835de59bb203">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methylphenidate, sold under the trade names Ritalin among others, is a stimulant medication used to treat attention deficit hyperactivity disorder and narcolepsy. It is a first line medication for ADHD. It is taken by mouth or applied to the skin. Different formulations have different durations of effect.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/4e766bf12fd04f756265a7aade79330d">
+								<span class="ui teal tiny label tag right floated">Viagra</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Viagra 100mg pills
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/4e766bf12fd04f756265a7aade79330d">
+											<img src="/item-image/4e766bf12fd04f756265a7aade79330d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/4e766bf12fd04f756265a7aade79330d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/4e766bf12fd04f756265a7aade79330d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>IMPORTANT SAFETY INFORMATION
+Do not take VIAGRA (sildenafil citrate) if you:</p>
+
+<p>take any medicines called nitrates, often prescribed for chest pain, or guanylate cyclase stimulators like Adempas (riociguat) for pulmonary hypertension. Your blood pressure could drop to an unsafe level
+are allergic to sildenafil, as contained in VIAGRA and REVATIO, or any of the ingredients in VIAGRA
+Discuss your health with your doctor to ensure that you are healthy enough for sex. If you experience chest pain, dizziness, or
+nausea during sex, seek immediate medical help.</p>
+
+<p>VIAGRA can cause serious side effects. Rarely reported side effects include:</p>
+
+<p>an erection that will not go away (priapism). If you have an erection that lasts more than 4 hours, get medical help right away.
+If it is not treated right away, priapism can permanently damage your penis
+sudden vision loss in one or both eyes. Sudden vision loss in one or both eyes can be a sign of a serious eye problem called
+non-arteritic anterior ischemic optic neuro</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/66d7a469a6cf4ca650afcbd80ba865c7">
+								<span class="ui teal tiny label tag right floated">2C-B</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								2C-B (2,5-dimethoxy-4-bromophenethylamine) Powder
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/66d7a469a6cf4ca650afcbd80ba865c7">
+											<img src="/item-image/66d7a469a6cf4ca650afcbd80ba865c7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/66d7a469a6cf4ca650afcbd80ba865c7">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>2C-B (2,5-dimethoxy-4-bromophenethylamine) is a psychedelic drug of the 2C family. … As a recreational drug, 2C-B is sold as a white powder sometimes pressed in tablets or gel caps and is also referred to by a number of other names. The drug is usually taken orally, but can also be snorted (insufflated) or vaporized.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/44df859e9c4747b14061ca3f432fcbb1">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Counterfeit Notes</span>
+								High Grade USD Counterfeits, GBP AND EURO also available
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/44df859e9c4747b14061ca3f432fcbb1">
+											<img src="/item-image/44df859e9c4747b14061ca3f432fcbb1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/44df859e9c4747b14061ca3f432fcbb1">
+										<div class="ui dark-green basic tiny button fluid left aligned">usd bills of $3000</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>i sell the old and new notes
+just let me know which you prefer</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/5338e1efe49946e550a67b341df8c588">
+								<span class="ui teal tiny label tag right floated">Hacking</span>
+								Hacker services for Hire (hack social media, change school grades, Hack any server and many other taks)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/5338e1efe49946e550a67b341df8c588">
+											<img src="/item-image/5338e1efe49946e550a67b341df8c588?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/5338e1efe49946e550a67b341df8c588">
+										<div class="ui dark-green basic tiny button fluid left aligned">social media hack </div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>we do all sorts of hack just contact us with your request
+serious clients only please</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/4ab16a2e572a4afd7a78577b8b667892">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Ketamine powder 99% purity 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/4ab16a2e572a4afd7a78577b8b667892">
+											<img src="/item-image/4ab16a2e572a4afd7a78577b8b667892?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/4ab16a2e572a4afd7a78577b8b667892">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>VitaminK; Super K; Special K; K; Green; Donkey Dust; Ket; Wonk. Ketamine is a hallucinogenic dissociative normally sold on the street as a grainy white powder .</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/506b4bb20a1e4005685b6b0b27c3d024">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Klonopin 2mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/506b4bb20a1e4005685b6b0b27c3d024">
+											<img src="/item-image/506b4bb20a1e4005685b6b0b27c3d024?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/506b4bb20a1e4005685b6b0b27c3d024">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This medication known as klonopin is an anticonvulsant or antiepileptic drug. It is also used to treat panic attacks. Clonazepam works by calming your brain and nerves. It belongs to a class of drugs called benzodiazepines
+Clonazepam, a benzodiazepine, has side effects that can be significantly dangerous when the drugs is misused. Learn the signs of abuse and overdose.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/f4253f010947482d4e4d50c4424fc98e">
+								<span class="ui teal tiny label tag right floated">DMT</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								N,N-Dimethyltryptamine DMT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/f4253f010947482d4e4d50c4424fc98e">
+											<img src="/item-image/f4253f010947482d4e4d50c4424fc98e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/f4253f010947482d4e4d50c4424fc98e">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>N, N-Dimethyltryptamine is a chemical substance that occurs in many plants and animals and which is both a derivative and a structural analog of tryptamine. It can be consumed as a psychedelic drug and has historically been prepared by various cultures for ritual purposes as an entheogen</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/19d79d751b084c6048f923ca26ef5eb3">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Morphine ER 100mg pills
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/19d79d751b084c6048f923ca26ef5eb3">
+											<img src="/item-image/19d79d751b084c6048f923ca26ef5eb3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/19d79d751b084c6048f923ca26ef5eb3">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Morphine has a risk for abuse and addiction, which can lead to overdose and death. Morphine may also cause severe, possibly fatal, breathing problems.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/61bc7b712c4c4b207462e942353bb68c">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Suboxone 8mg Sublingual Film
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/61bc7b712c4c4b207462e942353bb68c">
+											<img src="/item-image/61bc7b712c4c4b207462e942353bb68c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/61bc7b712c4c4b207462e942353bb68c">
+										<div class="ui dark-green basic tiny button fluid left aligned">20</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buprenorphine, sold under the brand name Subutex, among others, is an opioid used to treat opioid addiction, acute pain, and chronic pain. It can be used under the tongue, by injection, as a skin patch, or as an implant</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/f93bfcb7f55748ac4e1a0419fa0eb138">
+								<span class="ui teal tiny label tag right floated">GHB</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Gamma-Hydroxybutyrate (GHB, &#34;G&#34;, Liquid X, Liquid E, Juice
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/f93bfcb7f55748ac4e1a0419fa0eb138">
+											<img src="/item-image/f93bfcb7f55748ac4e1a0419fa0eb138?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/f93bfcb7f55748ac4e1a0419fa0eb138">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 capfull</div>
+										<div class="ui basic left pointing label price">5 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>γ-Hydroxybutyric acid, also known as 4-hydroxybutanoic acid, is a naturally occurring neurotransmitter and a psychoactive drug. It is a precursor to GABA, glutamate, and glycine in certain brain areas. It acts on the GHB receptor and is a weak agonist at the GABAB receptor.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/9b7da89b93804d2745e66f5eab95d05d">
+								<span class="ui teal tiny label tag right floated">2C-B</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								2C-B (2,5-dimethoxy-4-bromophenethylamine)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/9b7da89b93804d2745e66f5eab95d05d">
+											<img src="/item-image/9b7da89b93804d2745e66f5eab95d05d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/9b7da89b93804d2745e66f5eab95d05d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>2C-B (2,5-dimethoxy-4-bromophenethylamine) is a psychedelic drug of the 2C family. … As a recreational drug, 2C-B is sold as a white powder sometimes pressed in tablets or gel caps and is also referred to by a number of other names. The drug is usually taken orally, but can also be snorted (insufflated) or vaporized.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/e1f6e48fc486465645e2398383eb4bed">
+								<span class="ui teal tiny label tag right floated">3-FMP</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								3-Fluorophenmetrazine 10g
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/e1f6e48fc486465645e2398383eb4bed">
+											<img src="/item-image/e1f6e48fc486465645e2398383eb4bed?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/e1f6e48fc486465645e2398383eb4bed">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">170 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Fluorophenmetrazine is a phenylmorpholine-based stimulant and fluorinated analogue of phenmetrazine that has been sold online as a designer drug. Contents. 1 Pharmacology; 2 Legality; 3 See also; 4 References. Pharmacology[edit]. 3-FPM acts as a norepinephrine-dopamine releasing agent with EC50 …</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/02624ea1fbec43cc7a265f9610fb0720">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Methamphetamine
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/02624ea1fbec43cc7a265f9610fb0720">
+											<img src="/item-image/02624ea1fbec43cc7a265f9610fb0720?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/02624ea1fbec43cc7a265f9610fb0720">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">70 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methamphetamine is a potent central nervous system stimulant that is mainly used as a recreational drug and less commonly as a second-line treatment for attention deficit hyperactivity disorder and obesity. Wikipedia
+Formula: C10H15N
+IUPAC ID: N-methyl-1-phenylpropan-2-amine
+Melting point: 170 °C
+Molar mass: 149.2337 g/mol
+ChemSpider ID: 1169
+PubChem CID: 1206</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/87bfc08802a946956552569732f70ff1">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Amphetamine Crystals
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/87bfc08802a946956552569732f70ff1">
+											<img src="/item-image/87bfc08802a946956552569732f70ff1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/87bfc08802a946956552569732f70ff1">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Speed is the street name for the Class B drug amphetamine sulphate. JUST PLACE THE ORDER SO WE CAN DELIVER TO YOU</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/b00bd2f87fc8457062b3c0e5c301b351">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Crystal Meth
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/b00bd2f87fc8457062b3c0e5c301b351">
+											<img src="/item-image/b00bd2f87fc8457062b3c0e5c301b351?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/b00bd2f87fc8457062b3c0e5c301b351">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">70 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methamphetamine is a potent central nervous system stimulant that is mainly used as a recreational drug and less commonly as a second-line treatment for attention deficit hyperactivity disorder and obesity.
+Formula: C10H15N
+IUPAC ID: N-methyl-1-phenylpropan-2-amine
+Melting point: 170 °C
+Molar mass: 149.2337 g/mol
+ChemSpider ID: 1169
+PubChem CID: 1206</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/4d3ab00f8eb546e4614453219a4772bc">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">NBOMe</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								25I-NBOMe
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/4d3ab00f8eb546e4614453219a4772bc">
+											<img src="/item-image/4d3ab00f8eb546e4614453219a4772bc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/4d3ab00f8eb546e4614453219a4772bc">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>25I-NBOMe is a psychedelic hallucinogen that is used in biochemistry research for mapping the brain’s usage of the type 2A serotonin receptor; it is also sometimes used for recreational purposes. It is derivative of the substituted phenethylamine 2C-I and is the most well-known member of the 25-NB family</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/cfc30ad46a954dc57f0067d3f5484a13">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								SUDAFED 120mg  Pseudoephedrine Hydrochloride 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/cfc30ad46a954dc57f0067d3f5484a13">
+											<img src="/item-image/cfc30ad46a954dc57f0067d3f5484a13?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/cfc30ad46a954dc57f0067d3f5484a13">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dilated blood vessels can cause nasal congestion (stuffy nose). Pseudoephedrine is used to treat nasal and sinus congestion, or congestion of the tubes that drain fluid from your inner ears, called the eustachian (yoo-STAY-shun) tubes. Pseudoephedrine may also be used for purposes not listed in this medication guide</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/ee3767d58ca3455f4e074c96a1c9abfb">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Rohypnol 2mg Tablets 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/ee3767d58ca3455f4e074c96a1c9abfb">
+											<img src="/item-image/ee3767d58ca3455f4e074c96a1c9abfb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/ee3767d58ca3455f4e074c96a1c9abfb">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Flunitrazepam, also known as Rohypnol among other names, is an intermediate acting … Adverse effects of flunitrazepam include dependence, both physical and psychological; reduced sleep quality resulting in somnolence; and overdose,</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/37442e16bbae428d526c5f34fb179afb">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								Adderall 30mg Tablets
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/37442e16bbae428d526c5f34fb179afb">
+											<img src="/item-image/37442e16bbae428d526c5f34fb179afb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/37442e16bbae428d526c5f34fb179afb">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">90 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>buy high quality addy from us at very cheap rates</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/d3e294779ba7434c6e47ba670a72d69d">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Fentanyl</span>
+								Furanylfentanyl 99.92%
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/d3e294779ba7434c6e47ba670a72d69d">
+											<img src="/item-image/d3e294779ba7434c6e47ba670a72d69d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/d3e294779ba7434c6e47ba670a72d69d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">25 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>buy your high potent furanylfentanyl fro us at a very good pricing</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/e50dbbb68a33474c477464b07edd8345">
+								<span class="ui teal tiny label tag right floated">3-MEO-PCP</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								3-MEO-PCP (3-Methoxyphencyclidine )
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/e50dbbb68a33474c477464b07edd8345">
+											<img src="/item-image/e50dbbb68a33474c477464b07edd8345?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/e50dbbb68a33474c477464b07edd8345">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>3-Methoxyphencyclidine is a dissociative hallucinogen of the arylcyclohexylamine class related to phencyclidine which has been sold online as a designer drug. It acts mainly as an NMDA receptor antagonist, though it has also been found to interact with the sigma σ₁ receptor and the serotonin transporter</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/40b1b26295cd4d085ee19346d5be1c76">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Ephedrine-HCL-Powder
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/40b1b26295cd4d085ee19346d5be1c76">
+											<img src="/item-image/40b1b26295cd4d085ee19346d5be1c76?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/40b1b26295cd4d085ee19346d5be1c76">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ephedrine is a medication and stimulant. It is often used to prevent low blood pressure during …. Ephedrine hydrochloride has a melting point of 187−188 °C.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/e9d8a56bbb19492f689c303e92c7a3f3">
+								<span class="ui teal tiny label tag right floated">4-FA</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								4-Fluoroamphetamine (4-FA; 4-FMP; PAL-303; &#34;Flux&#34;)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/e9d8a56bbb19492f689c303e92c7a3f3">
+											<img src="/item-image/e9d8a56bbb19492f689c303e92c7a3f3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/e9d8a56bbb19492f689c303e92c7a3f3">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>4-Fluoroamphetamine (4-FA; 4-FMP; PAL-303; “Flux”), also known as para-fluoroamphetamine (PFA) is a psychoactive research chemical of the phenethylamine and substituted amphetamine chemical classes. It produces stimulant and entactogenic effects, and is described subjectively as being between amphetamine and MDMA.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/276caeacbc7f4a465d298d5102ba50e5">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Mandrax Quaalude 300ml, Lemmon
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/276caeacbc7f4a465d298d5102ba50e5">
+											<img src="/item-image/276caeacbc7f4a465d298d5102ba50e5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>buy now at very good prices</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/101d2175956a4fc6618f2683cb918658">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Columbian Cocaine
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/101d2175956a4fc6618f2683cb918658">
+											<img src="/item-image/101d2175956a4fc6618f2683cb918658?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/101d2175956a4fc6618f2683cb918658">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cocaine is a powerfully addictive stimulant drug made from the leaves of the coca plant native to South America. Although health care providers can use it for valid medical purposes, such as local anesthesia for some surgeries, cocaine is an illegal drug. As a street drug, cocaine looks like a fine, white, crystal powder. Street dealers often mix it with things like cornstarch, talcum powder, or flour to increase profits. They may also mix it with other drugs such as the stimulant amphetamine</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/f4de7d174b88454178632be87621226b">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">A-PVP</span>
+								High Quality Alpha PVP
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/f4de7d174b88454178632be87621226b">
+											<img src="/item-image/f4de7d174b88454178632be87621226b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/f4de7d174b88454178632be87621226b">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/f4de7d174b88454178632be87621226b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/f4de7d174b88454178632be87621226b">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>α-Pyrrolidinopentiophenone is a synthetic stimulant of the cathinone class developed in the 1960s that has been sold as a designer drug. Colloquially, it is sometimes called flakka. α-PVP is chemically related to pyrovalerone and is the ketone analog of prolintane</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/e003682204b940fd7e3b25064e2f0d6c">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Dilaudid (hydromorphone) 8mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/e003682204b940fd7e3b25064e2f0d6c">
+											<img src="/item-image/e003682204b940fd7e3b25064e2f0d6c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/e003682204b940fd7e3b25064e2f0d6c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">70 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Long-acting (Exalgo) is indicated for the management of pain in opioid tolerant patients severe enough to require daily, around-the-clock, long-term opioid treatment and for which alternative treatment options are inadequate</p>
+
+<p>Opioid tolerant patients only (extended-release:) 8-64 mg PO qDay; may administer a starting dose equivalent to patient’s total daily oral hydromorphone dose administered once daily with or without food</p>
+
+<p>Should address pain relief and adverse events frequently; increase dose no more frequently than q3-4days; may titrate with increases of 25-50% of current daily dose; consider increasing dose if more than 2 doses of rescue medications are needed within 24hr within 2 consecutive days</p>
+
+<p>Extented-release tablets should be swallowed whole; crushing, dividing, or dissolving will release opioid content all at once and increase risk of respiratory depression and death</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/340188e75ef8491050dd72fa61fc08a7">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								pure MDMA Crystal 98%
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/340188e75ef8491050dd72fa61fc08a7">
+											<img src="/item-image/340188e75ef8491050dd72fa61fc08a7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/340188e75ef8491050dd72fa61fc08a7">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g </div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>5.2.1 Neurotoxicity, by Borax; 5.2.2 MDMA purity myths, by Borax; 5.2.3 … It most frequently comes in tablet form, although it is also found in capsules or as powder. … Drug Enforcement Administration (DEA) in July 1984 and was classified as A</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/aa034321c42f4f806386ca1e9420ec63">
+								<span class="ui teal tiny label tag right floated">Fentanyl</span>
+								High quality and good potent Fentanly powder for sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/aa034321c42f4f806386ca1e9420ec63">
+											<img src="/item-image/aa034321c42f4f806386ca1e9420ec63?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/aa034321c42f4f806386ca1e9420ec63">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g </div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>buy from us now
+thanks</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/f514b077a44b49ac484c62c154b5ee81">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Soma (carisoprodol) 350mg pills
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/f514b077a44b49ac484c62c154b5ee81">
+											<img src="/item-image/f514b077a44b49ac484c62c154b5ee81?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/f514b077a44b49ac484c62c154b5ee81">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Soma (carisoprodol) is a muscle relaxer that blocks pain sensations between the nerves and the brain. Soma is used together with rest and physical therapy to treat skeletal muscle conditions such as pain or injury.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/4a8e6425088342717c347feaa35c8ade">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PRE-ROLLS JOINTS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/4a8e6425088342717c347feaa35c8ade">
+											<img src="/item-image/4a8e6425088342717c347feaa35c8ade?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/4a8e6425088342717c347feaa35c8ade">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 rolls</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Typically in most legal cannabis marketplaces across the US joints, known as pre-rolls in dispensaries, are sold in a 5-pack containing 5 grams of cannabis. That is roughly 1 grams per joint, and almost right on the High Times estimation.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/15bf712835584edd4c92cf6f59fb42f2">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Yellow 2mg xanax bars aka bananas 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/15bf712835584edd4c92cf6f59fb42f2">
+											<img src="/item-image/15bf712835584edd4c92cf6f59fb42f2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/15bf712835584edd4c92cf6f59fb42f2">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 bars</div>
+										<div class="ui basic left pointing label price">180 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pill with imprint R 0 3 9 is Yellow, Rectangle and has been identified as Alprazolam 2 mg. It is supplied by Actavis. Alprazolam is used in the treatment of anxiety; panic disorder; depression (and more), and belongs to the drug class benzodiazepines.
+Strength: 2 mg
+Imprint: R 0 3 9
+Shape: Rectangle</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/20e2f8fb02cf429a7e82ad143b321d09">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Get cheap Roxicodone M30
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/20e2f8fb02cf429a7e82ad143b321d09">
+											<img src="/item-image/20e2f8fb02cf429a7e82ad143b321d09?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/20e2f8fb02cf429a7e82ad143b321d09">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxycodone is a narcotic drug prescribed for the relief of moderate to moderately severe pain. Common side effects of oxycodone include sweating, headache, dizziness, dry mouth, and sleepiness. Dosage depends on the patient. Oxycodone may cause withdrawal symptoms of discontinued suddenly. Brand names for oxycodone are Oxycontin, Roxicodone, Oxecta, Oxaydo, Xtampza ER, and Roxybond.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/2da9154f04d449607872bb45ec074c26">
+								<span class="ui teal tiny label tag right floated">Barbiturates</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								NEMBUTAL PENTOBARBITAL SODIUM 100mg/ml
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/2da9154f04d449607872bb45ec074c26">
+											<img src="/item-image/2da9154f04d449607872bb45ec074c26?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/2da9154f04d449607872bb45ec074c26">
+										<div class="ui dark-green basic tiny button fluid left aligned">20ml solution</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pentobarbital, also known as pentobarbitone, is a short-acting barbiturate. In high doses, pentobarbital causes death by respiratory arrest. In the United States, the drug has been used for executions of convicted criminals</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/38196901296b410d52fd16821dde4c0b">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								Xanax 2mg bars (GG249)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/38196901296b410d52fd16821dde4c0b">
+											<img src="/item-image/38196901296b410d52fd16821dde4c0b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/38196901296b410d52fd16821dde4c0b">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 bars</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/38196901296b410d52fd16821dde4c0b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000 bars</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>we have
+white
+green
+yellow
+and the red bars</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/norcoscart/item/c6e5c031979247ce5af0c653da0ee955">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Roxicodne 30mg A215 pharmacy grade
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/norcoscart/item/c6e5c031979247ce5af0c653da0ee955">
+											<img src="/item-image/c6e5c031979247ce5af0c653da0ee955?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/norcoscart/item/c6e5c031979247ce5af0c653da0ee955">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pill</div>
+										<div class="ui basic left pointing label price">10 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>we sell pharmacy grades only</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 1392 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

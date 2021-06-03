@@ -1,0 +1,3072 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a class="item header-logo header" href="/">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form method="GET" action="/marketplace" class="ui input icon fluid">
+					<input name="category" value="0" type="hidden" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input type="hidden" name="csrf_token" value="" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a class="ui button fluid green tiny" href="/app/download">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a class="item" href="/feed">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a class="item fluid" href="/settings/language/en">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a class="item fluid" href="/settings/language/tr">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/combi?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@combi</h2>
+								<p>Trusted Vendor from Dream Market - Cocaine, Heroine, Crystal Meth, Speed Paste,  LSD, 2CB, Hash, XTC, MDMA, Ketamine</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 1 day ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									3 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.78</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/combi">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/combi">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item active" href="/store/combi/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">145</span>
+									</a>
+									<a class="item" href="/store/combi/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">11</span>
+									</a>
+									<a class="item" href="/store/combi/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="segment ui">
+							<h3 class="ui dividing header">Reviews</h3>
+							<div class="ui comments">
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/jimini_cricket">
+										<img src="/user-avatar/jimini_cricket?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/jimini_cricket">@jimini_cricket</a>
+										<div class="metadata">
+											<span class="date">8 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/hd7rga2">
+										<img src="/user-avatar/hd7rga2?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/hd7rga2">@hd7rga2</a>
+										<div class="metadata">
+											<span class="date">10 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Looks all good, fast delivery and sufficient stealth!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/moylessatellite">
+										<img src="/user-avatar/moylessatellite?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/moylessatellite">@moylessatellite</a>
+										<div class="metadata">
+											<span class="date">11 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Great stealth, super fast delivery</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/131108">
+										<img src="/user-avatar/131108?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/131108">@131108</a>
+										<div class="metadata">
+											<span class="date">11 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/paspalo">
+										<img src="/user-avatar/paspalo?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/paspalo">@paspalo</a>
+										<div class="metadata">
+											<span class="date">13 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/petterlustig">
+										<img src="/user-avatar/petterlustig?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/petterlustig">@petterlustig</a>
+										<div class="metadata">
+											<span class="date">13 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Speed-Qualität entspricht dem gehobenen Standard. Reinheit von 90-93% ist übertrieben, wie bei allen. Lieferzeit mit einem Tag ist unschlagbar. Verpackung ist ebenfalls astrein!
+Hier kann man bedenkenlos einkaufen. Vielen Dank für die gute Arbeit!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/chestnut44">
+										<img src="/user-avatar/chestnut44?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/chestnut44">@chestnut44</a>
+										<div class="metadata">
+											<span class="date">13 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Very fast dispatch, wasn&#39;t expecting it this soon. Thanks.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/sochka7">
+										<img src="/user-avatar/sochka7?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sochka7">@sochka7</a>
+										<div class="metadata">
+											<span class="date">15 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">alles bestens</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/stressicon">
+										<img src="/user-avatar/stressicon?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/stressicon">@stressicon</a>
+										<div class="metadata">
+											<span class="date">17 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/haofba">
+										<img src="/user-avatar/haofba?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/haofba">@haofba</a>
+										<div class="metadata">
+											<span class="date">22 hours ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/camil_bolivar">
+										<img src="/user-avatar/camil_bolivar?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/camil_bolivar">@camil_bolivar</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">All good, quick delivery</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/marxzoi">
+										<img src="/user-avatar/marxzoi?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/marxzoi">@marxzoi</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">This is insane: next-day delivery!
+
+Stealth was very good, too.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ramen_56hz7">
+										<img src="/user-avatar/ramen_56hz7?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ramen_56hz7">@ramen_56hz7</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/dufuswhistle">
+										<img src="/user-avatar/dufuswhistle?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dufuswhistle">@dufuswhistle</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/sluggypitts">
+										<img src="/user-avatar/sluggypitts?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sluggypitts">@sluggypitts</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Had a few issues with communication at first, but combi delivered despite having other issues. 5dd (not counting Easter weekend), don’t believe the panic about combi being a scammer like I did at first, give him a chance!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/checker88">
+										<img src="/user-avatar/checker88?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/checker88">@checker88</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ist ein super anbiter hat mich noch nie im stich gelassen und bestelle schon lange bei ihm. wenn man wasd bestellt ist es immer sehr schnell da. und komunikation ist echt super. 
+wirklich super anbiter kann ich nur empfehlen danke combi bist der beste.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/checker88">
+										<img src="/user-avatar/checker88?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/checker88">@checker88</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ist ein super anbiter hat mich noch nie im stich gelassen und bestelle schon lange bei ihm. wenn man wasd bestellt ist es immer sehr schnell da. und komunikation ist echt super. 
+wirklich super anbiter kann ich nur empfehlen danke combi bist der beste.
+</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/checker88">
+										<img src="/user-avatar/checker88?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/checker88">@checker88</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ist ein super anbiter hat mich noch nie im stich gelassen und bestelle schon lange bei ihm. wenn man wasd bestellt ist es immer sehr schnell da. und komunikation ist echt super. wirklich super anbiter kann ich nur empfehlen danke combi bist der beste.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/checker88">
+										<img src="/user-avatar/checker88?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/checker88">@checker88</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ist ein super anbiter hat mich noch nie im stich gelassen und bestelle schon lange bei ihm. wenn man wasd bestellt ist es immer sehr schnell da. und komunikation ist echt super. wirklich super anbiter kann ich nur empfehlen danke combi bist der beste.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/supposeimagine">
+										<img src="/user-avatar/supposeimagine?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/supposeimagine">@supposeimagine</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/flypaper">
+										<img src="/user-avatar/flypaper?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/flypaper">@flypaper</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/flypaper">
+										<img src="/user-avatar/flypaper?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/flypaper">@flypaper</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/flypaper">
+										<img src="/user-avatar/flypaper?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/flypaper">@flypaper</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">die beste!!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/audia">
+										<img src="/user-avatar/audia?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/audia">@audia</a>
+										<div class="metadata">
+											<span class="date">1 day ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top wie immer</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/traintroll">
+										<img src="/user-avatar/traintroll?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/traintroll">@traintroll</a>
+										<div class="metadata">
+											<span class="date">2 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">A1</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/alukann">
+										<img src="/user-avatar/alukann?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/alukann">@alukann</a>
+										<div class="metadata">
+											<span class="date">2 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Combi ist wirklich sehr zuverlässig, vertrauensvoll und 
+steht zu  seinen Wort.
+Habe vorher schon  bei ihm gekauft (nicht hier) und es kam wirklich niemals zu einem Problem. Macht bitte weiter so, denn ihr seit echt spitze. Merci.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/paspalo">
+										<img src="/user-avatar/paspalo?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/paspalo">@paspalo</a>
+										<div class="metadata">
+											<span class="date">2 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">jetzt werdet ihr aber ganz schön dreist. Von 25g Hash nur 21,64 erhalten und mails werden nicht beantwortet. Bei jeder Bestellung fehlen paar Gramm.Wiegt eure Ware unbedingt nach. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>3</span>
+									</span>
+									<a class="avatar" href="/user/flaredchunky">
+										<img src="/user-avatar/flaredchunky?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/flaredchunky">@flaredchunky</a>
+										<div class="metadata">
+											<span class="date">2 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">wird gerade geklärt</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ganymededashcube">
+										<img src="/user-avatar/ganymededashcube?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ganymededashcube">@ganymededashcube</a>
+										<div class="metadata">
+											<span class="date">3 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ganymededashcube">
+										<img src="/user-avatar/ganymededashcube?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ganymededashcube">@ganymededashcube</a>
+										<div class="metadata">
+											<span class="date">3 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ingana1">
+										<img src="/user-avatar/ingana1?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ingana1">@ingana1</a>
+										<div class="metadata">
+											<span class="date">3 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ich warte jetzt seit 15.04 auf meine Bestellung. Mir wurde letzten Freitag versichert, dass es versendet ist. Wenn sich nichts ändert, muss ich die Bewertung leider ändern.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/netstark">
+										<img src="/user-avatar/netstark?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/netstark">@netstark</a>
+										<div class="metadata">
+											<span class="date">3 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Order never arrived :-(</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/sflety">
+										<img src="/user-avatar/sflety?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sflety">@sflety</a>
+										<div class="metadata">
+											<span class="date">4 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Nothing arrived yet. No replies received from seller</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/herbert2019">
+										<img src="/user-avatar/herbert2019?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/herbert2019">@herbert2019</a>
+										<div class="metadata">
+											<span class="date">4 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top-deluxe vendor! thx</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/donjoe33">
+										<img src="/user-avatar/donjoe33?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/donjoe33">@donjoe33</a>
+										<div class="metadata">
+											<span class="date">5 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">5DD domestic, slight overweight and sufficient stealth 5/5!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/donjoe33">
+										<img src="/user-avatar/donjoe33?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/donjoe33">@donjoe33</a>
+										<div class="metadata">
+											<span class="date">5 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">5DD domestic, slight overweight and sufficient stealth 5/5!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/plustig">
+										<img src="/user-avatar/plustig?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/plustig">@plustig</a>
+										<div class="metadata">
+											<span class="date">6 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">all perfect</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/jonnyo1982">
+										<img src="/user-avatar/jonnyo1982?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/jonnyo1982">@jonnyo1982</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/houzzjibe">
+										<img src="/user-avatar/houzzjibe?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/houzzjibe">@houzzjibe</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/masterblaster676">
+										<img src="/user-avatar/masterblaster676?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/masterblaster676">@masterblaster676</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/drift_compatible">
+										<img src="/user-avatar/drift_compatible?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/drift_compatible">@drift_compatible</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">top notch, top Vendor </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/indiajones">
+										<img src="/user-avatar/indiajones?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/indiajones">@indiajones</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">All is perfect. Top Shipping speed, any amounts possible with him, amazing quality and uncut. Really a great vendor.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/moucha">
+										<img src="/user-avatar/moucha?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/moucha">@moucha</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/maskedboth3737">
+										<img src="/user-avatar/maskedboth3737?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/maskedboth3737">@maskedboth3737</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top !!! Ohne Frage ! Ist auf mein Anliegen eingegangen!!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>3</span>
+									</span>
+									<a class="avatar" href="/user/flaredchunky">
+										<img src="/user-avatar/flaredchunky?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/flaredchunky">@flaredchunky</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">wird gerade geklärt</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/cambo23">
+										<img src="/user-avatar/cambo23?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/cambo23">@cambo23</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">schneller Versand</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/cambo23">
+										<img src="/user-avatar/cambo23?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/cambo23">@cambo23</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">schneller versand</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/futzdumm1312">
+										<img src="/user-avatar/futzdumm1312?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/futzdumm1312">@futzdumm1312</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/nasoleh2">
+										<img src="/user-avatar/nasoleh2?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nasoleh2">@nasoleh2</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/nasoleh2">
+										<img src="/user-avatar/nasoleh2?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nasoleh2">@nasoleh2</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ingana1">
+										<img src="/user-avatar/ingana1?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ingana1">@ingana1</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Best Vendor on DN.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/pushkin66">
+										<img src="/user-avatar/pushkin66?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/pushkin66">@pushkin66</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">ok</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/pushkin66">
+										<img src="/user-avatar/pushkin66?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/pushkin66">@pushkin66</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">ok</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/dangerhandz_89">
+										<img src="/user-avatar/dangerhandz_89?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dangerhandz_89">@dangerhandz_89</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">sorry for the late rating...i have to say that COMBI is the fucking G.O.A.T. of all vendors on the markets..ordered over 15 times and everytime i got quick shipping, super professional stealth and excellent quality of the products !!! even if i&#39;m an neigh</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/star16">
+										<img src="/user-avatar/star16?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/star16">@star16</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">10/10</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/herbert2019">
+										<img src="/user-avatar/herbert2019?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/herbert2019">@herbert2019</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Alles Weltklasse! TOP-VENDOR!!! 5/5</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/petrelshoulders">
+										<img src="/user-avatar/petrelshoulders?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/petrelshoulders">@petrelshoulders</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">merchandise never arrived</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>4</span>
+									</span>
+									<a class="avatar" href="/user/il33x">
+										<img src="/user-avatar/il33x?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/il33x">@il33x</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/micropointe1">
+										<img src="/user-avatar/micropointe1?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/micropointe1">@micropointe1</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">;)</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ostara188869">
+										<img src="/user-avatar/ostara188869?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ostara188869">@ostara188869</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">So I have to say of order confirmation and sent the indication to me no 24 hours.
+Quality and price are just perfect no matter which market I was so perfect and fast it has never been</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/donattila">
+										<img src="/user-avatar/donattila?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/donattila">@donattila</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-----BEGIN PGP MESSAGE-----
+Version: BCPG C# v1.6.1.0
+
+hQIMAyph4dyokwmfAQ//RAe4WROzIux6LXbWUvtzhiaEDTFXl&#43;MEN6BBLzxxGb4d
+lBOQ/zmIk/9F&#43;boAJNqxPnfVSL7hdCWgXdUUtscf71udT5tK2TQ69Y7MfK5RXAiR
+AtYL4ucI50SdjuLU5uABPQpD2d6EVU5fzvxGeha1iB4ER0i7WHAWn/ZMDqgUr172</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/schlurenzuner">
+										<img src="/user-avatar/schlurenzuner?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/schlurenzuner">@schlurenzuner</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Everything perfect!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>3</span>
+									</span>
+									<a class="avatar" href="/user/peniskopf">
+										<img src="/user-avatar/peniskopf?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/peniskopf">@peniskopf</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Versand dauerte ein wenig, was aber nicht weiter schlimm war. Was mich etwas geärgert hat, ist, dass von mehreren Bestellungen immer nur eine bearbeitet wurde. Der Rest wurde immer gecancelt und ich musste die Transaktionsgebüren nochmal bezahlen. Auf N</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/kalinton">
+										<img src="/user-avatar/kalinton?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/kalinton">@kalinton</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">thanks &#43;&#43;&#43;&#43;&#43;</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/unknow666">
+										<img src="/user-avatar/unknow666?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/unknow666">@unknow666</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">AAA&#43;&#43;&#43;Top&#43;&#43;&#43;AAA</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/unknow666">
+										<img src="/user-avatar/unknow666?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/unknow666">@unknow666</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top AAA&#43;&#43;&#43;</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/clubin-it">
+										<img src="/user-avatar/clubin-it?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/clubin-it">@clubin-it</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Absolutely fantastic service &amp; product, honestly can&#39;t fault this seller. 
+Great stealth, great speed. My NEW go to vendor - Thank You!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/fraychaos1337">
+										<img src="/user-avatar/fraychaos1337?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/fraychaos1337">@fraychaos1337</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">For sure one of the best Vendors I know. Always fast delivery and some extras here and there. Most stuff is really potent (from which I &#39;ve tried.
+Always a celebration to work with you! :)
+</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/fraychaos1337">
+										<img src="/user-avatar/fraychaos1337?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/fraychaos1337">@fraychaos1337</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">For sure one of the best Vendors I know. Always fast delivery and some extras here and there. Most stuff is really potent (from which I &#39;ve tried).
+Always a celebration to work with you! :)
+</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/klomatize">
+										<img src="/user-avatar/klomatize?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/klomatize">@klomatize</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">All good. Will come back for sure.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ratze">
+										<img src="/user-avatar/ratze?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ratze">@ratze</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Diskret schneller Versand und super verpackt jederzeit wieder</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/checker88">
+										<img src="/user-avatar/checker88?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/checker88">@checker88</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Super verkäufer kann ich nur empfehlen immer nach einen tag da.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/sedeoperativa">
+										<img src="/user-avatar/sedeoperativa?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sedeoperativa">@sedeoperativa</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>3</span>
+									</span>
+									<a class="avatar" href="/user/sindy79">
+										<img src="/user-avatar/sindy79?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sindy79">@sindy79</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Komination so gut wie unmöglich,von 6 Fragen wurden null beantwortet,daher 3 Sterne und da bin ich noch großzügig. So bekommt man keinen festen Kundenkreis! und schon garnicht vertrauen!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/frodo1989_">
+										<img src="/user-avatar/frodo1989_?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/frodo1989_">@frodo1989_</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Alles TOP. Nach bestellung Ware innerhalb von 48H erhalten. Komme wieder.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/traintroll">
+										<img src="/user-avatar/traintroll?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/traintroll">@traintroll</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">He never let me down..</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/zoubida9696">
+										<img src="/user-avatar/zoubida9696?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/zoubida9696">@zoubida9696</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">der Combi ist wie auf DM immer ultra schnell und immer gütes zeug und serh gut verpackt !!
+weiter so mein freund !!! alles top im dem shop von dem combi !!!
+danke dir !!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/netstark">
+										<img src="/user-avatar/netstark?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/netstark">@netstark</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Had to wait for over a week, but finally it arrived!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/drina13">
+										<img src="/user-avatar/drina13?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/drina13">@drina13</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/skapti">
+										<img src="/user-avatar/skapti?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/skapti">@skapti</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">evrything perfect thxs</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/luflupon3">
+										<img src="/user-avatar/luflupon3?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/luflupon3">@luflupon3</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Fast shipping, good stealth, product as described. Recommendable! 5/5 </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/peniskopf">
+										<img src="/user-avatar/peniskopf?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/peniskopf">@peniskopf</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Alles in Ordnung</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/herbert2019">
+										<img src="/user-avatar/herbert2019?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/herbert2019">@herbert2019</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top-Deluxe Vendor!!!! The Best! thx</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/minimtrd">
+										<img src="/user-avatar/minimtrd?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/minimtrd">@minimtrd</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Superfast shipping 5/5 </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/rdtfjgs">
+										<img src="/user-avatar/rdtfjgs?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/rdtfjgs">@rdtfjgs</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">.good</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/spike1748">
+										<img src="/user-avatar/spike1748?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/spike1748">@spike1748</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/hagelbeck">
+										<img src="/user-avatar/hagelbeck?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/hagelbeck">@hagelbeck</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/aksel40hirscher">
+										<img src="/user-avatar/aksel40hirscher?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/aksel40hirscher">@aksel40hirscher</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">THX!!!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/traintroll">
+										<img src="/user-avatar/traintroll?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/traintroll">@traintroll</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">A1</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/sisyphos15">
+										<img src="/user-avatar/sisyphos15?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sisyphos15">@sisyphos15</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">fast shipping</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/myszon">
+										<img src="/user-avatar/myszon?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/myszon">@myszon</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Very solid and reliable seller. 3DD, solid stuff, will come again :)</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/aksel40hirscher">
+										<img src="/user-avatar/aksel40hirscher?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/aksel40hirscher">@aksel40hirscher</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Good stealth, fast shipping, friendly vendor...</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/herbert2019">
+										<img src="/user-avatar/herbert2019?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/herbert2019">@herbert2019</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top Vendor! Besser gehts nicht,einfach genial! I love combi</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/micropointe1">
+										<img src="/user-avatar/micropointe1?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/micropointe1">@micropointe1</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">5/5 parfait !</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/micropointe1">
+										<img src="/user-avatar/micropointe1?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/micropointe1">@micropointe1</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Good</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/nappingspooky">
+										<img src="/user-avatar/nappingspooky?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nappingspooky">@nappingspooky</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/technician">
+										<img src="/user-avatar/technician?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/technician">@technician</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">very trusted vendor</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/slovakwoodland">
+										<img src="/user-avatar/slovakwoodland?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/slovakwoodland">@slovakwoodland</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Great Quality, good packaging, speedy delivery.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/magicjohn439">
+										<img src="/user-avatar/magicjohn439?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/magicjohn439">@magicjohn439</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/1987one">
+										<img src="/user-avatar/1987one?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/1987one">@1987one</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">immer wieder geil bei euch zu bestellen.....
+schneller wie amazone Prime 
+^^Combi for President ^^
+Beste .....</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ganymededashcube">
+										<img src="/user-avatar/ganymededashcube?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ganymededashcube">@ganymededashcube</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ostara188869">
+										<img src="/user-avatar/ostara188869?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ostara188869">@ostara188869</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/aksel40hirscher">
+										<img src="/user-avatar/aksel40hirscher?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/aksel40hirscher">@aksel40hirscher</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/audia">
+										<img src="/user-avatar/audia?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/audia">@audia</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Alles bestens</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/checker88">
+										<img src="/user-avatar/checker88?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/checker88">@checker88</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">super verkäufer sehr vertrauenswürdig lässt ein nie in stich danke compi komme auf  jenden fall wieder</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/latoriness">
+										<img src="/user-avatar/latoriness?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/latoriness">@latoriness</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">alles top, danke</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/rockersarab">
+										<img src="/user-avatar/rockersarab?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/rockersarab">@rockersarab</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">I received the package within 3 working days i am very happy about this :D The amount which i received is exactly what i have ordered. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/paspalo">
+										<img src="/user-avatar/paspalo?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/paspalo">@paspalo</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">jetzt werdet ihr aber ganz schön dreist. Von 25g Hash nur 21,64 erhalten und mails werden nicht beantwortet. Bei jeder Bestellung fehlen paar Gramm.Wiegt eure Ware unbedingt nach. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/spike1748">
+										<img src="/user-avatar/spike1748?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/spike1748">@spike1748</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">4DD alles Top, Gerne wieder :D</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/flaredchunky">
+										<img src="/user-avatar/flaredchunky?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/flaredchunky">@flaredchunky</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Zuverlässig, schnell, grosszügig und zu 100 Prozent fair wie vertrauenswürdig. Danke !!!!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/luflupon3">
+										<img src="/user-avatar/luflupon3?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/luflupon3">@luflupon3</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Fast shipping (3DD). Stealth totally acceptable for inland shipping. Product as described.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/skaffy420">
+										<img src="/user-avatar/skaffy420?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/skaffy420">@skaffy420</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">24h -  Perfect. Thanks</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/jkhasdkhjekiow">
+										<img src="/user-avatar/jkhasdkhjekiow?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/jkhasdkhjekiow">@jkhasdkhjekiow</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/herbert2019">
+										<img src="/user-avatar/herbert2019?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/herbert2019">@herbert2019</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Absolute Weltklasse!!! Wie schon bei dm, er ist einfach unschlagbar= Stammkunde!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/schlurenzuner">
+										<img src="/user-avatar/schlurenzuner?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/schlurenzuner">@schlurenzuner</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Everything perfect!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/wizarddouble">
+										<img src="/user-avatar/wizarddouble?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/wizarddouble">@wizarddouble</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">One of the best! THX</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/masterblaster676">
+										<img src="/user-avatar/masterblaster676?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/masterblaster676">@masterblaster676</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Nicht gedacht aber das funzt.....Zeug is Top, nicht lange gedauert, lebensqualität verbessert..... </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/dufuswhistle">
+										<img src="/user-avatar/dufuswhistle?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dufuswhistle">@dufuswhistle</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Erste Bestellung hier in dem Markt -----&gt; 2 Tage für Lieferung, Stealh 1A</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/chiefrocka">
+										<img src="/user-avatar/chiefrocka?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/chiefrocka">@chiefrocka</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Alles Bestens, Produkt wie beschrieben und schnelle Antwort bekommen.. Bin aufjedenfall zufrieden</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/cirezd76">
+										<img src="/user-avatar/cirezd76?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/cirezd76">@cirezd76</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Der Verkäufer oder das Team machen ihre Dinge wie die Profis.
+Werde hier Stammkunde weil man einfach bestens und am sichersten bedient wird da der steahlt nicht besser sein könnte.
+Danke liebes Combi team für euren service und für den kleinen bonus </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/latschenknecht12">
+										<img src="/user-avatar/latschenknecht12?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/latschenknecht12">@latschenknecht12</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Very fast delivery and good Support!!!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/dedicatedxyz">
+										<img src="/user-avatar/dedicatedxyz?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dedicatedxyz">@dedicatedxyz</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">good seller</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/dextromethorphan">
+										<img src="/user-avatar/dextromethorphan?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dextromethorphan">@dextromethorphan</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Kind and fast</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/alliedworking">
+										<img src="/user-avatar/alliedworking?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/alliedworking">@alliedworking</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">2DD - TOP.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/wizarddouble">
+										<img src="/user-avatar/wizarddouble?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/wizarddouble">@wizarddouble</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">One of the best vendor. Always fast and correct. THX
+Only the postal costs are to high! (10.- for standard letter)
+Please change this.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/kockt">
+										<img src="/user-avatar/kockt?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/kockt">@kockt</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Everything perfect and legit vendor 10/10</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/traintroll">
+										<img src="/user-avatar/traintroll?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/traintroll">@traintroll</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Perfect</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/leftovermeth">
+										<img src="/user-avatar/leftovermeth?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/leftovermeth">@leftovermeth</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Thank you, Combi. Really like your stuff and Service. This time 3DD but thats prolly the Post Offices&#39; fault. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/serum">
+										<img src="/user-avatar/serum?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/serum">@serum</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Nice Seller. He is is one of the best german vendors here on DN. Nice doing business with you.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/netstark">
+										<img src="/user-avatar/netstark?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/netstark">@netstark</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Fast delivery!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/cirezd76">
+										<img src="/user-avatar/cirezd76?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/cirezd76">@cirezd76</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Verkäufer hat sein wort gehalten.sagte das es max 2 tage dauert bis ankommt.
+bei fragen gibt er auch gute antworten.
+vielen dank nochmals für den service</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/1987one">
+										<img src="/user-avatar/1987one?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/1987one">@1987one</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ich sags immer wieder Gerne ^^ I Love this Seller^^ 
+über 10 mal bestellt und immer alles direkt nächsten tag bei mir... vielen dank ^^ Combi For President ^^
+nächste bestellung folgt ^^ 
+ Liebe User bestellt alles was ihr braucht hir ^^ beste ^^</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/starryradarr01">
+										<img src="/user-avatar/starryradarr01?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/starryradarr01">@starryradarr01</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Aufjedenfall komme ich wieder. :) Hat alles super schnell geklappt ich bin sehr begeistert .</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/vivaciousph">
+										<img src="/user-avatar/vivaciousph?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/vivaciousph">@vivaciousph</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ultra schnelles und nettes Team.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/sindy79">
+										<img src="/user-avatar/sindy79?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sindy79">@sindy79</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">1 DD best Vendor</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/nimjassaniriba">
+										<img src="/user-avatar/nimjassaniriba?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nimjassaniriba">@nimjassaniriba</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">everything ok</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/mad-dog19">
+										<img src="/user-avatar/mad-dog19?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/mad-dog19">@mad-dog19</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Super Fast shipping. Nice packed. Trusted Seller. Nice clean Products ! Stealth TOP.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/ostara188869">
+										<img src="/user-avatar/ostara188869?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/ostara188869">@ostara188869</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">
+So I have to say of order confirmation and sent the indication to me no 24 hours.
+Quality and price are just perfect no matter which market I was so perfect and fast it has never been</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/57mokomo5">
+										<img src="/user-avatar/57mokomo5?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/57mokomo5">@57mokomo5</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/alukann">
+										<img src="/user-avatar/alukann?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/alukann">@alukann</a>
+										<div class="metadata">
+											<span class="date">3 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Fast delivery, good stealth and nice products </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/alukann">
+										<img src="/user-avatar/alukann?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/alukann">@alukann</a>
+										<div class="metadata">
+											<span class="date">4 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Fast delivery, nice stealth and good products.
+Highly recommended.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/fraychaos1337">
+										<img src="/user-avatar/fraychaos1337?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/fraychaos1337">@fraychaos1337</a>
+										<div class="metadata">
+											<span class="date">4 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">1DD you can‘t do it better! Top Vendor</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/adsmkclasdc">
+										<img src="/user-avatar/adsmkclasdc?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/adsmkclasdc">@adsmkclasdc</a>
+										<div class="metadata">
+											<span class="date">4 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Very professional</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/hanswurstwasgeht">
+										<img src="/user-avatar/hanswurstwasgeht?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/hanswurstwasgeht">@hanswurstwasgeht</a>
+										<div class="metadata">
+											<span class="date">4 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Super schnell und diskreter Versand</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/sebastianr84">
+										<img src="/user-avatar/sebastianr84?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sebastianr84">@sebastianr84</a>
+										<div class="metadata">
+											<span class="date">1 month ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Sehr schneller Versand.</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 1244 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

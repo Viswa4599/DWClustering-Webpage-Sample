@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/va_porion?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@va_porion</h2>
+								<p></p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 7 months ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 9 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									13 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.64</span>
+								</span>
+								<span class="ui teal label">Insured</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/va_porion">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/va_porion">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/va_porion/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">11</span>
+									</a>
+									<a class="item active" href="/store/va_porion/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">65</span>
+									</a>
+									<a class="item" href="/store/va_porion/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/b58760f6b3da4dac6163b9d3fb3fbb51">
+								<span class="ui teal tiny label tag right floated">Stanozolol</span>
+								Stanozolol-10mg/tab 100tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/b58760f6b3da4dac6163b9d3fb3fbb51">
+											<img src="/item-image/b58760f6b3da4dac6163b9d3fb3fbb51?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/b58760f6b3da4dac6163b9d3fb3fbb51">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">43 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Stanozolol-10mg/tab 100tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/17a8c2bbf2b2411f5d780d954c07304e">
+								<span class="ui teal tiny label tag right floated">Turanabol</span>
+								Turanabol 10mg/tab 100tabs IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/17a8c2bbf2b2411f5d780d954c07304e">
+											<img src="/item-image/17a8c2bbf2b2411f5d780d954c07304e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/17a8c2bbf2b2411f5d780d954c07304e">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">62 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Turanabol 10mg/tab 100tabs IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/6b573cc838774e777cde47a4250a09a7">
+								<span class="ui teal tiny label tag right floated">Testosterone Propionate</span>
+								Testosterone Propionate 100mg/ml 5amp BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/6b573cc838774e777cde47a4250a09a7">
+											<img src="/item-image/6b573cc838774e777cde47a4250a09a7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/6b573cc838774e777cde47a4250a09a7">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Propionate 100mg/ml 5amp BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/a311e42c71d64aaa724daaf49bc2ac9c">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Anadrol-50mg/tab 40tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/a311e42c71d64aaa724daaf49bc2ac9c">
+											<img src="/item-image/a311e42c71d64aaa724daaf49bc2ac9c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/a311e42c71d64aaa724daaf49bc2ac9c">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">48 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Anadrol-50mg/tab 40tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/aebc77b932274d9656b80d2e360a0d26">
+								<span class="ui teal tiny label tag right floated">Trenobolone</span>
+								Trenbolone Enanthate-200mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/aebc77b932274d9656b80d2e360a0d26">
+											<img src="/item-image/aebc77b932274d9656b80d2e360a0d26?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/aebc77b932274d9656b80d2e360a0d26">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trenbolone Enanthate-200mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/0541ff5fd0ff4da5672615cd734a6e87">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Methandienone-10mg/tab 100tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/0541ff5fd0ff4da5672615cd734a6e87">
+											<img src="/item-image/0541ff5fd0ff4da5672615cd734a6e87?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/0541ff5fd0ff4da5672615cd734a6e87">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">36 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methandienone-10mg/tab 100tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/0d3a9c61109b4e935998e9fbf6987d84">
+								<span class="ui teal tiny label tag right floated">Primobolan</span>
+								Primobolan Acetate-50mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/0d3a9c61109b4e935998e9fbf6987d84">
+											<img src="/item-image/0d3a9c61109b4e935998e9fbf6987d84?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/0d3a9c61109b4e935998e9fbf6987d84">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">54 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Primobolan Acetate-50mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/10bac7706ed848af56100247faed2cfe">
+								<span class="ui teal tiny label tag right floated">Anavar</span>
+								Oxandrolone-10mg/tab 100tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/10bac7706ed848af56100247faed2cfe">
+											<img src="/item-image/10bac7706ed848af56100247faed2cfe?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/10bac7706ed848af56100247faed2cfe">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">73 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxandrolone-10mg/tab 100tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/155bb54472fc461563842ababf3c8c43">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Test E 200mg / EQ 200mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/155bb54472fc461563842ababf3c8c43">
+											<img src="/item-image/155bb54472fc461563842ababf3c8c43?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/155bb54472fc461563842ababf3c8c43">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">70 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Test E 200mg / EQ 200mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/1d333f1d8b1548694456cadd5e422e0f">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Nandrolone Phenylpropionate-100mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/1d333f1d8b1548694456cadd5e422e0f">
+											<img src="/item-image/1d333f1d8b1548694456cadd5e422e0f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/1d333f1d8b1548694456cadd5e422e0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">52 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Nandrolone Phenylpropionate-100mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/1e44d6e9d35e4fc3470a5785f12e8530">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Boldenone Undecylenate 250mg/ml 5amp BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/1e44d6e9d35e4fc3470a5785f12e8530">
+											<img src="/item-image/1e44d6e9d35e4fc3470a5785f12e8530?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/1e44d6e9d35e4fc3470a5785f12e8530">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Boldenone Undecylenate 250mg/ml 5amp BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/2031b578cfbc45b04e07954350ac2e6d">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Aromasin-20mg/tab 20tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/2031b578cfbc45b04e07954350ac2e6d">
+											<img src="/item-image/2031b578cfbc45b04e07954350ac2e6d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/2031b578cfbc45b04e07954350ac2e6d">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Aromasin-20mg/tab 20tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/21e71382a0bf48ff723fcafaaebc637f">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Trestolone Acetate-50mg/ml 10 ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/21e71382a0bf48ff723fcafaaebc637f">
+											<img src="/item-image/21e71382a0bf48ff723fcafaaebc637f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/21e71382a0bf48ff723fcafaaebc637f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trestolone Acetate-50mg/ml 10 ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/2654dde5da0f47196f2b135c141546da">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Nandrolone Decanoate 250mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/2654dde5da0f47196f2b135c141546da">
+											<img src="/item-image/2654dde5da0f47196f2b135c141546da?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/2654dde5da0f47196f2b135c141546da">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">59 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Nandrolone Decanoate 250mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/26df99d7d2fd427173f27ca6622a0cfe">
+								<span class="ui teal tiny label tag right floated">Testosterone Enanthate</span>
+								Testosterone Enanthate 250mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/26df99d7d2fd427173f27ca6622a0cfe">
+											<img src="/item-image/26df99d7d2fd427173f27ca6622a0cfe?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/26df99d7d2fd427173f27ca6622a0cfe">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">52 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Enanthate 250mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/27e22ad47ad14dbb5b9c310fd64db318">
+								<span class="ui teal tiny label tag right floated">Testosterone Enanthate</span>
+								Testosterone Enanthate-250mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/27e22ad47ad14dbb5b9c310fd64db318">
+											<img src="/item-image/27e22ad47ad14dbb5b9c310fd64db318?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/27e22ad47ad14dbb5b9c310fd64db318">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Enanthate-250mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/2ed67b44126649667c4fba784e79e086">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Boldenone Undecylenate-250mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/2ed67b44126649667c4fba784e79e086">
+											<img src="/item-image/2ed67b44126649667c4fba784e79e086?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/2ed67b44126649667c4fba784e79e086">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">52 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Boldenone Undecylenate-250mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/369e1c986eff4a7f448409f736444462">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Test E 250mg / Tren E 150mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/369e1c986eff4a7f448409f736444462">
+											<img src="/item-image/369e1c986eff4a7f448409f736444462?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/369e1c986eff4a7f448409f736444462">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">71 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Test E 250mg / Tren E 150mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/3b10920b01334f7249992eafcbf53cb4">
+								<span class="ui teal tiny label tag right floated">Stanozolol</span>
+								Stanazolol 10mg/tab 60tabs BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/3b10920b01334f7249992eafcbf53cb4">
+											<img src="/item-image/3b10920b01334f7249992eafcbf53cb4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/3b10920b01334f7249992eafcbf53cb4">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">43 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Stanazolol 10mg/tab 60tabs BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/40b800bac94e451050dcf53964f5fb7e">
+								<span class="ui teal tiny label tag right floated">Anavar</span>
+								Oxandrolone 10mg/tab 100tabs IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/40b800bac94e451050dcf53964f5fb7e">
+											<img src="/item-image/40b800bac94e451050dcf53964f5fb7e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/40b800bac94e451050dcf53964f5fb7e">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">84 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxandrolone 10mg/tab 100tabs IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/43f64dbfaf2e462950cf027b5166c1e7">
+								<span class="ui teal tiny label tag right floated">Testosterone Propionate</span>
+								Testosterone Propionate-100mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/43f64dbfaf2e462950cf027b5166c1e7">
+											<img src="/item-image/43f64dbfaf2e462950cf027b5166c1e7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/43f64dbfaf2e462950cf027b5166c1e7">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">43 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Propionate-100mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/476802d26774469a4c72ee6a8befea26">
+								<span class="ui teal tiny label tag right floated">Trenbolone</span>
+								Trenbolone Acetate-100mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/476802d26774469a4c72ee6a8befea26">
+											<img src="/item-image/476802d26774469a4c72ee6a8befea26?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/476802d26774469a4c72ee6a8befea26">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">58 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trenbolone Acetate-100mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/47a53fe90dd14f9e5d1921c62af03b2d">
+								<span class="ui teal tiny label tag right floated">Danabol</span>
+								Methandienone 10mg/tab 60tabs BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/47a53fe90dd14f9e5d1921c62af03b2d">
+											<img src="/item-image/47a53fe90dd14f9e5d1921c62af03b2d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/47a53fe90dd14f9e5d1921c62af03b2d">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methandienone 10mg/tab 60tabs BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/48a3b3e98f0b494d7e79374a0b7bd06f">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Arimidex-1mg/tab 20 tab
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/48a3b3e98f0b494d7e79374a0b7bd06f">
+											<img src="/item-image/48a3b3e98f0b494d7e79374a0b7bd06f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/48a3b3e98f0b494d7e79374a0b7bd06f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Arimidex-1mg/tab 20 tab</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/4cec533e0a874e6e48873088f79aca34">
+								<span class="ui teal tiny label tag right floated">Testosterone Cypionate</span>
+								Testosterone Cypionate-200mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/4cec533e0a874e6e48873088f79aca34">
+											<img src="/item-image/4cec533e0a874e6e48873088f79aca34?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/4cec533e0a874e6e48873088f79aca34">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Cypionate-200mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/4ee3b67207d44bb37869a34481d06c07">
+								<span class="ui teal tiny label tag right floated">Sustanon</span>
+								Sustanon 500-500mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/4ee3b67207d44bb37869a34481d06c07">
+											<img src="/item-image/4ee3b67207d44bb37869a34481d06c07?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/4ee3b67207d44bb37869a34481d06c07">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">69 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sustanon 500-500mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/5221f30d2ef24ba97ce059184a5c6899">
+								<span class="ui teal tiny label tag right floated">Testosterone Propionate</span>
+								Testosterone Propionate 100mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/5221f30d2ef24ba97ce059184a5c6899">
+											<img src="/item-image/5221f30d2ef24ba97ce059184a5c6899?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/5221f30d2ef24ba97ce059184a5c6899">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">48 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Propionate 100mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/5aef6dd8a01a468e6c981c64c511ab79">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Drostanolone Masteron Propionate 100mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/5aef6dd8a01a468e6c981c64c511ab79">
+											<img src="/item-image/5aef6dd8a01a468e6c981c64c511ab79?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/5aef6dd8a01a468e6c981c64c511ab79">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">65 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Drostanolone Masteron Propionate 100mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/5b70ad8e3ce6412a6092b81fa115782c">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Testosterone Base-50mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/5b70ad8e3ce6412a6092b81fa115782c">
+											<img src="/item-image/5b70ad8e3ce6412a6092b81fa115782c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/5b70ad8e3ce6412a6092b81fa115782c">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Base-50mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/5b8a8a5b142b4f6151e165339c5f372d">
+								<span class="ui teal tiny label tag right floated">Testosterone Enanthate</span>
+								Testosterone Enanthate 250mg/ml 5amp BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/5b8a8a5b142b4f6151e165339c5f372d">
+											<img src="/item-image/5b8a8a5b142b4f6151e165339c5f372d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/5b8a8a5b142b4f6151e165339c5f372d">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">44 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Enanthate 250mg/ml 5amp BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/5fd2b55394344c87477eb566b819657b">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Nandrolone Phenylpropionate 100mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/5fd2b55394344c87477eb566b819657b">
+											<img src="/item-image/5fd2b55394344c87477eb566b819657b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/5fd2b55394344c87477eb566b819657b">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Nandrolone Phenylpropionate 100mg/ml 10amp IONS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/6d47af9957d246184f640dcb39420174">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Masteron Enanthate-200mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/6d47af9957d246184f640dcb39420174">
+											<img src="/item-image/6d47af9957d246184f640dcb39420174?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/6d47af9957d246184f640dcb39420174">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">62 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Masteron Enanthate-200mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/723c0e6cc41e443850a6a2c150f7079c">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Test E 250mg / Deca 200mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/723c0e6cc41e443850a6a2c150f7079c">
+											<img src="/item-image/723c0e6cc41e443850a6a2c150f7079c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/723c0e6cc41e443850a6a2c150f7079c">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">71 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Test E 250mg / Deca 200mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/77b83b35b7e249267dd907e6d610d336">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>4.75</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Cashout Methods</span>
+								Carding Cashout Methods. Mega Pack All In One
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/77b83b35b7e249267dd907e6d610d336">
+											<img src="/item-image/77b83b35b7e249267dd907e6d610d336?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/77b83b35b7e249267dd907e6d610d336">
+										<div class="ui dark-green basic tiny button fluid left aligned">cc mega pack</div>
+										<div class="ui basic left pointing label price">6 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Everything about carding. Must have. For beginners and pros.
+Be a pro carder. Mega Pack Everything you must have and more.</p>
+
+
+CARDING PAYMENT PROCESSORS: PAYPAL, SKRILL, STRIPE,..
+CARDING WITH CC ONLINE - VARIOUS METHOD
+CARDING OFFLINE WITH PHYSICAL ITEMS
+10 HQ CARDING METHOD - 1K / DAY
+5 VIDEOS TO BECOME A PRO CARDERS - CARDING CC INFRONT OF YOU
+CARDING OPSEC. HOW TO BE SAFE DOING FRAUD
+CARDING WEBSITES. WHERE TO DO CARDING
+NEARLY 10000 DARKNET BONUS ITEMS, TUTORIALS, SOFTWARES,..
+
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/7b5df688b8ff4a10798a3291affee106">
+								<span class="ui teal tiny label tag right floated">Danabol</span>
+								Methandienone-10mg/tab 100tabs IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/7b5df688b8ff4a10798a3291affee106">
+											<img src="/item-image/7b5df688b8ff4a10798a3291affee106?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/7b5df688b8ff4a10798a3291affee106">
+										<div class="ui dark-green basic tiny button fluid left aligned">europe priority mail</div>
+										<div class="ui basic left pointing label price">43 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methandienone-10mg/tab 100tabs IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/82235cfd2fa940bb5869f05abe2af12d">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Tamoxifen-20mg/tab 20 tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/82235cfd2fa940bb5869f05abe2af12d">
+											<img src="/item-image/82235cfd2fa940bb5869f05abe2af12d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/82235cfd2fa940bb5869f05abe2af12d">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">33 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tamoxifen-20mg/tab 20 tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/8292bbad5bb6474e5e4ffc04c94b705f">
+								<span class="ui teal tiny label tag right floated">Trenbolone</span>
+								Trenbolone Acetate 100mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/8292bbad5bb6474e5e4ffc04c94b705f">
+											<img src="/item-image/8292bbad5bb6474e5e4ffc04c94b705f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/8292bbad5bb6474e5e4ffc04c94b705f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">73 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trenbolone Acetate 100mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/8628ffb9bae34e0a54e206d7779c4b3f">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								T4-50mcg/tab 20tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/8628ffb9bae34e0a54e206d7779c4b3f">
+											<img src="/item-image/8628ffb9bae34e0a54e206d7779c4b3f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/8628ffb9bae34e0a54e206d7779c4b3f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">34 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>T4-50mcg/tab 20tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/90d801259e1349366ce664de824fab9f">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Drostanolone Masteron Enanthate 200mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/90d801259e1349366ce664de824fab9f">
+											<img src="/item-image/90d801259e1349366ce664de824fab9f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/90d801259e1349366ce664de824fab9f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">72 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Drostanolone Masteron Enanthate 200mg/ml 10amp IONS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/9166b4856afc4724622d035da8d4669a">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>1</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Clenbuterol</span>
+								Clenbuterol-0,04mg/tab 100tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/9166b4856afc4724622d035da8d4669a">
+											<img src="/item-image/9166b4856afc4724622d035da8d4669a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/9166b4856afc4724622d035da8d4669a">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Clenbuterol-0,04mg/tab 100tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/af645df9cdf04d426f413fca18edc362">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Test 400-400mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/af645df9cdf04d426f413fca18edc362">
+											<img src="/item-image/af645df9cdf04d426f413fca18edc362?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/af645df9cdf04d426f413fca18edc362">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">59 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Test 400-400mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/b248eb756fcf4c436ef4ea216fd191b0">
+								<span class="ui teal tiny label tag right floated">Sustanon</span>
+								Sustanon Testosterone Mix 250mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/b248eb756fcf4c436ef4ea216fd191b0">
+											<img src="/item-image/b248eb756fcf4c436ef4ea216fd191b0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/b248eb756fcf4c436ef4ea216fd191b0">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">54 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sustanon Testosterone Mix 250mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/b4b05bcf7c9342bc42a72660de62368a">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Boldenone Undecylenate 250mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/b4b05bcf7c9342bc42a72660de62368a">
+											<img src="/item-image/b4b05bcf7c9342bc42a72660de62368a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/b4b05bcf7c9342bc42a72660de62368a">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">59 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Boldenone Undecylenate 250mg/ml 10amp IONS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/c7a790a4e3a7462f4e0bd2f3803b433f">
+								<span class="ui teal tiny label tag right floated">Sustanon</span>
+								Sustanon 250-250mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/c7a790a4e3a7462f4e0bd2f3803b433f">
+											<img src="/item-image/c7a790a4e3a7462f4e0bd2f3803b433f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/c7a790a4e3a7462f4e0bd2f3803b433f">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sustanon 250-250mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/c7f45caedeaa47da6dd93a53f1d60c3a">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Clomed</span>
+								Clomid-50mg/tab 20tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/c7f45caedeaa47da6dd93a53f1d60c3a">
+											<img src="/item-image/c7f45caedeaa47da6dd93a53f1d60c3a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/c7f45caedeaa47da6dd93a53f1d60c3a">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">34 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Clomid-50mg/tab 20tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/d6b2b18c727948a662ca83cb64d1058a">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>4</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Hacking</span>
+								Your Own BitCoin Mine 1 Bitcoin per month
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/d6b2b18c727948a662ca83cb64d1058a">
+											<img src="/item-image/d6b2b18c727948a662ca83cb64d1058a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/d6b2b18c727948a662ca83cb64d1058a">
+										<div class="ui dark-green basic tiny button fluid left aligned">bitcoin mine</div>
+										<div class="ui basic left pointing label price">2 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Mining algorithm and achieve up to eight times faster speed compared to Google Chrome. Lightweight, fast, and ready to mine!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/e049dba627864b185e5d6c8cf521c47a">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Cytomel-T3-50mcg/tab  20tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/e049dba627864b185e5d6c8cf521c47a">
+											<img src="/item-image/e049dba627864b185e5d6c8cf521c47a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/e049dba627864b185e5d6c8cf521c47a">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">34 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cytomel-T3-50mcg/tab  20tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/e335168ded6149d679ee09c471e4c0f8">
+								<span class="ui teal tiny label tag right floated">Primobolan</span>
+								Primobolan Depot-100mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/e335168ded6149d679ee09c471e4c0f8">
+											<img src="/item-image/e335168ded6149d679ee09c471e4c0f8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/e335168ded6149d679ee09c471e4c0f8">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">65 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Primobolan Depot-100mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/ebe45c491f5649ba6d7583cb4a8124fb">
+								<span class="ui teal tiny label tag right floated">Testosterone Cypionate</span>
+								Testosterone Cypionate 200mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/ebe45c491f5649ba6d7583cb4a8124fb">
+											<img src="/item-image/ebe45c491f5649ba6d7583cb4a8124fb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/ebe45c491f5649ba6d7583cb4a8124fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">52 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Cypionate 200mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/f03de935383c4b486cbdefe309c400f3">
+								<span class="ui teal tiny label tag right floated">Trenbolone</span>
+								Trenbolone Base-50mg/ml 10 ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/f03de935383c4b486cbdefe309c400f3">
+											<img src="/item-image/f03de935383c4b486cbdefe309c400f3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/f03de935383c4b486cbdefe309c400f3">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trenbolone Base-50mg/ml 10 ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/f0a26cb926284f9146825afd08f468cb">
+								<span class="ui teal tiny label tag right floated">Trenbolone</span>
+								Trenbolone Enanthate 200mg/ml 10amp IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/f0a26cb926284f9146825afd08f468cb">
+											<img src="/item-image/f0a26cb926284f9146825afd08f468cb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/f0a26cb926284f9146825afd08f468cb">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">84 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trenbolone Enanthate 200mg/ml 10amp IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/b8a15814dfdb42e67a84199c60c1863e">
+								<span class="ui teal tiny label tag right floated">Anavar</span>
+								Oxandrolone 10mg/tab 60tabs BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/b8a15814dfdb42e67a84199c60c1863e">
+											<img src="/item-image/b8a15814dfdb42e67a84199c60c1863e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/b8a15814dfdb42e67a84199c60c1863e">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">62 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxandrolone 10mg/tab 60tabs BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/acbe1e1987a74b917b81d64f61b241ff">
+								<span class="ui teal tiny label tag right floated">Trenbolone</span>
+								Tri-Trenbolone-150mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/acbe1e1987a74b917b81d64f61b241ff">
+											<img src="/item-image/acbe1e1987a74b917b81d64f61b241ff?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/acbe1e1987a74b917b81d64f61b241ff">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tri-Trenbolone-150mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/10aa5805642b417f6d4b07624dde24a8">
+								<span class="ui teal tiny label tag right floated">Deca Durabolin</span>
+								Nandrolone Decanoate 250mg/ml 5amp BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/10aa5805642b417f6d4b07624dde24a8">
+											<img src="/item-image/10aa5805642b417f6d4b07624dde24a8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/10aa5805642b417f6d4b07624dde24a8">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">44 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Nandrolone Decanoate 250mg/ml 5amp BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/d0ada0f2822546ae484c21d0f1a17e6b">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Nandrolone Decanoate-250mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/d0ada0f2822546ae484c21d0f1a17e6b">
+											<img src="/item-image/d0ada0f2822546ae484c21d0f1a17e6b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/d0ada0f2822546ae484c21d0f1a17e6b">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">52 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Nandrolone Decanoate-250mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/d4a9cc9c998e4dcf738e6014397a115c">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Drostanolone Masteron Propionate 100mg/ml 5amp BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/d4a9cc9c998e4dcf738e6014397a115c">
+											<img src="/item-image/d4a9cc9c998e4dcf738e6014397a115c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/d4a9cc9c998e4dcf738e6014397a115c">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">49 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Drostanolone Propionate 100mg/ml 5amp BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/92d3b013c043461364163c17fb0c0647">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Masteron Propionate-100mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/92d3b013c043461364163c17fb0c0647">
+											<img src="/item-image/92d3b013c043461364163c17fb0c0647?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/92d3b013c043461364163c17fb0c0647">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">58 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Masteron Propionate-100mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/95970d2eb1df47c2646ca0932941d5de">
+								<span class="ui teal tiny label tag right floated">Stanozolol</span>
+								Stanazolol 10mg/tab 100tabs IONS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/95970d2eb1df47c2646ca0932941d5de">
+											<img src="/item-image/95970d2eb1df47c2646ca0932941d5de?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/95970d2eb1df47c2646ca0932941d5de">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">48 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Stanazolol 10mg/tab 100tabs IONS PHARMACY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/9c83ce3eb7c748227f65a2143a2b4d75">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Letrozole-2,5mg/tab  20tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/9c83ce3eb7c748227f65a2143a2b4d75">
+											<img src="/item-image/9c83ce3eb7c748227f65a2143a2b4d75?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/9c83ce3eb7c748227f65a2143a2b4d75">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">39 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Letrozole-2,5mg/tab  20tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Tobacco</span>
+								Tobacco cigarettes blend
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+											<img src="/item-image/885925c372494c9a671a949b358a8dcb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g priority</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g priority</div>
+										<div class="ui basic left pointing label price">25 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+										<div class="ui dark-green basic tiny button fluid left aligned">400g priority</div>
+										<div class="ui basic left pointing label price">41 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g priority</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/885925c372494c9a671a949b358a8dcb">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000g priority</div>
+										<div class="ui basic left pointing label price">96 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Very good quality tobacco for making cigarettes.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/8e8202c1cd5b41b67fadfb5ef4aad3b4">
+								<span class="ui teal tiny label tag right floated">Sustanon</span>
+								Sustanon 250mg/ml 5amp BAYER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/8e8202c1cd5b41b67fadfb5ef4aad3b4">
+											<img src="/item-image/8e8202c1cd5b41b67fadfb5ef4aad3b4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/8e8202c1cd5b41b67fadfb5ef4aad3b4">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sustanon 250mg/ml 5amp BAYER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/05fb26edab42402172097df60f15e33a">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								SuperDrol-10mg/tab 100 tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/05fb26edab42402172097df60f15e33a">
+											<img src="/item-image/05fb26edab42402172097df60f15e33a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/05fb26edab42402172097df60f15e33a">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">51 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>SuperDrol-10mg/tab 100 tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/48453e18b35f4c346675d787ab3ad7dc">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Halotestin-5mg/tab 100tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/48453e18b35f4c346675d787ab3ad7dc">
+											<img src="/item-image/48453e18b35f4c346675d787ab3ad7dc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/48453e18b35f4c346675d787ab3ad7dc">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">90 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Halotestin-5mg/tab 100tabs</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/f9ff8e3c67484815499686cf5ffc4228">
+								<span class="ui teal tiny label tag right floated">Stanozolol</span>
+								Stanozolol Depot-50mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/f9ff8e3c67484815499686cf5ffc4228">
+											<img src="/item-image/f9ff8e3c67484815499686cf5ffc4228?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/f9ff8e3c67484815499686cf5ffc4228">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority</div>
+										<div class="ui basic left pointing label price">51 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Stanozolol Depot-50mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/va_porion/item/02f68ce47ea340075597add9d438ff31">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Test P 50mg / Tren A 50mg/ml 10ml vial
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/va_porion/item/02f68ce47ea340075597add9d438ff31">
+											<img src="/item-image/02f68ce47ea340075597add9d438ff31?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/va_porion/item/02f68ce47ea340075597add9d438ff31">
+										<div class="ui dark-green basic tiny button fluid left aligned">priority mail</div>
+										<div class="ui basic left pointing label price">70 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Test P 50mg / Tren A 50mg/ml 10ml vial</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 307 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

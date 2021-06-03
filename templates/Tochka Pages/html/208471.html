@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a class="item header-logo header" href="/">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg version="1.1" width="25" height="29" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a href="/settings/user" class="item">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a href="/referrals" class="item">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input name="csrf_token" value="" type="hidden" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a class="ui button fluid green tiny" href="/app/download">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a class="item" href="/feed">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a href="/settings/language/de" class="item fluid">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a class="item fluid" href="/settings/language/en">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a href="/settings/language/es" class="item fluid">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a class="item fluid" href="/settings/language/tr">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/shroom09?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@shroom09</h2>
+								<p>online</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 1 day ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/shroom09">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item active" href="/store/shroom09">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/shroom09/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">5</span>
+									</a>
+									<a class="item" href="/store/shroom09/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">2</span>
+									</a>
+									<a class="item" href="/store/shroom09/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui grid divided top-aligned">
+							<div class="twelve wide column">
+								<div class="ui form segment contacts">
+									<h3 class="ui dividing header">Contact Information</h3>
+									<div class="field">
+										<label>PGP</label>
+										<pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xsFNBFyDpr4BEAC4WvHw4sXsxMz6pVO0CtY4oKKt2W5/zVBCPMQREerkDQbWN0Jk
+LJijVDICM6VHHDMfOssYQfMbu1L5lSWnX5RriS1&#43;C8jBJ7yj61hVvMFuzioXveO4
+0lE6cPL8ZGYZTvMSXFFc7Z&#43;4cOBiGLp9tJPWbu2sJc/1UvDCQoOcbQNQaDdTxKQx
+7PN3PfOcIvB1j74zRdu&#43;qsEmg3bFlWJFpsDCUE/Ibnu9vChfHcVOhSNB/iWq9efm
+cD0NlkgVRMRvWTgxrlQN1lJs0JwaEXoPSi41qPq3N3oaSrqL4PeRmLGV2xkjSrTx
+sK&#43;Aopn/TWcafK0VVG17rH8tGbc8wOFmqCsQNuzUwzJnOqPozo7&#43;7fdg&#43;IgdqiTE
+KlZPl1a5xdDkFMhcDF3P2reqya5gpSO8YI&#43;X0rPMTVT/2T&#43;/CzcQALIQkLssusrC
+yG7c51RQ4xqfOKTx7vPvzSnSw5xThVDSzKitytsYDasHrYt5ecLg3U0nKcJp&#43;RtD
+75PZJE16IrBJy1JcCAamW8aZqld4v6KfUhjR1maVNvlGd4Ed4wT6AxBIKnGyyBqo
+zsJVF3&#43;f57yIJLrYAat6d77ICNMs6p6h4d6A3&#43;vzMjIq06aiwtxw6CjbtCQntTD3
+tuENlNSRPjDfS8UqR/mZnSh7EreHBtGjEUZiOm8CT2ngVUR0DmeOU/k2kwARAQAB
+zQ1ub3BlQG5vcGUuY29twsFwBBMBCgAaBQJcg6a&#43;AhsvAwsJBwMVCggCHgECF4AC
+GQEACgkQXmUhrLBpXohgLw//bTG3YzF3Mr&#43;9xtfoKyEtbRd8MjndtXkUBVgmkr6e
+zd3dblTywizDU7dXgCA6dB2U2YuaSdTA/&#43;HV2vY94svNxwBT2VI6DMIGm&#43;Rv24LK
+PAxor06NLU175/kLHH/yFxbl5qP4&#43;syzeR2PGwIjisbFTaG84&#43;p&#43;5ClwMgdK8sGA
+EFVmnELLoO4FgiQmaPsKtNimp&#43;VxQX1o2iAxWiEyF6qGW04sMYkX6goFyD9aKnVF
+Ve8Bas&#43;pTpbcUmSYyWwy8Cbxo5Wk8opkYc7nTZvEwRjVfUxGNaCZ/sBR4Eh8TO7T
+SyXUAwjsCjX5xjDmSEAjA27dCd7MXkDZlNHQiD2Xy&#43;h&#43;UaGyTmR3unDUzfDmPG/E
+ledVCUlFJpE50tf6weC58Bq&#43;lhJb8EZdr7QsEHVwmXct4PEbBTZSM5N/GxcD0Y4v
+LNj0zG47b2WPLCp3iFHar9ytM3c4GTA5ZViNf8SyklEPDbPodvSi7J&#43;hCtQ6uhho
+5rA4CbH0DNTxxHZnWqTAX2P0/C33PCMIySku9AE/LBiqAqUcMmCb&#43;qRA/nTiTZ9l
+mjQIGFbp&#43;bCg0kr5N3VmMOTBNGfbrI0EsN8Vu1pxh5JSYooXZfEE0y3gpJGeYPIS
+H9pNJq6k6cPINzE4wIJ5PldnXWloA2yyTWI3R2Ot41qlE4/MHKf/yggrX6lw7CIK
+HcbOwE0EXIOmvgEIAMBHL9jhzLv/uFJ83G&#43;2kasbrzFZK0q7HrcBqLPOrwNp&#43;3Q1
+GK9aQg1r98N0hI21drYvOp6op0O&#43;tlmpXh3Ic2L0WdZ5b8HjVSUA3T7Gm1kd8LQE
+rzFygWp29I5EcHGFen84LkQjhvtHXRSjSmfIA7jCnlkAGPbKVm0JjSHWJ2hunAyE
+mq4HmmgzC08eRecZMWvPAfgT/n&#43;dSDQZrUtNMARgmuEsL4aRfRjynfDhj43djd3X
+hSAu/bW/yWrK3Pz4c/0POqfnl4Wuc8ocu6Qi220ORWmoqN7ZhYVTy4TeuvZcoWD3
+1I8tvMGRCkHQaLx2Q0RjDq/5BY4hqbvNcgEvajsAEQEAAcLChAQYAQoADwUCXIOm
+vgUJDwmcAAIbLgEpCRBeZSGssGleiMBdIAQZAQoABgUCXIOmvgAKCRAhc0KpOwf5
+AeOpCACD2Zi7qQptcWcO/5aEEwAxC6mmgw8t4M//cBzWZzEe8ZRzhTLKiFSuvRVr
+2/w4hlO9ZDRAIV4ejVG0fM4HYYt8D3JjKOlKK8igBTNfwyMytBOZZoX7Fw9xef04
+8EtgXxO15Wpgs9nyw&#43;iYU6dlQW/TvXKdGYcW5QyZp6afl8H4BCcyFDvYTcwk4ycb
+2hP8EMOGGfI&#43;tR4qAkWMWqZ&#43;NQ5dSIUeqIU/yseqPv3vOX7hSWeEYuMETiWY3QLz
+2GhjRkBMW0PKCvnXXk0DWxh9dzlLh21jj0KlQU8ImP7w5uIUcM0HbW1JMwFzOMFR
+SjGZZ&#43;g2OWcUjADFHahi160IoBuuegUP/i2c9rW39EhnoqmD2sSfBpiycXYENj5T
+clckhm5fdIkqPxbkMfdBdwa1Ha3qFQWbysBbiRhd25URL2YmxrX8B&#43;ZGZL5QLhB7
+gRTIyHwDbyT8z00XhsRezpAkTR5YC8JBnwXJzDPyBrAGLaIZ1ViSGaflThEYxb4n
+Er8uR1FFEftVFLY8bUT/nztiIITszvPNuqq7p4LmMgueT5N2AXfr3f310hXmB6sa
+nMjXuNornSZnNEZWk2QweiiOgGKdNwKdlwqAFVcXpiFU&#43;7Nh0aqTbX8STVh5GLJ4
+XK2T&#43;muEBqheTBzNOokefQJhYjnlp6obx4645fak6nLl4o2fHcPDg9uJXpQpTL02
+FCCj/eHdyol4nIdsOMUIqADNiX8MKrZFg4Et2b/PhKw5az9qJ2ZfV6b5QUwT6tV8
+2p&#43;8LQnNWjdwbqKj8KE4ItrsuZGzpA3fsO9N3/5ZwHpjmpfJ1GjK/svpRxIZhOnN
+Z&#43;pBD/9Jj1HUjRM44NSxqr70t5YJt08FoPakK/WjjKYHmxDBjDwcjNxBHMcbOVg2
+09Cm9zI83&#43;AKtvmLmfwx03lhohpTzG9PRWCfVxgofpLANXq9YeBVTmjcZ3SQ4y9r
+vnXYPLurM4AVXzLP5/lhhER6O&#43;Tc&#43;T6XBihG3q4s/OVYhob8w7VE5bQD/IaR13lX
+Y&#43;/ip9zQD62TzsBNBFyDpr4BCAC8/Uk9Wmq6TPIujnlgLVEHUs1fUotw0d46ZFha
+QyTqA6nHg/lkGfEXpQzh8fpC1ekVQ7ByFE9fRcZp90dM9mEcGugxqLYsKALKdYs7
+xIv/7h5fJNwCbhCqf&#43;IQ&#43;egu27/XkejM7a/imssENnC&#43;2NbVZtLWz1ITon3TAEDA
+26iqTZYftapxc9zlxRwGl0vBMGpbaQPBhtQlNTJFGSWerhUd29l64YC50QeLY7wL
+V9FeCTf1TRCmTHCudine5Ol28kgUpZfXaTxe&#43;oSrb7v&#43;xVRsbYrx5EX&#43;ZBnfyvia
+EhF0lODpOO9twSZfzngFT&#43;/Vhu4vfzr9Juafs4Tu&#43;a4yKRglABEBAAHCwoQEGAEK
+AA8FAlyDpr4FCQ8JnAACGy4BKQkQXmUhrLBpXojAXSAEGQEKAAYFAlyDpr4ACgkQ
+TTvVTpGZdToRXAf/UXbdL6xnErEFYZ0IEoIXquKoZhm5YJ6Vb6C5ucgC/9xotun7
+XCUZsGLg3d1lPyjFCma7nX/XTlP8ce3e&#43;NnXQcbf9wtFwz5oAi3BMjKSSu8iOktH
+PeQtGj2UA7EVZLHFTN&#43;/QBrhpkl1KwX155d6ZeHmpMyft3ZQxVsYjt0ekUVWYZMt
+7Iv&#43;aiTrF67qwI8kUSd2q&#43;rcYkLa&#43;YvSrnw9P8otNcLGVfNT2rWD7/QYM6iZUm1M
+6wndOzX6VmkQtWIoI8FghMgjeJv7vXRYbJUiHYrJD2R3fBjjbwm4ZVjyDfsXzm8T
+2QL/XMw2&#43;KRmYgfbyjO1aFyTmIKKMA0p7wB5VGwSD/99d3gJ8FVZBPBDlBPjmdD5
+o2IhJBzk26l/MTkpilkTU&#43;x&#43;2rDymlB&#43;ZP/TuOCz7VAM19P1vcRdvnYMV9SV1K1e
+aSdJeJYBBcU&#43;xwvEeTTa/K03WGdNwVp58zKGz4ZNpiiX80qoaIAE2evjZA8zsdIA
+HF14lZJFHJ113YSXQiD/FLkTpmf/jHhmoKjZElkOQni08ILwb8VVTm6&#43;4qIMadx1
+FP&#43;HnY1zmjaLTM&#43;okur4hTD2TPQ554mwCk05m6tS7FhePbqtHQ188rMBteO0lcXF
+NWqf1xldqc8JHOniOOA55Js5F04liTnq&#43;y9lQMCDpsHZiBJfPZwu/CNhQOK&#43;Flgs
+VbbZPmgwPFv3K8UsqFo671ToLNLuu3AT8j67SC38hEQ4IHNXgD0WHfji8MyoHcAF
+gzhJCrJsRxCsu69GxIjuuDz27hLcGujB7AU9G2QqFwRd78GMclN3bqRDfsf30Vde
+diPwS1CUjUvVlHHM&#43;yxl29hU/1Y0n&#43;A8Nykwc7Nm6nYZl1vj7z2fR/mRZVB&#43;xHbQ
+f6kGnfal94Y2maxTzN5I3MBVbxjFVgrfor/WxTcce6KxeCit7BSbWnq6xRnn1kXQ
+Su6EdSxE2O1Jd/a5i9B5nihCpLaK8af5LbOQ2ydn0n6LL1i4B5A3/vIp1yKsXlu&#43;
+wQclk6d/wCvt/dDWamoeIQ==
+=ZuZt
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+									</div>
+								</div>
+							</div>
+							<div class="four wide column t-left-menu-items">
+								<div class="ui fluid menu vertical secondary">
+									<a class="item" href="?section=info">About</a>
+									<a class="item active" href="?section=contacts">Contact Information</a>
+									<a href="?section=vendor_statistics" class="item">Statistics</a>
+									<a class="item" href="?section=staff">Staff</a>
+									<a class="item" href="?section=agreement">Agreement</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 498 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

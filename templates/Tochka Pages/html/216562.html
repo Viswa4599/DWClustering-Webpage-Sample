@@ -1,0 +1,4112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/runtz?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@runtz</h2>
+								<p>DISCRETE AND DISCOUNT OFFERS GET STOCKED NOW</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 6 months ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 11 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/runtz">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/runtz">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/runtz/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">4</span>
+									</a>
+									<a class="item active" href="/store/runtz/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">103</span>
+									</a>
+									<a class="item" href="/store/runtz/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/291fb1bf968045ee4553e4affdbc98e9">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								PRE-ROLL CONES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/291fb1bf968045ee4553e4affdbc98e9">
+											<img src="/item-image/291fb1bf968045ee4553e4affdbc98e9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/291fb1bf968045ee4553e4affdbc98e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/291fb1bf968045ee4553e4affdbc98e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">quater pound</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>blunt and a joint, utilizing joint-like paper, but mixing in tobacco-like effects. … Consider District 8’s natural, luxury cannabis and hand-crafted, pre-rolled blunts</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/29e704c934da4c1f526269ed1016284e">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								MDMA CRYSTALS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/29e704c934da4c1f526269ed1016284e">
+											<img src="/item-image/29e704c934da4c1f526269ed1016284e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/29e704c934da4c1f526269ed1016284e">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/29e704c934da4c1f526269ed1016284e">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/29e704c934da4c1f526269ed1016284e">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 grams</div>
+										<div class="ui basic left pointing label price">2700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/29e704c934da4c1f526269ed1016284e">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Molly is sold as loose powder that comes in a bag or a gel capsule. You lick it off your fingertip. Ecstasy and molly both are derived from MDMA rock crystals that have been crushed into powder
+WE GOT DECEMBER STOCKS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/3c7851a06348470a56b59784a078896b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GG#4
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/3c7851a06348470a56b59784a078896b">
+											<img src="/item-image/3c7851a06348470a56b59784a078896b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3c7851a06348470a56b59784a078896b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3c7851a06348470a56b59784a078896b">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound </div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>most definitely a heavy hitting strain, so users should expect a few side effects even if they are accustomed to smoking regularly. Many note a</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/42a17ef9fd3d450f426d0cd7a3436897">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								OXYCODONE 5MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/42a17ef9fd3d450f426d0cd7a3436897">
+											<img src="/item-image/42a17ef9fd3d450f426d0cd7a3436897?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/42a17ef9fd3d450f426d0cd7a3436897">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 pills</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/42a17ef9fd3d450f426d0cd7a3436897">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">6500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>manage moderate-to-severe pain by releasing medication over a 12 to 24-hour period. … The Committee indicated that the lower- strength 5mg tablet should be priced proportionately</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/ae2bb0a8e1cf479a4d6cc95e4ac2dba5">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								PREMIUM CANNABIS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/ae2bb0a8e1cf479a4d6cc95e4ac2dba5">
+											<img src="/item-image/ae2bb0a8e1cf479a4d6cc95e4ac2dba5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/ae2bb0a8e1cf479a4d6cc95e4ac2dba5">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>hybrid (70% indica/30% sativa) strain created by breeders at the infamous Serious Seeds farms as potent cross between the popular Strawberry Bubblegum X
+WE GOT STOCKS AT RUNTZ TO TAKE  YOU THE WHOLE CHRISTMAS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								CAN GELATO 33 41 45 ALL READY FOR SHIPMENT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+											<img src="/item-image/b50dcbf93f1b4c0073386cc6c2ca3322?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 can</div>
+										<div class="ui basic left pointing label price">20 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b50dcbf93f1b4c0073386cc6c2ca3322">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>perfectly everything got packed and everything is stainless steal.
+cali weed is all we know we want the best to come out of cali so feel the party for gelato flavors
+*gelato 33 about 28.23%THC
+*gelato 44 about 27.44%THC
+*gelato 45 about25.29 %THC</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/05adc2d4f67640666d5a756d0a2eae57">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								ORANGE TREE AND LEMON TREE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/05adc2d4f67640666d5a756d0a2eae57">
+											<img src="/item-image/05adc2d4f67640666d5a756d0a2eae57?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/05adc2d4f67640666d5a756d0a2eae57">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/05adc2d4f67640666d5a756d0a2eae57">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/05adc2d4f67640666d5a756d0a2eae57">
+										<div class="ui dark-green basic tiny button fluid left aligned">2.2 pound</div>
+										<div class="ui basic left pointing label price">2600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/05adc2d4f67640666d5a756d0a2eae57">
+										<div class="ui dark-green basic tiny button fluid left aligned">3 pound</div>
+										<div class="ui basic left pointing label price">3600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Orange Bud and OG Kush. It eases the body into relaxation while lifting moods with a sweet and tangy citrus flavor. This strain is resistant to most pests and mold and has long, dense buds with many orange hairs and trichome crystals.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/85323bc711004483560593694102326d">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								CALI BUD WE GROW WITH THE CLIMATE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/85323bc711004483560593694102326d">
+											<img src="/item-image/85323bc711004483560593694102326d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/85323bc711004483560593694102326d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/85323bc711004483560593694102326d">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">2400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Toast Gold pre-rolls just debuted in the California market. … ready to smoke joints—ground up bud twisted in a rolling paper—one of the mos</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/0ac5dc8a1664456a7f39f77d209c2649">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GELATO 45 FROM THE WHITE EXTRACT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/0ac5dc8a1664456a7f39f77d209c2649">
+											<img src="/item-image/0ac5dc8a1664456a7f39f77d209c2649?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0ac5dc8a1664456a7f39f77d209c2649">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound can weed</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0ac5dc8a1664456a7f39f77d209c2649">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound can weed</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0ac5dc8a1664456a7f39f77d209c2649">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg can weed</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>ORDERPROCESS:</p>
+
+<p>VACUUM
+REAL cali indoor grown strain gelato 45 which contains about 29.2% THC level and 4.5%THC clean and good to smoke still fresh just from harvest
+ANTISCAN BAG</p>
+
+<p>CLEANING WITH ANTI SMELL</p>
+
+<p>SPRAYING WITH ANTI DOG SMELL</p>
+
+<p>HIGH QUALITY STEALTH</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/3ac12e711789464246d6a6660806ea8f">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								100 GRAMS OF MDMA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/3ac12e711789464246d6a6660806ea8f">
+											<img src="/item-image/3ac12e711789464246d6a6660806ea8f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3ac12e711789464246d6a6660806ea8f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3ac12e711789464246d6a6660806ea8f">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 grams</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3ac12e711789464246d6a6660806ea8f">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3ac12e711789464246d6a6660806ea8f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Again, be sure that you are receiving pure MDMA, not mixed with other drugs or stimulants like caffeine. ‘Molly’ is another term for pure MDMA, distinguished from ‘Ecstasy</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/fb9f48cd33874e0358541964e478bccc">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GOLDEN BANANA,BLUE ZKITTLES,SHERBET,GUSHERS ,SYNERGY TOP QUALITY PACKS READY 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/fb9f48cd33874e0358541964e478bccc">
+											<img src="/item-image/fb9f48cd33874e0358541964e478bccc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/fb9f48cd33874e0358541964e478bccc">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/fb9f48cd33874e0358541964e478bccc">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The terpene is mostly Limonene with rich noes of fuel and grape. Paired with super dense trichome heads, this will make for a premium extract. Ideal for daytime and evening usage.
+ stress-relieving, to say the least, bringing a mood as delicious as its flavour.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/fe1e0009c57f4fd66c904e03958123c6">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								STONED GOBLIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/fe1e0009c57f4fd66c904e03958123c6">
+											<img src="/item-image/fe1e0009c57f4fd66c904e03958123c6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/fe1e0009c57f4fd66c904e03958123c6">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Close up STONED GOBLIN : Orango Bud CBD 27,40% . … Our upcoming products OG kush, Pinapple Pie, Blue Rhino and Orango Bud #stonedgoblin</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/09603d596a1c49a67a5523328aa0e560">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								QUALITY KETAMINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/09603d596a1c49a67a5523328aa0e560">
+											<img src="/item-image/09603d596a1c49a67a5523328aa0e560?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/09603d596a1c49a67a5523328aa0e560">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/09603d596a1c49a67a5523328aa0e560">
+										<div class="ui dark-green basic tiny button fluid left aligned">70 grams</div>
+										<div class="ui basic left pointing label price">2800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/09603d596a1c49a67a5523328aa0e560">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">4000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>. It induces a trance-like state while providing pain relief, sedation, and memory loss. Other uses include for chronic pain and for sedation in intensive care.
+WE GOT DECEMBER STOCKS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/0d898d21bd094c4a6b8b5e14cd2da6fb">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								OG KUSH 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/0d898d21bd094c4a6b8b5e14cd2da6fb">
+											<img src="/item-image/0d898d21bd094c4a6b8b5e14cd2da6fb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0d898d21bd094c4a6b8b5e14cd2da6fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>OG Kush as an indica, many people argue that the strain is in fact a sativa, or some sort of sativa-dominant hybrid. We can’t exactly argue with them considering the genetics are, for the most part unknown, and stem from purely myth</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/0f879f70a766482f5829c725b0522c2e">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								PREMIUM CARTRIDGE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/0f879f70a766482f5829c725b0522c2e">
+											<img src="/item-image/0f879f70a766482f5829c725b0522c2e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0f879f70a766482f5829c725b0522c2e">
+										<div class="ui dark-green basic tiny button fluid left aligned">20carts</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0f879f70a766482f5829c725b0522c2e">
+										<div class="ui dark-green basic tiny button fluid left aligned">30carts</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cartridge manufacturers - Select 2018 high quality Premium Toner Cartridge products in best price from certified</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/d9ffeaf2bc204212615fac5a0142a071">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								DO SI DOS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/d9ffeaf2bc204212615fac5a0142a071">
+											<img src="/item-image/d9ffeaf2bc204212615fac5a0142a071?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d9ffeaf2bc204212615fac5a0142a071">
+										<div class="ui dark-green basic tiny button fluid left aligned">80 grams</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d9ffeaf2bc204212615fac5a0142a071">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 grams</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>One of the first steps of making hash is extracting kief, as hash is basically just kief that has been heated and pressurized to form a soft, green ball
+Its aroma is pungent, sweet, and earthy with slight floral funkiness
+WE GOT STOCKS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/266f80e8ac5d49f772f13078fc301e80">
+								<span class="ui teal tiny label tag right floated">Valium</span>
+								VALIUMS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/266f80e8ac5d49f772f13078fc301e80">
+											<img src="/item-image/266f80e8ac5d49f772f13078fc301e80?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/266f80e8ac5d49f772f13078fc301e80">
+										<div class="ui dark-green basic tiny button fluid left aligned">10mg valium  200 pills</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/266f80e8ac5d49f772f13078fc301e80">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 mg valium 300 pills</div>
+										<div class="ui basic left pointing label price">1750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Valium calms the central nervous system by binding with brain receptors that respond to a neurotransmitter called GABA. At therapeutic doses, Valium can make you feel more relaxed, less stressed and more capable of coping with the demands of life.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/2701463dd88a47dc4d5e45bc9c873222">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								XXX OG CAN WEED READY FOR SHIPPING
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/2701463dd88a47dc4d5e45bc9c873222">
+											<img src="/item-image/2701463dd88a47dc4d5e45bc9c873222?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/2701463dd88a47dc4d5e45bc9c873222">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/2701463dd88a47dc4d5e45bc9c873222">
+										<div class="ui dark-green basic tiny button fluid left aligned">354grams</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/2701463dd88a47dc4d5e45bc9c873222">
+										<div class="ui dark-green basic tiny button fluid left aligned">700 grams</div>
+										<div class="ui basic left pointing label price">3200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The influence of OG Kush in this strain’s aroma, which is more earthy than fruity. Notes of damp earth and pine predominate. Some sharp citrus tang hangs out underneath, brightening up this dank profile. When combusted, this strain gives off a surprisingly smooth smoke for an indica. On the exhale, it leaves a cloyingly sweet and slightly peppery taste that lingers on the palate.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/31e40bb93fd643c56460b9c9f6283a1d">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								PURE COCAINE 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/31e40bb93fd643c56460b9c9f6283a1d">
+											<img src="/item-image/31e40bb93fd643c56460b9c9f6283a1d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/31e40bb93fd643c56460b9c9f6283a1d">
+										<div class="ui dark-green basic tiny button fluid left aligned">30grams</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>inhaled as smoke, or dissolved and injected into a vein. Mental effects may include loss of contact with reality, an intense feeling of happiness, or agitation</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/380c26a6a2fa4b1e5bdda9e86292739b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								LIBERTY REACH 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/380c26a6a2fa4b1e5bdda9e86292739b">
+											<img src="/item-image/380c26a6a2fa4b1e5bdda9e86292739b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/380c26a6a2fa4b1e5bdda9e86292739b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/380c26a6a2fa4b1e5bdda9e86292739b">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/380c26a6a2fa4b1e5bdda9e86292739b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This one of a kind indica-dominant hybrid delivers a nice euphoric cerebral high, as well as the “indica-lover”’s relaxed body high.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/0fb993cb64ad4009700ef7d11def0b9e">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								NON RECRYSTALLIZED MDMA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/0fb993cb64ad4009700ef7d11def0b9e">
+											<img src="/item-image/0fb993cb64ad4009700ef7d11def0b9e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0fb993cb64ad4009700ef7d11def0b9e">
+										<div class="ui dark-green basic tiny button fluid left aligned">47 grams</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0fb993cb64ad4009700ef7d11def0b9e">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Now i have no interest in methamphetamine, but mdma is well, very …. to recrystallize finely powdered mdma hcl that i have obtained
+WE GOT KILOS AT DISCOUNT RATES</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/0fbf08c5f82e4aad563b36b9767d98f6">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								THE DANK OF ENGLAND 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/0fbf08c5f82e4aad563b36b9767d98f6">
+											<img src="/item-image/0fbf08c5f82e4aad563b36b9767d98f6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0fbf08c5f82e4aad563b36b9767d98f6">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/0fbf08c5f82e4aad563b36b9767d98f6">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">2800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>EVER SINCE I STARTED THE RUNTZ PROJECT I ALWAYS BEEN LOYAL TO THE UK CUSTOMERS THEY ASK AND IT SHALL BE GIVEN BY RUNTZ NOW WE HAVE THE DANK OF ENGLAND HOPE YOU UNDERSTAND UK CUZ CALI DOES GOT LOUD PACKS TO PICK UP BULK DISCOUNT TO CUSTOMERS BEWARE TO PAY LESS I GOT YOUR BACK</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/1e21f22e82a0412870a435aaee5b795a">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								VAPE CARTS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/1e21f22e82a0412870a435aaee5b795a">
+											<img src="/item-image/1e21f22e82a0412870a435aaee5b795a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/1e21f22e82a0412870a435aaee5b795a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 carts</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>0 – Aspire CF-VV+ …
+9 – Kanger K-Pin Mini All-in-One. …
+8 – Innokin Endura T18. …
+7 – Apollo Ohm Go. …
+6 – Eleaf iJust 2. …
+5 – Kanger Subvod. …
+4 – VaporFi Rocket. …
+3 – Joyetech eGo One.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/2efe81035d164ee1676e06c4628e80d2">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								GELATO 25 EXTRACT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/2efe81035d164ee1676e06c4628e80d2">
+											<img src="/item-image/2efe81035d164ee1676e06c4628e80d2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/2efe81035d164ee1676e06c4628e80d2">
+										<div class="ui dark-green basic tiny button fluid left aligned">95 grams</div>
+										<div class="ui basic left pointing label price">1425 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/2efe81035d164ee1676e06c4628e80d2">
+										<div class="ui dark-green basic tiny button fluid left aligned">220 grams</div>
+										<div class="ui basic left pointing label price">3150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Our Gelato crumble is a hybrid strain named for its dessert-like aroma. A blend of Sunset Sherbet and Thin Mint Girl Scout Cookies, Gelato is potent and delivers
+WE GOT STOCKS FOR DECEMBER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/3059fec512704a824555cfa25b1e70fb">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								HASH HISH 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/3059fec512704a824555cfa25b1e70fb">
+											<img src="/item-image/3059fec512704a824555cfa25b1e70fb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3059fec512704a824555cfa25b1e70fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">30grams</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3059fec512704a824555cfa25b1e70fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">50grams</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3059fec512704a824555cfa25b1e70fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hashish is a potent form of cannabis produced by collecting and compressing the most potent material from cannabis plants. Includes Hashish</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/5c8ec77736b440927142637351a52561">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								PINEAPLES HASH EXTRACT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/5c8ec77736b440927142637351a52561">
+											<img src="/item-image/5c8ec77736b440927142637351a52561?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/5c8ec77736b440927142637351a52561">
+										<div class="ui dark-green basic tiny button fluid left aligned">160 grams</div>
+										<div class="ui basic left pointing label price">2400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/5c8ec77736b440927142637351a52561">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 grams</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>An Indica dominate cross with, amazing tropical flavor. Has a slight scent of coconuts and flowers accompanied with a relaxing high</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/642e06ac89e8444f501f4f787d2a63d7">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								DIESEL CALI MADE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/642e06ac89e8444f501f4f787d2a63d7">
+											<img src="/item-image/642e06ac89e8444f501f4f787d2a63d7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/642e06ac89e8444f501f4f787d2a63d7">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 grams cali made</div>
+										<div class="ui basic left pointing label price">2550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/642e06ac89e8444f501f4f787d2a63d7">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 grams cali made</div>
+										<div class="ui basic left pointing label price">3400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>sometimes called Sour D, is an invigorating sativa-dominant strain named after its pungent, diesel-like aroma. This fast-acting strain delivers energizing, dreamy cerebral effects that have pushed Sour Diesel to its legendary status. Stress, pain, and depression fade</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/683950acd3f04bb45f4a82d8f5dbb9d7">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								COKE 90% PURE COCAINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/683950acd3f04bb45f4a82d8f5dbb9d7">
+											<img src="/item-image/683950acd3f04bb45f4a82d8f5dbb9d7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/683950acd3f04bb45f4a82d8f5dbb9d7">
+										<div class="ui dark-green basic tiny button fluid left aligned">35 grams t qty</div>
+										<div class="ui basic left pointing label price">1650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/683950acd3f04bb45f4a82d8f5dbb9d7">
+										<div class="ui dark-green basic tiny button fluid left aligned">45 grams</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/683950acd3f04bb45f4a82d8f5dbb9d7">
+										<div class="ui dark-green basic tiny button fluid left aligned">70 grams</div>
+										<div class="ui basic left pointing label price">3300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Our survey found that purity levels for street cocaine (and therefore crack) are … uniformly citing some purities regularly at anything between 70%-90%.
+DECEMBER STOCK READY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/688ee70c2b5b4b117dc858c91fbf4f1c">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								vape pen right now
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/688ee70c2b5b4b117dc858c91fbf4f1c">
+											<img src="/item-image/688ee70c2b5b4b117dc858c91fbf4f1c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/688ee70c2b5b4b117dc858c91fbf4f1c">
+										<div class="ui dark-green basic tiny button fluid left aligned">quantity: 20 heavy hitters 1g carts strains: strawnana, gorilla glue, skywalker og, blue dream, gelato, malibu og</div>
+										<div class="ui basic left pointing label price">672 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/688ee70c2b5b4b117dc858c91fbf4f1c">
+										<div class="ui dark-green basic tiny button fluid left aligned">40 vape pen</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>the same blend of cannabinoids and terpenes as you would if you smoked that strain’s flower.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/6e7a061efe28464865c869fa71f9f73d">
+								<span class="ui teal tiny label tag right floated">Counterfeit Notes</span>
+								We supplying the best counterfeits in both EU, UAE ,USA, GBP, CAD, AUD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/6e7a061efe28464865c869fa71f9f73d">
+											<img src="/item-image/6e7a061efe28464865c869fa71f9f73d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/6e7a061efe28464865c869fa71f9f73d">
+										<div class="ui dark-green basic tiny button fluid left aligned">5000</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/6e7a061efe28464865c869fa71f9f73d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10000</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We supplying the best counterfeits in both EU, UAE ,USA, GBP, CAD, AUD are Money for many countries around the globe using ingredients such as cotton fiber (80-99%) originally sourced from common white linen rag, wood fiber (1-3%), titanium white( 2-3.5% by weight of the total wood fiber )</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/882cbece1ec14c554ca93af317876634">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								PURPLE LEMON HAZE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/882cbece1ec14c554ca93af317876634">
+											<img src="/item-image/882cbece1ec14c554ca93af317876634?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/882cbece1ec14c554ca93af317876634">
+										<div class="ui dark-green basic tiny button fluid left aligned">1</div>
+										<div class="ui basic left pointing label price">5 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/882cbece1ec14c554ca93af317876634">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/882cbece1ec14c554ca93af317876634">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">2900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Purple Lemon Haze- An interesting combination of Purple Kush and Lemon Haze, per AllBud.
+ALL GOLD ALL FIRE</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/e5c54818e2cb40864bbd712b052f2baa">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								white xanax 2 mg 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/e5c54818e2cb40864bbd712b052f2baa">
+											<img src="/item-image/e5c54818e2cb40864bbd712b052f2baa?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/e5c54818e2cb40864bbd712b052f2baa">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 white bars</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/e5c54818e2cb40864bbd712b052f2baa">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000 xanax white</div>
+										<div class="ui basic left pointing label price">3900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>White, Rectangle and has been identified as Xanax 2 mg. It is supplied by Pfizer U.S. Pharmaceuticals Group. Xanax is used in the treatment of anxiety;</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/48b2525a98c04cbd73246cc454cf4204">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								PURPLE PUNCH 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/48b2525a98c04cbd73246cc454cf4204">
+											<img src="/item-image/48b2525a98c04cbd73246cc454cf4204?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/48b2525a98c04cbd73246cc454cf4204">
+										<div class="ui dark-green basic tiny button fluid left aligned">1</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>the astonishing trichome laden Purple Punch was born, smelling of grape candy, blueberry muffins, and tart Kool-Aid. … Purple Punch is a delicious dessert</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/4996eb616dc14d4c64f59f088e32f6c3">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								BLUES 30MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/4996eb616dc14d4c64f59f088e32f6c3">
+											<img src="/item-image/4996eb616dc14d4c64f59f088e32f6c3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/4996eb616dc14d4c64f59f088e32f6c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 m30</div>
+										<div class="ui basic left pointing label price">375 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/4996eb616dc14d4c64f59f088e32f6c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 blues 30mg</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/4996eb616dc14d4c64f59f088e32f6c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 roxies 30mg</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxycodone is used in the treatment of chronic pain; pain and belongs to the drug class narcotic analgesics.
+Pill with imprint 30 M is Blue, Round and has been identified as Oxycodone</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/5030c9b5023c483a6629cfd1a45ac5e5">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								HASH
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/5030c9b5023c483a6629cfd1a45ac5e5">
+											<img src="/item-image/5030c9b5023c483a6629cfd1a45ac5e5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/5030c9b5023c483a6629cfd1a45ac5e5">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 grams</div>
+										<div class="ui basic left pointing label price">2700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Yes hash is stronger as it is a concentrated form. 5 to 10 times stronger in terms of THC. … Hash is essentially weed without the leaf matter, which is in itself not psychoactive, so hash is stronger</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/f549164df49c439d5a87e590644e4e54">
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								PINK REDBULLS 200-250MG MDMA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/f549164df49c439d5a87e590644e4e54">
+											<img src="/item-image/f549164df49c439d5a87e590644e4e54?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f549164df49c439d5a87e590644e4e54">
+										<div class="ui dark-green basic tiny button fluid left aligned">25pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f549164df49c439d5a87e590644e4e54">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pill</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f549164df49c439d5a87e590644e4e54">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>around 150MG, but new pills popping up have tested upwards of 250MG. … But in the 80s and 90s, people certainly weren’t bucking pills out with 200mg. ….. The Humans and just herd 300mg super strong Red Bulls are in town !!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/50365f39fdcd440a46a65bec1f66ddb1">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								moonrock
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/50365f39fdcd440a46a65bec1f66ddb1">
+											<img src="/item-image/50365f39fdcd440a46a65bec1f66ddb1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/50365f39fdcd440a46a65bec1f66ddb1">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 vape</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>. With these vape pens, you’ll be able to avoid the hassle and get high wherever you like</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/50fea77fcdf5443f59d388566526bcca">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GROWING PPASSION LEMONNADE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/50fea77fcdf5443f59d388566526bcca">
+											<img src="/item-image/50fea77fcdf5443f59d388566526bcca?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/50fea77fcdf5443f59d388566526bcca">
+										<div class="ui dark-green basic tiny button fluid left aligned">2pounds</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/50fea77fcdf5443f59d388566526bcca">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>THIS IS A TOP GAS STRAIN USE IN INHALING ALL THE BEAUTIFUL FLAVORS YOU NEED WITH ABOUT 27.67%THC GOT ENOUGH CAN STOCKS FOR THIS STRAIN</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/540b479e646a4a7e73a442838a6c79ce">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								PREROLLS SELECTION OF PREMIUM FLOWERS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/540b479e646a4a7e73a442838a6c79ce">
+											<img src="/item-image/540b479e646a4a7e73a442838a6c79ce?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/540b479e646a4a7e73a442838a6c79ce">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/540b479e646a4a7e73a442838a6c79ce">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/540b479e646a4a7e73a442838a6c79ce">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>PREMIUM FLOWERS READY NOW IN PREROLLS
+Enjoy your favorite flavors with the Iron Tree Premium Pre-Rolls. Hand-filled with 1.6g of OG-based flower, painted with ultra-refined…</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/7285deeea3474ef668d23aa2675c7b68">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								CONCENTRATE WAX
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/7285deeea3474ef668d23aa2675c7b68">
+											<img src="/item-image/7285deeea3474ef668d23aa2675c7b68?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/7285deeea3474ef668d23aa2675c7b68">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/7285deeea3474ef668d23aa2675c7b68">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 grams</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Moxie specializes in a concentrate known colloquially as live resin. Unlike other forms of extract, which use dried and cured marijuana plants …</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/7d1298fe8bf74288745df54527c45d21">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								western union transfer
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/7d1298fe8bf74288745df54527c45d21">
+											<img src="/item-image/7d1298fe8bf74288745df54527c45d21?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/7d1298fe8bf74288745df54527c45d21">
+										<div class="ui dark-green basic tiny button fluid left aligned">5000</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>VERY FAST western Union transfers. MTCN guaranteed. MTCN available max 2hours “FROM THE TIME I ACCEPT YOUR ORDER”. You can do as much deals as possible. – we hope we will work together for a long time. for smaller transfer or Test Run – $300 for MTCN $3000 – $400 for MTCN $4000 - $500 for MTCN $5000 with the mtcn and the senders info’s you are able to pick up your money at any western union store at your location.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/7df5ea2881e145aa6dd50f08c0ecbf9b">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								30MG ADDY PURE BEAUTIES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/7df5ea2881e145aa6dd50f08c0ecbf9b">
+											<img src="/item-image/7df5ea2881e145aa6dd50f08c0ecbf9b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/7df5ea2881e145aa6dd50f08c0ecbf9b">
+										<div class="ui dark-green basic tiny button fluid left aligned">300 adderall</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>30mg addys. Pure beauties
+ treat attention deficit hyperactivity disorder (ADHD) and narcolepsy. Adderall, a brand name, is a combination of amphetamine and dextroamphetamine,</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/9a6d945eb8ce40e9502c7edf0bb3e7c0">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								VAPE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/9a6d945eb8ce40e9502c7edf0bb3e7c0">
+											<img src="/item-image/9a6d945eb8ce40e9502c7edf0bb3e7c0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/9a6d945eb8ce40e9502c7edf0bb3e7c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">20vapes each with 1.1 gram </div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/9a6d945eb8ce40e9502c7edf0bb3e7c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">40 vapes each contains 1.2 gram liquid</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/9a6d945eb8ce40e9502c7edf0bb3e7c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Vape stocks are the next big thing. The vaping market has come alive for a variety of reasons. The market is currently predicted.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/bc129a79a05a48c174ce1cc8f1eb7bf8">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								ADERALL 30MG XR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/bc129a79a05a48c174ce1cc8f1eb7bf8">
+											<img src="/item-image/bc129a79a05a48c174ce1cc8f1eb7bf8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bc129a79a05a48c174ce1cc8f1eb7bf8">
+										<div class="ui dark-green basic tiny button fluid left aligned">30pills</div>
+										<div class="ui basic left pointing label price">210 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>e, a central nervous system stimulant of the phenethylamine class. Adderall is used in the treatment of attention deficit hyperactivity disorder and narcolepsy</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/d069dc4018194778438cdcd13488ad5f">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								GOT VARIETIES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/d069dc4018194778438cdcd13488ad5f">
+											<img src="/item-image/d069dc4018194778438cdcd13488ad5f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d069dc4018194778438cdcd13488ad5f">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d069dc4018194778438cdcd13488ad5f">
+										<div class="ui dark-green basic tiny button fluid left aligned">2.2 pound geato</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d069dc4018194778438cdcd13488ad5f">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg gg#4</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>renowned for its tastes and aromas which blend the gourmet tastes of its parents Thin Mint Girl Scout Cookies and Sunset Sherbet</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/8ae0e1aecf0d41ab45563c3afd26c588">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								MDMA CRYSTALS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/8ae0e1aecf0d41ab45563c3afd26c588">
+											<img src="/item-image/8ae0e1aecf0d41ab45563c3afd26c588?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/8ae0e1aecf0d41ab45563c3afd26c588">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 ounce</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/8ae0e1aecf0d41ab45563c3afd26c588">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 ounce</div>
+										<div class="ui basic left pointing label price">5300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>slightly off-white (yellow or brown) crystals, which can be crushed into a powder. The powder can be snorted, wrapped in tissue and swallowed (bombed) or dabbed on the gums. If it’s a tablet, it’s likely to be swallowed</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/b6c04024d72349cc57ff6288a65bdccf">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								QUALITY THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/b6c04024d72349cc57ff6288a65bdccf">
+											<img src="/item-image/b6c04024d72349cc57ff6288a65bdccf?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b6c04024d72349cc57ff6288a65bdccf">
+										<div class="ui dark-green basic tiny button fluid left aligned">35 grams top quality </div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b6c04024d72349cc57ff6288a65bdccf">
+										<div class="ui dark-green basic tiny button fluid left aligned">70 grams top quality</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>extraction of cannabis or hashish. It is a concentrated form of the plant containing many of its resins and terpenes</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/b80f5fa4f2dd4a446bf1afcf402b5cae">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								TOP SHELF GELATO 45 SACK AND CAN WEEED ALL THE FLAVORS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/b80f5fa4f2dd4a446bf1afcf402b5cae">
+											<img src="/item-image/b80f5fa4f2dd4a446bf1afcf402b5cae?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b80f5fa4f2dd4a446bf1afcf402b5cae">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound sherbet</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b80f5fa4f2dd4a446bf1afcf402b5cae">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound pin cookies</div>
+										<div class="ui basic left pointing label price">1850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b80f5fa4f2dd4a446bf1afcf402b5cae">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound gelato</div>
+										<div class="ui basic left pointing label price">1900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b80f5fa4f2dd4a446bf1afcf402b5cae">
+										<div class="ui dark-green basic tiny button fluid left aligned">2pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>GET YOUR PACKAGE NOW .WE CALM THIS FAR INORDER TO PREPARE SMOKERS AND PLUGS READY TO THEIR DECEMBER BREAK CATCH FUN WITH US WE CAN SHIP TO THE WORLD NOW WE ARE PROUND WITH ALL THE VARIOUS STRAINS AVAILABLE</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/b931d61e4b384dba76b60d511c18ff96">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								BLUES 30S
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/b931d61e4b384dba76b60d511c18ff96">
+											<img src="/item-image/b931d61e4b384dba76b60d511c18ff96?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b931d61e4b384dba76b60d511c18ff96">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">740 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b931d61e4b384dba76b60d511c18ff96">
+										<div class="ui dark-green basic tiny button fluid left aligned">110 pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Each tablet for oral administration contains 5 mg, 15 mg or 30 mg of oxycodone hydrochloride USP. Oxycodone hydrochloride is a white, odorless crystalline powder derived from the opium alkaloid, thebaine.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/b9fa2ad525244f627541b8c800c6620e">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								2 MG WHITE XANAX
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/b9fa2ad525244f627541b8c800c6620e">
+											<img src="/item-image/b9fa2ad525244f627541b8c800c6620e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b9fa2ad525244f627541b8c800c6620e">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 xanax</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b9fa2ad525244f627541b8c800c6620e">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 xanax</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>imprint X ANA X 2 is White, Rectangle and has been identified as Xanax 2 mg. … Xanax is used in the treatment of anxiety; depression; panic disorder and belongs to the drug class benzodiazepines</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/112a9130805c4b5564b88ef6e940ca37">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								EXTREME CREAM #4 HYBRID CAN WEED REALY STICKY IN THE BRAIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/112a9130805c4b5564b88ef6e940ca37">
+											<img src="/item-image/112a9130805c4b5564b88ef6e940ca37?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/112a9130805c4b5564b88ef6e940ca37">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/112a9130805c4b5564b88ef6e940ca37">
+										<div class="ui dark-green basic tiny button fluid left aligned">2pound</div>
+										<div class="ui basic left pointing label price">2700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>DANKY AND STICKY WEED GROWN IN NORTHERN CALI WE GOT EVERYTHING PACKED READY FOR SHIPMENT AND DELIVERY 26.9%THC AND CBD 0.11%THC
+WE REALLY WORKED HARD TO GET THE BEST TO OUR CUSTOMER NOW WE GOT STAINLESS STEAL CAN TO DEAL WITH ALL OUR TOP SHELF STRAINS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/115ef8d0832b41ab67d8a021d38b5bad">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								VAPE CARTRIDGE CALI BUDS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/115ef8d0832b41ab67d8a021d38b5bad">
+											<img src="/item-image/115ef8d0832b41ab67d8a021d38b5bad?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/115ef8d0832b41ab67d8a021d38b5bad">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 carts</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/115ef8d0832b41ab67d8a021d38b5bad">
+										<div class="ui dark-green basic tiny button fluid left aligned">5grams premium </div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>however, are a different beast altogether. … Most vape pens and cartridges for sale in Washington use a universal cartridge size, called a 510 thread, so you can use the same pen with almost every concentrate</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/20654f3850074a826daf090634a0e190">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								OPANA ER 40MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/20654f3850074a826daf090634a0e190">
+											<img src="/item-image/20654f3850074a826daf090634a0e190?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/20654f3850074a826daf090634a0e190">
+										<div class="ui dark-green basic tiny button fluid left aligned">20pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>has a risk for abuse and addiction, which can lead to overdose and death. Oxymorphone may also cause severe, possibly fatal, breathing …bulk offers is the best you wont spend much because you are covered by discounts dont forgrt we got stocks</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/243e2b9db54e48c853a0b9c483eb4721">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								GRAMS OF PURE EUPHORIA 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/243e2b9db54e48c853a0b9c483eb4721">
+											<img src="/item-image/243e2b9db54e48c853a0b9c483eb4721?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/243e2b9db54e48c853a0b9c483eb4721">
+										<div class="ui dark-green basic tiny button fluid left aligned">39 grams </div>
+										<div class="ui basic left pointing label price">1950 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/243e2b9db54e48c853a0b9c483eb4721">
+										<div class="ui dark-green basic tiny button fluid left aligned">78 gram</div>
+										<div class="ui basic left pointing label price">3100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>strong stimulant mostly used as a recreational drug. It is commonly snorted, inhaled as smoke, or dissolved and injected into a vein. Mental effects may include loss of contact with reality, an intense feeling of happiness, or agitation</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/250951b5f13748a5729f1265c9e66b18">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								ROSIN FRUIT PUNCH EXCLUSIVE MELTS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/250951b5f13748a5729f1265c9e66b18">
+											<img src="/item-image/250951b5f13748a5729f1265c9e66b18?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/250951b5f13748a5729f1265c9e66b18">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/250951b5f13748a5729f1265c9e66b18">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>. With cannabis, this method is incredibly versatile in that it can either be used with flowers or to clean up hash and kief into a full-melt hash oil. The result is a translucent, sappy, and sometimes shatter-like product.
+WE GOT STOCKS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/32d904d69410443661e7577b2f326bda">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								CBD PROS 1500MG UNFLAVORED
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/32d904d69410443661e7577b2f326bda">
+											<img src="/item-image/32d904d69410443661e7577b2f326bda?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/32d904d69410443661e7577b2f326bda">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 bottles</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/32d904d69410443661e7577b2f326bda">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 bottles</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Full spectrum or whole plant CBD, unlike CBD isolate, contains all other cannabinoids found in the hemp plant including trace amounts of THC. Diamond CBD offers a variety of full spectrum CBD oil products for sale</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/3b117e2a2fe04aeb5fa131bd65c7d30d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								ORANGO BUD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/3b117e2a2fe04aeb5fa131bd65c7d30d">
+											<img src="/item-image/3b117e2a2fe04aeb5fa131bd65c7d30d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3b117e2a2fe04aeb5fa131bd65c7d30d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3b117e2a2fe04aeb5fa131bd65c7d30d">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Read our shipping policy for information on international shipping rates before purchasing. You may also like… Orango Bud. Pinapple Pie. OG Kush. Hey!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/3ea6e411896e4d8975a32a2fc58ad455">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								WEDDING CAKE CAN WEED 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/3ea6e411896e4d8975a32a2fc58ad455">
+											<img src="/item-image/3ea6e411896e4d8975a32a2fc58ad455?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3ea6e411896e4d8975a32a2fc58ad455">
+										<div class="ui dark-green basic tiny button fluid left aligned">353 grams</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/3ea6e411896e4d8975a32a2fc58ad455">
+										<div class="ui dark-green basic tiny button fluid left aligned">2.2 pound/lb</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Birthday Cake Kush, also known as Wedding Cake or just Birthday Cake, is an indica-dominant hybrid with strong body effects and sweet cake-like flavor. As decadent as its Girl Scout Cookies and Cherry Pie parent strains, Birthday Cake Kush buds bloom with a crystalline icing of THC-rich resin.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/41dc26f46420419d42586ac97b0a8a5d">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								SOME LOVELY MDMA CRYSTALS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/41dc26f46420419d42586ac97b0a8a5d">
+											<img src="/item-image/41dc26f46420419d42586ac97b0a8a5d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/41dc26f46420419d42586ac97b0a8a5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Again, be sure that you are receiving pure MDMA, not mixed with other drugs or stimulants like caffeine. ‘Molly’ is another term for pure MDMA, distinguished from ‘Ecstasy
+WE GOT STOCKS AT DISCOUNT RATE</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/440aa94bcd564f8272b2b1340af1f64e">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								LEMON OG 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/440aa94bcd564f8272b2b1340af1f64e">
+											<img src="/item-image/440aa94bcd564f8272b2b1340af1f64e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/440aa94bcd564f8272b2b1340af1f64e">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams cali grown</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/440aa94bcd564f8272b2b1340af1f64e">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 grams  15 per gram</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/440aa94bcd564f8272b2b1340af1f64e">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 grams 15 per g</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Lemon OG Kush, is a hybrid cannabis strain, 60⁄40 Indica. The strain has some distant Kush relatives so it can
+Super Lemon OG Concentrate by Loud Pack Extractions &amp; Greenwolf, LA
+WE GOT DECEMBER STOCKS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/44d9516be09342ff758f1115b62d9bd3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								CHEM COOKIES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/44d9516be09342ff758f1115b62d9bd3">
+											<img src="/item-image/44d9516be09342ff758f1115b62d9bd3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/44d9516be09342ff758f1115b62d9bd3">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">2900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/44d9516be09342ff758f1115b62d9bd3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg </div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This cross between Chemdawg 91 and Girl Scout Cookies delivers a blast of cerebral euphoria that tapers into full-body relaxation with time.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/46f8e96028e743587e48c885785eb92a">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								DUTCH MDMA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/46f8e96028e743587e48c885785eb92a">
+											<img src="/item-image/46f8e96028e743587e48c885785eb92a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/46f8e96028e743587e48c885785eb92a">
+										<div class="ui dark-green basic tiny button fluid left aligned">40 grams</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/46f8e96028e743587e48c885785eb92a">
+										<div class="ui dark-green basic tiny button fluid left aligned">70 grams</div>
+										<div class="ui basic left pointing label price">3500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>drug of choice at sex parties … experiment in suppressing the appetites of soldiers in the German army
+The desired effects include altered sensations and increased energy, empathy, and pleasure</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/47ece4746f5c47d04de79fc99d3e1561">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								PLANET HASH STRAIGHT ORGANICS CALI MADE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/47ece4746f5c47d04de79fc99d3e1561">
+											<img src="/item-image/47ece4746f5c47d04de79fc99d3e1561?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/47ece4746f5c47d04de79fc99d3e1561">
+										<div class="ui dark-green basic tiny button fluid left aligned">140 grams</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/47ece4746f5c47d04de79fc99d3e1561">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>oil contains both THC (the often-illegal psychotropic substance in marijuana) and CBD (a legal, beneficial cannabinoid with no psychoactive effects and lots of CBD oil products to choose from</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/824948a3e59f4f666bbeaecd0c25994e">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GELATO#33 HYBRIDE STRAIN THIN MINTH, GIRLS SCOUT COOKIES * SUNSET SHERBET
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/824948a3e59f4f666bbeaecd0c25994e">
+											<img src="/item-image/824948a3e59f4f666bbeaecd0c25994e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/824948a3e59f4f666bbeaecd0c25994e">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/824948a3e59f4f666bbeaecd0c25994e">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>GET THE BEST FROM THIS HYBRID STRAINS CALI GROWN WE JUST WANT TO GROW SEEDS TO PRODUCE THE BEST BECAUSE ONLY BEST WE NEED .
+THIN MINT 26.21%THC
+GIRLS SCOUT COOKIES 27.11%THC
+SUNSET SHERBET 24.47%THC
+GELATO #33 29.02%THC</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/8275a82b62184fb14890aa888d752604">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								INDOOR GROWN PURPLE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/8275a82b62184fb14890aa888d752604">
+											<img src="/item-image/8275a82b62184fb14890aa888d752604?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/8275a82b62184fb14890aa888d752604">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/8275a82b62184fb14890aa888d752604">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">2950 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Featuring a strong sour grape smell and musty taste, this hybrid is slightly indica dominant. Purple Dream provides users with a relaxing tingly body sensation and has moderate head-heavy effects.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/839ab075034641d9613a51cee66878da">
+								<span class="ui teal tiny label tag right floated">Opiates</span>
+								BLACK TAR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/839ab075034641d9613a51cee66878da">
+											<img src="/item-image/839ab075034641d9613a51cee66878da?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/839ab075034641d9613a51cee66878da">
+										<div class="ui dark-green basic tiny button fluid left aligned">35 grams top quality</div>
+										<div class="ui basic left pointing label price">1750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/839ab075034641d9613a51cee66878da">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams t qty </div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>heroin is a form of heroin that is sticky like tar or hard like coal. Its dark color is the result of crude processing methods that leave behind impurities. Despite its name, black tar heroin can also be dark orange or dark brown in appearance.
+WE HAVE STOCKS FOR DECEMBER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/888a3364d0714e1c7897ddd23ce9c798">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								K9 OXYCODONE 30MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/888a3364d0714e1c7897ddd23ce9c798">
+											<img src="/item-image/888a3364d0714e1c7897ddd23ce9c798?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/888a3364d0714e1c7897ddd23ce9c798">
+										<div class="ui dark-green basic tiny button fluid left aligned">115 tabs</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/888a3364d0714e1c7897ddd23ce9c798">
+										<div class="ui dark-green basic tiny button fluid left aligned">160 pills</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/888a3364d0714e1c7897ddd23ce9c798">
+										<div class="ui dark-green basic tiny button fluid left aligned">230 pills</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Each tablet for oral administration contains 5 mg, 15 mg or 30 mg of oxycodone hydrochloride USP. Oxycodone hydrochloride is a white, odorless crystalline powder derived from the opium alkaloid, thebaine.
+WE GOT STOCKS AND DISCOUNTS .YOU WONT PAY MUCH BUT BUY TILL YOUR SATISFACTION DECEMBER STOCK STILL AVAILABLE</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/8a0464b13a7a4f517ac583e3a1f37c91">
+								<span class="ui teal tiny label tag right floated">Visa</span>
+								Get your Data Verification System Visa in both EU, UAE ,USA, GBP, CAD, AUD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/8a0464b13a7a4f517ac583e3a1f37c91">
+											<img src="/item-image/8a0464b13a7a4f517ac583e3a1f37c91?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/8a0464b13a7a4f517ac583e3a1f37c91">
+										<div class="ui dark-green basic tiny button fluid left aligned">visa  eu, uae ,usa, gbp, cad, aud</div>
+										<div class="ui basic left pointing label price">1750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Get your Data Verification System Visa. Our Visa are obtain from the respective country embassies or consulates worldwide,100% authenticity gurantee and database verifiable.</p>
+
+<p>Countries we offer Visa.. USA,Canada,Europe,UK,Asia,Australia,New Zealand,Middle East and Many More</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/906413424031465172f8fbe31645e3b8">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								CALI GROWN SHERBLATO READY FOR SHIPPING
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/906413424031465172f8fbe31645e3b8">
+											<img src="/item-image/906413424031465172f8fbe31645e3b8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/906413424031465172f8fbe31645e3b8">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/906413424031465172f8fbe31645e3b8">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/906413424031465172f8fbe31645e3b8">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>each can has 3.5g of danky weed.all we got for you in this strain is the flavor and the danky nature too good to walk along with.indoor grown with that smell and sticky nature.sherblato 26.1%THC AND CBD 0.2% TRY TO SEE HOW YOUR PACKAGE GETS TO YOUR LOCATION we got the best can weed to ship worldwide sherblato</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/90c063d0502341ca7a5bf412015d8eff">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								20MG OXYCODONE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/90c063d0502341ca7a5bf412015d8eff">
+											<img src="/item-image/90c063d0502341ca7a5bf412015d8eff?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/90c063d0502341ca7a5bf412015d8eff">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 oxycodone 20mg</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>brand name and generic medications … Enter your medication and location to find the best prescription drug discounts in your WE HAVE GRAT DISCOUNTS FOR BULK OFFERS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/922b705ba6fd49d87fbd844d2c7bf522">
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								Yellow Maseratis
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/922b705ba6fd49d87fbd844d2c7bf522">
+											<img src="/item-image/922b705ba6fd49d87fbd844d2c7bf522?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/922b705ba6fd49d87fbd844d2c7bf522">
+										<div class="ui dark-green basic tiny button fluid left aligned">50  tabs </div>
+										<div class="ui basic left pointing label price">1750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/922b705ba6fd49d87fbd844d2c7bf522">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 tabs</div>
+										<div class="ui basic left pointing label price">3500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ecstasy Tablet. B1276. MDMA; Caffeine; Methylone … Yellow Superman. 5B6PI. Caffeine; Benocyclidine. 3; 1 …. Blue Crown. Maserati, Trident. Caffeine; MDMA ..</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/9bda4b99804e49ad572ccf2242da2e69">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								1 LB EXORTICS BUD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/9bda4b99804e49ad572ccf2242da2e69">
+											<img src="/item-image/9bda4b99804e49ad572ccf2242da2e69?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/9bda4b99804e49ad572ccf2242da2e69">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 lb </div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/9bda4b99804e49ad572ccf2242da2e69">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 lb </div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Exotic Kush cannabis strain by KushBrother is an Indica dominant hybrid. It tastes like juicy mangos, permeating the air with other exotic fruits and wood. Flowering time is shortened thanks to the Confidential OG strain, and yields can bring up to 900 grams per plant! Buds are hard and orange. it can treat pain, stress and depression. Ideal for evening usage</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/9ec131897c1047f96e4fc0f6557547fd">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								STRAW NANA ICE CREAM MAN 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/9ec131897c1047f96e4fc0f6557547fd">
+											<img src="/item-image/9ec131897c1047f96e4fc0f6557547fd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>hybrid (70% indica/30% sativa) strain created by breeders at the infamous Serious Seeds farms as potent cross between the popular Strawberry Bubblegum X Crocket’s Banana Kush
+WE GOT DECEMBER STOCK</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a0268b8a2b5949a848dab7b9bdd5c942">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								CALI KUSH 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a0268b8a2b5949a848dab7b9bdd5c942">
+											<img src="/item-image/a0268b8a2b5949a848dab7b9bdd5c942?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a0268b8a2b5949a848dab7b9bdd5c942">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a0268b8a2b5949a848dab7b9bdd5c942">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>indica Cali Kush is a cross between award-winning Mendocino Purps and staple indica LA Confidential. It has small to medium-sized buds that appear mostly spherical with a tight and dense bud structure.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a1ae023c5c894df171df01be0c2878b1">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								10MG PERCOCET
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a1ae023c5c894df171df01be0c2878b1">
+											<img src="/item-image/a1ae023c5c894df171df01be0c2878b1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a1ae023c5c894df171df01be0c2878b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 percs</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>is a moderately priced drug used to treat moderate to severe pain. … Generic oxycodone/acetaminophen is covered by most Medicare and insurance plans, but some pharmacy coupons or cash prices may be lower. The lowest GoodRx price …</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a1ef3ba5a82f499d666bf8322a29e039">
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								BLUE TESLA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a1ef3ba5a82f499d666bf8322a29e039">
+											<img src="/item-image/a1ef3ba5a82f499d666bf8322a29e039?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a1ef3ba5a82f499d666bf8322a29e039">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 pills </div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a1ef3ba5a82f499d666bf8322a29e039">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pils</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a1ef3ba5a82f499d666bf8322a29e039">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a1ef3ba5a82f499d666bf8322a29e039">
+										<div class="ui dark-green basic tiny button fluid left aligned">160 pills</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Reagent tests can alert you when a pill contains something instead of MDMA. The pills in question are the orange tesla ecstasy tablets which are in the shape of a shield and have the Tesla</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a2a6e3342dda4cab7b7e8aee0cbcd141">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								LA CASA DE PAPEL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a2a6e3342dda4cab7b7e8aee0cbcd141">
+											<img src="/item-image/a2a6e3342dda4cab7b7e8aee0cbcd141?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a2a6e3342dda4cab7b7e8aee0cbcd141">
+										<div class="ui dark-green basic tiny button fluid left aligned">90 grams</div>
+										<div class="ui basic left pointing label price">1350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a2a6e3342dda4cab7b7e8aee0cbcd141">
+										<div class="ui dark-green basic tiny button fluid left aligned">130 grams</div>
+										<div class="ui basic left pointing label price">1900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a2a6e3342dda4cab7b7e8aee0cbcd141">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 grams</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a2a6e3342dda4cab7b7e8aee0cbcd141">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 grams</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>extracting kief, as hash is basically just kief that has been heated and pressurized to form a soft, green ball. Applying heat and pressure to kief changes its composition by rupturing the resin glands.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a37af382e0a5412b65b4055b47c49bc1">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GREASE MONKEY
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a37af382e0a5412b65b4055b47c49bc1">
+											<img src="/item-image/a37af382e0a5412b65b4055b47c49bc1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a37af382e0a5412b65b4055b47c49bc1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a37af382e0a5412b65b4055b47c49bc1">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>WE GOT GREASE MONKEY CALI GROWN STICKY BUDS WITH THAT CANNOIUSSEURS FLOWER .ALL OUR INDOOR STRAINS ARE TOP SHELF WE TRY TO GET OUR FLOWERS OUT OF INSECTS SO THAT YOU GUYS CAN GET THE BEST FROM US.THE QUALITY NEVER CHANGES .OUR CUSTOMERS MADE US WORKED HARD WE ARE GIVEN THEM 28.2%THC</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a54db060df9d4464567a099e6bc23c47">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								DOSI- FUEL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a54db060df9d4464567a099e6bc23c47">
+											<img src="/item-image/a54db060df9d4464567a099e6bc23c47?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a54db060df9d4464567a099e6bc23c47">
+										<div class="ui dark-green basic tiny button fluid left aligned">1.2 pound</div>
+										<div class="ui basic left pointing label price">1850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a54db060df9d4464567a099e6bc23c47">
+										<div class="ui dark-green basic tiny button fluid left aligned">2.2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a54db060df9d4464567a099e6bc23c47">
+										<div class="ui dark-green basic tiny button fluid left aligned">3 pounds</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>qualities similar to its parent, Girl Scout Cookies. With glittering trichomes, bright pistils, and lime green and lavender leaves, this strain is a feast for eyes.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/a64c3b7b422243ec79f3ea71b75d7d12">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GELATO 45 GOT THE STOCK 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/a64c3b7b422243ec79f3ea71b75d7d12">
+											<img src="/item-image/a64c3b7b422243ec79f3ea71b75d7d12?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a64c3b7b422243ec79f3ea71b75d7d12">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound </div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a64c3b7b422243ec79f3ea71b75d7d12">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/a64c3b7b422243ec79f3ea71b75d7d12">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>runtz production of gelato is the love and the flavors the geato gives to me all the time i smoke i want gelato connect to start enjoying the pssion of runtz gelato flavors ready for shipment got stock for all my customers so hurry up before december runs out</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/af5d1ca391cd40a950e68ede6c192d75">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								NORCO 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/af5d1ca391cd40a950e68ede6c192d75">
+											<img src="/item-image/af5d1ca391cd40a950e68ede6c192d75?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/af5d1ca391cd40a950e68ede6c192d75">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/af5d1ca391cd40a950e68ede6c192d75">
+										<div class="ui dark-green basic tiny button fluid left aligned">300 pills 10mg</div>
+										<div class="ui basic left pointing label price">2400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Vicodin and Norco among others, is the combination of an opioid pain medication, hydrocodone, with paracetamol. It is used as a prescription drug to relieve moderate to severe pain</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/afde6068c66f41f05563c270a3d8d60a">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								OXYCOTIN 30S
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/afde6068c66f41f05563c270a3d8d60a">
+											<img src="/item-image/afde6068c66f41f05563c270a3d8d60a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/afde6068c66f41f05563c270a3d8d60a">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 oxy</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/afde6068c66f41f05563c270a3d8d60a">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/afde6068c66f41f05563c270a3d8d60a">
+										<div class="ui dark-green basic tiny button fluid left aligned">320 pills</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/afde6068c66f41f05563c270a3d8d60a">
+										<div class="ui dark-green basic tiny button fluid left aligned">420 pills</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>. Each tablet for oral administration contains 15 mg or 30 mg of oxycodone …
+ pain reliever used to treat moderate to severe pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/b49fedddf2d442fe479934f42fc264f8">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								ADDERALLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/b49fedddf2d442fe479934f42fc264f8">
+											<img src="/item-image/b49fedddf2d442fe479934f42fc264f8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b49fedddf2d442fe479934f42fc264f8">
+										<div class="ui dark-green basic tiny button fluid left aligned">160 addy 30mg</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b49fedddf2d442fe479934f42fc264f8">
+										<div class="ui dark-green basic tiny button fluid left aligned">300 adderall</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/b49fedddf2d442fe479934f42fc264f8">
+										<div class="ui dark-green basic tiny button fluid left aligned">600 adderall</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>a central nervous system stimulant of the phenethylamine class. Adderall is used in the treatment of attention deficit hyperactivity disorder
+WE GOT STOCKS AND DISCOUNTS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/bb032bf6a391472548b568c9a504437d">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								56 GRAMS OF COKE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/bb032bf6a391472548b568c9a504437d">
+											<img src="/item-image/bb032bf6a391472548b568c9a504437d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bb032bf6a391472548b568c9a504437d">
+										<div class="ui dark-green basic tiny button fluid left aligned">56 gram </div>
+										<div class="ui basic left pointing label price">2800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>strong stimulant mostly used as a recreational drug. It is commonly snorted, inhaled as smoke, or dissolved and injected into a vein. Mental effects may include loss of contact with reality, an intense feeling of happiness,
+STOCK YOUR DECEMBER</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/bd0c233006074ad07be89f67673f104d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								DO SI DOS 28.33% HTC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/bd0c233006074ad07be89f67673f104d">
+											<img src="/item-image/bd0c233006074ad07be89f67673f104d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bd0c233006074ad07be89f67673f104d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bd0c233006074ad07be89f67673f104d">
+										<div class="ui dark-green basic tiny button fluid left aligned">3 pound</div>
+										<div class="ui basic left pointing label price">4500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>is an indica dominant hybrid (70% indica/30% sativa) strain created through crossing the potent GSC (f.k.a. Girl Scout Cookies) with Face Off OG.GROWN IN CALI WE GOT LARGE STOCKS WITH GOOD QUALITY GET STOCK BEFORE DECEMBER ENDS</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/bfbb0a48e5364b656f917a802f0f0fe3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								POUND CAKE 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/bfbb0a48e5364b656f917a802f0f0fe3">
+											<img src="/item-image/bfbb0a48e5364b656f917a802f0f0fe3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bfbb0a48e5364b656f917a802f0f0fe3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound/lb</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bfbb0a48e5364b656f917a802f0f0fe3">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bfbb0a48e5364b656f917a802f0f0fe3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/bfbb0a48e5364b656f917a802f0f0fe3">
+										<div class="ui dark-green basic tiny button fluid left aligned">2kg</div>
+										<div class="ui basic left pointing label price">10000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>an indica-dominant hybrid with strong body effects and sweet cake-like flavor. As decadent as its Girl Scout Cookies and Cherry Pie parent strains, Birthday Cake Kush buds</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/c207c5b418ca438e719c9705bbb61c90">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								FRENCH COOKIES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/c207c5b418ca438e719c9705bbb61c90">
+											<img src="/item-image/c207c5b418ca438e719c9705bbb61c90?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/c207c5b418ca438e719c9705bbb61c90">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>A cross between Cookies and Paris OG, this beautiful flower has two of the most popular strains on the scene in its parentage</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/c643df6c3c56402752e80819d6b192a1">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								THE VARIETIES OF MOONROCK SPECIAL FROM PINK TO PINEAPLE RIGHT UPTO ORIGINAL OG 1G PER( CAN WEED) TOP SHELF FLAVORS TRUST KIEF WAX SHATTER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/c643df6c3c56402752e80819d6b192a1">
+											<img src="/item-image/c643df6c3c56402752e80819d6b192a1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/c643df6c3c56402752e80819d6b192a1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/c643df6c3c56402752e80819d6b192a1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound moonrocks</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/c643df6c3c56402752e80819d6b192a1">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/c643df6c3c56402752e80819d6b192a1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg moonrocks</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>THE VARIETIES OF MOONROCK SPECIAL FROM PINK TO PINEAPLE RIGHT UPTO ORIGINAL OG 1G PER( CAN WEED) TOP SHELF MIX WITH ALL THE FLAVORS KIEF.HASH .we come all this mile to satisfy all our moonrock customers regular and new customers enjoy the cali flames everything ready and stocked .BULK discount is the most thing we encourage</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/cc68df97d465414545a7c16bce8e4631">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								FROSTY NORTHERN LIGHT ON THE LEFT BROTHER DURBAN POISON ON THE RIGHT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/cc68df97d465414545a7c16bce8e4631">
+											<img src="/item-image/cc68df97d465414545a7c16bce8e4631?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/cc68df97d465414545a7c16bce8e4631">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/cc68df97d465414545a7c16bce8e4631">
+										<div class="ui dark-green basic tiny button fluid left aligned">3 pound</div>
+										<div class="ui basic left pointing label price">4600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Durban Poison is known for its spicy/sweet anise-like smell and taste and it’s clear-headed cerebral effect.  Though it’s a (normally) pure Sativa, most versions finish fairly quickly and don’t stretch like crazy.  Many claim the real South African Durban Poison is very racy and finishes as long as 120 days,
+WE GOT STOCKS BULK OFFER WITH GREAT DISCOUNT YOU DONT NEED TO PAY ANYTHING</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								THE STRONGEST BUD YOU HAVE EVER SEEN MOONROCK KURRUPT HASH OIL KIEF
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+											<img src="/item-image/d77a1c6f5a1943ea7e4261a97f630710?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+										<div class="ui dark-green basic tiny button fluid left aligned">quater pound</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+										<div class="ui dark-green basic tiny button fluid left aligned">12 pound</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d77a1c6f5a1943ea7e4261a97f630710">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>moonrock the strongest kurrupt bud i have ever seen in this galaxy all this is done in california. it is mixed up with bud ,hash oil, kief.we are ready to get you the best of our quality because its our tradition to treat our customers with good THC 45.32%thc we got stock for moonrock order now</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/d7b36a40bed74b5040f9ae4c6eb894c9">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								DILAUDID 8MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/d7b36a40bed74b5040f9ae4c6eb894c9">
+											<img src="/item-image/d7b36a40bed74b5040f9ae4c6eb894c9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d7b36a40bed74b5040f9ae4c6eb894c9">
+										<div class="ui dark-green basic tiny button fluid left aligned">220 pills 8mg</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d7b36a40bed74b5040f9ae4c6eb894c9">
+										<div class="ui dark-green basic tiny button fluid left aligned">280 pills 8mg</div>
+										<div class="ui basic left pointing label price">2700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>DILAUDID ORAL LIQUID may contain traces of sodium metabisulfite. Each DILAUDID 8 mg TABLET contains 8 mg hydromorphone hydrochloride. In addition,</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/d8ba0122af834d404ac17ae5300f9f5b">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								TOP QTY HEROIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/d8ba0122af834d404ac17ae5300f9f5b">
+											<img src="/item-image/d8ba0122af834d404ac17ae5300f9f5b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d8ba0122af834d404ac17ae5300f9f5b">
+										<div class="ui dark-green basic tiny button fluid left aligned">36 grams</div>
+										<div class="ui basic left pointing label price">1750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d8ba0122af834d404ac17ae5300f9f5b">
+										<div class="ui dark-green basic tiny button fluid left aligned">52 grams</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/d8ba0122af834d404ac17ae5300f9f5b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">5000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Black tar heroin is a form of heroin that is sticky like tar or hard like coal. Its dark color is the result of crude processing methods that leave behind impurities. Despite its name, black tar heroin can also be dark orange or dark brown in appearance. It is generally less expensive than other forms of heroin</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/da0b47800b9d4cec44396b6406ad3138">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								SMOKE YOUR JOINTS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/da0b47800b9d4cec44396b6406ad3138">
+											<img src="/item-image/da0b47800b9d4cec44396b6406ad3138?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/da0b47800b9d4cec44396b6406ad3138">
+										<div class="ui dark-green basic tiny button fluid left aligned">8 packets</div>
+										<div class="ui basic left pointing label price">1760 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/da0b47800b9d4cec44396b6406ad3138">
+										<div class="ui dark-green basic tiny button fluid left aligned">21 packets</div>
+										<div class="ui basic left pointing label price">3800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Don’t feel like rolling a joint? Relax, our prerolled joints are ready to go. Available in a wide variety of strains &amp; delivered to your home from bud</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/dce633a9eb5d4fe47339948968ce10bd">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								STRAW NANA ICE CREAM MAN 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/dce633a9eb5d4fe47339948968ce10bd">
+											<img src="/item-image/dce633a9eb5d4fe47339948968ce10bd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/dce633a9eb5d4fe47339948968ce10bd">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 grams</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>hybrid (70% indica/30% sativa) strain created by breeders at the infamous Serious Seeds farms as potent cross between the popular Strawberry Bubblegum X Crocket’s Banana Kush
+WE GOT DECEMBER STOCK</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/e571c526e6034cac5aeb9ed6ac9af2e5">
+								<span class="ui teal tiny label tag right floated">Social Security (SSN)</span>
+								SOCIAL SICURITY NUMBER /ID CARDS available EU,USA,UAE,AU,INDIA WORLDWIDE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/e571c526e6034cac5aeb9ed6ac9af2e5">
+											<img src="/item-image/e571c526e6034cac5aeb9ed6ac9af2e5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/e571c526e6034cac5aeb9ed6ac9af2e5">
+										<div class="ui dark-green basic tiny button fluid left aligned">social security #/id cards</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>These are about just as good as the real ones as they have passed inside a bank before to open an account. These can even be used as one of the two forms of ID needed to open a PO box, so this and one other fake ID and you have a PO box under a fake name if you pay cash or use a prepaid card if card is required. The card will have whatever name and number you ask me to put on it. It will come unsigned and you will have to sign the signature on the card itself in ink as required for it to be valid. These are great if you just need to temporarily replace your card quicker than the formal process or need to assume another number or identity. This order will come with 4 identical cards in case you loose one, it gets something spilled on it or has wear and tear. This may also be used as secondary back up ID. If you match it to a fake ID and your fake is ever called into question presenting a backup matching ID will always clear any doubt. In addition if you assume another identity and all you have in your wallet i</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/e9d77de9e347432c408ec329f129bfbd">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								AMBERJACK STRAWBERRY ROSIN 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/e9d77de9e347432c408ec329f129bfbd">
+											<img src="/item-image/e9d77de9e347432c408ec329f129bfbd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/e9d77de9e347432c408ec329f129bfbd">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams of chaos</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/e9d77de9e347432c408ec329f129bfbd">
+										<div class="ui dark-green basic tiny button fluid left aligned">150 grams</div>
+										<div class="ui basic left pointing label price">2550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>begins in the head, slowly creating a mild head buzz. She creates a mental uplift and relaxation, allowing you to remain calm and
+CALI SUPPLY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/ec1b14c8b36d41cc513a764e0f0052f6">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GOLDEN STATE BANANA READY FOR SHIPPING
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/ec1b14c8b36d41cc513a764e0f0052f6">
+											<img src="/item-image/ec1b14c8b36d41cc513a764e0f0052f6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/ec1b14c8b36d41cc513a764e0f0052f6">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/ec1b14c8b36d41cc513a764e0f0052f6">
+										<div class="ui dark-green basic tiny button fluid left aligned">2pound </div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>CALI GROWN WITH ABOUT 30.5% THC
+INDOOR GROWN TOPSHELF GOT STOCK FOR SHIPMENT</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/ee554e4ae4884d8658cc84929e548589">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								STAR DAWG AND STRAWBERRY MONCHI 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/ee554e4ae4884d8658cc84929e548589">
+											<img src="/item-image/ee554e4ae4884d8658cc84929e548589?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/ee554e4ae4884d8658cc84929e548589">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>blanket the strain like stars, is a hybrid cross between Chemdawg 4 and Tres Dawg. Earthy pine with sour notes of diesel color Stardawg, whose uplifting effects may help patients treating stress</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/eefa7437165c4d9c621681696aa7f808">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								HASH KIEF 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/eefa7437165c4d9c621681696aa7f808">
+											<img src="/item-image/eefa7437165c4d9c621681696aa7f808?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/eefa7437165c4d9c621681696aa7f808">
+										<div class="ui dark-green basic tiny button fluid left aligned">55 grams t qty</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/eefa7437165c4d9c621681696aa7f808">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/eefa7437165c4d9c621681696aa7f808">
+										<div class="ui dark-green basic tiny button fluid left aligned">79 grams</div>
+										<div class="ui basic left pointing label price">2250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>One of the first steps of making hash is extracting kief, as hash is basically just kief that has been heated and pressurized to form a soft, green ball. Applying heat and pressure to kief changes its composition by rupturing the resin glands</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/f2ea7ece5ade4d4269003ffee51cfe9a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GELATO 45 CALI SHIT 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/f2ea7ece5ade4d4269003ffee51cfe9a">
+											<img src="/item-image/f2ea7ece5ade4d4269003ffee51cfe9a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f2ea7ece5ade4d4269003ffee51cfe9a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Gelato #45 is a relaxing mid-afternoon hybrid. Its effects can leave you with bouts of laughter and you may feel a bit like a social butterfly. Its physical.
+This particular version of the popular Gelato strain is a very smooth, unique smoke. It’s a cross of Original</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/f50a92892659405d5fc905c17e39301c">
+								<span class="ui teal tiny label tag right floated">Western Union</span>
+								we do 100% safe instant western union transfers.
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/f50a92892659405d5fc905c17e39301c">
+											<img src="/item-image/f50a92892659405d5fc905c17e39301c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f50a92892659405d5fc905c17e39301c">
+										<div class="ui dark-green basic tiny button fluid left aligned">3000</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f50a92892659405d5fc905c17e39301c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5000</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>we do 100% safe instant western union transfers. we are Professional sellers for more than 5 years experience,WE sell western union transfer mtcn all over the world. – Selling to many countries as: Canada,USA,Australia,UK… And many countries in Europe: Fr,Ger,Spain,Ita… – we hope we will work together for a long time. – 300$ for MTCN 3000$ – 500$ for MTCN 5000$… with the mtcn and the senders infos you are able to pick up your money at any western union store at your location</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/f6b6f413fe3d44dd4f2721707f2d8fff">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								PINKCHAMPAGNE XANAX- 7MG MADNESS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/f6b6f413fe3d44dd4f2721707f2d8fff">
+											<img src="/item-image/f6b6f413fe3d44dd4f2721707f2d8fff?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/f6b6f413fe3d44dd4f2721707f2d8fff">
+										<div class="ui dark-green basic tiny button fluid left aligned">290 pills 7mg xanax</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>milligrams per day. In the treatment of an anxiety disorder, Xanax may be prescribed to be taken in doses
+dosages of greater than 7 mg/day, including approximately 100 …
+WE GOT STOCK IN BULK</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/runtz/item/fb7d3228e9cb44e35703cff4706bf17c">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								PRE ROLLS MOONROCK
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/runtz/item/fb7d3228e9cb44e35703cff4706bf17c">
+											<img src="/item-image/fb7d3228e9cb44e35703cff4706bf17c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/fb7d3228e9cb44e35703cff4706bf17c">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/runtz/item/fb7d3228e9cb44e35703cff4706bf17c">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pound</div>
+										<div class="ui basic left pointing label price">4200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>own version called Kurupt Moonrock. Moon Rocks are a THC megazord—they’re essentially cannabis buds (historically GSC, but any strain</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 911 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

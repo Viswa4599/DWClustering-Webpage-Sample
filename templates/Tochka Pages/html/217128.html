@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid">
+			<div class="sixteen wide column header-logo">
+				<div class="ui menu tiny horizontal ten item top-menu inverted">
+					<a class="item header-logo" href="/">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+					<a class="item" href="/app/download">
+						
+						<i class="icon mobile"></i>
+						Mobile App
+					</a>
+					<a href="/marketplace" class="item">
+						<i class="ui icon shop"></i>
+						Marketplace
+					</a>
+					<a href="/vendors" class="item active">
+						<i class="ui icon users"></i>
+						Vendors
+					</a>
+					<a class="item" href="/help">
+						<i class="ui icon info"></i>
+						Help
+					</a>
+					<a class="item" href="/messages?section=inbox">
+						Messages
+						<span class="ui label tiny circular">0</span>
+					</a>
+					<a class="item" href="/payments">
+						Orders
+						<span class="ui label tiny circular">0</span>
+					</a>
+					<a class="item" href="/support">
+						Support
+						<span class="ui label tiny circular">0</span>
+					</a>
+					<span class="item">
+						<form class="ui input icon fluid" method="GET" action="/marketplace">
+							<input type="hidden" name="category" value="0" />
+							<input type="hidden" name="subcategory" value="0" />
+							<input type="text" name="query" placeholder="What are you looking for?" value="" />
+							<i class="icon search"></i>
+						</form>
+					</span>
+					<span class="item"></span>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/sheepswolfcloth?size=small" class="ui image circular" />
+					<div class="ui segment user-menu">
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/sheepswolfcloth">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a href="/settings/user" class="item">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input type="hidden" name="csrf_token" value="" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out   
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="sixteen wide column">
+						<div class="ui grid divided">
+							<div class="three wide column t-left-menu-items">
+								<h5 class="ui header">Categories</h5>
+								<div class="ui vertical fluid menu categories tiny">
+									<div class="item t-cat-item">
+										<span class="header">
+											<a class="cat" href="/marketplace?city-id=0&amp;category=1&amp;shipping-to=&amp;shipping-from=">
+												<span>Drugs</span>
+											</a>
+										</span>
+										<div class="menu hidden">
+											<a class="item" href="/marketplace?city-id=0&amp;category=2&amp;shipping-to=&amp;shipping-from=">
+												<span>Cannabis</span>
+												<a href="/marketplace?city-id=0&amp;category=13&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Buds</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=41&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Oil</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=4&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Hash</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=119&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>E-Liquid</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=40&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Edibles</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=38&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Prerolled joints</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=39&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Seeds</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=37&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Cheews</span>
+												</a>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=5&amp;shipping-to=&amp;shipping-from=">
+												<span>Stimulants</span>
+												<a href="/marketplace?city-id=0&amp;category=11&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Cocaine</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=107&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Methamphetamine</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=43&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Amphetamine</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=55&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>A-PVP</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=116&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Ephedrine</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=150&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Mexedrone</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=149&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>4-EMC</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=148&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>3-FMP</span>
+												</a>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=16&amp;shipping-to=&amp;shipping-from=">
+												<span>Other</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=3&amp;shipping-to=&amp;shipping-from=">
+												<span>Psychedelics</span>
+												<a href="/marketplace?city-id=0&amp;category=14&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>LSD</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=51&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span> Psilocybe Cubensis</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=54&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>DMT</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=113&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>2C-B</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=179&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>NBOMe</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=53&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>DOM</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=52&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>DOB</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=123&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>ALD-52</span>
+												</a>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=35&amp;shipping-to=&amp;shipping-from=">
+												<span>Empathogens</span>
+												<a href="/marketplace?city-id=0&amp;category=7&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>MDMA</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=9&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Ecstasy</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=185&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Mephedrone</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=153&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>GHB</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=152&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>4-FA</span>
+												</a>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=12&amp;shipping-to=&amp;shipping-from=">
+												<span>Dissociatives</span>
+												<a href="/marketplace?city-id=0&amp;category=36&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>Ketamine</span>
+												</a>
+												<a href="/marketplace?city-id=0&amp;category=147&amp;shipping-to=&amp;shipping-from=" class="item subsubcat">
+													<span>3-MEO-PCP</span>
+												</a>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=15&amp;shipping-to=&amp;shipping-from=">
+												<span>Opiates</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=121&amp;shipping-to=&amp;shipping-from=">
+												<span>Tobacco</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=118&amp;shipping-to=&amp;shipping-from=">
+												<span>Poppers</span>
+											</a>
+										</div>
+									</div>
+									<div class="item t-cat-item">
+										<span class="header">
+											<a class="cat" href="/marketplace?city-id=0&amp;category=8&amp;shipping-to=&amp;shipping-from=">
+												<span>Prescription</span>
+											</a>
+										</span>
+										<div class="menu hidden">
+											<a class="item" href="/marketplace?city-id=0&amp;category=6&amp;shipping-to=&amp;shipping-from=">
+												<span>Opioids</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=45&amp;shipping-to=&amp;shipping-from=">
+												<span>Xanax</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=42&amp;shipping-to=&amp;shipping-from=">
+												<span>Adderall</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=46&amp;shipping-to=&amp;shipping-from=">
+												<span>Benzodiazepines</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=125&amp;shipping-to=&amp;shipping-from=">
+												<span>Fentanyl</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=49&amp;shipping-to=&amp;shipping-from=">
+												<span>Valium</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=44&amp;shipping-to=&amp;shipping-from=">
+												<span>Viagra</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=117&amp;shipping-to=&amp;shipping-from=">
+												<span>Barbiturates</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=50&amp;shipping-to=&amp;shipping-from=">
+												<span>Sedatatives</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=47&amp;shipping-to=&amp;shipping-from=">
+												<span>Antidepressants</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=200&amp;shipping-to=&amp;shipping-from=">
+												<span>Ritalin</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=48&amp;shipping-to=&amp;shipping-from=">
+												<span>Antipsychotics</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=109&amp;shipping-to=&amp;shipping-from=">
+												<span>Levitra</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=122&amp;shipping-to=&amp;shipping-from=">
+												<span>Baclofen</span>
+											</a>
+										</div>
+									</div>
+									<div class="item t-cat-item">
+										<span class="header">
+											<a class="cat" href="/marketplace?city-id=0&amp;category=10&amp;shipping-to=&amp;shipping-from=">
+												<span>Steroids</span>
+											</a>
+										</span>
+										<div class="menu hidden">
+											<a class="item" href="/marketplace?city-id=0&amp;category=172&amp;shipping-to=&amp;shipping-from=">
+												<span>Other</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=146&amp;shipping-to=&amp;shipping-from=">
+												<span>Testosterone Enanthate</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=168&amp;shipping-to=&amp;shipping-from=">
+												<span>Anavar</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=163&amp;shipping-to=&amp;shipping-from=">
+												<span>Growth Hormone</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=143&amp;shipping-to=&amp;shipping-from=">
+												<span>Testosterone Cypionate</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=171&amp;shipping-to=&amp;shipping-from=">
+												<span>Trenbolone</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=176&amp;shipping-to=&amp;shipping-from=">
+												<span>Danabol</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=142&amp;shipping-to=&amp;shipping-from=">
+												<span>Testosterone Propionate</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=151&amp;shipping-to=&amp;shipping-from=">
+												<span>Clenbuterol</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=169&amp;shipping-to=&amp;shipping-from=">
+												<span>Stanozolol</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=175&amp;shipping-to=&amp;shipping-from=">
+												<span>Sustanon</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=174&amp;shipping-to=&amp;shipping-from=">
+												<span>Primobolan</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=165&amp;shipping-to=&amp;shipping-from=">
+												<span>Oxymetholone</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=141&amp;shipping-to=&amp;shipping-from=">
+												<span>Trenobolone</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=164&amp;shipping-to=&amp;shipping-from=">
+												<span>Parabolan</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=162&amp;shipping-to=&amp;shipping-from=">
+												<span>Clomed</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=166&amp;shipping-to=&amp;shipping-from=">
+												<span>Deca Durabolin</span>
+											</a>
+											<a class="item" href="/marketplace?city-id=0&amp;category=167&amp;shipping-to=&amp;shipping-from=">
+												<span>Turanabol</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="thirteen wide column">
+								<div class="ui segment serp-header">
+									<div class="ui five item menu secondary pointing">
+										<a class="item active" href="/vendors/">
+											<i class="icon filter"></i>
+											All types
+										</a>
+										<a href="/vendors/mail/" class="item">
+											
+											<i class="icon envelope open outline"></i>
+											Mail
+										</a>
+										<a class="item" href="/vendors/drop/">
+											<i class="icon sticky note outline"></i>
+											Drop
+										</a>
+										<a class="item" href="/vendors/drop preorder/">
+											<i class="icon warehouse"></i>
+											Drop Preorder
+										</a>
+										<a class="item" href="/vendors/digital/">
+											
+											<i class="icon arrow circle down"></i>
+											Digital
+										</a>
+									</div>
+								</div>
+								<div class="ui grid center aligned">
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/paradise-drugs">
+													
+													@paradise-drugs
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/paradise-drugs">
+													<img src="/user-avatar/paradise-drugs?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description">Welcome to my new Store on Tochka</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 3 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 19 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/power-dope">
+													
+													@power-dope
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/power-dope">
+													<img src="/user-avatar/power-dope?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														3.66
+													</span>
+												</div>
+												<div class="description">hello wellcome to my store</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 3 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 19 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/oumuamua">
+													
+													@oumuamua
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/oumuamua">
+													<img src="/user-avatar/oumuamua?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description">Always Online</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 2 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 2 weeks ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/soul_growers">
+													
+													@soul_growers
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/soul_growers">
+													<img src="/user-avatar/soul_growers?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														4.85
+													</span>
+												</div>
+												<div class="description">coming from dream with 4.99 rating / 350 transactions</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 year ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 1 day ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/spiker">
+													
+													@spiker
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/spiker">
+													<img src="/user-avatar/spiker?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label brown">Bronze Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														1
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 year ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 21 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/lindmark">
+													
+													@lindmark
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/lindmark">
+													<img src="/user-avatar/lindmark?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description">welcome to my store</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 2 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 18 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/fkr0514">
+													
+													@fkr0514
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/fkr0514">
+													<img src="/user-avatar/fkr0514?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label brown">Bronze Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														1
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 8 months ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 2 days ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/albaniarichkids">
+													
+													@albaniarichkids
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/albaniarichkids">
+													<img src="/user-avatar/albaniarichkids?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 11 months ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 2 days ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/whiterepublic">
+													
+													@whiterepublic
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/whiterepublic">
+													<img src="/user-avatar/whiterepublic?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 month ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 1 day ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/bestpricedcarts">
+													
+													@bestpricedcarts
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/bestpricedcarts">
+													<img src="/user-avatar/bestpricedcarts?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description">I am not a new vendor. I had over 1000 sales this year on markets that shut or scammed.  I do this full time and I take my job serious. I ship out orders within 24 hours.</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 3 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 13 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/kingdope1">
+													
+													@kingdope1
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/kingdope1">
+													<img src="/user-avatar/kingdope1?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description">HONEST VENDOR</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 month ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 1 day ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/geolocation">
+													
+													@geolocation
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/geolocation">
+													<img src="/user-avatar/geolocation?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 month ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 1 week ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/drugs-vendor">
+													
+													@drugs-vendor
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/drugs-vendor">
+													<img src="/user-avatar/drugs-vendor?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description">Welcome to our Tochka Store</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 2 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 18 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/romeodrugs">
+													
+													@romeodrugs
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/romeodrugs">
+													<img src="/user-avatar/romeodrugs?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														2.71
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 year ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 12 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/spacemonkey-cali">
+													
+													@spacemonkey-cali
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/spacemonkey-cali">
+													<img src="/user-avatar/spacemonkey-cali?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label brown">Bronze Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 6 months ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 22 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/balkanteam">
+													
+													@balkanteam
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/balkanteam">
+													<img src="/user-avatar/balkanteam?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label brown">Bronze Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description">Welcome - Active Offer!!! Great taste &amp; smel WEED</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 month ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 1 day ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/rcpotstore">
+													
+													@rcpotstore
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/rcpotstore">
+													<img src="/user-avatar/rcpotstore?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 month ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 12 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/spotifyypremiumm">
+													
+													@spotifyypremiumm
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/spotifyypremiumm">
+													<img src="/user-avatar/spotifyypremiumm?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label brown">Bronze Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 2 months ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 2 weeks ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/skunky">
+													
+													@skunky
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/skunky">
+													<img src="/user-avatar/skunky?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label grey">Silver Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description">Directly from us without any intermediaries</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 2 years ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 13 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/onlinebasar">
+													
+													@onlinebasar
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/onlinebasar">
+													<img src="/user-avatar/onlinebasar?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 month ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 13 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/kingfisher202">
+													
+													@kingfisher202
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/kingfisher202">
+													<img src="/user-avatar/kingfisher202?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label brown">Bronze Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description">Be Rest assured we honor every order and have great secured delivery standards, you can order with faith from us</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 3 weeks ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 12 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/martinjones00">
+													
+													@martinjones00
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/martinjones00">
+													<img src="/user-avatar/martinjones00?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description"> married</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 2 days ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 23 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/chestores">
+													
+													@chestores
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/chestores">
+													<img src="/user-avatar/chestores?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label orange">Gold Account</span>
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+													<span class="ui tiny label dark-green">
+														
+														<i class="icon thumbs up"></i>
+														5
+													</span>
+												</div>
+												<div class="description">ALL ITEMS ON OUR STORE IS CARDED FROM THE MANUFACTURER SO DON&#39;T ASK WHERE WE GOT IT FROM For custom order to card specific items contact us</div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 3 months ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 12 hours ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="four wide column">
+										<div class="ui card w100p">
+											<div class="content card-header">
+												<a class="header" href="/store/gideon1105">
+													
+													@gideon1105
+												</a>
+											</div>
+											<div class="image">
+												<a href="/store/gideon1105">
+													<img src="/user-avatar/gideon1105?size=230x230" class="ui centered" />
+												</a>
+											</div>
+											<div class="content">
+												<div class="meta">
+													<span class="ui tiny label teal">
+														
+														<i class="icon level up"></i>
+														1 lvl
+													</span>
+												</div>
+												<div class="description"></div>
+											</div>
+											<div class="extra content">
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Registered 1 week ago</span>
+												</div>
+												<div class="date">
+													
+													<i class="icon wait"></i>
+													<span>Last seen 1 week ago</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ui section divider"></div>
+								<div class="ui pagination menu">
+									<div class="item">
+										
+										<a href="?page=1&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">1</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=2&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">2</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=3&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">3</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=4&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">4</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=5&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">5</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=6&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">6</a>
+									</div>
+									<div class="item active">
+										
+										<a href="?page=7&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">7</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=8&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">8</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=9&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">9</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=10&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">10</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=11&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">11</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=12&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">12</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=13&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">13</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=14&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">14</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=15&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">15</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=16&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">16</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=17&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">17</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=18&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">18</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=19&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">19</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=20&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">20</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=21&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">21</a>
+									</div>
+									<div class="item">
+										
+										<a href="?page=22&amp;city=0&amp;category=0&amp;sortby=popularity&amp;account=all%3cnil%3e&amp;shipping-from=">22</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Commissions</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Tochka Source Code</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-mobile-app-android">
+								<li>Tochka Android App Source Code</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST API</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/" class="item">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 41406 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

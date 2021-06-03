@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/weedow1?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@weedow1</h2>
+								<p></p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 week ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 5 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/weedow1">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/weedow1">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/weedow1/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">0</span>
+									</a>
+									<a class="item active" href="/store/weedow1/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">32</span>
+									</a>
+									<a class="item" href="/store/weedow1/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/1aae35b3aa354d935bbf5a80d46014e3">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Medical cannabis
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/1aae35b3aa354d935bbf5a80d46014e3">
+											<img src="/item-image/1aae35b3aa354d935bbf5a80d46014e3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/1aae35b3aa354d935bbf5a80d46014e3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 oz</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Medical cannabis oil is utilized to treat a myriad of conditions, with the number of those who purchase it for medicinal use increasing every year. One of the most common reasons people are choosing to obtain a cannabis card is due to the drug’s effectiveness at combating cancer, and the symptoms related to its treatment.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/97d18b2419e044d8516d3e8f8df54e6c">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Peruvian Fishscale Cocaine
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/97d18b2419e044d8516d3e8f8df54e6c">
+											<img src="/item-image/97d18b2419e044d8516d3e8f8df54e6c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/97d18b2419e044d8516d3e8f8df54e6c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>95%+ purity Peruvian Fishscale Cocaine. If you haven’t tried it, you have to try it in it’s purest form! You will get chunks of cocaine that are flaky and shimmer in the light like a fish’s scales. When you rub it between your fingers, it breaks down into oily powder-like residue. Just a little bit will keep you going!</p>
+
+<p>For those who like to crack it up and smoke it, you’ll see how pure it is when you don’t lose any noticeable weig</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/217b22c9509d406c7b57e9dc6f7843c3">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								sativa hybrid
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/217b22c9509d406c7b57e9dc6f7843c3">
+											<img src="/item-image/217b22c9509d406c7b57e9dc6f7843c3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/217b22c9509d406c7b57e9dc6f7843c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">2oz</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Jack Herer sativa hybrid( overnight delivery within USA and diplomatic delivery worldwide) and other Best strains of weed available at very moderate prices.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/5ce835470f664d2f5cdd733c479e45dd">
+								<span class="ui teal tiny label tag right floated">Seeds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CANNABIS-SEEDS-FEMINIZED-MARIJUANA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/5ce835470f664d2f5cdd733c479e45dd">
+											<img src="/item-image/5ce835470f664d2f5cdd733c479e45dd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/5ce835470f664d2f5cdd733c479e45dd">
+										<div class="ui dark-green basic tiny button fluid left aligned">1</div>
+										<div class="ui basic left pointing label price">4 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/5ce835470f664d2f5cdd733c479e45dd">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000</div>
+										<div class="ui basic left pointing label price">780 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>These indica and sativa seeds produce bushy plants that grow indoors to just about 60 centimeters high but they can grow into fat bushes when grown outdoors. Each plant is known to produce an abundance of yielding buds. The Afghan marijuana plant has a fairly high CBD level, and its THC level is significantly high as well.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/453de8f2a39844566c7d7da2f1619955">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								QUALITY MOROCCAN* PRIMERO* HASH 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/453de8f2a39844566c7d7da2f1619955">
+											<img src="/item-image/453de8f2a39844566c7d7da2f1619955?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/453de8f2a39844566c7d7da2f1619955">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>MOROCCAN* PRIMERO* HASH is a beautiful hash, as nice as traditionally made hash gets, from the same crew that made the hand rubbed Critical+ charas this is a pressed hash solely from Lemon Haze.
+As you would expect this is a strong, euphoric hash with lots of energy and creativity, not for those looking for Indica type stones.
+It is also highly medicinal as it helps to eradicate many disease in your system and keeps you strong and healthy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/c6ddb9c1e1a74e7d5e1a328a84723b30">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								tasmanian medical oil
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/c6ddb9c1e1a74e7d5e1a328a84723b30">
+											<img src="/item-image/c6ddb9c1e1a74e7d5e1a328a84723b30?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/c6ddb9c1e1a74e7d5e1a328a84723b30">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 oz</div>
+										<div class="ui basic left pointing label price">320 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tasmanian Medical cannabis oil is utilized to treat a myriad of conditions, with the number of those who purchase it for medicinal use increasing every year. One of the most common reasons people are choosing to obtain a cannabis card is due to the drug’s effectiveness at combating cancer, and the symptoms related to its treatment.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/ec67000d5e8a4e7c4505d6595443d06d">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								AMPHETAMINE PURE [ Encyclopedia - Azarius ]
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/ec67000d5e8a4e7c4505d6595443d06d">
+											<img src="/item-image/ec67000d5e8a4e7c4505d6595443d06d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/ec67000d5e8a4e7c4505d6595443d06d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">320 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Top  quality and in its purest form amphetamine Encyclopedia - Azarius is a drug that provides the most comfortable and relaxed life
+This tablet is used for boasting energy, as a pain kill drug,cures cancer,reliefs stress and also gets you high.
+ For those wanting to use this drug for the very first time should know its very power and can knock you out.
+It is also important to know that it is also use as a recreational drug.
+place your orders now and enjoy the comfort that comes with it</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/3cc6584e1edb4c0277ba88c6c649d273">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Marijuana Edibles
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/3cc6584e1edb4c0277ba88c6c649d273">
+											<img src="/item-image/3cc6584e1edb4c0277ba88c6c649d273?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/3cc6584e1edb4c0277ba88c6c649d273">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>you suffer from Inflammation, Muscle Spasms, Headaches, Insomnia, BPH or Inflamed Prostate, Anxiety, Crohns, MS, etc. Than you need to try Auntie Dolly’s Yummy Gummies.
+At Auntie Dolly’s Edibles we only use the finest ingredients. Each gummy bear is 25mg. Each Jar contains 30 gummy bears.
+Now Available! Auntie Dolly’s Atomic Bears! Double the dose for severe cases of ailments listed above. Jars are $20 ea.
+We have added “Super Nova Bears.” They contain 1 oz of High Quality Shatter into 300 gummy bears! Must purchase entire batch. Batches of the Super Nova Bears are $350.00. The Super Nova Bears are for patient’s suffering from severe pain.
+Flavors Available: Blue Raspberry, Grape, Green Apple, Lemon, Orange and Watermelon.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/68122ce81859469b67560323705ac027">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Amphetamine Powder 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/68122ce81859469b67560323705ac027">
+											<img src="/item-image/68122ce81859469b67560323705ac027?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/68122ce81859469b67560323705ac027">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>There are different kinds of street amphetamines. Common ones and some of their slang terms are:</p>
+
+<p>Amphetamine: goey, louee, speed, uppers, whiz Dextroamphetamine (ADHD medicine used illegally): dexies, kiddie-speed, pep pills, uppers; black beauty (when combined with amphetamine) Methamphetamine (crystal solid form): base, crystal, d-meth, fast, glass, ice, meth, speed, whiz, pure, wax Methamphetamine (liquid form): leopard’s blood, liquid red, ox blood, red speed Illegal amphetamines come in different forms:Pills and capsules Powder and paste Crystal Liquid They can be used in different ways:Swallowed Dabbed onto the gums Inhaled through the nose (snorted) Injected into a vein (shooting up) Smoked.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/882a93859086494f7794179f07bfef0f">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Kurupt’s Moonrock
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/882a93859086494f7794179f07bfef0f">
+											<img src="/item-image/882a93859086494f7794179f07bfef0f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/882a93859086494f7794179f07bfef0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">1lb</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Moon Rock, also known as “Kurupt’s Moonrock,” is an infamous take on the classic Girl Scout Cookies strain, where the nugs are dipped in hash oil and then rolled in kief. This process supercharges the effects of Moon Rock, giving it a THC level of about 21-26% in total, making it way too strong for inexperienced users. The high hits you hard immediately after you toke, knocking you hard in the head with a cerebral rush that launches your mind into hazy bliss before leaving you completely stoned in mind and body,</p>
+
+<p>You’ll be utterly relaxed but totally euphoric as you slip away into a heavy couch-lock and sedation that can easily cause users to fall into a deep and peaceful sleep. Because of these effects and its insanely high THC level, Moon Rock is said to be perfect for treating insomnia, appetite loss, chronic pain, muscle spasms, and cramps. This bud has a unique flavor of earthy nutty hash that has a subtle sweetness to it from the hash oil.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/e60abddbf5b54e6657c4bc872ac99dac">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								crack cocaine 99.9% pure
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/e60abddbf5b54e6657c4bc872ac99dac">
+											<img src="/item-image/e60abddbf5b54e6657c4bc872ac99dac?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/e60abddbf5b54e6657c4bc872ac99dac">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pure colombian cocaine straight from the habor. Always clean no cuts 99% Pure.
+This medication is applied directly to the inside of the mouth, nose, or throat by a health care professional, usually right before your procedure. It may be poured, sprayed, or applied with a cotton swab directly to the area. When using this medication in the nose, your health care professional may soak absorbent material with the solution, then insert it into the nose.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/fdd6fba936914af36abccc78cc2c3375">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								colombian pure cocaine
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/fdd6fba936914af36abccc78cc2c3375">
+											<img src="/item-image/fdd6fba936914af36abccc78cc2c3375?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/fdd6fba936914af36abccc78cc2c3375">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cocaine, also known as coke, is a strong stimulant mostly used as a recreational drug. It is commonly snorted, inhaled as smoke, or dissolved and injected into a vein. Mental effects may include loss of contact with reality, an intense feeling of happiness, or agitation.
+this is very powerful and not recommended for first time users</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/76e29ea9528f4386799cc3b734d28d19">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Crystal Meth
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/76e29ea9528f4386799cc3b734d28d19">
+											<img src="/item-image/76e29ea9528f4386799cc3b734d28d19?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/76e29ea9528f4386799cc3b734d28d19">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">330 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methamphetamine Also Known As Crystal is a potent central nervous system stimulant that is mainly used as a recreational drug and less commonly as a second-line treatment for attention deficit hyperactivity disorder and obesity.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/cd2b29dd0a6444ad73d9b1ae3e372257">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Amphetamine Crystals
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/cd2b29dd0a6444ad73d9b1ae3e372257">
+											<img src="/item-image/cd2b29dd0a6444ad73d9b1ae3e372257?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/cd2b29dd0a6444ad73d9b1ae3e372257">
+										<div class="ui dark-green basic tiny button fluid left aligned">15g</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Speed is the street name for the Class B drug amphetamine sulphate. the purest and high quality you can get</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/d0dbf654758d49f4633cf9252c202d60">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								lowell herb prerolled
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/d0dbf654758d49f4633cf9252c202d60">
+											<img src="/item-image/d0dbf654758d49f4633cf9252c202d60?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/d0dbf654758d49f4633cf9252c202d60">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 rolls</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>best deals on our lowell herb prerolled joints
+best quality great taste</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/fd1d98da3a1e41f363a93481f8cf8c1c">
+								<span class="ui teal tiny label tag right floated">A-PVP</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								A-PVP Crystals
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/fd1d98da3a1e41f363a93481f8cf8c1c">
+											<img src="/item-image/fd1d98da3a1e41f363a93481f8cf8c1c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/fd1d98da3a1e41f363a93481f8cf8c1c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>A-Pyrrolidinopentiophenone is a synthetic stimulant of the cathinone class developed in the 1960s that has been sold as a designer drug. Colloquially, it is sometimes called flakka. α-PVP is chemically related to pyrovalerone and is the ketone analog of prolintane.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/0b31be23194c4b9e71462c69ee8fff7d">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CARTRIDGES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/0b31be23194c4b9e71462c69ee8fff7d">
+											<img src="/item-image/0b31be23194c4b9e71462c69ee8fff7d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/0b31be23194c4b9e71462c69ee8fff7d">
+										<div class="ui dark-green basic tiny button fluid left aligned">5cartridges</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Best quality cartridges you can ever think of
+now available at affordable prices</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/a76e40cb29bb4ad86b9166be468bd1f3">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Brass Knuckles
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/a76e40cb29bb4ad86b9166be468bd1f3">
+											<img src="/item-image/a76e40cb29bb4ad86b9166be468bd1f3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/a76e40cb29bb4ad86b9166be468bd1f3">
+										<div class="ui dark-green basic tiny button fluid left aligned">20vapes</div>
+										<div class="ui basic left pointing label price">380 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We have flavors such as,
+Sour Diesel GrandDaddy Purple OG Kush Sour Og Kush Green Crack Moon rock Jack Dream AK-47 Purple Kush Bubba Kush Bubblegum Kush Blueberry Purple-Skunk Master Kush Purple Haze Banana Kush pineapple express
+Orange kush Night Queen Big Bud Cheese BlueDream White Russia White Widow G13 hash oils and many more.
+our brass knuckles are simply the best and are very affordable as well.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/bce1e437c1374240496f9a1583f98188">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								cracked cocaine
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/bce1e437c1374240496f9a1583f98188">
+											<img src="/item-image/bce1e437c1374240496f9a1583f98188?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/bce1e437c1374240496f9a1583f98188">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cocaine is a powerfully addictive stimulant drug made from the leaves of the coca plant native to South America. Although health care providers can use it for valid medical purposes, such as local anesthesia for some surgeries. As a street drug, cocaine looks like a fine, white, crystal powder. this drug reliefs pains and cures many illnesses in humans,it increases energy and keeps the brain more active.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/c05d8e2d88384e2e59c42193883e8969">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								cannabis oil
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/c05d8e2d88384e2e59c42193883e8969">
+											<img src="/item-image/c05d8e2d88384e2e59c42193883e8969?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/c05d8e2d88384e2e59c42193883e8969">
+										<div class="ui dark-green basic tiny button fluid left aligned">15g</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Relieves Pain and Inflammation,also Helps Relieve Nausea and anxiety,may also Treat Seizures and Other Neurological Disorders, Lower Incidence of Diabetes and Offers Cardiovascular Health Benefits</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/09024c8499d24f0e448b8273e919979e">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								AK-47 Marijuana
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/09024c8499d24f0e448b8273e919979e">
+											<img src="/item-image/09024c8499d24f0e448b8273e919979e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/09024c8499d24f0e448b8273e919979e">
+										<div class="ui dark-green basic tiny button fluid left aligned">1lb</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>AK-47 will leave you relaxed and mellow. This sativa-dominant hybrid delivers a steady and long-lasting cerebral buzz that keeps you mentally alert and engaged in creative or social activities. AK-47 mixes Colombian, Mexican, Thai, and Afghani varieties, bringing together a complex blend of flavors and effects. While AK-47’s scent is sour and earthy, its sweet floral notes can only be fully realized in the taste</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/1666ffe1d332482f4f88a2259b3af3cf">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Moroccan hash
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/1666ffe1d332482f4f88a2259b3af3cf">
+											<img src="/item-image/1666ffe1d332482f4f88a2259b3af3cf?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/1666ffe1d332482f4f88a2259b3af3cf">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>About</p>
+
+<p>Moroccan hash is a sticky, thick, dark-colored resin (plant juice) which is made from the flower of the female cannabis plant, Cannabis sativa.The cannabis plant’s leaves and flowers contain chemicals known as cannabinoids. One cannabinoid is THC, which gives a person who smokes or eats parts of the cannabis plant a feeling of euphoria (makes the user feel good or happy). Another cannabinoid is CBD, which gives the user a relaxing feeling, and another is CBG which gives the user red or droopy eyes. The name hashish comes from an Arabic word meaning dry weed. The two main drugs made from the cannabis plant are marijuana and hashish. Hashish has much more of the chemical THC (which makes users feel good or happy) than marijuana.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/1f44766f577242636d5dfebed37af45d">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Vape Catridges
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/1f44766f577242636d5dfebed37af45d">
+											<img src="/item-image/1f44766f577242636d5dfebed37af45d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/1f44766f577242636d5dfebed37af45d">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 vape gold</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This is a listing for our AAA Golden Vape Cartridges which are always filled with nug run oil pre-loaded into these 600mg vape cartridges which work with most of the normal screw on pens!(Note Cartridge color may vary from time to time but product will always be consistent) We take pride in the level of stealth we offer the community while maintaining the most competitive prices on the market</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/3635c453a44d4211713eaa7081b02729">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PRE-ROLLS JOINTS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/3635c453a44d4211713eaa7081b02729">
+											<img src="/item-image/3635c453a44d4211713eaa7081b02729?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/3635c453a44d4211713eaa7081b02729">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 rolls</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>About</p>
+
+<p>Typically in most legal cannabis marketplaces across the US joints, known as pre-rolls in dispensaries, are sold in a 5-pack containing 5 grams of cannabis. That is roughly 1 grams per joint, and almost right on the High Times estimation.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/3b7442cb1b2e4cd1423534d76e6fbf25">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Super Brownie edibles
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/3b7442cb1b2e4cd1423534d76e6fbf25">
+											<img src="/item-image/3b7442cb1b2e4cd1423534d76e6fbf25?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/3b7442cb1b2e4cd1423534d76e6fbf25">
+										<div class="ui dark-green basic tiny button fluid left aligned">250g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Super Brownie 2-Pack</p>
+
+<p>Brownie 2-pack is made from Black Jack Indica Strain DOUBLE STRENGTH!!</p>
+
+<p>This order is for 2 of our finest Chocolate Super Brownies but with twice as much cannabutter!</p>
+
+<p>These are only for those who know they want a BIG edible experience…not recommended for first try.</p>
+
+<p>1 Brownie is usually enough for one person though it depends on your tolerance levels.</p>
+
+<p>Do not drive or operate machinery after taking one of these – please! Every Brownie has a wight of 85 Gram. The perfect remedy that naturally alleviates pain, stress and depression.</p>
+
+<p>Ingredients: Flour, Eggs, Dark chocolate, Cannabis Butter, Sugar, Vanilla</p>
+
+<p>Product is vacuum packed.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/866860b3c7d84b1f4d7cae5b42c9438b">
+								<span class="ui teal tiny label tag right floated">A-PVP</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Alpha - PVP (A-PVP)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/866860b3c7d84b1f4d7cae5b42c9438b">
+											<img src="/item-image/866860b3c7d84b1f4d7cae5b42c9438b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/866860b3c7d84b1f4d7cae5b42c9438b">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">220 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>PVP, alpha-PVP, gravel, flakka or niff – is one of a number of recreational drugs in the ‘bath salts’ (or cathinones ) family, so called because they resemble bath salts and because they have sometimes been sold disguised as them.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/840fd13ddba941685830f0b2b812da82">
+								<span class="ui teal tiny label tag right floated">Seeds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Feminized seeds
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/840fd13ddba941685830f0b2b812da82">
+											<img src="/item-image/840fd13ddba941685830f0b2b812da82?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/840fd13ddba941685830f0b2b812da82">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 seeds</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Feminized seeds solve almost all of cannabis sex problems, as they are specially engineered always to turn out female. Although earlier iterations of these types were not always stable and turned out hermaphrodite, breeding has improved dramatically.</p>
+
+<p>Their appearance on the marijuana growing scene is a relatively new phenomenon, as they were first released during the 1980s.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/df39986b348345b450bd5a795598d96c">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Ephedrine and Pseudoephedrine HCL crystal Powder 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/df39986b348345b450bd5a795598d96c">
+											<img src="/item-image/df39986b348345b450bd5a795598d96c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/df39986b348345b450bd5a795598d96c">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pseudoephedrine HCL Ephedrine is a medication and stimulant. It is often used to prevent low blood pressure during spinal anesthesia. It has also been used for asthma, narcolepsy, and obesity but is not the preferred treatment. It is of unclear benefit in nasal congestion we do ship Discreetly worldwide</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/15ec328e7d9847526681ccfcc2c02966">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Afghan Black Hash 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/15ec328e7d9847526681ccfcc2c02966">
+											<img src="/item-image/15ec328e7d9847526681ccfcc2c02966?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/15ec328e7d9847526681ccfcc2c02966">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Our Afghan Hash is a classic product derived from cannabis, If you’re looking for a strong indica body and mind buzz, give it a try! The effects are strong…</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/1bc94387668c4bd449c7b86561d4a789">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Crystal Meth ICE shards 98%&#43; (PURE &amp; UNCUT)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/1bc94387668c4bd449c7b86561d4a789">
+											<img src="/item-image/1bc94387668c4bd449c7b86561d4a789?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/1bc94387668c4bd449c7b86561d4a789">
+										<div class="ui dark-green basic tiny button fluid left aligned">15g</div>
+										<div class="ui basic left pointing label price">390 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>ALL OUR PRODUCTS ARE PURE AND UNCUT, WE SELL ONLY THE BEST OF THE BEST! AND TESTED ON A WEEKLY BASIS FOR POTENCY! PLENTY IN STOCK, BULK AVAILABLE!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/6092e6d6b63a4d8460d976a5f6368180">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								 Excellent quality crystal meth
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/6092e6d6b63a4d8460d976a5f6368180">
+											<img src="/item-image/6092e6d6b63a4d8460d976a5f6368180?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/6092e6d6b63a4d8460d976a5f6368180">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methamphetamine is a potent central nervous system (CNS) stimulant that is mainly used as a recreational drug and less commonly as a second-line treatment for attention deficit hyperactivity disorder and obesity.Methamphetamine was discovered in 1893 and exists as two enantiomers: levo-methamphetamine and dextro-methamphetamine.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/weedow1/item/982f497c0481454d71f198ba78a77daa">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								THC/CBD CANNABIS OIL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/weedow1/item/982f497c0481454d71f198ba78a77daa">
+											<img src="/item-image/982f497c0481454d71f198ba78a77daa?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/weedow1/item/982f497c0481454d71f198ba78a77daa">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Medical cannabis oil is utilized to treat a myriad of conditions, with the number of those who purchase it for medicinal use increasing every year. One of the most common reasons people are choosing to obtain a cannabis card is due to the drug’s effectiveness at combating cancer, and the symptoms related to its treatment</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 712 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

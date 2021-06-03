@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/company?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@company</h2>
+								<p>we are here to offer the best onpoint.Quality and Fast delivery is 100% Guaranteed.</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 34 minutes ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/company">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/company">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/company/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">6</span>
+									</a>
+									<a class="item active" href="/store/company/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">66</span>
+									</a>
+									<a class="item" href="/store/company/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/7e038ab735834d9f4c7d14ecc71a2d57">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								 High Quality White Widow Weed
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/7e038ab735834d9f4c7d14ecc71a2d57">
+											<img src="/item-image/7e038ab735834d9f4c7d14ecc71a2d57?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/7e038ab735834d9f4c7d14ecc71a2d57">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Indoor, best Coffee shop quality. Among the most famous strains worldwide is White Widow, a balanced hybrid first bred in the Netherlands by Green House Seeds. A cross between a Brazilian sativa landrace and a resin-heavy South Indian indica, White Widow has blessed every Dutch coffee shop menu since its birth in the 1990s.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/0f5bda8408f947765fc26f2a3b2553a2">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ritalin</span>
+								Concerta Ritalin Pills 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/0f5bda8408f947765fc26f2a3b2553a2">
+											<img src="/item-image/0f5bda8408f947765fc26f2a3b2553a2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/0f5bda8408f947765fc26f2a3b2553a2">
+										<div class="ui dark-green basic tiny button fluid left aligned">60</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Concerta Ritalin Pills Escrow</p>
+
+<p>Generic Name: methylphenidate (oral) (METH il FEN i date) Brand Names: Aptensio XR, Concerta, Cotempla XR-ODT, Metadate CD, Metadate ER, Methylin, QuilliChew ER, Quillivant XR, Ritalin</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/2e9e1a605b1f4eab5dd752b686e3057e">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								AK-47 Marijuana
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/2e9e1a605b1f4eab5dd752b686e3057e">
+											<img src="/item-image/2e9e1a605b1f4eab5dd752b686e3057e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/2e9e1a605b1f4eab5dd752b686e3057e">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>AK-47 will leave you relaxed and mellow. This sativa-dominant hybrid delivers a steady and long-lasting cerebral buzz that keeps you mentally alert and engaged in creative or social activities. AK-47 mixes Colombian, Mexican, Thai, and Afghani varieties, bringing together a complex blend of flavors and effects. While AK-47’s scent is sour and earthy, its sweet floral notes can only be fully realized in the taste</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/8946db66071b494471dfc3cd497ecf43">
+								<span class="ui teal tiny label tag right floated">Danabol</span>
+								Danabol Ds 10mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/8946db66071b494471dfc3cd497ecf43">
+											<img src="/item-image/8946db66071b494471dfc3cd497ecf43?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/8946db66071b494471dfc3cd497ecf43">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dianabol is a brand name for methandrostenolone, which is an anabolic steroid used by performance athletes all over the world. It was developed by doctors in Germany in the 1960’s as aid profession athletes. Its use has since spread to other areas of sports and of course, bodybuilding.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/ea23d7eb5ffa40014ba64577186b44be">
+								<span class="ui teal tiny label tag right floated">Clenbuterol</span>
+								Buy Clenbuterol tablets online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/ea23d7eb5ffa40014ba64577186b44be">
+											<img src="/item-image/ea23d7eb5ffa40014ba64577186b44be?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ea23d7eb5ffa40014ba64577186b44be">
+										<div class="ui dark-green basic tiny button fluid left aligned">125 tabs</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Clenbuterol Sopharma direct from the Pharmaceutical manufactuer Sopharma. Supplied in strips of 10 tablets. For best results combine with Ephedrine Hcl. Effective Dose: Clenbuterol used at 60-120 mcgs per day, divided throughout the day.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/2100cd3ef1be48c560662f82ab723b7f">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								Marijuana Edibles
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/2100cd3ef1be48c560662f82ab723b7f">
+											<img src="/item-image/2100cd3ef1be48c560662f82ab723b7f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/2100cd3ef1be48c560662f82ab723b7f">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>you suffer from Inflammation, Muscle Spasms, Headaches, Insomnia, BPH or Inflamed Prostate, Anxiety, Crohns, MS, etc. Than you need to try Auntie Dolly’s Yummy Gummies.</p>
+
+<p>At Auntie Dolly’s Edibles we only use the finest ingredients. Each gummy bear is 25mg. Each Jar contains 30 gummy bears.</p>
+
+<p>Now Available! Auntie Dolly’s Atomic Bears! Double the dose for severe cases of ailments listed above. Jars are $20 ea.</p>
+
+<p>We have added “Super Nova Bears.” They contain 1 oz of High Quality Shatter into 300 gummy bears! Must purchase entire batch. Batches of the Super Nova Bears are $350.00. The Super Nova Bears are for patient’s suffering from severe pain.</p>
+
+<p>Flavors Available: Blue Raspberry, Grape, Green Apple, Lemon, Orange and Watermelon.</p>
+
+<p>You will always receive Fast, Free and Discreet Shipping.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/7e889ca69b244b8e55f4a9e99105438c">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								Alprazolam / XANAX raw powder 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/7e889ca69b244b8e55f4a9e99105438c">
+											<img src="/item-image/7e889ca69b244b8e55f4a9e99105438c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/7e889ca69b244b8e55f4a9e99105438c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Here we have pharmacy/laboratory grade high quality raw Alprazolam / XANAX powder.</p>
+
+<p>I don’t need to remind you that when dealing with raw powders, exercise caution and do your research on dosing as this product is very strong.</p>
+
+<p>As we are just starting out, samples are available for quality testing. You will need good quality milligram scales, don’t eyeball your dose.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/80c9a338645b4bae7b38efc5d9d3c9f0">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								Crystal methamphetamine HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/80c9a338645b4bae7b38efc5d9d3c9f0">
+											<img src="/item-image/80c9a338645b4bae7b38efc5d9d3c9f0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/80c9a338645b4bae7b38efc5d9d3c9f0">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/80c9a338645b4bae7b38efc5d9d3c9f0">
+										<div class="ui dark-green basic tiny button fluid left aligned">20</div>
+										<div class="ui basic left pointing label price">560 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Meth is a filthy blend of toxic chemicals, methamphetamine is a central nervous system stimulant that acts like adrenaline. Methamphetamine has been derived from amphetamine, which in the 1960s was available as a diet and pep pill. Meth is found in the following forms; pills, powder, and crystals. The appearance of methamphetamine varies depending on the process and ingredients that are used. It can be smoked, snorted, inhaled, and injected. Methamphetamine in powder form packaged in plastic bags known as point bags. The powder comes in shades of yellow, brown, pink, orange and white.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/d460acd1e790488965c9304ae2a2b0b3">
+								<span class="ui teal tiny label tag right floated">Oxymetholone</span>
+								Buy Oxandrolone Genesis 100 tabs
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/d460acd1e790488965c9304ae2a2b0b3">
+											<img src="/item-image/d460acd1e790488965c9304ae2a2b0b3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/d460acd1e790488965c9304ae2a2b0b3">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 tabs</div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxandrolone is has come from the family of dihydrotestosterone. It is quite non-toxic to the liver than any other kind of oral steroid and easy to use. As it is not highly androgenic then such substance should be used along with Ripped-250, Propionate-100, Primabol-100 and Nandrolone Phenylpropionate to get the best effects. Oxandrolone is highly responsible for nitrogen retention and it causes almost no water retention in body muscles. This supplement is responsible for making the better performance and endeavor. It makes the body too strong and capable to tolerate harder and stronger fitness regime. Weight loss due to extensive surgery or other chronic health issues may be cured by the Oxandrolone. It is also regarded as the good fat burner and non toxic to liver.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/1ed1fb188eaa4e06670cae9ff11f79f9">
+								<span class="ui teal tiny label tag right floated">Anavar</span>
+								Anavar oxandrolone 10mg 50mg tab
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/1ed1fb188eaa4e06670cae9ff11f79f9">
+											<img src="/item-image/1ed1fb188eaa4e06670cae9ff11f79f9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/1ed1fb188eaa4e06670cae9ff11f79f9">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Anavar oxandrolone 10mg 50mg tabs steroids pharmacy 10mg 50mg bodybuilding
+D-bol metenolone 10mg 50mg Tabs steroids best quality 10mg 50mg
+Stanzolol Winstrol 10mg 50mg tabs steroids
+Tamoxifen clomid nolvaldex 10mg 50mg steroids tabs discreet delivery
+Test Cyp TC steroids 10ml oils pharmacy injection</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/11d308ed725044344f72cb8447b31528">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								Adderall, Adderall XR, Mydayis
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/11d308ed725044344f72cb8447b31528">
+											<img src="/item-image/11d308ed725044344f72cb8447b31528?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/11d308ed725044344f72cb8447b31528">
+										<div class="ui dark-green basic tiny button fluid left aligned">270 pills</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/11d308ed725044344f72cb8447b31528">
+										<div class="ui dark-green basic tiny button fluid left aligned">550 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Adderall, Adderall XR, and Mydayis are combination drugs containing four salts of the two enantiomers of amphetamine, a central nervous system stimulant of the phenethylamine class. Adderall is used in the treatment of attention deficit hyperactivity disorder and narcolepsy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/613b2ea154cc46696fe654dbf2527542">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								Xanax bar IR and XR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/613b2ea154cc46696fe654dbf2527542">
+											<img src="/item-image/613b2ea154cc46696fe654dbf2527542?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/613b2ea154cc46696fe654dbf2527542">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">155 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/613b2ea154cc46696fe654dbf2527542">
+										<div class="ui dark-green basic tiny button fluid left aligned">120pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>These bars are pressed with 2.1mg of alprazolam and pressed in an FDA standard type of environment. All consumable goods we sell are kept away from any contaminates and are always handled with care. The alprazolam used is always tested before sale to make sure there are no major impurties that could cause problems. All tablets are pressed in a clean room where a hepa filter is used to make sure no dust or contaminates enter the clean room. Humidifier is also used to keep powders dry to make sure that the tablets are perfectly pressed to stop them being soft.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/724385bad04a4c954079b770285c798f">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								Fiscale Colombian Cocaine 90%&#43;
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/724385bad04a4c954079b770285c798f">
+											<img src="/item-image/724385bad04a4c954079b770285c798f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/724385bad04a4c954079b770285c798f">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/724385bad04a4c954079b770285c798f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">580 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Very HIGH quality coke (flakes) from Colombia, straight from the scorpion cartel. The cocaine is produced deep down Jungles of Colombia and imported to the Netherlands. Pure and uncut, the way cocaine is meant to be sold.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/80b8215d522f495f620fa556e0a6ec1a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Moonrocks high quality
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/80b8215d522f495f620fa556e0a6ec1a">
+											<img src="/item-image/80b8215d522f495f620fa556e0a6ec1a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/80b8215d522f495f620fa556e0a6ec1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz moonrocks</div>
+										<div class="ui basic left pointing label price">320 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>********<strong>PROMO!!!</strong>********</p>
+
+<p>Orders under $50 - 1 preroll and 1 toastie</p>
+
+<p>Orders $51-$100 - 2g of Premium OG and and 2 toasties</p>
+
+<p>Order $101+ - 3.5g of Premium OG and 3 toasties</p>
+
+
+
+<p>First Class Canna (Check out on Weedmaps)</p>
+
+
+Indoor OG Soaked in oil concentrate, rolled in kief
+
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/aa356a2570734bd56074dfc37954bc0a">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								Brass Knuckles vs 710 King Pen
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/aa356a2570734bd56074dfc37954bc0a">
+											<img src="/item-image/aa356a2570734bd56074dfc37954bc0a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/aa356a2570734bd56074dfc37954bc0a">
+										<div class="ui dark-green basic tiny button fluid left aligned">75g</div>
+										<div class="ui basic left pointing label price">260 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/aa356a2570734bd56074dfc37954bc0a">
+										<div class="ui dark-green basic tiny button fluid left aligned">150g</div>
+										<div class="ui basic left pointing label price">285 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We have Brass Knuckles vape distillate cartridges available in a variety of flavors. Although it is a well known brand, there are probably 100 fake knock-offs for every authentic one out there on the market. This is the real deal as you will find out by comparing and testing it for yourself, from the packaging (commonly forged) to the contents within (impossible to forge!)</p>
+
+<p>The flavors currently available are: Maui Wowie Dosidos Skywalker OG Banana OG Forbidden Fruit Grape God Girl Scout Cookies Jack Herer Gelato Sour Diesel GG4 Tangie Tahoe OG SFV OG Strawberry Cough</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/b5e552e2764d4abe5d826d5e9ca9ad1b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Blackberry Kush best quality 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/b5e552e2764d4abe5d826d5e9ca9ad1b">
+											<img src="/item-image/b5e552e2764d4abe5d826d5e9ca9ad1b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b5e552e2764d4abe5d826d5e9ca9ad1b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Blackberry Kush hybrid is described by many as the best strain they have ever smoked. The dense dark green and purple buds of this indica hybrid are frosted over with crystals. Sharing this trichome wonderland is an abundance of thin orange hairs protruding from this exotic flower. This delectable treat emits a complex aroma with a deep fuel and mixed berry scent that caresses the nostrils. Blackberry Kush’s rich smoke produces a great body high without the usual side effects of fatigue and laziness. If you really want to savor Blackberry Kush strain, try it out of a vaporizer.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/d436908675be4e0c7e6504b8a251eb6e">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								COKE 90% PURE COCAINE 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/d436908675be4e0c7e6504b8a251eb6e">
+											<img src="/item-image/d436908675be4e0c7e6504b8a251eb6e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/d436908675be4e0c7e6504b8a251eb6e">
+										<div class="ui dark-green basic tiny button fluid left aligned">6g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/d436908675be4e0c7e6504b8a251eb6e">
+										<div class="ui dark-green basic tiny button fluid left aligned">11.25g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/d436908675be4e0c7e6504b8a251eb6e">
+										<div class="ui dark-green basic tiny button fluid left aligned">45g</div>
+										<div class="ui basic left pointing label price">2400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Our survey found that purity levels for street cocaine (and therefore crack) are … uniformly citing some purities regularly at anything between 70%-90%. DECEMBER STOCK READY</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/014cb413c4424f866ed4b1855c5fea57">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Viagra</span>
+								quality VIAGRA  (sildenafil) 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/014cb413c4424f866ed4b1855c5fea57">
+											<img src="/item-image/014cb413c4424f866ed4b1855c5fea57?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/014cb413c4424f866ed4b1855c5fea57">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">1 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Viagra (sildenafil) relaxes muscles found in the walls of blood vessels and increases blood flow to particular areas of the body. Viagra is used to treat erectile dysfunction (impotence) in men and Its effectiveness for treating sexual dysfunction in women has not been demonstrated..</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/02d5eae1dd6e4f0a7530835145dfa578">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Jack Herer marijuana high grade AA&#43;
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/02d5eae1dd6e4f0a7530835145dfa578">
+											<img src="/item-image/02d5eae1dd6e4f0a7530835145dfa578?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/02d5eae1dd6e4f0a7530835145dfa578">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/02d5eae1dd6e4f0a7530835145dfa578">
+										<div class="ui dark-green basic tiny button fluid left aligned">1\4 lb</div>
+										<div class="ui basic left pointing label price">580 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/02d5eae1dd6e4f0a7530835145dfa578">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 lb</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Jack Herer online( overnight delivery within USA and diplomatic delivery worldwide) and other Best strains of weed available at very moderate prices, Our shipping is 100% effective and in-case i fail to deliver, i give a refund or send a second package.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/42d91a57fc1c40197367f60d67219aea">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								Buy High quality Peruvian Cocaine flake! for sale online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/42d91a57fc1c40197367f60d67219aea">
+											<img src="/item-image/42d91a57fc1c40197367f60d67219aea?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/42d91a57fc1c40197367f60d67219aea">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/42d91a57fc1c40197367f60d67219aea">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy High quality Peruvian Cocaine flake! for sale online. we do ship Discreetly worldwide, Our Delivery within USA Address take 24 hours while Europe and other parts of the world takes 48- 72 hours - no Delivery is 100% guaranteed - tracking number is available as soon as we are done with the shipment so that our clients can be guarded to know exactly the exact time of arrival at your address, - no signing of document before receiving your package from the shipping agent</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/a6cf9556873a422e42e15be9f160e7df">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Afghan Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/a6cf9556873a422e42e15be9f160e7df">
+											<img src="/item-image/a6cf9556873a422e42e15be9f160e7df?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a6cf9556873a422e42e15be9f160e7df">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a6cf9556873a422e42e15be9f160e7df">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a6cf9556873a422e42e15be9f160e7df">
+										<div class="ui dark-green basic tiny button fluid left aligned">1ib</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Afghan Kush, also known as “Afghan OG,” is another indica strain which was brought from ‘Hindu Kush’ mountain range. This is classified as easy-to-grow marijuana strain and is known for its stereotypical body effects that are typical to indica strains. These effects will last up to 2 to 3 hours. Buy Afghan Kush Online. Traditionally, this particular strain will be harvested for giving out higher counts of hashish. The plant will be sturdy with light colored nugs and resinous trichomes. The buds are covered with numerous red or dark orange colored hairs. While the THC levels of Afghan Kush strain are found to be 21.6% (of all cannabinoids), the CBD levels are also high and has good medicinal values. The aroma of this medical marijuana strain will be like a mango orange farm with a pinch of funky odor. The taste of this strain is not at all harsh. This will have a bland and fruity taste. This strain is known to affect the user’s body more than his/her mind which would lead to a feeling of laziness/sle</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/14244e800b554ed660f6511aadfee0e3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								OG Kush Marijuana
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/14244e800b554ed660f6511aadfee0e3">
+											<img src="/item-image/14244e800b554ed660f6511aadfee0e3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/14244e800b554ed660f6511aadfee0e3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/14244e800b554ed660f6511aadfee0e3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/4 lb</div>
+										<div class="ui basic left pointing label price">580 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/14244e800b554ed660f6511aadfee0e3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1ib</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>About</p>
+
+<p>Buy og kush online( overnight delivery within USA and diplomatic delivery worldwide) and other Best strains of weed available at very moderate prices, Our shipping is 100% effective and in-case i fail to deliver, i give a refund or send a second package.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/b5ea4bc35bd747d0719cde6eaf4eb425">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								CBD Organic Cannabis Oil 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/b5ea4bc35bd747d0719cde6eaf4eb425">
+											<img src="/item-image/b5ea4bc35bd747d0719cde6eaf4eb425?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b5ea4bc35bd747d0719cde6eaf4eb425">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml cbd cannabis oil </div>
+										<div class="ui basic left pointing label price">185 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b5ea4bc35bd747d0719cde6eaf4eb425">
+										<div class="ui dark-green basic tiny button fluid left aligned">100ml cbd cannabis oil </div>
+										<div class="ui basic left pointing label price">360 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b5ea4bc35bd747d0719cde6eaf4eb425">
+										<div class="ui dark-green basic tiny button fluid left aligned">200ml cbd cannabis oil </div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Organic CBD Cannabis Oil.</p>
+
+<p>Predominantly CBD but there is still a very small amount of THC in the oil, about a 95%-5% CBD-THC ratio.</p>
+
+<p>This oil is aimed to have minimal psychoactive effects, in larger doses it may. recommended dose is half a ml daily.</p>
+
+<p>Can be used in cooking or placed straight into mouth.</p>
+
+<p>Safely extracted with organic methods infused with olive oil.</p>
+
+<p>Store at room temperature.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/13670d8f227e467d68f6047c56151a1d">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Actavis Promethazine Codeine Cough Syrup
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/13670d8f227e467d68f6047c56151a1d">
+											<img src="/item-image/13670d8f227e467d68f6047c56151a1d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/13670d8f227e467d68f6047c56151a1d">
+										<div class="ui dark-green basic tiny button fluid left aligned">32 oz bottles</div>
+										<div class="ui basic left pointing label price">220 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Actavis promethazine with codeine purple cough syrup Tussionex cough syrup for sale Rexcoff codeine cough syrup for sale buy actavis online, actavis for sale actavis promethazine cough syrup online, actavis online, promethazine cough syrup online, actavis online, promethazine cough syrup with codeine online, buy actavis promethazine cough syrup online, buy actavis online. We sell top quality Actavis Promethazine with codeine purple cough syrup in large quantities at very affordable prices. Place your order and contact now.</p>
+
+<p>Each 5 mL contains: Promethazine hydrochloride 6.25 mg; codeine phosphate 10 mg. Alcohol 7%. Indication: Cough Suppressant Dosage Form: Syrup Validity: 2yrs Strength 200mg Drug : 1622-62-44 8oz,16 oz, 32oz,4oz.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/5f00eccb978548366c19406940fc5856">
+								<span class="ui teal tiny label tag right floated">Testosterone Cypionate</span>
+								Buy Testosterone Cypionate Injections
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/5f00eccb978548366c19406940fc5856">
+											<img src="/item-image/5f00eccb978548366c19406940fc5856?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5f00eccb978548366c19406940fc5856">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 vials</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>t is a testosterone Cypionate replacement treatment administered in the form of an injection. The doctor or health care provider usually gives the injection, but a patient can do it himself too. But if you want to administer the injections yourself, you need to consult with your doctor first.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/fc7cf249ac624a0e75d47f26d7b6e35f">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								BUY 87% PURE CRACK COCAINE BROCHURE BEST QUALITY online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/fc7cf249ac624a0e75d47f26d7b6e35f">
+											<img src="/item-image/fc7cf249ac624a0e75d47f26d7b6e35f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/fc7cf249ac624a0e75d47f26d7b6e35f">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 gram</div>
+										<div class="ui basic left pointing label price">1 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/fc7cf249ac624a0e75d47f26d7b6e35f">
+										<div class="ui dark-green basic tiny button fluid left aligned">3g</div>
+										<div class="ui basic left pointing label price">220 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/fc7cf249ac624a0e75d47f26d7b6e35f">
+										<div class="ui dark-green basic tiny button fluid left aligned">6g</div>
+										<div class="ui basic left pointing label price">460 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>BUY 87% PURE CRACK COCAINE BROCHURE BEST QUALITY online. we do ship Discreetly worldwide, Our Delivery within USA Address take 24 hours while Europe and other parts of the world takes 48- 72 hours - no Delivery is 100% guaranteed - tracking number is available as soon as we are done with the shipment so that our clients can be guarded to know exactly the exact time of arrival at your address, - no signing of document before receiving your package from the shipping agent</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/9f7c1089e9d444c76b7b5cedc23a61b1">
+								<span class="ui teal tiny label tag right floated">Levitra</span>
+								LEVITRA 100MG 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/9f7c1089e9d444c76b7b5cedc23a61b1">
+											<img src="/item-image/9f7c1089e9d444c76b7b5cedc23a61b1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/9f7c1089e9d444c76b7b5cedc23a61b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Generic Levitra is a popular prescription medicine which has been used for a long time to treat erectile dysfunction. In erectile dysfunction, men cannot get erection of the penis. This is an embarrassing condition. Inability to achieve and maintain an erection until ejaculation is called as impotence in men. This condition was considered as a taboo subject. There are different psychological and physiological causes of impotence. Recent heavy advertisements of medicines used for treatment of erectile dysfunction have helped in making remedial products like Levitra an accepted norm in people.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/ea36390db6dc48ca783710e051fc1c8b">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								Top quality MDMA 85% for sale 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/ea36390db6dc48ca783710e051fc1c8b">
+											<img src="/item-image/ea36390db6dc48ca783710e051fc1c8b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ea36390db6dc48ca783710e051fc1c8b">
+										<div class="ui dark-green basic tiny button fluid left aligned">12g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ea36390db6dc48ca783710e051fc1c8b">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This is a bulk offer for MDMA 85%.</p>
+
+<p>Please read these instructions carefully and provide all the required information. If there are any questions contact me here This order will be shipped from the Netherlands. You will have a tracking number, it will be send to an e-mail address you provide. Due too difficulty of packaging it will take an extra 2-3 days for your order to be shipped. Once you receive the parcel do not throw anything away until you find the product. The product will be in rock/small rock.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/f3b5059c0c6743e94dd578b84eb9a9b1">
+								<span class="ui teal tiny label tag right floated">Parabolan</span>
+								Primobolan 25mg GENESIS 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/f3b5059c0c6743e94dd578b84eb9a9b1">
+											<img src="/item-image/f3b5059c0c6743e94dd578b84eb9a9b1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/f3b5059c0c6743e94dd578b84eb9a9b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">110 tabs</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>opportunity to buy steroids online of very high efficiency. No matter whether you’re a beginner or a professional bodybuilder, on this web store you will find a wide range of legal anabolic steroids, shipped directly from worldwide leading manufacturers: Kalpa Pharmaceuticals, Dragon Pharma, Balkan Pharmaceuticals, Geneza Pharmaceuticals, British Dragon, Body Research, Gen-Shi Laboratories, Sciroxx.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/3ad1cf96a26340864492e41900b8ede8">
+								<span class="ui teal tiny label tag right floated">Stanozolol</span>
+								Genesis Stanozolol Tablets 10mg/tab [100 tabs]
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/3ad1cf96a26340864492e41900b8ede8">
+											<img src="/item-image/3ad1cf96a26340864492e41900b8ede8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/3ad1cf96a26340864492e41900b8ede8">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 vials</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Stanozolol is one of the most popular and recognized anabolic steroid among bodybuilders.</p>
+
+<p>As you realized, the active component is Stanozolol.</p>
+
+<p>The main reason why this steroid is so popular is maybe because it does not convert to estrogen and an anti estrogen drug is not needed while using stanozolol. Also it does not give water retention and not giving gynecomastia.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/95ac13d9c0a44e4547b67146dfe2705d">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Suboxone Tablets 8mg/2mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/95ac13d9c0a44e4547b67146dfe2705d">
+											<img src="/item-image/95ac13d9c0a44e4547b67146dfe2705d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/95ac13d9c0a44e4547b67146dfe2705d">
+										<div class="ui dark-green basic tiny button fluid left aligned">43 pills </div>
+										<div class="ui basic left pointing label price">240 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>available in two dosage strengths, 2 mg buprenorphine and 8 mg buprenorphine (as the free base, equivalent to 2.16 mg buprenorphine hydrochloride USP and 8.64 mg buprenorphine hydrochloride USP). Each tablet also contains lactose, mannitol, cornstarch, povidone K30, citric acid, sodium citrate and magnesium stearate.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/cddfb8e927f44c784b29535c40314c33">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								Crystal Meth BEST Quality AAA&#43;&#43;&#43;
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/cddfb8e927f44c784b29535c40314c33">
+											<img src="/item-image/cddfb8e927f44c784b29535c40314c33?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/cddfb8e927f44c784b29535c40314c33">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">270 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/cddfb8e927f44c784b29535c40314c33">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">520 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>HIGHEST RATED VENDOR OF THE 2 BIGGEST MARKETS EVER WITH MORE THEN 10 K OF POSITIVE FEEDBACK (ASK SUPPORT AND ADMIN WILL CONFIRM THIS! FOR PRIVACY REASONS I WILL NOT USE MY OLD PGP AND PROVIDE MY OLD ACCOUNTNAME (SO DONT ASK/GUESS FOR IT)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/6e7af2d7d4f14a5d7d5abbd4eca50a91">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Top shelf Northern Light 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/6e7af2d7d4f14a5d7d5abbd4eca50a91">
+											<img src="/item-image/6e7af2d7d4f14a5d7d5abbd4eca50a91?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/6e7af2d7d4f14a5d7d5abbd4eca50a91">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Top shelf Northern Light online( overnight delivery within USA and diplomatic delivery worldwide) and other Best strains of weed available at very moderate prices, Our shipping is 100% effective and in-case i fail to deliver, i give a refund or send a second package.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/0af9f63d8cfc4aa27a6370d9721664e2">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								BUY 87% PURE CRACK COCAINE BROCHURE BEST QUALITY online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/0af9f63d8cfc4aa27a6370d9721664e2">
+											<img src="/item-image/0af9f63d8cfc4aa27a6370d9721664e2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/0af9f63d8cfc4aa27a6370d9721664e2">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>BUY 87% PURE CRACK COCAINE BROCHURE BEST QUALITY online. we do ship Discreetly worldwide, Our Delivery within USA Address take 24 hours while Europe and other parts of the world takes 48- 72 hours - no Delivery is 100% guaranteed - tracking number is available as soon as we are done with the shipment so that our clients can be guarded to know exactly the exact time of arrival at your address, - no signing of document before receiving your package from the shipping agent</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/12f8fad236004f915887babfaa80eb47">
+								<span class="ui teal tiny label tag right floated">Cheews</span>
+								Durban Poison
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/12f8fad236004f915887babfaa80eb47">
+											<img src="/item-image/12f8fad236004f915887babfaa80eb47?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/12f8fad236004f915887babfaa80eb47">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">260 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/12f8fad236004f915887babfaa80eb47">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/4lb</div>
+										<div class="ui basic left pointing label price">580 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The plant looks somewhat fluffy and has very large trichomes. Gives light to medium smoke with a dank after taste. Durban Poison has an overall sweet, candy-like, minty flavor that</p>
+
+<p>most of its users enjoy compared to other weeds. This strain has been around for a long period of time and is sure to be available in the many more years to come. The plant is extremely potent and causes an extremely joyful upbeat although somewhat relaxed and tranquil high. Users will experience a very euphoric effect in the beginning and will start to wear off after two or three hours. This is mostly considered as a smoke a go kind of strain as users aren’t left feeling groggy after it wore off. The strain won third place at the High Times Medical Cannabis Cup simply because it offers a very clean, cerebral sensation to fight off stress and anxiety. It is also useful in treating some symptoms of depressions such as lethargy, loss of appetite, fatigue and attention deficit.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/3b0854763ca342947a3ff8e747be64b2">
+								<span class="ui teal tiny label tag right floated">Trenobolone</span>
+								Trenbolone Acetate  Vial 100mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/3b0854763ca342947a3ff8e747be64b2">
+											<img src="/item-image/3b0854763ca342947a3ff8e747be64b2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/3b0854763ca342947a3ff8e747be64b2">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 vials</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Trenbolone Acetate is an incredibly fast acting form of the most effective steroid ever manufactured. It is highly valued for its ability to increase muscle hardness, definition, and raw strength, without unwanted water retention and fat mass gains. This form is perfect for fat burning and bulking cycles. It is considered a drug of choice for contest bodybuilders, yet remains very popular with recreational users simply looking to refine their physiques.</p>
+
+<p>In addition to increasing the nutrient efficiency, trenbolone stimulates the following: acceleration of protein synthesis and maintenance of positive nitrogen balance. Protein synthesis determines how rapidly the body will build muscle so the higher the nitrogen balance is the more proteins will be built.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/5ac0c64d68f5413d59286844bd7536f6">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								Super Brownie edibles
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/5ac0c64d68f5413d59286844bd7536f6">
+											<img src="/item-image/5ac0c64d68f5413d59286844bd7536f6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5ac0c64d68f5413d59286844bd7536f6">
+										<div class="ui dark-green basic tiny button fluid left aligned">270g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5ac0c64d68f5413d59286844bd7536f6">
+										<div class="ui dark-green basic tiny button fluid left aligned">575g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Super Brownie 2-Pack</p>
+
+<p>Brownie 2-pack is made from Black Jack Indica Strain DOUBLE STRENGTH!!</p>
+
+<p>This order is for 2 of our finest Chocolate Super Brownies but with twice as much cannabutter!</p>
+
+<p>These are only for those who know they want a BIG edible experience…not recommended for first try.</p>
+
+<p>1 Brownie is usually enough for one person though it depends on your tolerance levels.</p>
+
+<p>Do not drive or operate machinery after taking one of these – please! Every Brownie has a wight of 85 Gram. The perfect remedy that naturally alleviates pain, stress and depression.</p>
+
+<p>Ingredients: Flour, Eggs, Dark chocolate, Cannabis Butter, Sugar, Vanilla</p>
+
+<p>Product is vacuum packed.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/7c59f8b3c3a847c65087472509f71653">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								Adderall 30mg IR Pressed Pills
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/7c59f8b3c3a847c65087472509f71653">
+											<img src="/item-image/7c59f8b3c3a847c65087472509f71653?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/7c59f8b3c3a847c65087472509f71653">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 pills</div>
+										<div class="ui basic left pointing label price">177 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/7c59f8b3c3a847c65087472509f71653">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/7c59f8b3c3a847c65087472509f71653">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>packs of Adderall pressed pills. They are exactly the ones on the picture shown. These pills are 30 mg, instant release, HIGH QUALITY pressed pills, not made with any BS fillers. They are professionally made however they are NOT from pharmacies. They are made with the same active ingredients as pharmaceutical grade adderalls. These pills have been tested with fresh reagent test kits. Mecke, Marquis, and Mandelin have shown results of amphetamine. The exact amphetamine salts are unknown, I do not manufacture them.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/80258e3732a4490b4bfb43c9a653f83b">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								AMPHETAMINE PURE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/80258e3732a4490b4bfb43c9a653f83b">
+											<img src="/item-image/80258e3732a4490b4bfb43c9a653f83b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/80258e3732a4490b4bfb43c9a653f83b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">260 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/80258e3732a4490b4bfb43c9a653f83b">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>TOP PURITY Amphetamine 98% PURITY FROM THE CHINA(MAINLAND) SUPPLIER</p>
+
+<p>GREAT FORMULA ,LAB PROVEN AND TESTED</p>
+
+<p>AVAILABLE IN CUSTOMIZED FORMS CRYSTALS POWDERED ,UNCUT ,PARTIALLY-CRUSHED,CRUSHED BROWN,CRYSTAL CLEAR ,BLUE…</p>
+
+<p>SHIPPING WORLDWIDE</p>
+
+<p>BULK BUYERS HAVE DISCOUNTS</p>
+
+<p>WORLDWIDE DELIVERY MAXIMUM 5 DAYS (USA AND UK 3 DAYS)</p>
+
+<p>100% MONEY BACK GUARANTEED FOR UNDELIVERED PARCELS</p>
+
+<p>SALES ARE FROM 100GRMS AND ABOVE</p>
+
+<p>SEE VENDOR FAQ FOR MORE DETAILS</p>
+
+<p>We will provide the most comprehensive products and service to you!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/803162ac2c98446c6ae8f9d97d2dd920">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Sour Diesel 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/803162ac2c98446c6ae8f9d97d2dd920">
+											<img src="/item-image/803162ac2c98446c6ae8f9d97d2dd920?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/803162ac2c98446c6ae8f9d97d2dd920">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sour Diesel, sometimes called Sour D, is an invigorating sativa-dominant strain named after its pungent, diesel-like aroma. This fast-acting strain delivers energizing, dreamy cerebral effects that havepushed Sour Diesel to its legendary status. Stress, pain, and depressionfade away in long-lasting relief that makes Sour Diesel a top choice among medical patients. This strain took root in the early 90’s, and it is believed to have descended from Chemdawg 91and Super Skunk.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/84a39396fb7e40d654a34c836fda954c">
+								<span class="ui teal tiny label tag right floated">Testosterone Propionate</span>
+								Testosterone propionate
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/84a39396fb7e40d654a34c836fda954c">
+											<img src="/item-image/84a39396fb7e40d654a34c836fda954c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/84a39396fb7e40d654a34c836fda954c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 botttles </div>
+										<div class="ui basic left pointing label price">199 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone propionate is an anabolic steroid, the fastest ester of testosterone. This steroid is quite popular among athletes of power sports, …</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/a3be712ed7bc48cb45d61dc362b8b96b">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								Prerolled joints
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/a3be712ed7bc48cb45d61dc362b8b96b">
+											<img src="/item-image/a3be712ed7bc48cb45d61dc362b8b96b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a3be712ed7bc48cb45d61dc362b8b96b">
+										<div class="ui dark-green basic tiny button fluid left aligned">50pj</div>
+										<div class="ui basic left pointing label price">260 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a3be712ed7bc48cb45d61dc362b8b96b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pj</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Best deals available, high quality potent marijuana strains clean , loud with stinky smell. Special OG KUSH SOUR DIESEL Girl scout cookies PINEAPPLE EXPRESS NORTHERN LIGHT HASH BROWNIES EDIBLES Cannabis OIL SEEDS And more potent strains Perfectly rolled joints with clean strains The safety and security of our customers and the quality of our products first. Our drugs, good and services are of high quality and are in stock. Place your order and contact for safe delivery and more info. We base our goods so it will definitely meet and surpass every buyer’s highest expectations. We guarantee 100%,the satisfaction and security of the customer is of first importance to us. Contact for more inquiry and medic adv as per our products and services. For a faster reply, more inquiry and information about our order rates and discounts We carry the top trusted brands in the industry and many types of guns such as Bolt-Action, Lever-Action, Over/Under, Semi-Automatic or Single-Shot to just name a few along with ammo and o</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/a6042f90ebf8456151bce94ecd9b214e">
+								<span class="ui teal tiny label tag right floated">DMT</span>
+								20 grams DMT (Dimethyltryptamine) powder
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/a6042f90ebf8456151bce94ecd9b214e">
+											<img src="/item-image/a6042f90ebf8456151bce94ecd9b214e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a6042f90ebf8456151bce94ecd9b214e">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">360 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/a6042f90ebf8456151bce94ecd9b214e">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy DMT online is a powerful psychedelic drug, and a type of tryptamine alkaloid. It is a naturally occurring substance, found in various plants and animals, and in small quantities in the human brain, where its function is unknown. DMT is famous for its power. Though the psychedelic trip it creates only lasts 5 to 30 minutes when smoked, the effect is profound and remarkable, with the feeling that the user is transported to a completely different place, immersed in kaleidoscopic sounds and images. In its pure form, the drug is a white to yellow crystalline solid.</p>
+
+<p>Some of the most unusual psychedelic trip reports come from users of DMT, who report “revolving quadrate vortices,” conversations with intelligent alien-type creatures, and so on. These reports are unusual because of their intensity and the sensation of meeting intelligent beings, which is reminiscent of what happens to many people each night in dreams. The drug is relatively rare due to the lack of commercial demand and the scarcity of peopl</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/ce2ca11d572044fc7f1af6a9378eb9a0">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								KETAMINE 100% PURE LAB TESTED 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/ce2ca11d572044fc7f1af6a9378eb9a0">
+											<img src="/item-image/ce2ca11d572044fc7f1af6a9378eb9a0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ce2ca11d572044fc7f1af6a9378eb9a0">
+										<div class="ui dark-green basic tiny button fluid left aligned">12g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ce2ca11d572044fc7f1af6a9378eb9a0">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>What is Ketamine HCL Crystal Powder? Inducing anesthesia (lack of sensation or feeling) before surgery or certain procedures that do not require skeletal muscle relaxation. It may also be used for other conditions as determined by your doctor.What is Ketamine HCL used for? Ketamine HCL Crystal salt/powder:Ketamine used before surgery or a medical or dental procedure to produce loss of consciousness. May be used on its own or with another medicine. This medicine is a type of anesthetic.Before using ketamine:Some medical conditions may interact with ketamine. Tell your doctor or pharmacist if you have any medical conditions, especially if any of the following apply to you:if you are pregnant, planning to become pregnant, or are breast-feeding if you are taking any prescription or nonprescription medicine, herbal preparation, or dietary supplement if you have allergies to medicines, foods, or other substances if you have a history of head trauma or injury, bleeding in the brain, a stroke, increased spinal fluid</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/b83fdefb967644595d5382bece712566">
+								<span class="ui teal tiny label tag right floated">Seeds</span>
+								Cannabis Seeds
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/b83fdefb967644595d5382bece712566">
+											<img src="/item-image/b83fdefb967644595d5382bece712566?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b83fdefb967644595d5382bece712566">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 seeds</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b83fdefb967644595d5382bece712566">
+										<div class="ui dark-green basic tiny button fluid left aligned">35 seeds</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cannabis seeds are perfect for growing both indoors and outdoors. These indica and sativa seeds produce bushy plants that grow indoors to just about 60 centimeters high but they can grow into fat bushes when grown outdoors. Each plant is known to produce an abundance of yielding buds. The Afghan marijuana plant has a fairly high CBD level, and its THC level is significantly high as well.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/dacb9148f3444c6564e86bb575219b3f">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								Top quality MDMA 85% 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/dacb9148f3444c6564e86bb575219b3f">
+											<img src="/item-image/dacb9148f3444c6564e86bb575219b3f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/dacb9148f3444c6564e86bb575219b3f">
+										<div class="ui dark-green basic tiny button fluid left aligned">12g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/dacb9148f3444c6564e86bb575219b3f">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">499 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>On this order we offer 100% arrival guarantee in EU!!</p>
+
+<p>This is a bulk offer for MDMA 85%.</p>
+
+<p>Please read these instructions carefully and provide all the required information. If there are any questions contact me here This order will be shipped from the Netherlands. You will have a tracking number, it will be send to an e-mail address you provide. Due too difficulty of packaging it will take an extra 2-3 days for your order to be shipped. Once you receive the parcel do not throw anything away until you find the product. The product will be in rock/small rock.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/5f6463a0a04f42317c69a11238a22ff9">
+								<span class="ui teal tiny label tag right floated">LSD</span>
+								LSD Blotter 280 orginal Hofmann 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/5f6463a0a04f42317c69a11238a22ff9">
+											<img src="/item-image/5f6463a0a04f42317c69a11238a22ff9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5f6463a0a04f42317c69a11238a22ff9">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 packs</div>
+										<div class="ui basic left pointing label price">1 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5f6463a0a04f42317c69a11238a22ff9">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 packs</div>
+										<div class="ui basic left pointing label price">220 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5f6463a0a04f42317c69a11238a22ff9">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 packs</div>
+										<div class="ui basic left pointing label price">410 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/5f6463a0a04f42317c69a11238a22ff9">
+										<div class="ui dark-green basic tiny button fluid left aligned">400 pacs</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>LSD Blotter 280 orginal Hofmann,perforated.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/3381997a924c4b804377985d0295936b">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								High Medicated Gummies
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/3381997a924c4b804377985d0295936b">
+											<img src="/item-image/3381997a924c4b804377985d0295936b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/3381997a924c4b804377985d0295936b">
+										<div class="ui dark-green basic tiny button fluid left aligned">20</div>
+										<div class="ui basic left pointing label price">310 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/3381997a924c4b804377985d0295936b">
+										<div class="ui dark-green basic tiny button fluid left aligned">40</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Medicated Gummies… Comes in bear or puzzle piece shapes. Please specify in your order or we will choose for you.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/0b0703229de241d367d95fd6197d52ee">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								Buy Afghan Black Hash
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/0b0703229de241d367d95fd6197d52ee">
+											<img src="/item-image/0b0703229de241d367d95fd6197d52ee?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/0b0703229de241d367d95fd6197d52ee">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">240 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/0b0703229de241d367d95fd6197d52ee">
+										<div class="ui dark-green basic tiny button fluid left aligned">2oz</div>
+										<div class="ui basic left pointing label price">470 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Afghan Black Hash is a hash clone. It is worldwide legal, and it will be legal forever. It does NOT contain any THC, synthetic cannabinoids or other research chemicals (like JWH-018, JWH-073, JWH-250, AM-2209 etc.). It is probably the best legal hash on the market. We only use natural, food quality materials. It looks like hash, it feels like hash, it smells like hemp and it has a very good taste. Afghan Black hashish only differs in colour from our other products. If you are not familiar with our products, buy a sample pack first. The shipping is free. Buy more from our legal hash products and the price will be lower.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/6cbd8b7e6f88439158c45939cc9ef3cd">
+								<span class="ui teal tiny label tag right floated">Testosterone Enanthate</span>
+								Testosterone Enanthate - Steroids 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/6cbd8b7e6f88439158c45939cc9ef3cd">
+											<img src="/item-image/6cbd8b7e6f88439158c45939cc9ef3cd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/6cbd8b7e6f88439158c45939cc9ef3cd">
+										<div class="ui dark-green basic tiny button fluid left aligned">12 vials </div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Testosterone Enanthate - Steroids  one of the many esterified variants of Testosterone available. It is an injectable compound with a slow rate of release due to the larger Enanthate ester attached to the Testosterone molecule. This augments the release rate and half-life of Testosterone to that of a slower release. The majority of Testosterone products that have been designed are single products that contain a single esterified form, as opposed to Testosterone products which consist of a blend of several different esterified variants in the liquid (such as Sustanon 250, for example).</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/b116d835231346094adb825f937cdeb3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								1oz moonrocks
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/b116d835231346094adb825f937cdeb3">
+											<img src="/item-image/b116d835231346094adb825f937cdeb3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/b116d835231346094adb825f937cdeb3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>So unique. Just ike the smell. Velvety thick textured smoke that coats your mouth with the flavor and then stays there. THIN MINTS! No joke, it’s very earthy and chocolatey. You will understand why this strain is called GS Cookies</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/c67172303b4a42485f47667675263743">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								High quality Ephedrine HCL Tablets 30mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/c67172303b4a42485f47667675263743">
+											<img src="/item-image/c67172303b4a42485f47667675263743?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/c67172303b4a42485f47667675263743">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000pills</div>
+										<div class="ui basic left pointing label price">260 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/c67172303b4a42485f47667675263743">
+										<div class="ui dark-green basic tiny button fluid left aligned">2000pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>High quality Ephedrine HCL Tablets 30mg ship overnight,,We have the best quality Ephedrine HCL Tablets 30mg The prices are affordable and the quality is the best you can see on the market Large orders have discounts and free shipping</p>
+
+<p>Overnight and express is also offered at low rates Our priority is to offer the best business deals to all our clients</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/e8c2f2bdffd8482b6dc550e5a2988a75">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								HYDROCODONE 10/325
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/e8c2f2bdffd8482b6dc550e5a2988a75">
+											<img src="/item-image/e8c2f2bdffd8482b6dc550e5a2988a75?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/e8c2f2bdffd8482b6dc550e5a2988a75">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 pills</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hydrocodone is an opioid, and acts as a selective agonist of the μ-opioid receptor, the main biological target of the endogenous neuropeptide endorphin.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/ec9a0688c564406f53e92d83b80d126d">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Levitra</span>
+								LEVITRA 20MG 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/ec9a0688c564406f53e92d83b80d126d">
+											<img src="/item-image/ec9a0688c564406f53e92d83b80d126d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ec9a0688c564406f53e92d83b80d126d">
+										<div class="ui dark-green basic tiny button fluid left aligned">55</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Generic Levitra is a popular prescription medicine which has been used for a long time to treat erectile dysfunction. In erectile dysfunction, men cannot get erection of the penis. This is an embarrassing condition. Inability to achieve and maintain an erection until ejaculation is called as impotence in men. This condition was considered as a taboo subject. There are different psychological and physiological causes of impotence. Recent heavy advertisements of medicines used for treatment of erectile dysfunction have helped in making remedial products like Levitra an accepted norm in people.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/ede344b4afe4482d63a08618c25678ac">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Galeto 41 hybrid with high THC level 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/ede344b4afe4482d63a08618c25678ac">
+											<img src="/item-image/ede344b4afe4482d63a08618c25678ac?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ede344b4afe4482d63a08618c25678ac">
+										<div class="ui dark-green basic tiny button fluid left aligned">4 packs</div>
+										<div class="ui basic left pointing label price">210 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/ede344b4afe4482d63a08618c25678ac">
+										<div class="ui dark-green basic tiny button fluid left aligned">2</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Galeto 41 from is a hybrid that was developed when an old school Super Skunk clone (pre-98) from Holland was pollinated by an East Coast Sour Diesel male. The result is a sativa-dominant mix that rewards consumers with high-flying effects. The combination of sour citrus aromas shift to flavors of earthy Skunk that produce happy thoughts and a smile that lasts all day. Super Sour Skunk’s uplifting</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/3731ce84cbab481a79b24ffb9efb2dce">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								Top quality MDMA 85% 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/3731ce84cbab481a79b24ffb9efb2dce">
+											<img src="/item-image/3731ce84cbab481a79b24ffb9efb2dce?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/3731ce84cbab481a79b24ffb9efb2dce">
+										<div class="ui dark-green basic tiny button fluid left aligned">12g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/3731ce84cbab481a79b24ffb9efb2dce">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>On this order we offer 100% arrival guarantee in EU!!</p>
+
+<p>This is a bulk offer for MDMA 85%.</p>
+
+<p>Please read these instructions carefully and provide all the required information. If there are any questions contact me here This order will be shipped from the Netherlands. You will have a tracking number, it will be send to an e-mail address you provide. Due too difficulty of packaging it will take an extra 2-3 days for your order to be shipped. Once you receive the parcel do not throw anything away until you find the product. The product will be in rock/small rock.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/9c1063416d0a49b65367e70d7e38079d">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								Buy Ketamine Liquid Online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/9c1063416d0a49b65367e70d7e38079d">
+											<img src="/item-image/9c1063416d0a49b65367e70d7e38079d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/9c1063416d0a49b65367e70d7e38079d">
+										<div class="ui dark-green basic tiny button fluid left aligned">12 vials</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/9c1063416d0a49b65367e70d7e38079d">
+										<div class="ui dark-green basic tiny button fluid left aligned">25vials</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ketamine is used to induce loss of consciousness or anesthesia. It can produce relaxation and relieve pain in humans and animals.It is the most widely used anesthetic in veterinary medicine and is used for some surgical procedures in humans. Ketamine is used to put you to sleep for surgery and to prevent pain and discomfort during certain medical tests or procedures,its injected into a muscle, or as an infusion into a vein. You will receive this injection in a clinic or hospital setting your breathing, blood pressure, heart function, and other vital signs will be watched closely while you are receiving ketamine</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/8a48e97ebc0d431a66544046ded6a4c1">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								MEDICAL CANNABIS OIL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/8a48e97ebc0d431a66544046ded6a4c1">
+											<img src="/item-image/8a48e97ebc0d431a66544046ded6a4c1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/8a48e97ebc0d431a66544046ded6a4c1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2oz</div>
+										<div class="ui basic left pointing label price">180 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/8a48e97ebc0d431a66544046ded6a4c1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1oz</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Medical cannabis oil is utilized to treat a myriad of conditions, with the number of those who purchase it for medicinal use increasing every year. One of the most common reasons people are choosing to obtain a cannabis card is due to the drug’s effectiveness at combating cancer, and the symptoms related to its treatment.ORDER NOW</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/38adac1918cb47dc5e9551a7604ef6d0">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								PRE-ROLL CONES 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/38adac1918cb47dc5e9551a7604ef6d0">
+											<img src="/item-image/38adac1918cb47dc5e9551a7604ef6d0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/38adac1918cb47dc5e9551a7604ef6d0">
+										<div class="ui dark-green basic tiny button fluid left aligned">4g</div>
+										<div class="ui basic left pointing label price">210 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/38adac1918cb47dc5e9551a7604ef6d0">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/4 oz</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>blunt and a joint, utilizing joint-like paper, but mixing in tobacco-like effects. … Consider District 8’s natural, luxury cannabis and hand-crafted, pre-rolled blunts</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/9ce67552b39c463e6b944dbd2a245de9">
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								EXSTACY PILLS LAB TASTED
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/9ce67552b39c463e6b944dbd2a245de9">
+											<img src="/item-image/9ce67552b39c463e6b944dbd2a245de9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/9ce67552b39c463e6b944dbd2a245de9">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 tabs</div>
+										<div class="ui basic left pointing label price">130 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/9ce67552b39c463e6b944dbd2a245de9">
+										<div class="ui dark-green basic tiny button fluid left aligned">125 tabs</div>
+										<div class="ui basic left pointing label price">360 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/9ce67552b39c463e6b944dbd2a245de9">
+										<div class="ui dark-green basic tiny button fluid left aligned">250tabs</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>EXTRA EXSTACY PILLS for sale</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/f737ef6358ef4b8b5b097b20d7d6e571">
+								<span class="ui teal tiny label tag right floated">Danabol</span>
+								Danabol Ds 10mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/f737ef6358ef4b8b5b097b20d7d6e571">
+											<img src="/item-image/f737ef6358ef4b8b5b097b20d7d6e571?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/f737ef6358ef4b8b5b097b20d7d6e571">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000 tabs</div>
+										<div class="ui basic left pointing label price">210 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dianabol is a brand name for methandrostenolone, which is an anabolic steroid used by performance athletes all over the world. It was developed by doctors in Germany in the 1960’s as aid profession athletes. Its use has since spread to other areas of sports and of course, bodybuilding.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/237c8231710144bb47d22641f2c679bf">
+								<span class="ui teal tiny label tag right floated">Mexedrone</span>
+								Mexedrone Crystals
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/237c8231710144bb47d22641f2c679bf">
+											<img src="/item-image/237c8231710144bb47d22641f2c679bf?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/237c8231710144bb47d22641f2c679bf">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/237c8231710144bb47d22641f2c679bf">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">570 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Mexedrone is a stimulant drug of the class that has been sold online as a designer drug. It is the alpha-methoxy derivative of . Best Grade Health Care Products Available Online at best prices,fast ,secure and efficient delivery services.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/7db45f5ae0eb47984e30ffb1054a2a3f">
+								<span class="ui teal tiny label tag right floated">Baclofen</span>
+								Baclofen Release Tablet
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/7db45f5ae0eb47984e30ffb1054a2a3f">
+											<img src="/item-image/7db45f5ae0eb47984e30ffb1054a2a3f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/7db45f5ae0eb47984e30ffb1054a2a3f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10mg x 60pills </div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Baclofen is used to treat muscle spasms caused by certain conditions (such as multiple sclerosis, spinal cord injury/disease). It works by helping to relax the muscles</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/39ee3488b1ce460872a8e86a10fab21f">
+								<span class="ui teal tiny label tag right floated">Cheews</span>
+								Banana Kush Grade A&#43; Organic,(Indica) 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/39ee3488b1ce460872a8e86a10fab21f">
+											<img src="/item-image/39ee3488b1ce460872a8e86a10fab21f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/39ee3488b1ce460872a8e86a10fab21f">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">260 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Banana Kush is one hybrid strain created in this Golden State. Banana Kush is a mixture of two other popular types of kush, Skunk Haze, and Ghost OG. This guarantees you a potent high that lasts for quite a while.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/102e0e7c03f545cd7c80728c313ff5be">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								Premium Vape Cartridges
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/102e0e7c03f545cd7c80728c313ff5be">
+											<img src="/item-image/102e0e7c03f545cd7c80728c313ff5be?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/102e0e7c03f545cd7c80728c313ff5be">
+										<div class="ui dark-green basic tiny button fluid left aligned">4g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/company/item/102e0e7c03f545cd7c80728c313ff5be">
+										<div class="ui dark-green basic tiny button fluid left aligned">8g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Vape pens of various strains. Available in 500 and 1000 mgs. Bulk Orders only. Shipping is worldwide with no signature needed for package.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/company/item/455e534442164cd366e5a2654bc1de9a">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ritalin</span>
+								Buy Ritalin / Methylphenidate 10 mg online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/company/item/455e534442164cd366e5a2654bc1de9a">
+											<img src="/item-image/455e534442164cd366e5a2654bc1de9a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/company/item/455e534442164cd366e5a2654bc1de9a">
+										<div class="ui dark-green basic tiny button fluid left aligned">90 tablets including box</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tablets in original blister and package from Dutch pharmacy.</p>
+
+<p>Brands: Mylan Teva Sandoz (ATM out of stock)</p>
+
+<p>Direct release No US/AU/CA/ Shipping</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 1882 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

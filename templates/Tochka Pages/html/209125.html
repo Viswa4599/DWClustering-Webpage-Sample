@@ -1,0 +1,2953 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/slayer1?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@slayer1</h2>
+								<p>Supplier of top quality pharmaceutical pills, research chemicals, cannabis products and psychedelics products with discreet delivery worldwide.</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 week ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 41 minutes ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/slayer1">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/slayer1">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/slayer1/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">5</span>
+									</a>
+									<a class="item active" href="/store/slayer1/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">61</span>
+									</a>
+									<a class="item" href="/store/slayer1/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/03876c937a9849f66ad9f1aadcce12e1">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								TILIDIN 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/03876c937a9849f66ad9f1aadcce12e1">
+											<img src="/item-image/03876c937a9849f66ad9f1aadcce12e1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/03876c937a9849f66ad9f1aadcce12e1">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/03876c937a9849f66ad9f1aadcce12e1">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/03876c937a9849f66ad9f1aadcce12e1">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tilidine is used in the form of hydrochloride or phosphate salt. In Germany, tilidine is available in a fixed combination with naloxone for oral administration (Valoron N and generics); the mixture of naloxone is claimed to lower the abuse liability of the opioid analgesic.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/f7174162777f41206d8f2a5a9e719145">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								OXYCOTIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/f7174162777f41206d8f2a5a9e719145">
+											<img src="/item-image/f7174162777f41206d8f2a5a9e719145?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7174162777f41206d8f2a5a9e719145">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7174162777f41206d8f2a5a9e719145">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7174162777f41206d8f2a5a9e719145">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>. Each tablet for oral administration contains 15 mg or 30 mg of oxycodone … pain reliever used to treat moderate to severe pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/c9d4615895e940247b6eb3edb3ac0881">
+								<span class="ui teal tiny label tag right floated">2C-B</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								2C-B PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/c9d4615895e940247b6eb3edb3ac0881">
+											<img src="/item-image/c9d4615895e940247b6eb3edb3ac0881?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/c9d4615895e940247b6eb3edb3ac0881">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/c9d4615895e940247b6eb3edb3ac0881">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/c9d4615895e940247b6eb3edb3ac0881">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>2C-B is a psychedelic drug similar to mescaline. … 2C-B commonly comes in the form of a pill or a powder (pills are usually white but can be any colour) and is often sold as ecstasy in the underground rave scene, despite being a very distinct substance with markedly different effects at higher doses.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/d9dd8b017c5143fa46025edce2b31914">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								THC/CBD CANNABIS OIL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/d9dd8b017c5143fa46025edce2b31914">
+											<img src="/item-image/d9dd8b017c5143fa46025edce2b31914?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d9dd8b017c5143fa46025edce2b31914">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d9dd8b017c5143fa46025edce2b31914">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 grams</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d9dd8b017c5143fa46025edce2b31914">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>HIGH GRADE THC/CBD CO2 EXTRACTED OIL</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/fafb461770a843ef6f40a448fbb6fbb7">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								SOMA 350
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/fafb461770a843ef6f40a448fbb6fbb7">
+											<img src="/item-image/fafb461770a843ef6f40a448fbb6fbb7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/fafb461770a843ef6f40a448fbb6fbb7">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/fafb461770a843ef6f40a448fbb6fbb7">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>SOMA
+(carisoprodol) Tablets</p>
+
+<p>DESCRIPTION
+SOMA (carisoprodol) Tablets are available as 250 mg and 350 mg round, white tablets. Carisoprodol is a white, crystalline powder, having a mild, characteristic odor and a bitter taste. It is slightly soluble in water; freely soluble in alcohol, in chloroform, and in acetone; and its solubility is practically independent of pH. Carisoprodol is present as a racemic mixture. Chemically, carisoprodol is N-isopropyl-2-methyl-2-propyl-1,3propanediol dicarbamate and the molecular formula is C12H24N2O4, with a molecular weight of 260.33.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/815f05ca100f4e2340266d736abf17b5">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ATIVAN LORAZEPAM 2MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/815f05ca100f4e2340266d736abf17b5">
+											<img src="/item-image/815f05ca100f4e2340266d736abf17b5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/815f05ca100f4e2340266d736abf17b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/815f05ca100f4e2340266d736abf17b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/815f05ca100f4e2340266d736abf17b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">5000 pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Lorazepam, sold under the brand name Ativan among others, is a benzodiazepine medication. It is used to treat anxiety disorders, trouble sleeping, active seizures including status epilepticus, alcohol withdrawal, and chemotherapy-induced nausea and vomiting.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/8a40e64c8b58497942435d21d9345c33">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								DEMEROL MEPERIDINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/8a40e64c8b58497942435d21d9345c33">
+											<img src="/item-image/8a40e64c8b58497942435d21d9345c33?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8a40e64c8b58497942435d21d9345c33">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8a40e64c8b58497942435d21d9345c33">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8a40e64c8b58497942435d21d9345c33">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Meperidine is used to help relieve moderate to severe pain. It belongs to a class of drugs known as opioid (narcotic) analgesics and is similar to morphine. It works in the brain to change how your body feels and responds to pain.</p>
+
+<p>Meperidine should not be used to treat long-term or ongoing pain. It should only be used to treat sudden episodes of moderate to severe pain. See also Precautions section.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/b37af753972a4cf44afd5ccb6984604c">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MANDRAX QUAALUDE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/b37af753972a4cf44afd5ccb6984604c">
+											<img src="/item-image/b37af753972a4cf44afd5ccb6984604c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b37af753972a4cf44afd5ccb6984604c">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills/300mg</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b37af753972a4cf44afd5ccb6984604c">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills/300mg</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b37af753972a4cf44afd5ccb6984604c">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills/300mg</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methaqualone is a sedative whose effects are similar to those of barbiturates. Commonly known as Mandrax , M-Pills or Bonbon</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/c368cf38daae459258873f2ab8081aed">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PURE COCAINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/c368cf38daae459258873f2ab8081aed">
+											<img src="/item-image/c368cf38daae459258873f2ab8081aed?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/c368cf38daae459258873f2ab8081aed">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/c368cf38daae459258873f2ab8081aed">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 grams</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/c368cf38daae459258873f2ab8081aed">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cocaine, also known as coke, is a strong stimulant mostly used as a recreational drug. It is commonly snorted, inhaled as smoke, or dissolved and injected into a vein</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/f7b110b596c1429a7623a302c11efa5d">
+								<span class="ui teal tiny label tag right floated">Opiates</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Tramadol
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/f7b110b596c1429a7623a302c11efa5d">
+											<img src="/item-image/f7b110b596c1429a7623a302c11efa5d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7b110b596c1429a7623a302c11efa5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">300 pills/100mg</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7b110b596c1429a7623a302c11efa5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">600pills/100mg</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7b110b596c1429a7623a302c11efa5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000pills/100mg</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tramadol is a narcotic-like pain reliever. Tramadol is used to treat moderate to severe pain. Tramadol is in a class of medications called opiate (narcotic) analgesics.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/475b8461177f42e46987a7761a950444">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ROHYPNOL 2MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/475b8461177f42e46987a7761a950444">
+											<img src="/item-image/475b8461177f42e46987a7761a950444?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/475b8461177f42e46987a7761a950444">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/475b8461177f42e46987a7761a950444">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/475b8461177f42e46987a7761a950444">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Rohypnol is an intermediate-acting benzodiazepine with general properties similar to those of Valium (diazepam). It is used in the short-term treatment of insomnia, as a pre-medication in surgical procedures and for inducing anesthesia.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/3dd16b770bed4b1f623baafa10fa3fcd">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ROXICET 30MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/3dd16b770bed4b1f623baafa10fa3fcd">
+											<img src="/item-image/3dd16b770bed4b1f623baafa10fa3fcd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/3dd16b770bed4b1f623baafa10fa3fcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/3dd16b770bed4b1f623baafa10fa3fcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">1250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/3dd16b770bed4b1f623baafa10fa3fcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This combination medication is used to help relieve moderate to severe pain. It contains a opioid (narcotic) pain reliever (oxycodone) and a non-opioid pain reliever (acetaminophen). Oxycodone works in the brain to change how your body feels and responds to pain. Acetaminophen can also reduce a fever.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/827de69794d24d045b5a9846c41ada1a">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								HIGH GRADE THC/CBD WAX
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/827de69794d24d045b5a9846c41ada1a">
+											<img src="/item-image/827de69794d24d045b5a9846c41ada1a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/827de69794d24d045b5a9846c41ada1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/827de69794d24d045b5a9846c41ada1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/827de69794d24d045b5a9846c41ada1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">2800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>As the name suggests, wax concentrates resemble the texture of candle wax. Depending on the overall consistency it can be known as budder, badder, crumble or honeycomb.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/83ea37dab8c443c749273a4344b2c3ac">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ROXICODONE 30 BLUES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/83ea37dab8c443c749273a4344b2c3ac">
+											<img src="/item-image/83ea37dab8c443c749273a4344b2c3ac?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/83ea37dab8c443c749273a4344b2c3ac">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/83ea37dab8c443c749273a4344b2c3ac">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/83ea37dab8c443c749273a4344b2c3ac">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>ROXICODONE® (oxycodone hydrochloride tablets USP) is an opioid analgesic.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/4d829fd59125410a6546eb24b057dcfd">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								OC 80&#39;s
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/4d829fd59125410a6546eb24b057dcfd">
+											<img src="/item-image/4d829fd59125410a6546eb24b057dcfd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/4d829fd59125410a6546eb24b057dcfd">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/4d829fd59125410a6546eb24b057dcfd">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/4d829fd59125410a6546eb24b057dcfd">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We have top quality oxycontin pills, OC 80 mg lables , Good quality and can sell without prescription, Prescription not needed.</p>
+
+<p>thanks</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/aaa9fe5dbfbe40fc5afd5aedcd44d2c6">
+								<span class="ui teal tiny label tag right floated">Viagra</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								VIAGRA 100MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/aaa9fe5dbfbe40fc5afd5aedcd44d2c6">
+											<img src="/item-image/aaa9fe5dbfbe40fc5afd5aedcd44d2c6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/aaa9fe5dbfbe40fc5afd5aedcd44d2c6">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/aaa9fe5dbfbe40fc5afd5aedcd44d2c6">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/aaa9fe5dbfbe40fc5afd5aedcd44d2c6">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sildenafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED). In combination with sexual stimulation, sildenafil works by increasing blood flow to the penis to help a man get and keep an erection.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/d7f4542aa0854cf871801a7af98f4c43">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								HEROIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/d7f4542aa0854cf871801a7af98f4c43">
+											<img src="/item-image/d7f4542aa0854cf871801a7af98f4c43?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d7f4542aa0854cf871801a7af98f4c43">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d7f4542aa0854cf871801a7af98f4c43">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 grams</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d7f4542aa0854cf871801a7af98f4c43">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Heroin, also known as diamorphine among other names, is an opioid most commonly used as a recreational drug for its euphoric effects. It is used medically in several countries to relieve pain or in opioid replacement therapy</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/d949441d975d43485a16a397e56006a5">
+								<span class="ui teal tiny label tag right floated">Baclofen</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								FENTANYL PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/d949441d975d43485a16a397e56006a5">
+											<img src="/item-image/d949441d975d43485a16a397e56006a5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d949441d975d43485a16a397e56006a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d949441d975d43485a16a397e56006a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d949441d975d43485a16a397e56006a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Fentanyl, also spelled fentanil, is an opioid used as a pain medication and together with other medications for anesthesia.[2] Fentanyl is also used as a recreational drug, often mixed with heroin or cocaine.[4] It has a rapid onset and effects generally last less than two hours.[2] Medically, fentanyl is used by injection, as a patch on the skin, as a nasal spray, or in the mouth.[2]</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/f53dac2d136a47397dce503cce7c305a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PURPLE PUNCH
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/f53dac2d136a47397dce503cce7c305a">
+											<img src="/item-image/f53dac2d136a47397dce503cce7c305a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f53dac2d136a47397dce503cce7c305a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f53dac2d136a47397dce503cce7c305a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f53dac2d136a47397dce503cce7c305a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Purple Punch is the sweet and sedating union of two indica-dominant classics. By breeding Larry OG with Granddaddy Purple, the astonishing trichome laden Purple Punch was born, smelling of grape candy, blueberry muffins, and tart Kool-Aid. The potency of this strain gives the consumer a one-two punch to the head and body, initially landing between the eyes and settling down into the limbs. Purple Punch is a delicious dessert strain that is best suited for after dinner. Its effects may help with managing nausea, stress, minor body aches, and sleeplessness.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/12bd5e6887f443c05f83cef5c03f03d8">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								VICODINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/12bd5e6887f443c05f83cef5c03f03d8">
+											<img src="/item-image/12bd5e6887f443c05f83cef5c03f03d8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/12bd5e6887f443c05f83cef5c03f03d8">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/12bd5e6887f443c05f83cef5c03f03d8">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/12bd5e6887f443c05f83cef5c03f03d8">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Vicodin addiction is a very treatable problem. At clinics across the UK, Vicodin abusers are getting the help they need under the care of trained doctors and nurses who know what it takes to beat addiction. UKAT is here to help you with your own treatment, or that of a loved one. Please know that Vicodin addiction does not have to be a permanent condition. Proper medical treatment makes it very possible to overcome.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/18c967c67b6243d17f74bd7095d67595">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								RICK SIMPSON OIL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/18c967c67b6243d17f74bd7095d67595">
+											<img src="/item-image/18c967c67b6243d17f74bd7095d67595?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/18c967c67b6243d17f74bd7095d67595">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/18c967c67b6243d17f74bd7095d67595">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 grams</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/18c967c67b6243d17f74bd7095d67595">
+										<div class="ui dark-green basic tiny button fluid left aligned">90 grams</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Rick Simpson oil (RSO) is a cannabis oil product. It was developed by Rick Simpson, a Canadian medical marijuana activist. RSO differs from a lot of other cannabis oils because it contains higher levels of tetrahydrocannabinol (THC). This is the main psychoactive cannabinoid in marijuana that gets people “high.”</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/30741e8153074e657b8d810d353577f1">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								KLONOPIN CLONAZEPAM 2MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/30741e8153074e657b8d810d353577f1">
+											<img src="/item-image/30741e8153074e657b8d810d353577f1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/30741e8153074e657b8d810d353577f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/30741e8153074e657b8d810d353577f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/30741e8153074e657b8d810d353577f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Clonazepam oral tablet is available as a generic drug and a brand-name drug. Brand name: Klonopin.
+Clonazepam comes as both an oral tablet and an oral disintegrating (dissolving) tablet.
+Clonazepam is used to treat panic disorder and seizures.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/42de4696606f4c407e62fb1754dc2127">
+								<span class="ui teal tiny label tag right floated">Fentanyl</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								FENTANYL 100MG PATCHES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/42de4696606f4c407e62fb1754dc2127">
+											<img src="/item-image/42de4696606f4c407e62fb1754dc2127?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/42de4696606f4c407e62fb1754dc2127">
+										<div class="ui dark-green basic tiny button fluid left aligned">4 packets</div>
+										<div class="ui basic left pointing label price">180 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/42de4696606f4c407e62fb1754dc2127">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 packet</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/42de4696606f4c407e62fb1754dc2127">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 packet</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Fentanyl patch online is a potent, synthetic opioid pain medication with a quick onset and short duration of action. Fentanyl is 70 to 110 times more potent than morphine, but some fentanyl analogs, which are designed to resemble the pharmacological effects of the original drug, may be as much as 9,999 times more potent than morphine. buy fentanyl patches online without prescription.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/43cdcd23e89948dd6c684a3eb88fc615">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PHENTERMINE 37.5MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/43cdcd23e89948dd6c684a3eb88fc615">
+											<img src="/item-image/43cdcd23e89948dd6c684a3eb88fc615?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/43cdcd23e89948dd6c684a3eb88fc615">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/43cdcd23e89948dd6c684a3eb88fc615">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/43cdcd23e89948dd6c684a3eb88fc615">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Phentermine, sold under the brand name Ionamin among others, is a medication used together with diet and exercise to treat obesity. It is taken by mouth for up to a few weeks. After a few weeks the beneficial effects no longer occur. It is also available as the combination phentermine/topiramate.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/b74d93eae8914176740c8eb0ff9ce07d">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								OXYNORM 20MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/b74d93eae8914176740c8eb0ff9ce07d">
+											<img src="/item-image/b74d93eae8914176740c8eb0ff9ce07d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b74d93eae8914176740c8eb0ff9ce07d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b74d93eae8914176740c8eb0ff9ce07d">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b74d93eae8914176740c8eb0ff9ce07d">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>OxyNorm capsules contain oxycodone hydrochloride. Oxycodone belongs to a group of medicines called opioid analgesics. OxyNorm capsules are used to relieve moderate to severe pain. Your doctor, however, may prescribe it for another purpose. Ask your doctor if you have any questions about why it has been prescribed for you. As with all strong painkillers, your body may become used to you taking OxyNorm capsules.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/ca4c242d12614bff47188a199a70eb91">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CRACK COCAINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/ca4c242d12614bff47188a199a70eb91">
+											<img src="/item-image/ca4c242d12614bff47188a199a70eb91?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/ca4c242d12614bff47188a199a70eb91">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 grams</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/ca4c242d12614bff47188a199a70eb91">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/ca4c242d12614bff47188a199a70eb91">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Crack cocaine, also known simply as crack or rock, is a free base form of cocaine that can be smoked. Crack offers a short but intense high to smokers.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/1f1a03310e7546ac6464417a9fdf896f">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								STILNOX 10MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/1f1a03310e7546ac6464417a9fdf896f">
+											<img src="/item-image/1f1a03310e7546ac6464417a9fdf896f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/1f1a03310e7546ac6464417a9fdf896f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/1f1a03310e7546ac6464417a9fdf896f">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/1f1a03310e7546ac6464417a9fdf896f">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>STILNOX CR is used to initiate and maintain sleep in those with sleeping difficulties, also called insomnia. STILNOX CR has a different chemical structure to other sleeping tablets.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/2d02310d8cbd4a70442c5b3015106af1">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								SOUR DIESEL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/2d02310d8cbd4a70442c5b3015106af1">
+											<img src="/item-image/2d02310d8cbd4a70442c5b3015106af1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2d02310d8cbd4a70442c5b3015106af1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">230 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2d02310d8cbd4a70442c5b3015106af1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2d02310d8cbd4a70442c5b3015106af1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sour Diesel, sometimes called Sour D, is an invigorating sativa-dominant strain named after its pungent, diesel-like aroma. This fast-acting strain delivers energizing, dreamy cerebral effects that have pushed Sour Diesel to its legendary status. Stress, pain, and depression fade away in long-lasting relief that makes Sour Diesel a top choice among medical patients. This strain took root in the early 90’s, and it is believed to have descended from Chemdog 91 and Super Skunk.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/b8a98ec49cec422a5f71deb8aa606489">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ACCUTANE 40MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/b8a98ec49cec422a5f71deb8aa606489">
+											<img src="/item-image/b8a98ec49cec422a5f71deb8aa606489?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b8a98ec49cec422a5f71deb8aa606489">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b8a98ec49cec422a5f71deb8aa606489">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b8a98ec49cec422a5f71deb8aa606489">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Isotretinoin, also known as 13-cis-retinoic acid, is a medication primarily used to treat severe acne. Rarely, it is also used to prevent certain skin cancers, and in the treatment of other cancers. It is used to treat harlequin-type ichthyosis, a usually lethal skin disease, and lamellar ichthyosis</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/bd95ab755a9642a94e08fb180ef8b36a">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								KETAMINE POWDER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/bd95ab755a9642a94e08fb180ef8b36a">
+											<img src="/item-image/bd95ab755a9642a94e08fb180ef8b36a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/bd95ab755a9642a94e08fb180ef8b36a">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 grams</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/bd95ab755a9642a94e08fb180ef8b36a">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 grams</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/bd95ab755a9642a94e08fb180ef8b36a">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ketamine used before surgery or a medical or dental procedure to produce loss of consciousness. May be used on its own or with another medicine. This medicine is a type of anesthetic.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/8d652bc575b44c296ce49bca605051b1">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								HYDROCODONE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/8d652bc575b44c296ce49bca605051b1">
+											<img src="/item-image/8d652bc575b44c296ce49bca605051b1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8d652bc575b44c296ce49bca605051b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8d652bc575b44c296ce49bca605051b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8d652bc575b44c296ce49bca605051b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hydrocodone is an opioid pain medication, sometimes called a narcotic. Acetaminophen is a less potent pain reliever that increases the effects of hydrocodone. Acetaminophen and hydrocodone is a combination medicine used to relieve moderate to severe pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/cd6aecb9f94a48554c92351841e7df3c">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Opiates</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CODEINE SYRUP
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/cd6aecb9f94a48554c92351841e7df3c">
+											<img src="/item-image/cd6aecb9f94a48554c92351841e7df3c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/cd6aecb9f94a48554c92351841e7df3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">1.5 per bottle</div>
+										<div class="ui basic left pointing label price">125 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/cd6aecb9f94a48554c92351841e7df3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 bottles</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/cd6aecb9f94a48554c92351841e7df3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 bottles</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Codeine is a prescription pain medication used to treat mild to moderate pain. It comes in tablet form and as the main ingredient in prescription-grade cough suppressants. Tylenol 3, another popular pain reliever, is codeine combined with acetaminophen.</p>
+
+<p>Codeine is an opiate (sometimes called a narcotic). Other opiates include oxycodone, heroin and morphine. Street names for codeine include cough syrup, schoolboy, coties and t-three’s.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/dd1e00437061495e43293826479e7bd5">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MOON ROCKS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/dd1e00437061495e43293826479e7bd5">
+											<img src="/item-image/dd1e00437061495e43293826479e7bd5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/dd1e00437061495e43293826479e7bd5">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/dd1e00437061495e43293826479e7bd5">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/dd1e00437061495e43293826479e7bd5">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Moon rocks are not exactly a type of marijuana strain, but more of a cannabis experiment. Typically, they’re are nuggets of the marijuana strain Girl Scout Cookies, dipped in hash oil and then sprinkled with kief.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/116c9deab01249085e13b5b5d5a6cf37">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								VALIUM DIAZEPAM 10MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/116c9deab01249085e13b5b5d5a6cf37">
+											<img src="/item-image/116c9deab01249085e13b5b5d5a6cf37?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/116c9deab01249085e13b5b5d5a6cf37">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/116c9deab01249085e13b5b5d5a6cf37">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/116c9deab01249085e13b5b5d5a6cf37">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Diazepam belongs to a class of drugs known as benzodiazepines. It is used to treat anxiety, alcohol withdrawal, and seizures. It is also used to relieve muscle spasms and to provide sedation before medical procedures. This medication works by calming the brain and nerves.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/03eca7ce9a1e4f0f69b193240789f92a">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CRACK COCAINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/03eca7ce9a1e4f0f69b193240789f92a">
+											<img src="/item-image/03eca7ce9a1e4f0f69b193240789f92a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Crack cocaine, also known simply as crack or rock, is a free base form of cocaine that can be smoked. Crack offers a short but intense high to smokers.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/24bba6773d834d4572e1a335221e281e">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MDMA PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/24bba6773d834d4572e1a335221e281e">
+											<img src="/item-image/24bba6773d834d4572e1a335221e281e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/24bba6773d834d4572e1a335221e281e">
+										<div class="ui dark-green basic tiny button fluid left aligned">30/250mg pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/24bba6773d834d4572e1a335221e281e">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/24bba6773d834d4572e1a335221e281e">
+										<div class="ui dark-green basic tiny button fluid left aligned">100/250mg pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>3,4-methylenedioxy-methamphetamine (MDMA) is a synthetic drug that alters mood and perception. It is chemically similar to stimulants and hallucinogens. People who use MDMA typically take it as a capsule or tablet. Many people take it in combination with other drugs.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/406f4e2c86f346606120343830de05a5">
+								<span class="ui teal tiny label tag right floated">Opiates</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								SUBOXONE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/406f4e2c86f346606120343830de05a5">
+											<img src="/item-image/406f4e2c86f346606120343830de05a5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/406f4e2c86f346606120343830de05a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/406f4e2c86f346606120343830de05a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/406f4e2c86f346606120343830de05a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Suboxone is an opiate analgesic many physicians and professional treatment centers prescribe to opiate addicts. Suboxone contains buprenorphine and naloxone, or Narcan, making it effective for weaning individuals off of other opiates. Experts debate the use of Suboxone for treating opiate addiction, because of the risk of dependence on Suboxone itself.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/b4f5832ab5b34309586361e590b18a94">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Percocet 10MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/b4f5832ab5b34309586361e590b18a94">
+											<img src="/item-image/b4f5832ab5b34309586361e590b18a94?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b4f5832ab5b34309586361e590b18a94">
+										<div class="ui dark-green basic tiny button fluid left aligned">70 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b4f5832ab5b34309586361e590b18a94">
+										<div class="ui dark-green basic tiny button fluid left aligned">140 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b4f5832ab5b34309586361e590b18a94">
+										<div class="ui dark-green basic tiny button fluid left aligned">300 pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Percocet is a combination of the opioid oxycodone and acetaminophen. Oxycodone is a strong narcotic pain-reliever and cough suppressant similar to morphine, codeine, and hydrocodone. Acetaminophen is a less potent pain reliever that increases the effects of oxycodone. Percocet tablets should not be administered to patients with known hypersensitivity to oxycodone, acetaminophen, or any other component of this product. Percocet acts on the Central Nervous System (CNS) by blocking some brains receptors, to relieve the on-going pain. However, people who have continuing pain should not let the fear of dependence keep them from using narcotics to relieve their pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/0629fa4dda084de472e760a41646b0fb">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								DESOXYN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/0629fa4dda084de472e760a41646b0fb">
+											<img src="/item-image/0629fa4dda084de472e760a41646b0fb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/0629fa4dda084de472e760a41646b0fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/0629fa4dda084de472e760a41646b0fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>home drugs a-z list side effects drug center desoxyn (methamphetamine hydrochloride) drug</p>
+
+<p>Privacy &amp; Trust Info
+Drug Description
+ ADHD Symptoms in Children
+ADHD Symptoms in Children Slideshow Pictures</p>
+
+<p>RxList
+Take the ADHD Quiz</p>
+
+<p>ADHD in Children: Better Parenting
+Parenting a Child with ADHD</p>
+
+<p>Find Lowest Prices on</p>
+
+<p>Desoxyn®
+(methamphetamine hydrochloride) Tablets for Oral Administration</p>
+
+<p>WARNING</p>
+
+<p>METHAMPHETAMINE HAS A HIGH POTENTIAL FOR ABUSE. IT SHOULD THUS BE TRIED ONLY IN WEIGHT REDUCTION PROGRAMS FOR PATIENTS IN WHOM ALTERNATIVE THERAPY HAS BEEN INEFFECTIVE. ADMINISTRATION OF METHAMPHETAMINE FOR PROLONGED PERIODS OF TIME IN OBESITY MAY LEAD TO DRUG DEPENDENCE AND MUST BE AVOIDED. PARTICULAR ATTENTION SHOULD BE PAID TO THE POSSIBILITY OF SUBJECTS OBTAINING METHAMPHETAMINE FOR NON-THERAPEUTIC USE OR DISTRIBUTION TO OTHERS, AND THE DRUG SHOULD BE PRESCRIBED OR DISPENSED SPARINGLY. MISUSE OF METHAMPHETAMINE MAY CAUSE SUDDEN DEATH AND SERIOUS CARDIOVASCULAR ADVERSE EVENTS.</p>
+
+<p>DESCRI</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/8d9047c4b6be46736e0dd6347305399f">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								NORCO PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/8d9047c4b6be46736e0dd6347305399f">
+											<img src="/item-image/8d9047c4b6be46736e0dd6347305399f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8d9047c4b6be46736e0dd6347305399f">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/8d9047c4b6be46736e0dd6347305399f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Norco (hydrocodone bitartrate and acetaminophen) is an opioid analgesic and antitussive (cough suppressant) combined with a pain reliever (analgesic) used to treat moderate to fairly severe pain. Norco is available as a generic.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/acefa94533784a88534e8cb294bd2f19">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								AMBIEN 10MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/acefa94533784a88534e8cb294bd2f19">
+											<img src="/item-image/acefa94533784a88534e8cb294bd2f19?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/acefa94533784a88534e8cb294bd2f19">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/acefa94533784a88534e8cb294bd2f19">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/acefa94533784a88534e8cb294bd2f19">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Zolpidem, sold under the brand name Ambien, among others, is a medication primarily used for the short term treatment of sleeping problems. Guidelines recommend that it be used only after counseling and behavioral changes have been tried.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/b4e137da83e443027e47b6d7543a825a">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MORPHINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/b4e137da83e443027e47b6d7543a825a">
+											<img src="/item-image/b4e137da83e443027e47b6d7543a825a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b4e137da83e443027e47b6d7543a825a">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b4e137da83e443027e47b6d7543a825a">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b4e137da83e443027e47b6d7543a825a">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Morphine is an opioid pain medication. An opioid is sometimes called a narcotic.</p>
+
+<p>Morphine is used to treat moderate to severe pain. Short-acting formulations are taken as needed for pain.</p>
+
+<p>The extended-release form of morphine is for around-the-clock treatment of pain. This form of morphine is not for use on an as-needed basis for pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/97cca4f7f1144f5c53d0359c89251c34">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ritalin</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								RITALIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/97cca4f7f1144f5c53d0359c89251c34">
+											<img src="/item-image/97cca4f7f1144f5c53d0359c89251c34?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/97cca4f7f1144f5c53d0359c89251c34">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/97cca4f7f1144f5c53d0359c89251c34">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/97cca4f7f1144f5c53d0359c89251c34">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>RITALIN is a central nervous system (CNS) stimulant prescription medicine. It is used for the treatment of Attention- Deficit Hyperactivity Disorder (ADHD). RITALIN may help increase attention and decrease impulsiveness and hyperactivity in patients with ADHD.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/d694d10607344f2d4f89ea6ec8bc8a1f">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CODEINE PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/d694d10607344f2d4f89ea6ec8bc8a1f">
+											<img src="/item-image/d694d10607344f2d4f89ea6ec8bc8a1f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d694d10607344f2d4f89ea6ec8bc8a1f">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d694d10607344f2d4f89ea6ec8bc8a1f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Acetaminophen/codeine (Tylenol With Codeine) is an inexpensive drug used to treat mild to moderate pain. This drug is less popular than comparable drugs. It is available in brand and generic versions</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/7ab171220c314b575bed85cf32b1ec7a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								GUAVA GELATO
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/7ab171220c314b575bed85cf32b1ec7a">
+											<img src="/item-image/7ab171220c314b575bed85cf32b1ec7a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/7ab171220c314b575bed85cf32b1ec7a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/7ab171220c314b575bed85cf32b1ec7a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/7ab171220c314b575bed85cf32b1ec7a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Guava Gelato is a Gelato phenotype from Sherbinkski. This genetic expression of the Gelato lineage delivers a unique terpene profile steeped in creamy, tropical aromas with bright notes of piña colada and hops. The buds take on a dense structure that is representative of its parental lineage while emitting an aroma all its own. Guava Gelato’s effects are indica-forward, laying heavily atop the limbs while it excites and uplifts the mind. These attributes make for an effective strain when combating stress, daily aches and pains, and nausea.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/bae73be96712479b5816b1aa93432c5f">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PURE AMPHETAMINE POWDER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/bae73be96712479b5816b1aa93432c5f">
+											<img src="/item-image/bae73be96712479b5816b1aa93432c5f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/bae73be96712479b5816b1aa93432c5f">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 grams</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/bae73be96712479b5816b1aa93432c5f">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 grams</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/bae73be96712479b5816b1aa93432c5f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 grams</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Amphetamines is a stimulants of the central nervous system. Amphetamines is sold mostly as a powder or as pills.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/a2868f3e354b4bd652c5983973c745b2">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								OPANA 40MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/a2868f3e354b4bd652c5983973c745b2">
+											<img src="/item-image/a2868f3e354b4bd652c5983973c745b2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/a2868f3e354b4bd652c5983973c745b2">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/a2868f3e354b4bd652c5983973c745b2">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/a2868f3e354b4bd652c5983973c745b2">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Opana (oxymorphone) is an opioid pain medication. An opioid is sometimes called a narcotic. Opana is used to treat moderate to severe pain. The extended-release form of this medicine is for around-the-clock treatment of severe pain. Opana ER is not for use on an as-needed basis for pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/444dd57864ca42de55d911ef3253b16f">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								TOP GRADE THC/CBD GUMMIES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/444dd57864ca42de55d911ef3253b16f">
+											<img src="/item-image/444dd57864ca42de55d911ef3253b16f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/444dd57864ca42de55d911ef3253b16f">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 packet/ 100 gummies</div>
+										<div class="ui basic left pointing label price">120 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/444dd57864ca42de55d911ef3253b16f">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 packets/ 500 gummies</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/444dd57864ca42de55d911ef3253b16f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 packet/ 1000 gummies</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Find your comfy spot on the couch and kick your feet up with our gummies.Our gummies are infused with indica,sativa and hybrid extracts.These gummies provide full body relaxation and are enjoyable.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/4e034faf9dde4ef96e5ce9fb50c3883a">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MDMA CRYSTAL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/4e034faf9dde4ef96e5ce9fb50c3883a">
+											<img src="/item-image/4e034faf9dde4ef96e5ce9fb50c3883a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/4e034faf9dde4ef96e5ce9fb50c3883a">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 grams</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/4e034faf9dde4ef96e5ce9fb50c3883a">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 grams</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>MDMA (3,4-methylenedioxy-N-methylamphetamine) is an empathogenic drug of the phenethylamine and amphetamine classes of drugs.</p>
+
+<p>MDMA can induce euphoria, a sense of intimacy with others, diminished anxiety, and mild psychedelia.</p>
+
+<p>MDMA have worn off include:</p>
+
+<p>Impaired attention, focus, and concentration, as well as drive and motivation (due to depleted serotonin levels)</p>
+
+<p>Residual feelings of empathy, emotional sensitivity, and a sense of closeness to others .</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/08f76ed4765b47fa6d50173cbb60dd5a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MATANUSKA THUNDER FUCK
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/08f76ed4765b47fa6d50173cbb60dd5a">
+											<img src="/item-image/08f76ed4765b47fa6d50173cbb60dd5a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/08f76ed4765b47fa6d50173cbb60dd5a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">210 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/08f76ed4765b47fa6d50173cbb60dd5a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/08f76ed4765b47fa6d50173cbb60dd5a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Since many marijuana strains hail from the tropics or specific breeding hubs, it’s no surprise that this Alaskan hybrid’s name celebrates its origins. Developed from strains grown in Matanuska Valley’s grasslands, the flowers on these plants develop a frosting of icy white hairs that bring to mind its snowy homeland. Despite its rugged roots, these plants do best indoors but will still yield well in outdoor dry climates for the experienced grower. They will remain squat in size but tend to have very large leaves. This strain smells like hot chocolate with fruit, the latter of which can dominate the taste. Matanuska’s effects tend to come on slowly and then give a strong body buzz. It also goes by the less colorful name Matanuska Tundra, especially outside of the United States.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/87063ce7e874445248676c320e582efb">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ADDERALL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/87063ce7e874445248676c320e582efb">
+											<img src="/item-image/87063ce7e874445248676c320e582efb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/87063ce7e874445248676c320e582efb">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/87063ce7e874445248676c320e582efb">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/87063ce7e874445248676c320e582efb">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Adderall contains a combination of amphetamine and dextroamphetamine. Amphetamine and dextroamphetamine are central nervous system stimulants that affect chemicals in the brain and nerves that contribute to hyperactivity and impulse control.</p>
+
+<p>Adderall is used to treat narcolepsy and attention deficit hyperactivity disorder (ADHD).</p>
+
+<p>Adderall may also be used for different purposes</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/9d17ea4c3b984d286caa36b71cbf17a6">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								GIRL SCOUT COOKIES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/9d17ea4c3b984d286caa36b71cbf17a6">
+											<img src="/item-image/9d17ea4c3b984d286caa36b71cbf17a6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/9d17ea4c3b984d286caa36b71cbf17a6">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/9d17ea4c3b984d286caa36b71cbf17a6">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/9d17ea4c3b984d286caa36b71cbf17a6">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>GSC, formerly known as Girl Scout Cookies, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. With a sweet and earthy aroma, GSC launches you to euphoria’s top floor where full-body relaxation meets a time-bending cerebral space. A little goes a long way with this hybrid, whose THC heights have won GSC numerous Cannabis Cup awards. Patients needing a strong dose of relief, however, may look to GSC for severe pain, nausea, and appetite loss.</p>
+
+<p>There are several different phenotypes of the GSC strain including Thin Mint and Platinum Cookies, which exhibit some variation in appearance and effect. Typically, however, GSC expresses its beauty in twisting green calyxes wrapped in purple leaves and fiery orange hairs. Patients and consumers looking to cultivate this cannabis staple themselves should wait 9 to 10 weeks for their indoor plants to finish flowering.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/07d9c021bb1b43fa45e3891d28d5cc85">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								METHADONE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/07d9c021bb1b43fa45e3891d28d5cc85">
+											<img src="/item-image/07d9c021bb1b43fa45e3891d28d5cc85?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/07d9c021bb1b43fa45e3891d28d5cc85">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/07d9c021bb1b43fa45e3891d28d5cc85">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/07d9c021bb1b43fa45e3891d28d5cc85">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>METHADONE Generic Name: methadone (METH a done) Brand Names: Dolophine, Methadose, Methadose Sugar-Free, Diskets Methadone is an opioid medication. An opioid is sometimes called a narcotic. Methadone reduces withdrawal symptoms in people addicted to heroin or other narcotic drugs without causing the “high” associated with the drug addiction.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/d088f419d5be4f1e6d5ef1394882a40d">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								HIGH GRADE THC/CBD SHATTER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/d088f419d5be4f1e6d5ef1394882a40d">
+											<img src="/item-image/d088f419d5be4f1e6d5ef1394882a40d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d088f419d5be4f1e6d5ef1394882a40d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d088f419d5be4f1e6d5ef1394882a40d">
+										<div class="ui dark-green basic tiny button fluid left aligned">half pound</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/d088f419d5be4f1e6d5ef1394882a40d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">3500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Shatter is just one form of dabs, the catch-all term for marijuana concentrates produced by extracting cannabinoids like THC and CBD, the plant’s psychoactive chemicals. Other well-known forms include “budder,” which has a creamier, wax-like consistency, and oils, which are golden and honey-like.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/2c464989a8d241fc45195987b2284ae7">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								DILAUDID 8MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/2c464989a8d241fc45195987b2284ae7">
+											<img src="/item-image/2c464989a8d241fc45195987b2284ae7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2c464989a8d241fc45195987b2284ae7">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pill</div>
+										<div class="ui basic left pointing label price">50 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2c464989a8d241fc45195987b2284ae7">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2c464989a8d241fc45195987b2284ae7">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/2c464989a8d241fc45195987b2284ae7">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dilaudid (hydromorphone) is an opioid pain medication. An opioid is sometimes called a narcotic. Dilaudid is used to treat moderate to severe pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/e96312e77f9c44e34094ec2b480295f3">
+								<span class="ui teal tiny label tag right floated">Sedatatives</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								TEMAZEPAM
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/e96312e77f9c44e34094ec2b480295f3">
+											<img src="/item-image/e96312e77f9c44e34094ec2b480295f3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/e96312e77f9c44e34094ec2b480295f3">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/e96312e77f9c44e34094ec2b480295f3">
+										<div class="ui dark-green basic tiny button fluid left aligned">400 pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/e96312e77f9c44e34094ec2b480295f3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000 pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This medication is used to treat a certain sleep problem (insomnia). It may help you fall asleep faster, stay asleep longer, and lessen how often you wake up during the night, so you can get a better night’s rest. Temazepam belongs to a class of drugs called sedative-hypnotics.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/f7a77efdf8524b7844461dc7050d2c34">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								GRAPE FRUIT
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/f7a77efdf8524b7844461dc7050d2c34">
+											<img src="/item-image/f7a77efdf8524b7844461dc7050d2c34?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7a77efdf8524b7844461dc7050d2c34">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 ounce</div>
+										<div class="ui basic left pointing label price">180 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7a77efdf8524b7844461dc7050d2c34">
+										<div class="ui dark-green basic tiny button fluid left aligned">1/2 pound</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/f7a77efdf8524b7844461dc7050d2c34">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pound</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This potent sativa was developed by crossing Cinderella 99 with a fast-flowering sativa selected for its rich grapefruit flavor. The tropical, citrus smell of Grapefruit mixes with energetic effects to give you a happy stress-reliever that also works well for battling migraine headaches.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/812427070ccd485555d78225a790c98c">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								MODAFINIL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/812427070ccd485555d78225a790c98c">
+											<img src="/item-image/812427070ccd485555d78225a790c98c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/812427070ccd485555d78225a790c98c">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pill/200mg</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/812427070ccd485555d78225a790c98c">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills/200mg</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/812427070ccd485555d78225a790c98c">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills/200mg</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Modafinil, sold under the brand name Provigil among others, is a medication to treat sleepiness due to narcolepsy, shift work sleep disorder, or obstructive sleep apnea. In OSA continuous positive airway pressure is the preferred treatment.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/0225d6d325814f585350195b17c9fe5d">
+								<span class="ui teal tiny label tag right floated">Stimulants</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								AMPHETAMINE PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/0225d6d325814f585350195b17c9fe5d">
+											<img src="/item-image/0225d6d325814f585350195b17c9fe5d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/0225d6d325814f585350195b17c9fe5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/0225d6d325814f585350195b17c9fe5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/0225d6d325814f585350195b17c9fe5d">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Amphetamines is a stimulants of the central nervous system. Amphetamines is sold mostly as a powder or as pills.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/147ebe2e4d0d44d75bfb433b6eb698fd">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CO2 PREFILLED THC/CBD CARTRIDGES
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/147ebe2e4d0d44d75bfb433b6eb698fd">
+											<img src="/item-image/147ebe2e4d0d44d75bfb433b6eb698fd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/147ebe2e4d0d44d75bfb433b6eb698fd">
+										<div class="ui dark-green basic tiny button fluid left aligned">10/1 gram cartridges</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/147ebe2e4d0d44d75bfb433b6eb698fd">
+										<div class="ui dark-green basic tiny button fluid left aligned">20/ 1 gram cartridges</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/147ebe2e4d0d44d75bfb433b6eb698fd">
+										<div class="ui dark-green basic tiny button fluid left aligned">50/ 1 gram cartridges</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Our co2 cartridges are purely extracted using the co2 extraction method and they contain both thc and cbd.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/slayer1/item/b049006ebe09488e69dce4e04b5c95c3">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CRYSTAL METH
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/slayer1/item/b049006ebe09488e69dce4e04b5c95c3">
+											<img src="/item-image/b049006ebe09488e69dce4e04b5c95c3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b049006ebe09488e69dce4e04b5c95c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 grams</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b049006ebe09488e69dce4e04b5c95c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 grams</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/slayer1/item/b049006ebe09488e69dce4e04b5c95c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 grams</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Crystal meth is short for crystal methamphetamine. It is just one form of the drug methamphetamine.</p>
+
+<p>Methamphetamine is a white crystalline drug that people take by snorting it (inhaling through the nose), smoking it or injecting it with a needle. Some even take it orally,</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 586 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/spiker?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@spiker</h2>
+								<p></p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 year ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 19 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>1</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/spiker">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/spiker">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/spiker/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">1</span>
+									</a>
+									<a class="item active" href="/store/spiker/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">23</span>
+									</a>
+									<a class="item" href="/store/spiker/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/152951b1411a41cb70ee59f47579db11">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								OPANA 40 MG ER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/152951b1411a41cb70ee59f47579db11">
+											<img src="/item-image/152951b1411a41cb70ee59f47579db11?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/152951b1411a41cb70ee59f47579db11">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">270 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Opana (oxymorphone) is an opioid pain medication. An opioid is sometimes
+called a narcotic.</p>
+
+<p>Opana is used to treat moderate to severe pain.</p>
+
+<p>The extended-release form of this medicine is for around-the-clock
+treatment of severe pain. Opana ER is not for use on an as-needed basis for
+pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/b3fcfd8298e245cb5d9eabe8c896daf4">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>1</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								DILUADID 8MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/b3fcfd8298e245cb5d9eabe8c896daf4">
+											<img src="/item-image/b3fcfd8298e245cb5d9eabe8c896daf4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/b3fcfd8298e245cb5d9eabe8c896daf4">
+										<div class="ui dark-green basic tiny button fluid left aligned">50</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Diluadid is a centrally acting pain medication of the opioid class. It is made from morphine. Comparatively, hydromorphone is to morphine as hydrocodone is to codeine – it is a hydrogenated ketone thereof. In medical terms, it is an opioid analgesic, and in legal terms, a narcotic.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/8bfee32c65f64a7f7c131ef8f1786280">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								MORPHINE &amp; LIQUID MORPHINE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/8bfee32c65f64a7f7c131ef8f1786280">
+											<img src="/item-image/8bfee32c65f64a7f7c131ef8f1786280?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/8bfee32c65f64a7f7c131ef8f1786280">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Morphine is used to treat moderate to severe pain. Short-acting
+formulations are taken as needed for pain.</p>
+
+<p>The extended-release form of this medicine is for around-the-clock
+treatment of pain. This form of morphine is not for use on an as-needed
+basis for pain</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/b69ec4eafa38462072028f256f435556">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								PURE AMPHETAMINE PILLS
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/b69ec4eafa38462072028f256f435556">
+											<img src="/item-image/b69ec4eafa38462072028f256f435556?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/b69ec4eafa38462072028f256f435556">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Amphetamine is a stimulant and is used to trat narcolepsy and attention deficit disorder. Includes amphetamine side effects, interactions and indications.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/c512cfc0f548431c5c47298ca3e3cc18">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Actavis Promethazine With Codeine Purple Cough Syrup For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/c512cfc0f548431c5c47298ca3e3cc18">
+											<img src="/item-image/c512cfc0f548431c5c47298ca3e3cc18?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/c512cfc0f548431c5c47298ca3e3cc18">
+										<div class="ui dark-green basic tiny button fluid left aligned">32oz</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>ACTAVIS PROMETHAZINE WITH CODEINE PURPLE COUGH SYRUP.Each 5 mL contains: Promethazine hydrochloride 6.25 mg; codeinephosphate 10 mg. Alcohol 7%. We deal in the medicines available on the worldmarket ; our products are 100% legit and original..</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/11b02df222f0499279b4478b00b2dbf4">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								VICODINE 500/5mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/11b02df222f0499279b4478b00b2dbf4">
+											<img src="/item-image/11b02df222f0499279b4478b00b2dbf4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/11b02df222f0499279b4478b00b2dbf4">
+										<div class="ui dark-green basic tiny button fluid left aligned">50</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Welcome To Drughouse LTD, The Most Trusted Pharmacy Of USA
+We ensure 100% Satisfaction and also offer a Money Back Guarantee</p>
+
+<p>We are so confident that Drughouse LTD, will give you the amazing results you desire, that it is backed by our ironclad 100% Satisfaction Guarantee policy!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/d696cacaafa54e2841f092548e4fcdde">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								HYDROCODONE 10 mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/d696cacaafa54e2841f092548e4fcdde">
+											<img src="/item-image/d696cacaafa54e2841f092548e4fcdde?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/d696cacaafa54e2841f092548e4fcdde">
+										<div class="ui dark-green basic tiny button fluid left aligned">400</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hydrocodone which is an orally active narcotic analgesic and antitussive. It
+is is commonly available in tablet, capsule, and syrup form and is often
+synthesized with other analgesic compounds like acetaminophen or ibuprofen.It
+is marketed, in its varying forms, under a number of trademarks such as
+Vicodin, Anexsia, Dicodid, Hycodan (or generically Hydromet), Hycomine,
+Lorcet, Lortab, Norco, Novahistex, Hydroco, Tussionex, Gentex, Vicoprofen,
+Xodol, Bekadid, Calmodid, Codinovo, Duodin, Kolikodol, Orthoxycol,
+Mercodinone etc.Hydrocodone was first synthesized in Germany in 1920 and was
+approved by the FDA.All the products are very pure and good with fast and
+safe delivery world wide</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/e0f0ff0bdba841f553248dace3690b9f">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Tramadol 225mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/e0f0ff0bdba841f553248dace3690b9f">
+											<img src="/item-image/e0f0ff0bdba841f553248dace3690b9f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/e0f0ff0bdba841f553248dace3690b9f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tramadol tablet is comes under the category of narcotic like pain reliever used to treat mild to moderate pain. It is comes in the form of tablet and capsules in strength of 50mg and 100mg. It is sold under the brand name of Ultram, Oltram, M-Tram etc. Mhetar Healthcare is one of the largest exporter of generic medicine tramadol tablet.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/3b686d50738549ee6a8be20fc81c59d6">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								METH A&#43; High quality
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/3b686d50738549ee6a8be20fc81c59d6">
+											<img src="/item-image/3b686d50738549ee6a8be20fc81c59d6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/3b686d50738549ee6a8be20fc81c59d6">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We do sell 99.9% Pure Crystal Meth/ Ice / Methamphetamine . Delivery to the USA takes 24 hours while that of Europe and other parts of the world takes 48- 72 hours - We do re-ship in case our Clients fails to receive their packages Or we do full refunds All our shipment are done discreetly. Such Even the ION SCANNER CAN NOT DICTATE THE PRESENCE OF ANY ICE/ CRYSTAL METH IN OUR SHIPMENT.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/56bcf908a0f745c94bd0914cd6b363e8">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								ROXICODONE 30mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/56bcf908a0f745c94bd0914cd6b363e8">
+											<img src="/item-image/56bcf908a0f745c94bd0914cd6b363e8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/56bcf908a0f745c94bd0914cd6b363e8">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Roxicodone is a narcotic pain reliever. It works in the brain and nervous
+system to reduce pain</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/dd7c5136be94450e5faedca8226bee1c">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								NORCO 10/325 MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/dd7c5136be94450e5faedca8226bee1c">
+											<img src="/item-image/dd7c5136be94450e5faedca8226bee1c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/dd7c5136be94450e5faedca8226bee1c">
+										<div class="ui dark-green basic tiny button fluid left aligned">50</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Norco is a combination of hydrocodone and acetaminophen. Hydrocodone is in a group of drugs called narcotic pain relievers. Acetaminophen is a less potent pain reliever that increases the effects of hydrocodone. Hydrocodone is an antitussive (cough suppressant) and analgesic agent for the treatment of moderate to moderately severe pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/17dbab5323eb49b5489de3c963a5f30f">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								ADDERALL 30 mg pills
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/17dbab5323eb49b5489de3c963a5f30f">
+											<img src="/item-image/17dbab5323eb49b5489de3c963a5f30f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/17dbab5323eb49b5489de3c963a5f30f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Adderall is sympathomimetic amines based medicine used for Attention deficit
+hyperactivity disorder and Narcolepsy. It is a psychostimulant central
+nervous system stimulant medicine. It maximizes the quantity of dopamine and
+norepinephrine in the brain. It alters materials in the human brain and
+nerves so that it can check hyperactivity and impulses. Adderall has been
+widely used nowadays to treat various cases of treatment-resistant depression
+and exogenous obesity.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/570d67a36f9f475660aba00f368c2477">
+								<span class="ui teal tiny label tag right floated">A-PVP</span>
+								A-PVP Crystals 99% Purity
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/570d67a36f9f475660aba00f368c2477">
+											<img src="/item-image/570d67a36f9f475660aba00f368c2477?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/570d67a36f9f475660aba00f368c2477">
+										<div class="ui dark-green basic tiny button fluid left aligned">60g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>High Quality Alpha-PVP Crystals with 99% purity. Specification Sheet :</p>
+
+<p>Description : A-PVP CAS No. : 14530-33-7 Product name : a-PVP(alpha-PVP) crystal A-PVP color crystal and powder IUPAC : (RS)-1-phenyl-2-(1-pyrrolidinyl)-1-pentanone Mol.mass : 231.333 g/mol Purity : &gt;99% above by HPLC Molecular Formula : C15H21NO Stock status : Ready stock for prompt delivery Appearance : white ,pink ,yellow ,blue color crystal</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/9bc9abc855b844bd65327d30ac049e8f">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								Ketamine HCl (Ketalar®) 50mg/ml 10ml Multi-Dose Vial - 10/Box
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/9bc9abc855b844bd65327d30ac049e8f">
+											<img src="/item-image/9bc9abc855b844bd65327d30ac049e8f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/9bc9abc855b844bd65327d30ac049e8f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10/10ml</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ketamine is a drug used in human and veterinary medicine, primarily for the induction and maintenance of general anesthesia, usually in combination with a sedative. Other uses include sedation in intensive care, analgesia (particularly in emergency medicine), and treatment of bronchospasm. Ketamine has a wide range of effects in humans, including analgesia, anesthesia, hallucinations, elevated blood pressure, and bronchodilation. Like other drugs of its class, such as tiletamine and phencyclidine (PCP), ketamine induces a state referred to as “dissociative anesthesia” and is used as a recreational drug.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/052eab7364e5462359252ffe2ec7e2e8">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								OXYCODONE 30mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/052eab7364e5462359252ffe2ec7e2e8">
+											<img src="/item-image/052eab7364e5462359252ffe2ec7e2e8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/052eab7364e5462359252ffe2ec7e2e8">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxycodone is an opioid pain medication. An opioid is sometimes called a
+narcotic.
+Oxycodone is used to treat moderate to severe pain.
+Oxycodone extended-release is used for around-the-clock treatment of pain.
+This form of oxycodone is not for use on an as-needed basis for pain
+You should not use oxycodone if you have severe asthma or breathing
+problems, or a blockage in your stomach or intestines.
+Oxycodone can slow or stop your breathing, especially when you start using
+this medicine or whenever your dose is changed. Never take this medicine in
+larger amounts, or for longer than prescribed. Do not crush, break, or open
+an extended-release pill (Oxycontin). Swallow it whole to avoid exposure to
+a potentially fatal dose</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/132f7727004449074de6d5e591c0a5f9">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								PERCOCET 10MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/132f7727004449074de6d5e591c0a5f9">
+											<img src="/item-image/132f7727004449074de6d5e591c0a5f9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/132f7727004449074de6d5e591c0a5f9">
+										<div class="ui dark-green basic tiny button fluid left aligned">50</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Percocet is available as tablets in strengths of 2.5⁄325, 5⁄325, 7.5⁄325, 7.5⁄500, 10⁄325, and 10⁄650 mg tablets (oxycodone/acetaminophen strengths), with a total daily dose not to exceed 4 grams of acetaminophen to avoid liver damage; 60 mg total per day of oxycodone strength and above used only for opioid tolerant patients. The tablets should be swallowed whole because broken or chewed tablets release oxycodone too rapidly and because it is rapidly adsorbed, too concentrated levels will be present in the body which can lead to death. Serious adverse reactions which may occur with Percocet are similar to those observed with other opioid analgesics; they include respiratory depression, apnea (periodic stop of breathing),</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/e3276343fec94c4851487b2f566b26ec">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								PSEUDOEPHEDRINE HCL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/e3276343fec94c4851487b2f566b26ec">
+											<img src="/item-image/e3276343fec94c4851487b2f566b26ec?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/e3276343fec94c4851487b2f566b26ec">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pseudoephedrine is a sympathomimetic drug of the phenethylamine and
+amphetamine chemical classes. It may be used as a nasal/sinus decongestant,
+as a stimulant, or as a wakefulness-promoting agent.[2]
+The salts pseudoephedrine hydrochloride and pseudoephedrine sulfate are
+found in many over-the-counter preparations, either as a single ingredient
+or (more commonly) in combination with antihistamines, guaifenesin,
+dextromethorphan, and/or paracetamol (acetaminophen) or an NSAID (such as
+aspirin or ibuprofen).
+Pseudoephedrine is a stimulant, but it is well known for shrinking swollen
+nasal mucous membranes, so it is often used as a decongestant. It reduces
+tissue hyperemia, edema, and nasal congestion commonly associated with
+colds or allergies. Other beneficial effects may include increasing the
+drainage of sinus secretions, and opening of obstructed Eustachian tubes.
+The same vasoconstriction action can also result in hypertension, which is
+a noted side effect of pseudoephedrine.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/70d01f6ecb0b4b315f11f92deeaa4bf6">
+								<span class="ui teal tiny label tag right floated">Barbiturates</span>
+								Buy Nembutal Sodium Oral Solution
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/70d01f6ecb0b4b315f11f92deeaa4bf6">
+											<img src="/item-image/70d01f6ecb0b4b315f11f92deeaa4bf6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/70d01f6ecb0b4b315f11f92deeaa4bf6">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 mg/ml</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pentobarbital is in a group of drugs called barbiturates (bar-BIT-chur-
+ates). Pentobarbital slows the activity of your brain and nervous system.</p>
+
+<p>Pentobarbital is used short-term to treat insomnia. Pentobarbital is also
+used as an emergency treatment for seizures, and to cause you to fall
+asleep for surgery.</p>
+
+<p>Pentobarbital may also be used for other purposes not listed in this
+medication guide.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/a9b0f1e58c824f305e063ed5db0928c3">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								OXYCONTIN OC 80mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/a9b0f1e58c824f305e063ed5db0928c3">
+											<img src="/item-image/a9b0f1e58c824f305e063ed5db0928c3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/a9b0f1e58c824f305e063ed5db0928c3">
+										<div class="ui dark-green basic tiny button fluid left aligned">20</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Treating moderate to severe pain. It may be used before surgery to sedate
+the patient and reduce fear. It may also be used for other conditions as
+determined by your doctor.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/4a37519863ed4c546c1c335315322bd7">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								Cannabis Oil (aka Hash Oil)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/4a37519863ed4c546c1c335315322bd7">
+											<img src="/item-image/4a37519863ed4c546c1c335315322bd7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/4a37519863ed4c546c1c335315322bd7">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>CBD oil may offer a range of benefits, including reducing pain and inflammation. Evidence shows that the oil does not contain psychoactive</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/4a41e551abfc486d4fb13df2ffa89dca">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								PURE MDMA CRYSTAL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/4a41e551abfc486d4fb13df2ffa89dca">
+											<img src="/item-image/4a41e551abfc486d4fb13df2ffa89dca?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/4a41e551abfc486d4fb13df2ffa89dca">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>MDMA (3,4-methylenedioxy-N-methylamphetamine) is an empathogenic drug
+of the phenethylamine and amphetamine classes of drugs.</p>
+
+<p>MDMA can induce euphoria, a sense of intimacy with others, diminished
+anxiety, and mild psychedelia.</p>
+
+<p>MDMA have worn off include:</p>
+
+<p>Impaired attention, focus, and concentration, as well as drive and
+motivation (due to depleted serotonin levels)</p>
+
+<p>Residual feelings of empathy, emotional sensitivity, and a sense of
+closeness to others .</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/1e744ea03d0d46a663fc6fb31ce3502b">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								SUBUTEX 8MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/1e744ea03d0d46a663fc6fb31ce3502b">
+											<img src="/item-image/1e744ea03d0d46a663fc6fb31ce3502b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/1e744ea03d0d46a663fc6fb31ce3502b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Suboxone contains a combination of buprenorphine and naloxone.
+Buprenorphine is an opioid medication. An opioid is sometimes called a
+narcotic. Naloxone blocks the effects of opioid medication, including pain
+relief or feelings of well-being that can lead to opioid abuse.</p>
+
+<p>Suboxone is used to treat narcotic (opiate) addiction. It is not for use as
+a pain medication.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/spiker/item/85297e06bf944dcc698c778763e795d5">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Tramal SR (Tramadol HCI) 100mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/spiker/item/85297e06bf944dcc698c778763e795d5">
+											<img src="/item-image/85297e06bf944dcc698c778763e795d5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/spiker/item/85297e06bf944dcc698c778763e795d5">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">150 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tramadol is used similarly to codeine, to treat moderate to moderately
+severe pain and most types of neuralgia, including trigeminal neuralgia.
+Tramadol is somewhat pharmacologically similar to levorphanolSNRI
+activity (other such opioids to do the same are dextropropoxyphene (Darvon)
+&amp; M1-like molecule tapentadol[11] because of its action on the
+noradrenergic and serotonergic systems, such as its “atypical” opioid
+activity.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 1376 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

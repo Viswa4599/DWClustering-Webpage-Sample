@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/properbud_?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@properbud_</h2>
+								<p>Mr. Proper Bud , Open 24/7 Check It Out Noow!</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 7 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/properbud_">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/properbud_">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/properbud_/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">0</span>
+									</a>
+									<a class="item active" href="/store/properbud_/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">7</span>
+									</a>
+									<a class="item" href="/store/properbud_/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/8ac449eb31b84cff5f55b59a8b7a6ec6">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Cali OG Strawberry
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/8ac449eb31b84cff5f55b59a8b7a6ec6">
+											<img src="/item-image/8ac449eb31b84cff5f55b59a8b7a6ec6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/8ac449eb31b84cff5f55b59a8b7a6ec6">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">13 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/8ac449eb31b84cff5f55b59a8b7a6ec6">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5g</div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/8ac449eb31b84cff5f55b59a8b7a6ec6">
+										<div class="ui dark-green basic tiny button fluid left aligned">7.g</div>
+										<div class="ui basic left pointing label price">185 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>OG Strawberry, grown on the southwest ridgeline of Mendocino County by HappyDays Farms, is an indica-dominant hybrid strain that delivers crushing effects alongside a sour fuel aroma. With a THC content that can stretch to 29%, OG Strawberry is a force to be reckoned with. This hybrid combines parent strains OG Kush and Island Strawberry Afghani Indica, a union of potency that will impress even the seasoned veteran.
+1g- Sample ONLY!!!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/eebc33fe7544493179f7bdeac53b3a6c">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								THC/CBD Lemon Honey Vape Pen 500MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/eebc33fe7544493179f7bdeac53b3a6c">
+											<img src="/item-image/eebc33fe7544493179f7bdeac53b3a6c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/eebc33fe7544493179f7bdeac53b3a6c">
+										<div class="ui dark-green basic tiny button fluid left aligned">500mg vape pen honeylemon</div>
+										<div class="ui basic left pointing label price">100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Best Taste &amp; Flavor.
+Artisan crafted, exclusive cannabis oil blend for the smoothest taste. HONEYLEMON® always tastes good.
+Thick Oil.
+Thick oil indicates minimal processing: not diluted or overly refined. This IS better, and most like the natural plant.Pure.
+No artificial fillers or additives.
+Color.
+Golden or honey colored oil shows purity and quality. Look at the product for color and thickness.
+Pure.
+No artificial fillers or additives!
+Also suitable for medical use!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/428aa50bf90446746724814262a1ef0f">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								A Grade Cookies Kush 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/428aa50bf90446746724814262a1ef0f">
+											<img src="/item-image/428aa50bf90446746724814262a1ef0f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/428aa50bf90446746724814262a1ef0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">13 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/428aa50bf90446746724814262a1ef0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5</div>
+										<div class="ui basic left pointing label price">60 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/428aa50bf90446746724814262a1ef0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">7g</div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/428aa50bf90446746724814262a1ef0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">14g</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cookies Kush from Barney’s Coffeeshop combines Girl Scout Cookies with the Rolex phenotype of OG Kush, resulting in a potent indica cross worthy of 1st place in High Times’ 2014 Amsterdam Cannabis Cup in the “Best Coffeeshop Strain” category.
+The Cookies Kush high can be a bit jarring to some as it brings together two opposing sensations that build and build as the high continues. On the initial rush you’ll feel an immediate sedation that leaves you a bit lethargic. Your eyes may get dry and red at this point and if you are susceptible to that side effect this may become very uncomfortable.Medically speaking, you can find a lot of uses for Cookies Kush. Beyond it being powerfully sedative, it is also a mood booster which makes it great for anyone suffering from chronic stress, depression, or bipolar. Because of this you can utilize this for pain, muscle spasms, and insomnia as it will leave you feeling extremely sleepy as you start to come down. Though it has a lot of positives, we’d be remiss to not inc</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/ba9c0098fbfc400677fbf5fce7fb959f">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Skittlez Cali Import
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/ba9c0098fbfc400677fbf5fce7fb959f">
+											<img src="/item-image/ba9c0098fbfc400677fbf5fce7fb959f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/ba9c0098fbfc400677fbf5fce7fb959f">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5</div>
+										<div class="ui basic left pointing label price">138 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/ba9c0098fbfc400677fbf5fce7fb959f">
+										<div class="ui dark-green basic tiny button fluid left aligned">7g</div>
+										<div class="ui basic left pointing label price">252 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Zkittlez looks like an indica hybrid — with its dense, moderate-to-small size and rounded density. It features copious pistils, which are reddish brown, gold and blond over a medium-green to lime-green color.
+Cannabis aficionados love this strain for its huge nose, which isn’t loud like gasoline, but more thick and syrupy sweet. It’s the precise ratio of linalool (floral), humulene (hops), limonene (lemons), myrcene (perfume), pinene (pine), nerolidol (orange) and terpinolene (fuel) that creates the inviting aroma and strong yet balanced effects.
+Zkittlez feels moderately dense and powdery with THC resin as opposed to sticky. Its fused leaves break apart nice and chewy rather than locking the grinder. Great for Js, bowls, vapes — you name it.
+Taste it!
+That huge terpene load translates into huge tastes as well — a rainbow gobstopper of sugary orange and pine, with a floral-fuel bite, then orange again.
+Fast onset, physical relaxation and mental stress relief with neither couch-lock nor raciness</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/d76fe1594985475360d0a488855d9d6b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Cali Gelato 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/d76fe1594985475360d0a488855d9d6b">
+											<img src="/item-image/d76fe1594985475360d0a488855d9d6b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/d76fe1594985475360d0a488855d9d6b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">14 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/d76fe1594985475360d0a488855d9d6b">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5g</div>
+										<div class="ui basic left pointing label price">118 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/d76fe1594985475360d0a488855d9d6b">
+										<div class="ui dark-green basic tiny button fluid left aligned">7g</div>
+										<div class="ui basic left pointing label price">202 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Gelato (also referred to as “Larry Bird”) is another tantalizing hybrid cannabis strain from Cookie Fam Genetics, following in the footsteps of its parents Sunset Sherbet and Thin Mint GSC. This Bay Area, California native gets its name from the fruity, dessert-like aroma, a common genetic thread among the Cookie family. Her buds tend to bloom in dark purple hues illuminated by fiery orange hairs and a shining white coat of crystal resin. Novice consumers may want to approach this THC powerhouse with caution, but those armed with a high tolerance will delight in Gelato’s heavy-handed euphoria. Physical relaxation comes on strong, but many find themselves still mentally agile enough to stay productive and creative when enjoying Gelato during the day.
+1g- Sample ONLY!!!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/8201459170f44b1a6b120a21f74e7dfa">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Top Shelf Quality Cali StarDawg 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/8201459170f44b1a6b120a21f74e7dfa">
+											<img src="/item-image/8201459170f44b1a6b120a21f74e7dfa?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/8201459170f44b1a6b120a21f74e7dfa">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5</div>
+										<div class="ui basic left pointing label price">97 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/8201459170f44b1a6b120a21f74e7dfa">
+										<div class="ui dark-green basic tiny button fluid left aligned">7g</div>
+										<div class="ui basic left pointing label price">167 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sativa Dominant Hybrid - 90% Sativa / 10% Indica
+THC: 16% - 25%
+Stardawg, also known as “Stardog” to most members of the cannabis community, is heavily sativa dominant hybrid (90% sativa/10% indica) strain that is a potent cross between the insanely popular Chemdawg 4 X Tres Dog strains. This dank bud boasts a THC level ranging from 16-22% and a potent effects length of up to 3 hours. Stardawg buds have small to medium-sized dense popcorn-shaped nugs that are bright minty green with olive green and rich amber undertones. These nugs are specked with fiery orange and deep amber hairs and a fine layer of white crystal trichomes and resin. Stardawg has an earthy pine aroma with hints of diesel and a taste of pungent earthy diesel with a hint of lemony pine upon exhale. Stardawg users describe the high as an extremely active and uplifting sativa head buzz with pressure felt behind the eyes and in the neck. You’ll experience a huge burst of energy and urge to be social and talkative, although you may fall into fi</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/properbud_/item/c2dcd1d0a08147156edfb5ce1c1fcf25">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Fresh Top Quality Methamphetamine Shards A Grade &#43;
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/properbud_/item/c2dcd1d0a08147156edfb5ce1c1fcf25">
+											<img src="/item-image/c2dcd1d0a08147156edfb5ce1c1fcf25?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/c2dcd1d0a08147156edfb5ce1c1fcf25">
+										<div class="ui dark-green basic tiny button fluid left aligned">small baggie - 1.0g</div>
+										<div class="ui basic left pointing label price">13 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/properbud_/item/c2dcd1d0a08147156edfb5ce1c1fcf25">
+										<div class="ui dark-green basic tiny button fluid left aligned">shiny baggie - 10.0g</div>
+										<div class="ui basic left pointing label price">190 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Proper crystal Ice A+ Pharmaceutical Grade!!!
+It comes with stealth package (Anti X-Ray,DogSmell,Waterproof,Anti-Fingerprint)
+Our packing techniques are bulletproof until now 73 shipments out of 75 were delivered successfully in CA/US/EU/AU!
+* 99% Delivery success rate!
+We care about our customers and we guarantee about the stuff we listed in here!
+Grab your sample G now and see by yourself - order / deliver / quality =&gt; you’ll see the quality speaks for itself!
+We’re available 24⁄7 - 365 so if there are any problems with your order just give us a shout,don’t rush into opening tickets or disputes!
+Secured Delivery Guaranteed for orders above 10.0g!
+We ship very same day when you place your order!
+Cheers guys - stay safe - stay high!
+-= Proper Brotherz =-</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 2336 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/akindercare?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@akindercare</h2>
+								<p>our KIND is your KIND | Liquid Cannabis Derivatives </p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 53 minutes ago</span>
+								</div>
+								<br />
+								<span class="ui label grey">Silver Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									3 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/akindercare">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/akindercare">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/akindercare/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">18</span>
+									</a>
+									<a class="item active" href="/store/akindercare/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">15</span>
+									</a>
+									<a class="item" href="/store/akindercare/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/8743a43ca8804cf652b642d677855ad6">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								VARIETY PACK - 3 X Cannabis Vape Oil | 75% THC | Choose your strains!
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/8743a43ca8804cf652b642d677855ad6">
+											<img src="/item-image/8743a43ca8804cf652b642d677855ad6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8743a43ca8804cf652b642d677855ad6">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">180 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8743a43ca8804cf652b642d677855ad6">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h3>CHOOSE YOUR STRAINS -</h3>
+
+<p><strong>STRAWBERRY COUGH (sativa) - AGENT ORANGE (hybrid) - SENSEI STAR (indica) - LEMON DIESEL (hybrid)</strong></p>
+
+<p>Mix and match any 3 of our rotating supply of available strains.  Don’t see something you’d like? Ask</p>
+
+<p>Slow brewed. Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend. Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process. This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+<p>Thanks for looking, contact us with any questions.</p>
+
+<p>Take care of each other,</p>
+
+<p><strong>KINDercare</strong></p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/40290309d33547d55988b2c74f69d0c9">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								VARIETY PACK - 3 X Cannabis Vape Oil | 50% THC | Choose your stain!
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/40290309d33547d55988b2c74f69d0c9">
+											<img src="/item-image/40290309d33547d55988b2c74f69d0c9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/40290309d33547d55988b2c74f69d0c9">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/40290309d33547d55988b2c74f69d0c9">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">205 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h3>CHOOSE YOUR STRAINS -</h3>
+
+<p><strong>OBAMA KUSH (indica)</strong> - <strong>CHOCOLOPE (sativa)</strong> - <strong>LEMON DIESEL (hybrid)</strong> - <strong>SFV OG (sativa)</strong> - <strong>CHEMDAWG (hybrid)</strong> - <strong>STRAWBERRY COUGH (sativa)</strong></p>
+
+<p>Mix and match any 3 of our rotating supply of available strains. Don’t see something you’d like? Ask</p>
+
+<p>Slow brewed. Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend. Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process. This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+<p>Thanks for looking, contact us with any questions.</p>
+
+<p>Take care of each other,</p>
+
+<p><strong>KINDercare</strong></p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								BLUE CHEESE Cannabis Vape Oil | 50% THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+											<img src="/item-image/5105720ac52e4b354ae224fd476bb743?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">205 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/5105720ac52e4b354ae224fd476bb743">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml</div>
+										<div class="ui basic left pointing label price">310 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: BLUE CHEESE</h2>
+
+<p><strong>[Indica]</strong>   |   [<strong>80%</strong> Indica / <strong>20%</strong> Sativa]</p>
+
+<p><strong>ATTRIBUTES</strong>: relaxed, happy, euphoric, sleepy, uplifted</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: stress, depression, pain, insomnia, muscle spasms</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+<p><strong>—————————–</strong></p>
+
+<p><strong>BLUE CHEESE</strong> [Hybrid] -</p>
+
+<p>This indica-dominant hybrid (20:80 sativa/indica ratio) is fairly potent.  As its name suggests, it tastes strongly of blue cheese, giving it a flavor distinct from other Cheese varieties. The aroma is a mix of blue cheese and sweet blueberries. The ori</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/54416867a6cf4dc769d93be4c8ea8bf7">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								75% THC | SENSEI STAR Cannabis Vape Oil 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/54416867a6cf4dc769d93be4c8ea8bf7">
+											<img src="/item-image/54416867a6cf4dc769d93be4c8ea8bf7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/54416867a6cf4dc769d93be4c8ea8bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">65 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/54416867a6cf4dc769d93be4c8ea8bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/54416867a6cf4dc769d93be4c8ea8bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: Sensei Star</h2>
+
+<p><strong>ATTRIBUTES</strong>: relaxed, happy, tingly, euphoric, sleepy</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: pain, depression, stress, insomnia, depression</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>STRAIN: Sensei Star</strong></p>
+
+<p>Sensi Star is an award winning Indica dominant hybrid that smells of a coniferous forest and a citrus lemon; which is similar to the taste of the strain.</p>
+
+<p>Most feel high instantaneously with cerebral effects starting right after the first hit that lifts spirits and fills users with a sense of euphoria. Soon aft</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/54a0e74f59784adc606a109af4488450">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								CANNABIS CAPSULES  - 17.5mg THC - INDICA 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/54a0e74f59784adc606a109af4488450">
+											<img src="/item-image/54a0e74f59784adc606a109af4488450?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cannabis capsules are still considered a rather new product on the market.</p>
+
+<p>Capsules can be useful for patients/users as they are discrete and can help minimize the stigma associated with cannabis consumed via vaporization or smoking.</p>
+
+<p>Our capsules are produced using unrefined coconut oil as well as cannabis extract.  That’s it.  Pure and simple.  Natural.</p>
+
+<p>Each capsule contains approximately 15-20 milligrams of THC.</p>
+
+<p>INGREDIENT LIST:
+unrefined coconut oil
+cannabis flowers and shake</p>
+
+<p>Recommended dose of 1-3 capsules depending on users tolerance.</p>
+
+<p>Experience is very similar to that of edibles.  The effects require time to kick in (30-60 minutes) and last much longer than traditional methods of consuming cannabis.</p>
+
+<p>Remember that ingested cannabis will affect you differently than inhaled cannabis. Those of you who are new to ingesting marijuana (edibles) we recommend starting at a lower dose than you are accustomed to in order to account for any differences between products prior to titrating</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/56d5e80306c748ca441ba011713b5d38">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								75% THC | LEMON DIESEL Cannabis Vape Oil
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/56d5e80306c748ca441ba011713b5d38">
+											<img src="/item-image/56d5e80306c748ca441ba011713b5d38?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/56d5e80306c748ca441ba011713b5d38">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">65 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/56d5e80306c748ca441ba011713b5d38">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">295 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/56d5e80306c748ca441ba011713b5d38">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: LEMON DIESEL [Hybrid]</h2>
+
+<p><strong>ATTRIBUTES</strong>: relaxed, happy, euphoric, energetic, uplifted</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: stress, depression, pain, headaches, anxiety</p>
+
+<p>Slow brewed. Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend. Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process. This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>LEMON DIESEL</strong> [Hybrid]</p>
+
+<p>Bred from the Lost Coast OG and California Sour strains, as smelling fruity and sweet, with a hint of a skunk. The smell and flavor have been likened to citrus and pepper, with effects that can “sneak up” on its consumer.</p>
+
+<p>The Lost Coast OG in the genetics brings a euphoric spaciness that start</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								STRAWBERRY COUGH Cannabis Vape Oil | 50% THC 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+											<img src="/item-image/7ba041274afc40f66cc892edbf2de1eb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+										<div class="ui dark-green basic tiny button fluid left aligned">20ml</div>
+										<div class="ui basic left pointing label price">145 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/7ba041274afc40f66cc892edbf2de1eb">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: Strawberry Cough | [80% Sativa / 20% Indica]</h2>
+
+<p><strong>ATTRIBUTES</strong>: happy, uplifted, euphoric, energetic, relaxed</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: depression, stress, fatigue, pain, headaches</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>STRAIN: Strawberry Cough</strong></p>
+
+<p>Known for its sweet smell of fresh strawberries and an expanding sensation that can make even the most seasoned consumer cough, Strawberry Cough is a potent sativa blend with mysterious genetic origins. The skunky, berry flavors will capture your senses</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/858a543601d24ca172121a62d9fd5897">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								75% THC | AGENT ORANGE Cannabis Vape Oil 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/858a543601d24ca172121a62d9fd5897">
+											<img src="/item-image/858a543601d24ca172121a62d9fd5897?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/858a543601d24ca172121a62d9fd5897">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">65 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/858a543601d24ca172121a62d9fd5897">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/858a543601d24ca172121a62d9fd5897">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN:  AGENT ORANGE [hybrid]</h2>
+
+<p><strong>EFFECTS</strong>: happy, uplifted, energetic, creative, relaxed</p>
+
+<p><strong>MEDICAL</strong>: depression, stress, pain, headaches, fatigue</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>AGENT ORANGE [hybrid]</strong></p>
+
+<p>A well-balanced hybrid that combines the smooth Orange Velvet with the bold Jack the Ripper, Agent Orange will capture your senses.  Wonderful smells of oranges and fresh-cut citrus fruit will entice you immediately, while the pigments of deep maroon and purple will make this bud stand out in a sea of green. Th</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								CHEMDAWG Cannabis Vape Oil | 50% THC 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+											<img src="/item-image/8fae6b09ea4646e04ea5185eaa61132f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/8fae6b09ea4646e04ea5185eaa61132f">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: Chemdawg [HYBRID]</h2>
+
+<p><strong>ATTRIBUTES</strong>: happy, uplifted, creative, euphoric, relaxed</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: stress, depression, pain, fatigue, insomnia</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>STRAIN: Chemdawg [HYBRID]</strong></p>
+
+<p>Chemdog has developed quite the name for itself over the years. Between its mysterious origin, ambiguous genetics, and the plethora of successful crosses the strain has produced, Chemdog has practically secured itself a permanent place in the cannabis hall of fame. The original source of powerhouse strains like S</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								CHOCOLOPE Cannabis Vape Oil | 50% THC 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+											<img src="/item-image/9555c430b1094d1975de1b1e218cf89c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/9555c430b1094d1975de1b1e218cf89c">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: Chocolope [sativa]</h2>
+
+<p><strong>ATTRIBUTES</strong>: happy, uplifted, energetic, euphoric, focused</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: stress, depression, pain, fatigue, headaches</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>Chocolope [sativa]</strong></p>
+
+<p>Chocolope, created by crossing Chocolate Thai with Cannalope Haze to create an homage to the Chocolate strains of the 1980s. The hefty sativa buds give earthy, sweet coffee flavors that provide a dreamy, cerebral effect. Consumers report a strong, euphoric mental shift that is great when coping with depression or str</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/a8bdfeff04854bf5579aa5e901c52ea6">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								75% THC | STRAWBERRY COUGH Cannabis Vape Oil 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/a8bdfeff04854bf5579aa5e901c52ea6">
+											<img src="/item-image/a8bdfeff04854bf5579aa5e901c52ea6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/a8bdfeff04854bf5579aa5e901c52ea6">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">65 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/a8bdfeff04854bf5579aa5e901c52ea6">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/a8bdfeff04854bf5579aa5e901c52ea6">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">295 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: Strawberry Cough | [80% Sativa / 20% Indica]</h2>
+
+<p><strong>ATTRIBUTES</strong>: happy, uplifted, euphoric, energetic, relaxed</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: depression, stress, fatigue, pain, headaches</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>STRAIN: Strawberry Cough</strong></p>
+
+<p>Known for its sweet smell of fresh strawberries and an expanding sensation that can make even the most seasoned consumer cough, Strawberry Cough is a potent sativa blend with mysterious genetic origins. The skunky, berry flavors will capture your senses while the cerebral, upli</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								SFV OG Cannabis Vape Oil | 50% THC 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+											<img src="/item-image/b484b427c01e476f6bfa47f0092ed06b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/b484b427c01e476f6bfa47f0092ed06b">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: SFV OG [sativa 70%/indica 30%]</h2>
+
+<p><strong>ATTRIBUTES</strong>: creative, euphoria, focus, happy, relaxing</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: ADD, anxiety, pain, depression, hyperactivity, insomnia, migraines</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Juice is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>SFV OG [sativa 70%/indica 30%]</strong></p>
+
+<p>SFV OG, also known as “San Fernando Valley OG” to many members of the cannabis community, is a potent sativa dominant phenotype of the OG Kush strain.</p>
+
+<p>Users describe the SFV OG high as one with an almost immediate onset of relaxing and sedative effects that leave you fee</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								LEMON DIESEL Cannabis Vape Oil | 50% THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+											<img src="/item-image/f6d4d73de66c47f26bbf6f52d4b540e7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+										<div class="ui dark-green basic tiny button fluid left aligned">30ml</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/f6d4d73de66c47f26bbf6f52d4b540e7">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: LEMON DIESEL [Hybrid]</h2>
+
+<p><strong>ATTRIBUTES</strong>: relaxed, happy, euphoric, energetic, uplifted</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: stress, depression, pain, headaches, anxiety</p>
+
+<p>Slow brewed.  Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend.  Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process.  This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p>STRAIN: LEMON DIESEL [Hybrid]</p>
+
+<p>Bred from the Lost Coast OG and California Sour strains, as smelling fruity and sweet, with a hint of a skunk. The smell and flavor have been likened to citrus and pepper, with effects that can “sneak up” on its consumer.</p>
+
+<p>The Lost Coast OG in the genetics brings a euphoric spaciness that starts in th</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								OBAMA KUSH Cannabis Vape Oil | 50% THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+											<img src="/item-image/cd163e24c6564fa35522aa234a072562?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+										<div class="ui dark-green basic tiny button fluid left aligned">5ml</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">75 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+										<div class="ui dark-green basic tiny button fluid left aligned">15ml</div>
+										<div class="ui basic left pointing label price">115 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">195 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/cd163e24c6564fa35522aa234a072562">
+										<div class="ui dark-green basic tiny button fluid left aligned">50ml</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><h2>STRAIN: Obama Kush [Indica]</h2>
+
+<p><strong>ATTRIBUTES</strong>: relaxed, euphoric, happy, uplifted, sleepy</p>
+
+<p><strong>MEDICAL BENEFITS</strong>: pain, depression, stress, insomnia, fatigue</p>
+
+<p>Slow brewed. Our products are prepared in small batches with great love and care using A grade, high-quality cannabis concentrate (shatter/wax) and our own custom vape mix blend. Triple filtered.</p>
+
+<p>We go to great lengths to ensure the plants original terpene profiles are preserved during the brew process. This ensures a tasty and robust cloud each time.</p>
+
+<p>Item is heat activated having been twice decarbed.</p>
+
+<p>Designed for use with standard e-liquid tanks and devices.</p>
+
+
+
+<p><strong>STRAIN: Obama Kush [Indica]</strong></p>
+
+<p>This unique indica appropriately channels the President’s famous message of ‘Change’ as it invigorates and inspires. Daughter of indica Afghani and mostly sativa hybrid OG Kush, Obama Kush sets itself apart from other indicas through its cerebral stimulation and euphoric rush. This strain is recommend</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/akindercare/item/5d7bb4f764654cb757870cb477d43cf7">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								custom listing for iipx707
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/akindercare/item/5d7bb4f764654cb757870cb477d43cf7">
+											<img src="/item-image/5d7bb4f764654cb757870cb477d43cf7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/akindercare/item/5d7bb4f764654cb757870cb477d43cf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">1x 10ml 75% including usps priority mail</div>
+										<div class="ui basic left pointing label price">108 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>as discussed. w/ custom labels etc</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 418 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

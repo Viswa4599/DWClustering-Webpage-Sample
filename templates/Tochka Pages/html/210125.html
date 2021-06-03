@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/wxcvbnqsdfghjklm?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@wxcvbnqsdfghjklm</h2>
+								<p>Sale of drugs Classified Narcotics, and on order of Pharmacy French.</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 3 months ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 7 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.2</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/wxcvbnqsdfghjklm">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/wxcvbnqsdfghjklm">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/wxcvbnqsdfghjklm/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">5</span>
+									</a>
+									<a class="item active" href="/store/wxcvbnqsdfghjklm/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">24</span>
+									</a>
+									<a class="item" href="/store/wxcvbnqsdfghjklm/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/3bbc50b82b5b43bf46c0f4b41906e825">
+								<span class="ui teal tiny label tag right floated">Antipsychotics</span>
+								Risperidone 1mg Fro FR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/3bbc50b82b5b43bf46c0f4b41906e825">
+											<img src="/item-image/3bbc50b82b5b43bf46c0f4b41906e825?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3bbc50b82b5b43bf46c0f4b41906e825">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 tablets of risperidone 1mg</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Risperidone 1mg is an antipsychotic neuroleptic, used to treat bi-polarity, scizophrenia, or depression.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/c259cdb2864c468343a84d76a15b4f83">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>1</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Zopiclone 7.5 mg (imovane) From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/c259cdb2864c468343a84d76a15b4f83">
+											<img src="/item-image/c259cdb2864c468343a84d76a15b4f83?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/c259cdb2864c468343a84d76a15b4f83">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">21 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/c259cdb2864c468343a84d76a15b4f83">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 pills</div>
+										<div class="ui basic left pointing label price">36 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Generic Zopiclone 7.5mg imovane, hypnotic sleep aid.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/c8b7217d04314a5171628adc966be1ba">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Pregabaline 300 mg (Lyrica)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/c8b7217d04314a5171628adc966be1ba">
+											<img src="/item-image/c8b7217d04314a5171628adc966be1ba?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/c8b7217d04314a5171628adc966be1ba">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/c8b7217d04314a5171628adc966be1ba">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 pills</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/c8b7217d04314a5171628adc966be1ba">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">54 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/c8b7217d04314a5171628adc966be1ba">
+										<div class="ui dark-green basic tiny button fluid left aligned">50</div>
+										<div class="ui basic left pointing label price">84 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pregabaline 300 mg (Lyrica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/d1cfac10c813430745edaef73e78c270">
+								<span class="ui teal tiny label tag right floated">Antidepressants</span>
+								Venlafaxine 75mg generic of Effexor from FR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/d1cfac10c813430745edaef73e78c270">
+											<img src="/item-image/d1cfac10c813430745edaef73e78c270?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d1cfac10c813430745edaef73e78c270">
+										<div class="ui dark-green basic tiny button fluid left aligned">1</div>
+										<div class="ui basic left pointing label price">4 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d1cfac10c813430745edaef73e78c270">
+										<div class="ui dark-green basic tiny button fluid left aligned">10</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d1cfac10c813430745edaef73e78c270">
+										<div class="ui dark-green basic tiny button fluid left aligned">30</div>
+										<div class="ui basic left pointing label price">34 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>venlafaxine 75 LP is the generic of the effexor.
+It is an antidepressant that is extremely effective for anxiety disorders, it acts on serotonyl and noradrenaline.
+An antidepressant medication must be taken over a long enough period often a few months at a minimum.
+If you need more information about this contact me in PM.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/378b8c36329744036090a1a0b5ef21d1">
+								<span class="ui teal tiny label tag right floated">Antidepressants</span>
+								Mirtazapine 15mg from Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/378b8c36329744036090a1a0b5ef21d1">
+											<img src="/item-image/378b8c36329744036090a1a0b5ef21d1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/378b8c36329744036090a1a0b5ef21d1">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pils</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/378b8c36329744036090a1a0b5ef21d1">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 pilss</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/378b8c36329744036090a1a0b5ef21d1">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Mirtazapine 15mg that comes from French pharmacy.
+Antidepressant. To take the evening at bedtime because it makes sleep.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ritalin</span>
+								Ritalin methylphenidate from Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+											<img src="/item-image/3e06a82bec6d41a166961558361006b5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 pills</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">20pills</div>
+										<div class="ui basic left pointing label price">73 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">101 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3e06a82bec6d41a166961558361006b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">60 pills</div>
+										<div class="ui basic left pointing label price">185 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>My Ritalin is called Ritaline and comes from French pharmacy, for more info or special request contact me.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/5421991a79b345886e6cf403b68d59ec">
+								<span class="ui teal tiny label tag right floated">Antipsychotics</span>
+								Loxapac 100 mg (loxapine) from Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/5421991a79b345886e6cf403b68d59ec">
+											<img src="/item-image/5421991a79b345886e6cf403b68d59ec?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/5421991a79b345886e6cf403b68d59ec">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 tabblets</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/5421991a79b345886e6cf403b68d59ec">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 tablets</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/5421991a79b345886e6cf403b68d59ec">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 tablets</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Loxapac 100 mg (loxapine) from Fr</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/5f8c72f8244344ad5c92b27cfdc4746b">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Original Subutex 8mg  From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/5f8c72f8244344ad5c92b27cfdc4746b">
+											<img src="/item-image/5f8c72f8244344ad5c92b27cfdc4746b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/5f8c72f8244344ad5c92b27cfdc4746b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pills 8mg</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/5f8c72f8244344ad5c92b27cfdc4746b">
+										<div class="ui dark-green basic tiny button fluid left aligned">7pills of 8mg</div>
+										<div class="ui basic left pointing label price">101 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Original Subutex 8mg is a substitution treatment for opiate addicted person,
+This treatment comes from French pharmacy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/67f5fbfe0b5e432b532d1a09731496d8">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Tramadol 50mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/67f5fbfe0b5e432b532d1a09731496d8">
+											<img src="/item-image/67f5fbfe0b5e432b532d1a09731496d8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/67f5fbfe0b5e432b532d1a09731496d8">
+										<div class="ui dark-green basic tiny button fluid left aligned">10</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/67f5fbfe0b5e432b532d1a09731496d8">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tramadol 50mg.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/7ba0d3e8a4cf4258573005cd53df7c27">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Methadone Syrup 20mg / 15ml From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/7ba0d3e8a4cf4258573005cd53df7c27">
+											<img src="/item-image/7ba0d3e8a4cf4258573005cd53df7c27?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/7ba0d3e8a4cf4258573005cd53df7c27">
+										<div class="ui dark-green basic tiny button fluid left aligned">20mg / 15ml</div>
+										<div class="ui basic left pointing label price">6 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/7ba0d3e8a4cf4258573005cd53df7c27">
+										<div class="ui dark-green basic tiny button fluid left aligned">40mg/30ml</div>
+										<div class="ui basic left pointing label price">12 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/7ba0d3e8a4cf4258573005cd53df7c27">
+										<div class="ui dark-green basic tiny button fluid left aligned">200mg/75ml</div>
+										<div class="ui basic left pointing label price">51 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/7ba0d3e8a4cf4258573005cd53df7c27">
+										<div class="ui dark-green basic tiny button fluid left aligned">400mg / 150ml</div>
+										<div class="ui basic left pointing label price">112 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methadone Syrup 20mg / 15ml is a substitution treatment for opiate addicted person,
+This treatment comes from French pharmacy..</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/9385a6ebb8a9433c5cedbeecfbb290e8">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Moby Dick Indoor
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/9385a6ebb8a9433c5cedbeecfbb290e8">
+											<img src="/item-image/9385a6ebb8a9433c5cedbeecfbb290e8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9385a6ebb8a9433c5cedbeecfbb290e8">
+										<div class="ui dark-green basic tiny button fluid left aligned">2.5 g</div>
+										<div class="ui basic left pointing label price">37 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9385a6ebb8a9433c5cedbeecfbb290e8">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 g</div>
+										<div class="ui basic left pointing label price">73 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9385a6ebb8a9433c5cedbeecfbb290e8">
+										<div class="ui dark-green basic tiny button fluid left aligned">7.5 g</div>
+										<div class="ui basic left pointing label price">101 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9385a6ebb8a9433c5cedbeecfbb290e8">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 g</div>
+										<div class="ui basic left pointing label price">135 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I would like to introduce you to my online boutique
+ All the weed which I offer in my boutique are organically produced with no chemicals,
+high quality, good smell, compact and resinous buds. Products are organic of high quality,
+ my aim is to satisfy my customers. I can’t expect to make further developments if my customers don’t come back.</p>
+
+<p>Moby Dick gives off a pleasant, flowery scent with hints of lemon and exotic woods.
+The flavour is a subtle blend of wood, citrus, pine, Haze and incense.
+ It is the perfect cannabis strain for relaxing.</p>
+
+<p>Type : 60% Sativa 40% Indica - THC : High - Effets : Euphoric, Happiness, Relaxed. Cross : Haze x White Widow</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/b800f5e5dfa740f356f3de3280226c66">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Prelagaline (Lyrica) 300mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/b800f5e5dfa740f356f3de3280226c66">
+											<img src="/item-image/b800f5e5dfa740f356f3de3280226c66?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/b800f5e5dfa740f356f3de3280226c66">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 capsule</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/b800f5e5dfa740f356f3de3280226c66">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 capsules</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/b800f5e5dfa740f356f3de3280226c66">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 capsules</div>
+										<div class="ui basic left pointing label price">51 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/b800f5e5dfa740f356f3de3280226c66">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 capsules</div>
+										<div class="ui basic left pointing label price">84 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pregabaline 300 mg (lyrica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/d2f1dc1fffa74a0a5bc866a7edfb7e5b">
+								<span class="ui teal tiny label tag right floated">Antipsychotics</span>
+								Solian 100mg amisulpride From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/d2f1dc1fffa74a0a5bc866a7edfb7e5b">
+											<img src="/item-image/d2f1dc1fffa74a0a5bc866a7edfb7e5b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d2f1dc1fffa74a0a5bc866a7edfb7e5b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 tablet of 100mg</div>
+										<div class="ui basic left pointing label price">2 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d2f1dc1fffa74a0a5bc866a7edfb7e5b">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 tablets of 100mg</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d2f1dc1fffa74a0a5bc866a7edfb7e5b">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 tablets of 100mg</div>
+										<div class="ui basic left pointing label price">42 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Solian 100mg is a neuroleptic used for several indications, below 200mg / day it can have a mild boosting effect for people in depression who do not respond to antidepressants.
+Above it can treat bi-polar and schizophrenic state, pour plus de question écrivez moi je me ferai un plaisir de vous répondre.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/d735254b85794ce7424b121073fc17f2">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Codeine 30mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/d735254b85794ce7424b121073fc17f2">
+											<img src="/item-image/d735254b85794ce7424b121073fc17f2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d735254b85794ce7424b121073fc17f2">
+										<div class="ui dark-green basic tiny button fluid left aligned">28 pills</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d735254b85794ce7424b121073fc17f2">
+										<div class="ui dark-green basic tiny button fluid left aligned">56 pills</div>
+										<div class="ui basic left pointing label price">73 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/d735254b85794ce7424b121073fc17f2">
+										<div class="ui dark-green basic tiny button fluid left aligned">112 pills</div>
+										<div class="ui basic left pointing label price">135 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Codeine 30mg</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/fd4152acfb46448d5e718bc5470d348b">
+								<span class="ui teal tiny label tag right floated">Antipsychotics</span>
+								Risperidone 2mg from Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/fd4152acfb46448d5e718bc5470d348b">
+											<img src="/item-image/fd4152acfb46448d5e718bc5470d348b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/fd4152acfb46448d5e718bc5470d348b">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 tablets of risperidone 2mg</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Risperidone 2mg is an antipsychotic neuroleptic, used to treat bi-polarity, scizophrenia, or depression.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/eec8aae881f04246587b45f1e0590408">
+								<span class="ui teal tiny label tag right floated">Antipsychotics</span>
+								Pregabaline 300 mg (lyrica)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/eec8aae881f04246587b45f1e0590408">
+											<img src="/item-image/eec8aae881f04246587b45f1e0590408?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/eec8aae881f04246587b45f1e0590408">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 capsules</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/eec8aae881f04246587b45f1e0590408">
+										<div class="ui dark-green basic tiny button fluid left aligned">20</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/eec8aae881f04246587b45f1e0590408">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 capsules</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pregabaline 300 mg (lyrica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/fd3f7be46f224df17423c9ce9b53cf48">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Oxycondone LP/SR 30 mg ( Oxycodone) from Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/fd3f7be46f224df17423c9ce9b53cf48">
+											<img src="/item-image/fd3f7be46f224df17423c9ce9b53cf48?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/fd3f7be46f224df17423c9ce9b53cf48">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 pill</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/fd3f7be46f224df17423c9ce9b53cf48">
+										<div class="ui dark-green basic tiny button fluid left aligned">3 pills</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Oxycontin brand of French pharmacy, the generic is oxycodone, the dosage is 30 mg LP / SR.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/3dbde0bdea474c067d6314c1bbe464a7">
+								<span class="ui teal tiny label tag right floated">Sedatatives</span>
+								Loxapac 100mg (Loxapine) From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/3dbde0bdea474c067d6314c1bbe464a7">
+											<img src="/item-image/3dbde0bdea474c067d6314c1bbe464a7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3dbde0bdea474c067d6314c1bbe464a7">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pills</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3dbde0bdea474c067d6314c1bbe464a7">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 pills</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/3dbde0bdea474c067d6314c1bbe464a7">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 pills</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Loxapac 100mg (Loxapine) From Fr</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/a0877bd08586430c788b3ba1e49f5110">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Actiskenan (sufate of morphone) 10mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/a0877bd08586430c788b3ba1e49f5110">
+											<img src="/item-image/a0877bd08586430c788b3ba1e49f5110?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/a0877bd08586430c788b3ba1e49f5110">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 capsule</div>
+										<div class="ui basic left pointing label price">12 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/a0877bd08586430c788b3ba1e49f5110">
+										<div class="ui dark-green basic tiny button fluid left aligned">3 capsules</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/a0877bd08586430c788b3ba1e49f5110">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 capsules</div>
+										<div class="ui basic left pointing label price">43 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Actiskenan (sufate of morphone) 10mg</p>
+
+<p>Actiskenan 10mg, contains 10mg of morphine, which equals 60mg of codeine or 5mg of oxycodone or 50mg of tramadol.
+This comes from the French pharmacy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/0388d2eaf6934cab51f427f5caf2e2ef">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Alprazolam 0.50mg (Xanax) From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/0388d2eaf6934cab51f427f5caf2e2ef">
+											<img src="/item-image/0388d2eaf6934cab51f427f5caf2e2ef?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/0388d2eaf6934cab51f427f5caf2e2ef">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 tablets of alprazolam 0.50mg</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/0388d2eaf6934cab51f427f5caf2e2ef">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 tablets of alaprozlam 0.50mg</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/0388d2eaf6934cab51f427f5caf2e2ef">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 tablets of alprazolam 0.50mg</div>
+										<div class="ui basic left pointing label price">40 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Alprazolam 0.50mg is the generic of xanax, it is an anxiolytic of the benzodiazepine family</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/19bdb9d53e684d0f64bc2eb920fcfecd">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Seresta 50mg (oxazepam)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/19bdb9d53e684d0f64bc2eb920fcfecd">
+											<img src="/item-image/19bdb9d53e684d0f64bc2eb920fcfecd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Seresta 50mg brand of oxazepam in France.
+Anxiolytic benzodiazepine.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/a6b52b7b488e4ee0558f6daef2b9fc61">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Zolpidem 10mg (Stilnox) From Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/a6b52b7b488e4ee0558f6daef2b9fc61">
+											<img src="/item-image/a6b52b7b488e4ee0558f6daef2b9fc61?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Zolpidem 10mg (Stilnox) From Fr</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/b36d6ebadb454fe5615094e7b18fc5df">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Diazepam 10mg (Valium) from Fr
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/b36d6ebadb454fe5615094e7b18fc5df">
+											<img src="/item-image/b36d6ebadb454fe5615094e7b18fc5df?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/b36d6ebadb454fe5615094e7b18fc5df">
+										<div class="ui dark-green basic tiny button fluid left aligned">10</div>
+										<div class="ui basic left pointing label price">23 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Diazepam 10mg (Valium)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wxcvbnqsdfghjklm/item/9169df4cf4f549dd6435944ec5fdeff2">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Zopiclone (imovane) 7.5mg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wxcvbnqsdfghjklm/item/9169df4cf4f549dd6435944ec5fdeff2">
+											<img src="/item-image/9169df4cf4f549dd6435944ec5fdeff2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9169df4cf4f549dd6435944ec5fdeff2">
+										<div class="ui dark-green basic tiny button fluid left aligned">1</div>
+										<div class="ui basic left pointing label price">3 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9169df4cf4f549dd6435944ec5fdeff2">
+										<div class="ui dark-green basic tiny button fluid left aligned">10</div>
+										<div class="ui basic left pointing label price">17 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wxcvbnqsdfghjklm/item/9169df4cf4f549dd6435944ec5fdeff2">
+										<div class="ui dark-green basic tiny button fluid left aligned">20</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Zopiclone 7.5mg is a sleeping pill, inducing sleep, it helps to induce sleep in the half hour after taking the tablet if the one who took it put in good condition to sleep directly after taking the tablet. tablet, it is not a benzodiazepine but appears.
+Do not exceed 1 month of treatment, not to develop dependence. If insomnia persists, consult your doctor.
+Take care of yourself.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 808 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

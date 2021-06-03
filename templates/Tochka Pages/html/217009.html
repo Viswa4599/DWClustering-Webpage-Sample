@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/showrunzer?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@showrunzer</h2>
+								<p>we sell quality products 100% reshipping</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 year ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 3 days ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									19 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.3</span>
+								</span>
+								<span class="ui teal label">Insured</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/showrunzer">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/showrunzer">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/showrunzer/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">17</span>
+									</a>
+									<a class="item active" href="/store/showrunzer/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">37</span>
+									</a>
+									<a class="item" href="/store/showrunzer/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/54b3439ed7344c936d1274ed5150bff2">
+								<span class="ui teal tiny label tag right floated">LSD</span>
+								BUY 1P-LSD Blotters 150mcg
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/54b3439ed7344c936d1274ed5150bff2">
+											<img src="/item-image/54b3439ed7344c936d1274ed5150bff2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/54b3439ed7344c936d1274ed5150bff2">
+										<div class="ui dark-green basic tiny button fluid left aligned">50x 1p-lsd blotters</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/54b3439ed7344c936d1274ed5150bff2">
+										<div class="ui dark-green basic tiny button fluid left aligned">100x 1p-lsd blotters</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/54b3439ed7344c936d1274ed5150bff2">
+										<div class="ui dark-green basic tiny button fluid left aligned">200x 1p-lsd blotters</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy 1P-LSD Blotters 150mcg, Buy 1P-LSD Blotters
+1-propionyl-lysergic acid diethylamide
+IUPAC   (6aR,9R)-N,N-diethyl-7-methyl-4-propanoyl-6,6a,8,9-tetrahydroindolo[4,3-fg]quinoline-9-carboxamide
+CAS NO. N/A
+Synonyms    Pink Sunshine Acid, 1-propionyl-lysergic acid diethylamide
+Formula C23H29N3O2
+Purity  99.5 %
+Appearance  Blotter</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/1eaa632c4d1e467a720675c4dac7ca91">
+								<span class="ui teal tiny label tag right floated">DMT</span>
+								Buy DMT powder online powerful qualt&#43;&#43;&#43;A
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/1eaa632c4d1e467a720675c4dac7ca91">
+											<img src="/item-image/1eaa632c4d1e467a720675c4dac7ca91?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/1eaa632c4d1e467a720675c4dac7ca91">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/1eaa632c4d1e467a720675c4dac7ca91">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/1eaa632c4d1e467a720675c4dac7ca91">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy DMT powder online powerful qualt+++a,DMT (Dimethyltryptamine) is a potent short-term hallucinogenic drug. Sometimes called ‘the spirit molecule’. Effects are similar to those of LSD, but with more rapid onset, greater likelihood of a panic reaction, and a shorter duration (1–2 hours).</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/b8257c21ff6041d676d790190296589c">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								High quality  Ephedrine HCL Tablets 30mg ship overnight!!
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/b8257c21ff6041d676d790190296589c">
+											<img src="/item-image/b8257c21ff6041d676d790190296589c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b8257c21ff6041d676d790190296589c">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000pilss</div>
+										<div class="ui basic left pointing label price">280 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b8257c21ff6041d676d790190296589c">
+										<div class="ui dark-green basic tiny button fluid left aligned">2000pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b8257c21ff6041d676d790190296589c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5000pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>High quality  Ephedrine HCL Tablets 30mg ship overnight,,We have the best quality Ephedrine HCL Tablets 30mg The prices are affordable and the quality is the best you can see on the market Large orders have discounts and free shipping</p>
+
+<p>Overnight and express is also offered at low rates Our priority is to offer the best business deals to all our clients</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/c96a0b909dc44ff0735416d381b28aa0">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								HG MORPHINE SULPHATE TABLETS 15MG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/c96a0b909dc44ff0735416d381b28aa0">
+											<img src="/item-image/c96a0b909dc44ff0735416d381b28aa0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/c96a0b909dc44ff0735416d381b28aa0">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/c96a0b909dc44ff0735416d381b28aa0">
+										<div class="ui dark-green basic tiny button fluid left aligned">2000</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/c96a0b909dc44ff0735416d381b28aa0">
+										<div class="ui dark-green basic tiny button fluid left aligned">5000</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>HG MORPHINE SULPHATE TABLETS 15MG……We have the best quality Morphine Sulphate Tablets 15mg The prices are affordable and the quality is the best you can see on the market Large orders have discounts and free shipping</p>
+
+<p>Overnight and express is also offered at low rates Our priority is to offer the best business deals to all our clients</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/eb4dd25d885c4635691abe3c073a6d61">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Buy Jwh-018 Good quality
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/eb4dd25d885c4635691abe3c073a6d61">
+											<img src="/item-image/eb4dd25d885c4635691abe3c073a6d61?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/eb4dd25d885c4635691abe3c073a6d61">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/eb4dd25d885c4635691abe3c073a6d61">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/eb4dd25d885c4635691abe3c073a6d61">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/eb4dd25d885c4635691abe3c073a6d61">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Jwh-018 Good quality</p>
+
+<p>What is  JWH 018?</p>
+
+<p>JWH 018 is a mildly selective agonist of the peripheral cannabinoid (CB2) receptor, derived from the aminoalkylindole WIN 55,212-2. The Ki values for binding central cannabinoid (CB1) and CB2 receptors are 9.0 and 2.94 nM, respectively, for a CB1:CB2 ratio of 3.06.1 Its effects on suppression of spontaneous activity, maximum possible antinociceptive effect in the tail-flick assay, and rectal temperature are comparable to those of WIN 55,212-2 when tested in rats.</p>
+
+<p>It is a research chemical that belongs to the naphthoylindole family. JWH-081 as all the other research chemicals in the JWH group is a synthetic cannabinoid with analgesic effects.Its full chemical name is 4-methoxynaphthalen- 1-yl- (1-pentylindol- 3-yl)methanone with chemical formula as C25H25NO2 and molecular mass 371.47 g/mol.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/191ad6f080d448fa79c3391d7b62dd72">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								4-CL-PVP Crystal online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/191ad6f080d448fa79c3391d7b62dd72">
+											<img src="/item-image/191ad6f080d448fa79c3391d7b62dd72?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/191ad6f080d448fa79c3391d7b62dd72">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/191ad6f080d448fa79c3391d7b62dd72">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/191ad6f080d448fa79c3391d7b62dd72">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/191ad6f080d448fa79c3391d7b62dd72">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>4-CL-PVP is a new research chemical and is classified in the family of stimulants. The chemical formula for 4-CL-PVP is C15H20ClNO with an IUPAC name of 1-(4-chlorophenyl)-2-(pyrrolidin-1-yl)pentan-1-one 265.12 and a molecular mass of 265.12. Since 4-CL-PVP is so new on the market, research data is not available. Predicted research on compound was published by ACD/Labs’, US Environmental Protection Agency’s EPISuite, and ChemAxon. In the reports by ACD/Labs the chemical has 2 hydrogen acceptors, 0 hydrogen donors, 5 freely rotating bonds, an index of refraction of 1.538, with a surface tension of 40.0±3.0 dyne/cm, a flash point of 119.0±12.5 °C and a boiling point of 340.8±25.0 °C at 760 mmHg.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/e2b76780af8e413e6280cd3505817ed7">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								A&#43;&#43;&#43;AM-2201 FOR SALE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/e2b76780af8e413e6280cd3505817ed7">
+											<img src="/item-image/e2b76780af8e413e6280cd3505817ed7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/e2b76780af8e413e6280cd3505817ed7">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/e2b76780af8e413e6280cd3505817ed7">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/e2b76780af8e413e6280cd3505817ed7">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>AM-2201 is a strong synthetic weed (CB) that has been identified in smoking mix.
+The physiological and toxicologic properties of this compound aren’t identified.
+AM-2201 is meant for forensic and analysis applications.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/42064499b14642b272d9c05b019385c8">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								slift qualt...Alprazolam Powder 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/42064499b14642b272d9c05b019385c8">
+											<img src="/item-image/42064499b14642b272d9c05b019385c8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/42064499b14642b272d9c05b019385c8">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/42064499b14642b272d9c05b019385c8">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/42064499b14642b272d9c05b019385c8">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Alprazolam Powder Online
+Where to buy alprazolam powder online in the USA. People keep looking for where to buy xanax online. On the other hand ordering xanax powder happens every day. What then is the problem? A reliable source. The medication alprazolam xanax is not so  common so you should not just see a number on some blog and call. Medicine supply is done with care and caution. This to avoid the DEA and FDA with their drug laws.</p>
+
+<p>Xanax is also of the class benzodiazepines. It is a short acting anxiolytic use for anxiety and panic disorders. It is effective when you take a correct dose. Also abusing it can lead to death. Though we don’t care if you have a prescription, we advice you see a medical doctor. It is an anti anxiety medication but ordering without medical know how is risky. Alprazolam for sale and shipping policy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								Ecstacy yellow illuminati pills Available in bulk
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+											<img src="/item-image/4f45b222965a41867a5df38d86e2aa4a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+										<div class="ui dark-green basic tiny button fluid left aligned">150pills</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+										<div class="ui dark-green basic tiny button fluid left aligned">200pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4f45b222965a41867a5df38d86e2aa4a">
+										<div class="ui dark-green basic tiny button fluid left aligned">500pills</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ecstacy yellow illuminati pills Available in bulk,Molly (Pure MDMA) 180mg capsule</p>
+
+<p>Molly (Pure MDMA) is an empathogenic drug of the phenethylamine and amphetamine classes of drugs. MDMA has become widely known as “ecstasy”, usually referring to its street form, although this term may also include the presence of possible adulterants.</p>
+
+<p>Buy molly capsules Online (Pure MDMA 160mg)</p>
+
+<p>Molly capsules is a drug of ADD/ADHD category. You can see details and related molly capsules in same</p>
+
+<p>ADHD (Attention dificit hyperactivity disorder) is a problem of not being able to focus, being overactive, not being able control behavior, or a combination of these. For these problems to be diagnosed as ADHD, they must be out of the normal range for a person’s age and development.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/9f295611f52146c35c69390d09f16336">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								LAB TEST pure heroin 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/9f295611f52146c35c69390d09f16336">
+											<img src="/item-image/9f295611f52146c35c69390d09f16336?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9f295611f52146c35c69390d09f16336">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9f295611f52146c35c69390d09f16336">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9f295611f52146c35c69390d09f16336">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9f295611f52146c35c69390d09f16336">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Heroin online and get discrete delivery world wide. Buy Heroin,buy legal Heroin.Pure white powder uncut available in stock Packaging and shipping  is very discrete and bypass all custom. Buy now with confident, We have 100% success delivery withing USA, CANADA and UK.</p>
+
+<p>How Is Heroin Used?</p>
+
+<p>Heroin can be injected, inhaled by snorting or sniffing, or smoked. All three routes of administration deliver the drug to the brain very rapidly, which contributes to its health risks and to its high risk for addiction, which is a chronic relapsing disease caused by changes in the brain and characterized by uncontrollable drug-seeking no matter the consequences.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/2d3defb224dd44006680553231c59818">
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								XTC PILLS | 270 MG | QUALITY | LAB TESTED GOOD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/2d3defb224dd44006680553231c59818">
+											<img src="/item-image/2d3defb224dd44006680553231c59818?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/2d3defb224dd44006680553231c59818">
+										<div class="ui dark-green basic tiny button fluid left aligned">200pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/2d3defb224dd44006680553231c59818">
+										<div class="ui dark-green basic tiny button fluid left aligned">500pilss</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/2d3defb224dd44006680553231c59818">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Pils(with official logo on front side) Strength: 270 mg p/p Lab tested: Yes, pure substance of MDMA, no additional substances When released: August 2018
+Excellent quality XTC pills, please take quarters or halves at a time, they’re strong! Lab and personally tested, as always FREE SHIPPING! I ship worldwide! Please read buyer FAQ before ordering. Don’t forget to send me your address so I can ship your order asap. Preferably with PGP encryption for your and my safety. And while you’re at it, check out my other items!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/883bbcd5d82d421f4d8620eb7c092988">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								buy Xanax 2mg bars online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/883bbcd5d82d421f4d8620eb7c092988">
+											<img src="/item-image/883bbcd5d82d421f4d8620eb7c092988?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/883bbcd5d82d421f4d8620eb7c092988">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 bars</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/883bbcd5d82d421f4d8620eb7c092988">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 bars</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Alprazolam is used to treat anxiety and panic disorders. It belongs to a class of medications called benzodiazepines which act on the brain and nerves (central nervous system) to produce a calming effect. It works by enhancing the effects of a certain natural chemical in the body (GABA)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/9bfb2512b1cb456547c331e0db562ed1">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								Great Quality Methamphetamine Crystals  Pure
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/9bfb2512b1cb456547c331e0db562ed1">
+											<img src="/item-image/9bfb2512b1cb456547c331e0db562ed1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9bfb2512b1cb456547c331e0db562ed1">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9bfb2512b1cb456547c331e0db562ed1">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9bfb2512b1cb456547c331e0db562ed1">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/9bfb2512b1cb456547c331e0db562ed1">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We have the best quality Pure Methamphetamine Crystals The prices are affordable and the quality is the best you can see on the market Large orders have discounts and free shipping</p>
+
+<p>Overnight and express is also offered at low rates Our priority is to offer the best business deals to all our clients</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/3c2c56872a4342f76746305cdf256d1b">
+								<span class="ui teal tiny label tag right floated">LSD</span>
+								LSD blotter for sale (Lysergic Acid Diethylamide)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/3c2c56872a4342f76746305cdf256d1b">
+											<img src="/item-image/3c2c56872a4342f76746305cdf256d1b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/3c2c56872a4342f76746305cdf256d1b">
+										<div class="ui dark-green basic tiny button fluid left aligned">50hits (squares)</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/3c2c56872a4342f76746305cdf256d1b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100hits (squares)</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/3c2c56872a4342f76746305cdf256d1b">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 blotters sheet</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/3c2c56872a4342f76746305cdf256d1b">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 blotters sheet</div>
+										<div class="ui basic left pointing label price">2800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>LSD blotter for sale (Lysergic Acid Diethylamide),,Lysergic acid diethylamide (LSD), also known as acid, is a psychedelic drug known for its psychological effects. This may include altered awareness of the surroundings, perceptions, and feelings as well as sensations and images that seem real though they are not. It is used mainly as a recreational drug and for spiritual reasons</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/b17796c460f741004f4047fb99b4f684">
+								<span class="ui teal tiny label tag right floated">A-PVP</span>
+								Grade A&#43;&#43;&#43;  5 A-pvp Crystals 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/b17796c460f741004f4047fb99b4f684">
+											<img src="/item-image/b17796c460f741004f4047fb99b4f684?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b17796c460f741004f4047fb99b4f684">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b17796c460f741004f4047fb99b4f684">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b17796c460f741004f4047fb99b4f684">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b17796c460f741004f4047fb99b4f684">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Grade A+++  5 A-pvp Crystals ,Genuine and 100% Pure and effective * Genuine products * Best prices and services. * Healthily approved * Qualified staff at your service * Always available… * Best Quality Products/Medicines/Pills/Herbs at best prices. * Fast Delivery * Discreet Packaging * 24⁄48 Hours online support Our A-PVP is of very high quality</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								Highly tested from pharmacy  Clonazolam 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+											<img src="/item-image/ff0c5ea3f1b4466a7ec63e10594d7749?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+										<div class="ui dark-green basic tiny button fluid left aligned">25g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ff0c5ea3f1b4466a7ec63e10594d7749">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">3800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Highly tested from pharmacy  Clonazolam ,</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/b00afb14b8a341bf5136c597ba75718a">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								AA&#43;&#43;&#43;Quality 3F-Phenmetrazine
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/b00afb14b8a341bf5136c597ba75718a">
+											<img src="/item-image/b00afb14b8a341bf5136c597ba75718a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b00afb14b8a341bf5136c597ba75718a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b00afb14b8a341bf5136c597ba75718a">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b00afb14b8a341bf5136c597ba75718a">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/b00afb14b8a341bf5136c597ba75718a">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy 3F-Phenmetrazine
+Active substance:
+Active after:
+Active time:
+One order unit:
+3F-Phenmetrazine
+20-30 min. after use
+4-5 hours
+1g of min 99,8% pure 3F-Phenmetrazine
+Buy 3F-Phenmetrazine at RC-CHEMS.COM – 99,8% pure Legal Highs!
+Buy 3F-Phenmetrazine online manufactured by professionel leading European chemical companies in min. 99,8% purity guaranteed. We can provide COA of any batch produced of all our research chemicals!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/4e74510274ff40ba43d802eb5eace102">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								crystal meth selling great quality
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/4e74510274ff40ba43d802eb5eace102">
+											<img src="/item-image/4e74510274ff40ba43d802eb5eace102?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4e74510274ff40ba43d802eb5eace102">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4e74510274ff40ba43d802eb5eace102">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4e74510274ff40ba43d802eb5eace102">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methamphetamine (N-methylamphetamine, desoxyephedrine) is also known as crystal meth, chalk, and ice is an extremely addictive stimulant drug that is chemically similar to amphetamine. It takes the form of a white, odorless, bitter-tasting crystalline powder.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/db8be7bdba8044536cb7566e45d5f9ca">
+								<span class="ui teal tiny label tag right floated">Methamphetamine</span>
+								A&#43;&#43;5g Pure Ice (Meth) Discount Special  For SALE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/db8be7bdba8044536cb7566e45d5f9ca">
+											<img src="/item-image/db8be7bdba8044536cb7566e45d5f9ca?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/db8be7bdba8044536cb7566e45d5f9ca">
+										<div class="ui dark-green basic tiny button fluid left aligned">3.5g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/db8be7bdba8044536cb7566e45d5f9ca">
+										<div class="ui dark-green basic tiny button fluid left aligned">7g</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/db8be7bdba8044536cb7566e45d5f9ca">
+										<div class="ui dark-green basic tiny button fluid left aligned">14g</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/db8be7bdba8044536cb7566e45d5f9ca">
+										<div class="ui dark-green basic tiny button fluid left aligned">28g</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>A++5g Pure Ice (Meth) Discount Special  For SALE, You are purchasing our #!! 2.5g Pure Ice (Meth) Crystal clear shards straight from an import source, will not disappoint with immaculate presentation, no dust and clear consistency throughout the whole product.</p>
+
+<p>This is some decent quality shit at a very affordable price.</p>
+
+<p>This stuff is the sort of rack that you can enjoy all night without the anxiety and it certainly wont blow the budget.</p>
+
+<p>Enjoy!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/51b1c99e87d64b3d7b322fbe8760bfc9">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">3-MEO-PCP</span>
+								 Purity 100% 3-MeO-PCP high purity supplier 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/51b1c99e87d64b3d7b322fbe8760bfc9">
+											<img src="/item-image/51b1c99e87d64b3d7b322fbe8760bfc9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/51b1c99e87d64b3d7b322fbe8760bfc9">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/51b1c99e87d64b3d7b322fbe8760bfc9">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/51b1c99e87d64b3d7b322fbe8760bfc9">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/51b1c99e87d64b3d7b322fbe8760bfc9">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Purity 100% 3-MeO-PCP high purity supplier…..3-MeO-PCP FROM THE CHINA(MAINLAND) SUPPLIER</p>
+
+<p>GREAT FORMULA ,LAB PROVEN AND TESTED</p>
+
+<p>AVAILABLE IN CUSTOMIZED FORMS CRYSTALS POWDERED ,UNCUT ,PARTIALLY-CRUSHED,CRUSHED BROWN,CRYSTAL CLEAR ,BLUE…</p>
+
+<p>SHIPPING WORLDWIDE</p>
+
+<p>BULK BUYERS HAVE DISCOUNTS</p>
+
+<p>WORLDWIDE DELIVERY MAXIMUM 5 DAYS (USA AND UK 3 DAYS)</p>
+
+<p>100% MONEY BACK GUARANTEED FOR UNDELIVERED PARCELS</p>
+
+<p>SALES ARE FROM 100GRMS AND ABOVE</p>
+
+<p>SEE VENDOR FAQ FOR MORE DETAILS</p>
+
+<p>We will provide the most comprehensive products and service to you!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/c43d8ba267f74e74541eaec8b6ffabfd">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								SFIFT 4-CEC Crystal FOR SALE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/c43d8ba267f74e74541eaec8b6ffabfd">
+											<img src="/item-image/c43d8ba267f74e74541eaec8b6ffabfd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/c43d8ba267f74e74541eaec8b6ffabfd">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/c43d8ba267f74e74541eaec8b6ffabfd">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/c43d8ba267f74e74541eaec8b6ffabfd">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Analog of 4-MEC……4-CEC Crystals is a research chemical classified as a research chemical with a CAS number of 777666-01-2. The chemical formula for 4-CEC Crystals is C11H14ClND and the IUPAC 1-(4-Chloro-phenyl)-2-ethylamino-propan-1-one. The molecular mass is 211.08. 4-CEC Crystals is a newly discovered chemical in a laboratory; therefore, it is labeled as a research chemical. Due to this, no information is available at this time, other than what is mentioned above until more researching is done on the properties of the.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/0c82d4570b864a2d4b2a87877f05aedb">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								 500 X 30MG ADDERALL IR AVIALABLE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/0c82d4570b864a2d4b2a87877f05aedb">
+											<img src="/item-image/0c82d4570b864a2d4b2a87877f05aedb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/0c82d4570b864a2d4b2a87877f05aedb">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/0c82d4570b864a2d4b2a87877f05aedb">
+										<div class="ui dark-green basic tiny button fluid left aligned">150</div>
+										<div class="ui basic left pointing label price">1400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/0c82d4570b864a2d4b2a87877f05aedb">
+										<div class="ui dark-green basic tiny button fluid left aligned">500</div>
+										<div class="ui basic left pointing label price">2100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>500 X 30MG ADDERALL IR AVIALABLE….500 x adderall 30mg instant release as pictured.</p>
+
+<p>Read my profile please &amp; thank you.</p>
+
+<p>All items are guaranteed from a pharmacy so you will know how great they are.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/8a0737b544a747f27431fc103e2df522">
+								<span class="ui teal tiny label tag right floated">Drugs</span>
+								Moon Rock medical marijuana Great Highing 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/8a0737b544a747f27431fc103e2df522">
+											<img src="/item-image/8a0737b544a747f27431fc103e2df522?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8a0737b544a747f27431fc103e2df522">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8a0737b544a747f27431fc103e2df522">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8a0737b544a747f27431fc103e2df522">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8a0737b544a747f27431fc103e2df522">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Moon Rock medical marijuana Great Highing , Moon Rock medical marijuana well treated and available…</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/097fac5bf62b43e15548ca6824c25165">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								a-php crystals for sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/097fac5bf62b43e15548ca6824c25165">
+											<img src="/item-image/097fac5bf62b43e15548ca6824c25165?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>PHP is commonly referred to as alpha-pyrrolidinyl-hexaphenone, PHP, and alpha-PHP. The IUPAC name for a-PHP is (±)-1-Phenyl-2-(1-pyrrolidinyl)-1-hexanone. We can look at the research conducted on this research chemical. Research was conducted by ACD/Labs’, US Environmental Protection Agency’s EPISuite, and ChemAxon. Properties that were predicted by ACD/Labs showed 2 #H bond acceptors, 5 #Freely rotating bonds, index of refraction at 1.535 with a surface tension of 39.3±3.0 dyne/cm, a flash point of 127.3±12.5 °C and a boiling point of 362.4±25.0 °C at 760 mmHg.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Sedatatives</span>
+								Pharmaceutical Bottle Quaalude 300 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+											<img src="/item-image/12cccfb744fb49d14d1b5312649f4a18?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+										<div class="ui dark-green basic tiny button fluid left aligned">200 pills</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/12cccfb744fb49d14d1b5312649f4a18">
+										<div class="ui dark-green basic tiny button fluid left aligned">1pill</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methaqualone, sold under the brand name Quaalude (pronounced KWAY-lood) and …. by the pharmaceutical firms Rorer and Lemmon with the numbers 714 stamped on the tablet, so people often referred to Quaalude as 714s, “Lemmons”</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/18b4976707354db96c53dc2945f94b8d">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Drugs</span>
+								BUY CANNABIS SUPER SILVER HAZE  %100LAB TESTED 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/18b4976707354db96c53dc2945f94b8d">
+											<img src="/item-image/18b4976707354db96c53dc2945f94b8d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/18b4976707354db96c53dc2945f94b8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/18b4976707354db96c53dc2945f94b8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/18b4976707354db96c53dc2945f94b8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/18b4976707354db96c53dc2945f94b8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">3000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>BUY CANNABIS SUPER SILVER HAZE  %100LAB TESTED…..Homegrown with the greatest care in Amsterdam. First prize winner at the High Times Cannabis festival. Consumers label the effects as ‘euphoric, happy, energetic’ and a great remedy for stress, depression and pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/228b40fbeaaa45ec6a7417689df339cd">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								**Grade A&#43;&#43;&#43; 2500 Bars Xanax GG249**
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/228b40fbeaaa45ec6a7417689df339cd">
+											<img src="/item-image/228b40fbeaaa45ec6a7417689df339cd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/228b40fbeaaa45ec6a7417689df339cd">
+										<div class="ui dark-green basic tiny button fluid left aligned">2500 bars </div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Grade A+++ 2500 Bars Xanax GG249….We upgraded our stealth methods. Stealth techniques are updated all the time. We now use TOP NOTCH stealth. What does this mean?
+Vacuum sealed thick plastic Extra layer of MYLAR seal Decoy Address label + return address label Priority shipping</p>
+
+<p>All orders are shipped without tracking, no signature needed. The envelope will be delivered in your mailbox. Our shipping / stealth techniques have high success rates (over 95%)</p>
+
+<p>Shipping times vary for each country. Numbers mentioned below are estimates. We ship out orders same day or next day.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/4a6156c233da46f470c05427a77062ad">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								2-MPPP FOR SALE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/4a6156c233da46f470c05427a77062ad">
+											<img src="/item-image/4a6156c233da46f470c05427a77062ad?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4a6156c233da46f470c05427a77062ad">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4a6156c233da46f470c05427a77062ad">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4a6156c233da46f470c05427a77062ad">
+										<div class="ui dark-green basic tiny button fluid left aligned">200</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>What is 2-MPPP 2-methyl-1-phenyl-3-(piperidin-1-yl)propan-1-one is a compound structurally derived from 2-Aminopropan-1-one in which the Nitrogen is connected to the Carbon in the 3-position. The physiological and toxicological properties of this compound have not been studied. 2-methyl-1-phenyl-3-(piperidin-1-yl)propan-1-one may be utilised by researchers who wish to use it as a reference sample for their Gas chromatography/mass spectrometry (GC/MS), Fourier transform infrared spectroscopy(FTIR) or Nuclear magnetic resonance(NMR) analysis catalogues.
+In stockPriceStock is Available2-MPPP</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/4bb85872baf3455d7974cbdfd7639841">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								Methylone (bk-MDMA) crystals for sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/4bb85872baf3455d7974cbdfd7639841">
+											<img src="/item-image/4bb85872baf3455d7974cbdfd7639841?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4bb85872baf3455d7974cbdfd7639841">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4bb85872baf3455d7974cbdfd7639841">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4bb85872baf3455d7974cbdfd7639841">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/4bb85872baf3455d7974cbdfd7639841">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methylone (bk-MDMA) crystals for sale, Methylone is a chemical drug which is very similar in structure to MDMA and has comparable effects. Methylone is a stimulant with a mild hallucinogenic effect. Because it’s a relatively new substance it’s called a research chemical. It’s recommended to treat methylone with caution: because of its short existence not much research has been conducted and not much is known about long term effects or addiction rates.</p>
+
+<p>Usually, methylone is offered as powder, but pills are in circulation as well. As with XTC, these tablets can differ in size, colour and strength.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/92e93fb3316c4b35403be262f2fcb148">
+								<span class="ui teal tiny label tag right floated">Cocaine</span>
+								HG  Colombian Cocaine FOR SALE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/92e93fb3316c4b35403be262f2fcb148">
+											<img src="/item-image/92e93fb3316c4b35403be262f2fcb148?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/92e93fb3316c4b35403be262f2fcb148">
+										<div class="ui dark-green basic tiny button fluid left aligned">15g</div>
+										<div class="ui basic left pointing label price">800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/92e93fb3316c4b35403be262f2fcb148">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/92e93fb3316c4b35403be262f2fcb148">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>HG  Colombian Cocaine FOR SALE,Pure Colombian Cocaine 80%+ Purity OFF THE BRICK SCALES ONLY NO POWDER.</p>
+
+<p>Don’t miss out on this awesome supply.</p>
+
+<p>Ordering: Ship within the United States of America</p>
+
+<p>Make sure that the name an the address are spelled correctly. We’re not responsible if you do not receive the item. Also, make sure your shipping info is encrypted for everyone’s safety Full refund or reship if the product is seized. If Post office loses the item we’ll reship 50%. If tracking shows delivered but you haven’t received the item, we won’t be responsible for that.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/d7952d420d8c4d225ade9718503b7ef9">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								a-php crystals for sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/d7952d420d8c4d225ade9718503b7ef9">
+											<img src="/item-image/d7952d420d8c4d225ade9718503b7ef9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/d7952d420d8c4d225ade9718503b7ef9">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/d7952d420d8c4d225ade9718503b7ef9">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/d7952d420d8c4d225ade9718503b7ef9">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>PHP is commonly referred to as alpha-pyrrolidinyl-hexaphenone, PHP, and alpha-PHP. The IUPAC name for a-PHP is (±)-1-Phenyl-2-(1-pyrrolidinyl)-1-hexanone. We can look at the research conducted on this research chemical. Research was conducted by ACD/Labs’, US Environmental Protection Agency’s EPISuite, and ChemAxon. Properties that were predicted by ACD/Labs showed 2 #H bond acceptors, 5 #Freely rotating bonds, index of refraction at 1.535 with a surface tension of 39.3±3.0 dyne/cm, a flash point of 127.3±12.5 °C and a boiling point of 362.4±25.0 °C at 760 mmHg.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/209d804ffe014c9f5d04e3a0f84fb20d">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								Big Rock MDMA crystal online %100
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/209d804ffe014c9f5d04e3a0f84fb20d">
+											<img src="/item-image/209d804ffe014c9f5d04e3a0f84fb20d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/209d804ffe014c9f5d04e3a0f84fb20d">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/209d804ffe014c9f5d04e3a0f84fb20d">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/209d804ffe014c9f5d04e3a0f84fb20d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>3,4-methylenedioxy-methamphetamine (MDMA) is a synthetic drug that alters mood and perception (awareness of surrounding objects and conditions). It is chemically similar to both stimulants and hallucinogens, producing feelings of increased energy, pleasure, emotional warmth, and distorted sensory and time perception.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/239d4b70e7ca411852d357c54b0f6167">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								 5 Sky MDMA Ecstasy Pills HG&#43;
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/239d4b70e7ca411852d357c54b0f6167">
+											<img src="/item-image/239d4b70e7ca411852d357c54b0f6167?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/239d4b70e7ca411852d357c54b0f6167">
+										<div class="ui dark-green basic tiny button fluid left aligned">500pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/239d4b70e7ca411852d357c54b0f6167">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000pills</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/239d4b70e7ca411852d357c54b0f6167">
+										<div class="ui dark-green basic tiny button fluid left aligned">2000pills</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>5 Sky MDMA Ecstasy Pills HG+, We have the best quality Sky MDMA Ecstasy Pills The prices are affordable and the quality is the best you can see on the market Large orders have discounts and free shipping</p>
+
+<p>Overnight and express is also offered at low rates Our priority is to offer the best business deals to all our clients</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/e25820dda04e4fc74a6610c0552b803f">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Dibutylone Crystal online best quality
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/e25820dda04e4fc74a6610c0552b803f">
+											<img src="/item-image/e25820dda04e4fc74a6610c0552b803f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/e25820dda04e4fc74a6610c0552b803f">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/e25820dda04e4fc74a6610c0552b803f">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/e25820dda04e4fc74a6610c0552b803f">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dibutylone Crystal online best quality,Similar to: Amphetamine/MDMA Recommended dosage: 100-200mg Dibutylone (bk-DMBDB,”booty”, or “beauty”) is a psychedelic drug of the amphetamine, phenethylamine, and cathinone drug classes. It is structurally related to methylone, a designer drug that has been detected in products marketed as bath salts or plant food. Structural similarity to MDMA:</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/ef94a0e538e0498c7af78167f26f0a8d">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								U47700 Powder uality lab t%100
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/ef94a0e538e0498c7af78167f26f0a8d">
+											<img src="/item-image/ef94a0e538e0498c7af78167f26f0a8d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ef94a0e538e0498c7af78167f26f0a8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ef94a0e538e0498c7af78167f26f0a8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/ef94a0e538e0498c7af78167f26f0a8d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>U47700 For Sale
+U47700 for sale online. It is all over the internet but we love to teach you more about it. Be that as it may be, what is u 47700? Yes we know it is a research chemical. It is an opioid with benzamide chemical class. It is also and opioid analgesic drug not for human consumption. But with it uses, we turn to consume it. The existence of this chemical is thanks to Upjohn in the 1970s. It sells as a designer drug.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/d8f6aae27e86471a776d3a77191a280d">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								Jwh-018 Online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/d8f6aae27e86471a776d3a77191a280d">
+											<img src="/item-image/d8f6aae27e86471a776d3a77191a280d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/d8f6aae27e86471a776d3a77191a280d">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/d8f6aae27e86471a776d3a77191a280d">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/d8f6aae27e86471a776d3a77191a280d">
+										<div class="ui dark-green basic tiny button fluid left aligned">200g</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>What is  JWH 018?</p>
+
+<p>JWH 018 is a mildly selective agonist of the peripheral cannabinoid (CB2) receptor, derived from the aminoalkylindole WIN 55,212-2. The Ki values for binding central cannabinoid (CB1) and CB2 receptors are 9.0 and 2.94 nM, respectively, for a CB1:CB2 ratio of 3.06.1 Its effects on suppression of spontaneous activity, maximum possible antinociceptive effect in the tail-flick assay, and rectal temperature are comparable to those of WIN 55,212-2 when tested in rats. It is a research chemical that belongs to the naphthoylindole family. JWH-081 as all the other research chemicals in the JWH group is a synthetic cannabinoid with analgesic effects.Its full chemical name is 4-methoxynaphthalen- 1-yl- (1-pentylindol- 3-yl)methanone with chemical formula as C25H25NO2 and molecular mass 371.47 g/mol.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/showrunzer/item/8e8debfef7674c8946ec313e60d6b8fb">
+								<span class="ui teal tiny label tag right floated">Barbiturates</span>
+								buy Nembutal  powder
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/showrunzer/item/8e8debfef7674c8946ec313e60d6b8fb">
+											<img src="/item-image/8e8debfef7674c8946ec313e60d6b8fb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8e8debfef7674c8946ec313e60d6b8fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8e8debfef7674c8946ec313e60d6b8fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">50</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/showrunzer/item/8e8debfef7674c8946ec313e60d6b8fb">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pentobarbital is in a group of drugs called barbiturates (bar-BIT-chur-ates). Pentobarbital slows the activity of your brain and nervous system. Pentobarbital is used short-term to treat insomnia. Pentobarbital is also used as an emergency treatment for seizures, and to cause you to fall asleep for surgery.</p>
+
+<p>Pentobarbital may also be used for other purposes not listed in this medication guide.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 402 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

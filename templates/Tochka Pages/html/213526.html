@@ -1,0 +1,2751 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/maryjanedoesit?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@maryjanedoesit</h2>
+								<p>Maryjanedoesit to all, Do you suffer from insomnia, pain, pannic attack, cancer,Anxiety ? Valid tracking number available. </p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 week ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 1 hour ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/maryjanedoesit">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/maryjanedoesit">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/maryjanedoesit/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">0</span>
+									</a>
+									<a class="item active" href="/store/maryjanedoesit/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">48</span>
+									</a>
+									<a class="item" href="/store/maryjanedoesit/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/17a3a2fdae1e476d6d1eedc115268933">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Exotic Carts Multiple of flavour avaible for good price 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/17a3a2fdae1e476d6d1eedc115268933">
+											<img src="/item-image/17a3a2fdae1e476d6d1eedc115268933?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/17a3a2fdae1e476d6d1eedc115268933">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 carts </div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/17a3a2fdae1e476d6d1eedc115268933">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 carts </div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/17a3a2fdae1e476d6d1eedc115268933">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 carts </div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/17a3a2fdae1e476d6d1eedc115268933">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 carts </div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We got good quality Exotic Carts for good prices and good flavor we have multiples of flavor available just place your order and state the flavor you will love to come your way ,and that will be deliver to you with best quality ,</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/c9ab645dc0a149b674f6c77624685419">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Bubba Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/c9ab645dc0a149b674f6c77624685419">
+											<img src="/item-image/c9ab645dc0a149b674f6c77624685419?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c9ab645dc0a149b674f6c77624685419">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c9ab645dc0a149b674f6c77624685419">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c9ab645dc0a149b674f6c77624685419">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c9ab645dc0a149b674f6c77624685419">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Bubba Kush Online, an indica strain that has gained notoriety in the U.S. and beyond for its heavy tranquilizing effects. Sweet hashish flavors with subtle notes of chocolate and coffee come through on the exhale, delighting the palate as powerful relaxation takes over. From head to toe, muscles ease with heaviness as dreamy euphoria blankets the mind, crushing stress while coercing happy moods. Bubba Kush exhibits a distinctive, bulky bud structure with hues that range from forest green to pale purple.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/05e64987dcaa406d6dccdf6e7f665e73">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								hi-tech 16oz and 32 oz bottle available, all bottle are 100% Sealed no bullhsit .
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/05e64987dcaa406d6dccdf6e7f665e73">
+											<img src="/item-image/05e64987dcaa406d6dccdf6e7f665e73?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/05e64987dcaa406d6dccdf6e7f665e73">
+										<div class="ui dark-green basic tiny button fluid left aligned">16oz  bottle </div>
+										<div class="ui basic left pointing label price">210 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/05e64987dcaa406d6dccdf6e7f665e73">
+										<div class="ui dark-green basic tiny button fluid left aligned">32oz bottle </div>
+										<div class="ui basic left pointing label price">290 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hi-Tech Syrup is used as a pain reliever in cases of mild to moderate pain, and to help relieve coughing when over-the-counter medications aren’t strong enough. Codeine belongs to the opiate class of medications and it alters the brain and nervous system’s response to pain. This psychoactive effect can cause numbing effects in the body and suppress the body’s cough reflex, but it can also cause a euphoric high that people chase when they take codeine to get high.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/b8a68af9f16440106a319bf18e371015">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Lemon Diesel
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/b8a68af9f16440106a319bf18e371015">
+											<img src="/item-image/b8a68af9f16440106a319bf18e371015?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b8a68af9f16440106a319bf18e371015">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b8a68af9f16440106a319bf18e371015">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b8a68af9f16440106a319bf18e371015">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b8a68af9f16440106a319bf18e371015">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Lemon Diesel is a strain that has been bred making use of Green Lantern Seeds. The Lemon Diesel Strain is a hybrid, which has been formed by the combination of Lost Coast OG and California Sour. These are fairly easy to grow as they take no more than 9 or 10 weeks to grow properly. In appearance, they are long and have small buds growing on them that are dense.</p>
+
+<p>The dense buds on the cannabis are mostly filled in during the last few weeks of the flowering process of the Lemon Diesel Strain. The leaves of the strain are long and wide as well with a combination of purple and grey color, which serves as its distinguishing factor. The Lemon Diesel Strain is known famously for making the person who uses it feel uplifted. The strain also makes the person creative and happy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/12eb0fc61e5445c55be8d163426fd98e">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Blueberry Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/12eb0fc61e5445c55be8d163426fd98e">
+											<img src="/item-image/12eb0fc61e5445c55be8d163426fd98e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/12eb0fc61e5445c55be8d163426fd98e">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/12eb0fc61e5445c55be8d163426fd98e">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/12eb0fc61e5445c55be8d163426fd98e">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/12eb0fc61e5445c55be8d163426fd98e">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>A true A-List cannabis strain. Blueberry’s legendary status soared to new heights after claiming the High Times’ Cannabis Cup 2000 for Best Indica. The long history of the stain is traced back to the late 1970s when American breeder DJ Short was working with a variety of exotic landrace strains. However, throughout the decades of Blueberry’s cultivation the genetics have been passed around, due in large part to DJ Short working with multiple seed banks and breeders. The sweet flavors of fresh blueberries combine with relaxing effects to produce a long-lasting sense of euphoria. Many medical patients appreciate Blueberry for its ability to suppress pain and relieve stress, while connoisseurs and growers admire the strain for its colorful hues and high THC content.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/291d68dcd831407b4c9062a1e9383b40">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Good test and good smell Tahoe OG 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/291d68dcd831407b4c9062a1e9383b40">
+											<img src="/item-image/291d68dcd831407b4c9062a1e9383b40?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/291d68dcd831407b4c9062a1e9383b40">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/291d68dcd831407b4c9062a1e9383b40">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/291d68dcd831407b4c9062a1e9383b40">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/291d68dcd831407b4c9062a1e9383b40">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tahoe OG is the perfect rainy day strain. Strong and fast-acting, you may not want to use this strain when you’re planning to leave the house. Great for those suffering from insomnia, pain, or lack of appetite, Tahoe OG has made a name for itself among other indicas. A top nighttime strain, it provides an extremely lazy, heavy body sensation. Due to superb breeding, Tahoe OG embodies all of the typical indica effects with an added euphoric, sativa-like kick. This strain features an earthy, lemon taste, and is a phenotype of OG Kush. Maturing at around 10 weeks, Tahoe OG is a must-try for those looking for a great night’s sleep.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/f7793427f1a94c374fc26e59f477793b">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								KINGPEN supper good quality 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/f7793427f1a94c374fc26e59f477793b">
+											<img src="/item-image/f7793427f1a94c374fc26e59f477793b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f7793427f1a94c374fc26e59f477793b">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 pen </div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f7793427f1a94c374fc26e59f477793b">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 pen</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f7793427f1a94c374fc26e59f477793b">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 pen</div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f7793427f1a94c374fc26e59f477793b">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 pen </div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Get best quality KINGPEN for good prices we have available</p>
+
+<p>King Louis Og, Skywalker og , Gelato,Sunset sherbert ,King Louis ,Trainwreck</p>
+
+<p>And many others just place your order leave a massage of the flavor you need and that will be deliver to you.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/27982dc1972f42f57bca4ab76943ab56">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy quality OG Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/27982dc1972f42f57bca4ab76943ab56">
+											<img src="/item-image/27982dc1972f42f57bca4ab76943ab56?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/27982dc1972f42f57bca4ab76943ab56">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/27982dc1972f42f57bca4ab76943ab56">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/27982dc1972f42f57bca4ab76943ab56">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/27982dc1972f42f57bca4ab76943ab56">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>OG Kush is an American marijuana classic, a Southern California original with some of the highest THC levels in the world. With a 55:45 sativa/indica ratio, this strain pulls no punches. Expect a hard, mixed high with intense euphoria followed by serious couch-lock. The plant’s THC concentration can reach levels as high as 21-24%. That just 1 percentage point less than the current record-holder. The cerebral boost from OG Kush is ideal for depression, bipolar disorder, and anxiety, while the heavy body high can help with pain and nausea. OG Kush is also used to treat Alzheimer’s disease. Dry mouth and eyes are the most common negative effects, though headaches and paranoia are also possible.
+Buy OG Kush Online. This strain is a hybrid, probably a descendant of a female Chemdawg plant and a male Hindu Kush plant. OG Kush, which has given rise to countless West Coast strains, has an earthy, wood taste and a strong pine scent. It’s most popular in California, the Pacific Northwest, and Colorado.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/3b2f8aa25ee3418a5d351f5462595889">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Kosher Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/3b2f8aa25ee3418a5d351f5462595889">
+											<img src="/item-image/3b2f8aa25ee3418a5d351f5462595889?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3b2f8aa25ee3418a5d351f5462595889">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3b2f8aa25ee3418a5d351f5462595889">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3b2f8aa25ee3418a5d351f5462595889">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3b2f8aa25ee3418a5d351f5462595889">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Strain Highlights Kosher Kush, offered now in seed form from DNA Genetics, originated in Los Angeles as a clone-only strain. Winner of High Times Cannabis Cup’s Best Indica in 2010 and 2011, as well as Best Strain in 2011, Kosher Kush produces staggering levels of THC, with some samples testing over 29%. Known as one of the most odiferous OG Kush-related strains, it has a unique yet familiar smell reminiscent of rich earth and fruit, and is considered by many to be one of the tastiest smokes around. The high experienced is typical of many heavy indica strains, producing pronounced relaxation and pain relief, with sleep often following close behind. Definitely good stuff.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/7f3105ae6e0d451444415b1394c3fa32">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Best quality Wedding Cake
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/7f3105ae6e0d451444415b1394c3fa32">
+											<img src="/item-image/7f3105ae6e0d451444415b1394c3fa32?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7f3105ae6e0d451444415b1394c3fa32">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7f3105ae6e0d451444415b1394c3fa32">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7f3105ae6e0d451444415b1394c3fa32">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7f3105ae6e0d451444415b1394c3fa32">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Wedding Cake is a delicious hybrid, Indica-dominant weed. Its parents were themselves selected for their delicious tastes, these are Girl Scout Cookies weed, and Cherry Pie strain marijuana. The parents in turn have the genetics also of OG Kush, Durban Poison, and Granddaddy Purple, producing not only a delicious weed, but one that packs a serious punch, with THC levels in excess of 25 percent.
+Wedding Cake buds are a powerful medical strain. The high THC levels make it a consummate mood elevator, as well as a strong analgesic. Wedding Cake medical marijuana may relieve musculoskeletal pain such as sciatica, inflammatory pain like arthritis, and neuropathic pain such as in fibromyalgia, among other conditions. Neurological conditions such as ALS or Lou Gehrig’s disease can be treated with medicinal formulations of this bud recommended by a doctor. Many other conditions are recommended and legal be treated with Wedding Cake marijuana as per the laws in different states and countries.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/c2793b6a13a14d05760854c7eebd26e9">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Xanax Online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/c2793b6a13a14d05760854c7eebd26e9">
+											<img src="/item-image/c2793b6a13a14d05760854c7eebd26e9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c2793b6a13a14d05760854c7eebd26e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c2793b6a13a14d05760854c7eebd26e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">20pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c2793b6a13a14d05760854c7eebd26e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c2793b6a13a14d05760854c7eebd26e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">400pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>XANAX Tablets contain alprazolam which is a triazolo analog of the 1,4 benzodiazepine class of central nervous system-active compounds. The chemical name of alprazolam is 8-Chloro-1-methyl-6-phenyl-4H-s-triazolo [4,3-α] [1,4] benzodiazepine. Alprazolam affects chemicals in the brain that may be unbalanced in people with anxiety. Xanax is used to treat anxiety disorders, panic disorders, and anxiety caused by depression. It is commonly used for the treatment of anxiety disorders, especially of panic disorder, but also in the treatment of generalized anxiety disorder (GAD) or social anxiety disorder. Buy Xanax online without prescription here.</p>
+
+<p>USES
+This Xanax by Pfizer is used to treat anxiety and panic disorders. It belongs to a class of medications called benzodiazepines which act on the brain and nerves (central nervous system) to produce a calming effect. It works by enhancing the effects of a certain natural chemical in the body. Safely and securely Buy Xanax without prescription at healthy life medic</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/5d8b54ef61ef4dba4fc91fc83cef3b25">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Actavis Prometh 8oz, 16oz and 32oz bottle available all bottle are sealed 100%
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/5d8b54ef61ef4dba4fc91fc83cef3b25">
+											<img src="/item-image/5d8b54ef61ef4dba4fc91fc83cef3b25?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5d8b54ef61ef4dba4fc91fc83cef3b25">
+										<div class="ui dark-green basic tiny button fluid left aligned">8oz bottle </div>
+										<div class="ui basic left pointing label price">110 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5d8b54ef61ef4dba4fc91fc83cef3b25">
+										<div class="ui dark-green basic tiny button fluid left aligned">16 oz bottle</div>
+										<div class="ui basic left pointing label price">220 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5d8b54ef61ef4dba4fc91fc83cef3b25">
+										<div class="ui dark-green basic tiny button fluid left aligned">32 oz bottle </div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Actavis Promethazine Codeine Cough Syrup Online.
+It is used to treat allergic reactions and to treat or prevent nausea and vomiting from illness or motion sickness. It is also used to make you sleep before surgery, and to help treat pain or nausea after surgery</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/c8be808f3642497d79d4dc0ae70bde1e">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								White Berry
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/c8be808f3642497d79d4dc0ae70bde1e">
+											<img src="/item-image/c8be808f3642497d79d4dc0ae70bde1e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c8be808f3642497d79d4dc0ae70bde1e">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c8be808f3642497d79d4dc0ae70bde1e">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c8be808f3642497d79d4dc0ae70bde1e">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c8be808f3642497d79d4dc0ae70bde1e">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Berry White is often considered an indica-dominant hybrid, this strain can feature a variety of different phenotypes. This fragrant bud has some truly top-notch lineage. Berry White is a cross between two Dutch classics Blueberry and White Widow. Blueberry is an indica that gave birth to Blue Dream, while White Widow has a solid reputation as a powerhouse hybrid.
+Like most strains nowadays, Berry White can produce very high levels of THC when grown with expert care. It’s not uncommon for this flower to feature between 18 and 25 percent of the psychoactive when purchased from dispensaries or social clubs. However, this strain does not tend to feature high levels of CBD. This means that it can be a bit strong for novice or occasional consumers.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/f27df9f138e74b7568701d0a58ae51c2">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Bubble Gum
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/f27df9f138e74b7568701d0a58ae51c2">
+											<img src="/item-image/f27df9f138e74b7568701d0a58ae51c2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f27df9f138e74b7568701d0a58ae51c2">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f27df9f138e74b7568701d0a58ae51c2">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f27df9f138e74b7568701d0a58ae51c2">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f27df9f138e74b7568701d0a58ae51c2">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Bubble Gum Online
+Bubble Gum is a hybrid strain that gets its name from its sweet almost candy-like smell. It produces a well balanced body and head buzz that is relaxing and euphoric. This great tasting strain was originally grown in Indiana in the 1970s. It took many years, but Amsterdam growers were eventually able to stabilize the strain and produce consistent results. Medical users find Bubble Gum relieves muscle soreness and inflammation and is great for fast pain relief.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/0477d7ad957a458d764efa892882e9c5">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Blackberry Kush 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/0477d7ad957a458d764efa892882e9c5">
+											<img src="/item-image/0477d7ad957a458d764efa892882e9c5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/0477d7ad957a458d764efa892882e9c5">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/0477d7ad957a458d764efa892882e9c5">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/0477d7ad957a458d764efa892882e9c5">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/0477d7ad957a458d764efa892882e9c5">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Blackberry Kush Online, described by many as the best strain they have every smoked. The dense dark green and purple buds of this indica hybrid are frosted over with crystals. Sharing this trichome wonderland is an abundance of thin orange hairs protruding from this exotic flower. This delectable treat emits a complex aroma with a deep fuel and mixed berry scent that caresses the nostrils. Blackberry Kush’s rich smoke produces a great body high without the usual side effects of fatigue and laziness. If you really want to savor Blackberry Kush, try it out of a vaporizer</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/06a1701ebeef467a71b305e30599199a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy AK-47 Marijuana Online,
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/06a1701ebeef467a71b305e30599199a">
+											<img src="/item-image/06a1701ebeef467a71b305e30599199a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/06a1701ebeef467a71b305e30599199a">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/06a1701ebeef467a71b305e30599199a">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/06a1701ebeef467a71b305e30599199a">
+										<div class="ui dark-green basic tiny button fluid left aligned">226</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/06a1701ebeef467a71b305e30599199a">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy AK-47 Marijuana Online, unlike Russia’s most popular assault rifle, will leave you with a euphoric mellow buzz. This popular high quality hybrid strain is as “kind” as they come. A cross between a Thai and Afghani plant and a Columbian and Mexican Plant. AK-47 is known for its high potency and is considered by some to be a “one hit wonder.” This marijuana strain has compact buds with pristine crystals that shine in the light. The aroma produced is citrusy and tart, yet enjoyable. It is great for pain relief, mood enhancement and stress relief. Buy AK-47 Marijuana Online</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/08a3290927c847045593511915c55178">
+								<span class="ui teal tiny label tag right floated">Drugs</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Kurupts Moonrock
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/08a3290927c847045593511915c55178">
+											<img src="/item-image/08a3290927c847045593511915c55178?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/08a3290927c847045593511915c55178">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/08a3290927c847045593511915c55178">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/08a3290927c847045593511915c55178">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/08a3290927c847045593511915c55178">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy moonrock online. Our special moonrocks or lunar rocks hits hard and evenly. It’s a great relaxant and is best for creativity, in fact they will send you to space. These amazing weed strains are made from carefully selected Indica-dominant strains. Moon rocks are favored worldwide for its extensive powers to alleviate bodily pains and simultaneously excite the brain. It washes away depressive episodes just as well as it relieves long-challenging back pains.
+We’re talking three times as potent as your typical top-shelf dispensary flowers, it’s no wonder people are calling moon rocks “the strongest marijuana strain in the world” and “the best high on Earth.
+This special weed strain is achieved by dipping Girl scout cookies in oil and kief in turns. The resulting strain hits very hard and has long lasting effect clocking up to and over 50% THC content.
+We grow all our strains organically hand trim them, make the moon rocks ourselves and sell directly to our customers.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/26aa8d2c3c694cd458f41edf089d140f">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Fire Gaz  Sunrocks
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/26aa8d2c3c694cd458f41edf089d140f">
+											<img src="/item-image/26aa8d2c3c694cd458f41edf089d140f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/26aa8d2c3c694cd458f41edf089d140f">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/26aa8d2c3c694cd458f41edf089d140f">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/26aa8d2c3c694cd458f41edf089d140f">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/26aa8d2c3c694cd458f41edf089d140f">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Sunrocks online is an update to MoonRocks, in which a bud is dipped in CO2 oil and then rolled in kief. These buds are almost as powerful as dabs, with a lot more flavor and a stronger aroma.SunRocks, however, is a bit different.some particularly delicious rocks reportedly contain all OG products, from bud, to wax, to kief. Strains sold as SunRocks do not look like MoonRocks, which are coated with what looks like a hardened layer of kief.From afar, it is difficult to tell these buds apart from any other. But, make no mistake, they are sticky and coated with top-shelf concentrate. Up close, you can see plenty of amber goo leaking out from between calyxes.Unfortunately, there don’t seem to be many samples of SunRocks out there yet. But, the buds are certainly developing a reputation for themselves.Sunrocks are so sticky that they need to be broken up with the fingers or cut using a pair of scissors. Never put Sunrocks into a grinder, that would waste the kief and concentrate mixed into the bud, enjoy.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/3252a8e32e394ccd7f218bf2975de81c">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Lemon OG Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/3252a8e32e394ccd7f218bf2975de81c">
+											<img src="/item-image/3252a8e32e394ccd7f218bf2975de81c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3252a8e32e394ccd7f218bf2975de81c">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3252a8e32e394ccd7f218bf2975de81c">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3252a8e32e394ccd7f218bf2975de81c">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/3252a8e32e394ccd7f218bf2975de81c">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Lemon OG Kush Online.
+Lemon OG Kush is an indica-dominant hybrid with a 60:40 indica to sativa ratio. The strain has been created by crossing the legendary Lemon skunk and the OG #18.
+With its high THC content, which is up to 22% on the average, and gorgeous buds completely coated with trichomes, Lemon OG Kush induces a strong euphoric and cerebral high with a strong boost of both energy and creativity. The strain is perfect for morning daytime use, as it uplifts mood and adds positivity to your day. On the other hand, Lemon OG Kush may induce a sleepy feeling in your head, reminding you of its indica origins sometimes. As for the side effects of this powerful strain, you can expect a sudden urge for munchies.
+Lemon OG Kush has a strong lemon fragrance with a hint of pungent aroma followed by sweet and sour cloud. The strain has a delicious, creamy lemon flavor emphasised by herbal and sweet lemon notes.
+Buy Lemon OG Kush Online. This potent medical marijuana hybrid has proven itself useful in treatin</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/4928b097674642067a79f5fbd5dd5cc7">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Khalifa Kush 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/4928b097674642067a79f5fbd5dd5cc7">
+											<img src="/item-image/4928b097674642067a79f5fbd5dd5cc7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4928b097674642067a79f5fbd5dd5cc7">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4928b097674642067a79f5fbd5dd5cc7">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4928b097674642067a79f5fbd5dd5cc7">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4928b097674642067a79f5fbd5dd5cc7">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Khalifa Kush, also known more commonly as “Wiz Khalifa OG” among the cannabis community, is an indica dominant hybrid (80% indica/20% sativa) strain created as a descendant of the insanely popular classic strain OG Kush. The exact genetics of this strain are kept under lock and key, as it was bred specifically for Wiz himself by a dispensary in San Jose, CA. This dank bud boasts a powerful 24-27% THC level and insanely active and stimulating effects. This perfect wake-and-bake 6strain hits you hard with an intense cerebral activity that leaves you energetic and uplifted, immediately eliminating any feelings of fatigue or pain. This is accompanied by a relaxing mellow body buzz that leaves you completely relaxed in both mind and body without any feelings of sedation.
+Because of these powerful effects, Khalifa Kush is perfect for treating chronic fatigue, chronic stress or anxiety, mild to moderate cases of depression, and muscle spasms. Khalifa Kush buds have small to medium-sized super tight forest green</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/4ff197dae8e74033770289483fa1a760">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Oxycodone Online
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/4ff197dae8e74033770289483fa1a760">
+											<img src="/item-image/4ff197dae8e74033770289483fa1a760?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4ff197dae8e74033770289483fa1a760">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4ff197dae8e74033770289483fa1a760">
+										<div class="ui dark-green basic tiny button fluid left aligned">200pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4ff197dae8e74033770289483fa1a760">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4ff197dae8e74033770289483fa1a760">
+										<div class="ui dark-green basic tiny button fluid left aligned">400pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy oxycodone Online. Oxycodone is a semisynthetic opioid synthesized from thebaine, an opioid alkaloid and one of the many alkaloids found in the opium poppy.It is a moderately potent opioid pain medication, generally indicated for relief of moderate to severe pain as one of several semi-synthetic opioids in an attempt to improve on the existing opioids.</p>
+
+<p>Uses
+Oxycodone is used to help relieve moderate to severe pain.
+Oxycodone belongs to a class of drugs known as opioid (narcotic) analgesics.
+It works in the brain to change how your body feels and responds to pain.</p>
+
+<p>Side Effects
+Nausea and vomiting.
+Fatigue.
+Depression.
+Coughing.
+Diarrhea.
+Runny nose.
+Teary eyes.
+Sweating.</p>
+
+<p>Best Place to Buy Oxycodone Online Without Prescription
+Because at healthy life medications, our main objective is making sure customers are safe and satisfied. We highly recommend you to buy oxycodone here. We the Healthy life medications has been established since 2015 and have experienced approximately 100% success r</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/5059ff0930194611678726ff95ce16c0">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Skywalker OG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/5059ff0930194611678726ff95ce16c0">
+											<img src="/item-image/5059ff0930194611678726ff95ce16c0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5059ff0930194611678726ff95ce16c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5059ff0930194611678726ff95ce16c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5059ff0930194611678726ff95ce16c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5059ff0930194611678726ff95ce16c0">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Skywalker OG Kush Online, also known as “Skywalker OG Kush” to many members of the cannabis community, is an indica dominant hybrid (85% indica/15% sativa) strain that is a potent cross between the hugely popular Skywalker X OG Kush strains. This dank bud boasts an intense THC level ranging from 20-25% on average and a combination of both indica and sativa effects. Skywalker OG has an aroma of spicy herbal jet fuel and a taste of spicy diesel with an herby aftertaste. This bud has medium-sized dense round olive green nugs with burnt orange furry twisty hairs and rich orange undertones. These nugs have a fine layer of milky white trichomes and sweet sticky resin.</p>
+
+<p>Buy Skywalker OG Kush Online. Users describe the Skywalker OG high as a very heavy stoney high that leaves you utterly couch-locked, relaxed, and lethargic with an almost overwhelming case of the munchies. This is accompanied by a head-in-the-clouds euphoric head high that fades into a deep and peaceful sleep upon the come down. Due to thes</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/66b9b5f5494b411f6d63237103d6dd01">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Silver Haze
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/66b9b5f5494b411f6d63237103d6dd01">
+											<img src="/item-image/66b9b5f5494b411f6d63237103d6dd01?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/66b9b5f5494b411f6d63237103d6dd01">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/66b9b5f5494b411f6d63237103d6dd01">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/66b9b5f5494b411f6d63237103d6dd01">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/66b9b5f5494b411f6d63237103d6dd01">
+										<div class="ui dark-green basic tiny button fluid left aligned">450</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Silver Haze is a heavily sativa dominant hybrid (90% sativa/10% indica) strain created by breeders at the infamous Sensi Seeds farms as a potent cross between the insanely popular Skunk #1 X Northern Lights #5 X Haze strains. This dank bud is a cult favorite among many cannabis users and boasts an average THC level ranging from 20-24%. Silver Haze gets its name from the intensely shiny THC glands covering its buds.</p>
+
+<p>This bud has long dense pepper shaped bright neon green nugs with gold and amber undertones and long thin rich amber hairs. These nugs are frosty with crystal white trichomes and have a thick layer of sweet sticky resin. Silver Haze has an aroma of pungent earthy pine and a taste of pungent earth with a hint of sweet pine upon exhale. Users describe the Silver Haze high as one that is a strong clear-headed cerebral head high that leaves you happy, creative, and energetic. Buy Silver Haze Marijuana Strain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/6c30edcbb54943c07bd5cfce725320dd">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Hydrocodone Online Without Prescription 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/6c30edcbb54943c07bd5cfce725320dd">
+											<img src="/item-image/6c30edcbb54943c07bd5cfce725320dd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6c30edcbb54943c07bd5cfce725320dd">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6c30edcbb54943c07bd5cfce725320dd">
+										<div class="ui dark-green basic tiny button fluid left aligned">200pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6c30edcbb54943c07bd5cfce725320dd">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6c30edcbb54943c07bd5cfce725320dd">
+										<div class="ui dark-green basic tiny button fluid left aligned">400pills </div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Hydrocodone Online Without Prescription Legit
+Hydrocodone is an opioid pain medication. An opioid is sometimes called a narcotic. Zohydro ER and Hysingla ER are extended-release forms of hydrocodone that are used for around-the-clock treatment of severe pain. Extended-release hydrocodone is not for use on an as-needed basis for pain. Here, you can safely and secure Buy Hydrocodone online without prescription. Products are of the best quality and about 98.98% pure and FDA approved. Packaging is safe and shipping is 100% discreet and delivery is very fast. We ship with DHL, FedEx and UPS for now . So Buy Hydrocodone Online Here. You do NOT need a Prescription to order from us. Place your Order Now and we’ll ship your package discreetly to your location worldwide. Customer satisfaction and safety is our major priority. We treat our customers as royalties. We are here to supply these medications to those that need them.</p>
+
+<p>Uses of Hydrocodone
+Hydrocodone according to the doctors should only be used by peo</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/6f74d6bc04f049c07b75c181f852daf6">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Percocet 10mg and 5mg Online without Prescription
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/6f74d6bc04f049c07b75c181f852daf6">
+											<img src="/item-image/6f74d6bc04f049c07b75c181f852daf6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6f74d6bc04f049c07b75c181f852daf6">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6f74d6bc04f049c07b75c181f852daf6">
+										<div class="ui dark-green basic tiny button fluid left aligned">200pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6f74d6bc04f049c07b75c181f852daf6">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/6f74d6bc04f049c07b75c181f852daf6">
+										<div class="ui dark-green basic tiny button fluid left aligned">400pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Percocet 10mg and 5mg is a combined pain-killer medication which calms even the most severe pain. Percocet medications contains two main ingredients</p>
+
+<p>Acetaminophen – This is the standard mild analgesic action</p>
+
+<p>Oxycodone – This is the semi-synthetic opioid that has a strong analgesic effect</p>
+
+<p>USES AND DOSAGE OF PERCOCET 10mg and 5mg
+Percocet is mainly used to stop or calm the symptoms of pain inconsiderate of the meals. A pill of Percocet contains or it is made up of various amounts of the active ingredients:</p>
+
+<p>Oxycodone 10mg and 5mg 325 mg of acetaminophen
+Depending on how severe or mild is the pain syndrome, patients are mostly prescribed a unique dose and pattern of the treatment.</p>
+
+<p>Percocet may be used every 5 hours. It is not recommended to take the medicine for a long time because it can cause the side effects. The length of taking Percocet is usually 10-20 days. Then, it is always necessary to change the medication to avoid the development of the body resistance to Oxycodone.</p>
+
+<p>CONTRAINDI</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/76db50b8e5dc405172a88d664344eb0f">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Northern Light 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/76db50b8e5dc405172a88d664344eb0f">
+											<img src="/item-image/76db50b8e5dc405172a88d664344eb0f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/76db50b8e5dc405172a88d664344eb0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/76db50b8e5dc405172a88d664344eb0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/76db50b8e5dc405172a88d664344eb0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/76db50b8e5dc405172a88d664344eb0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Northern Lights Marijuana Strain.
+Northern Lights stands among the most famous strains of all time, a pure indica cherished for its resinous buds, fast flowering, and resilience during growth. Itself a descendant of indigenous Afghani and Thai landrace strains, Northern Lights has given rise to famous hybrids like Sour Diesel, Shiva Skunk, and Super Silver Haze. Rumor has it that Northern Lights first sprouted near Seattle, Washington, but was propagated out of Holland after 1985 at what is now Sensi Seeds. Pungently sweet, spicy aromas radiate from the crystal-coated buds, which sometimes reveal themselves in hues of purple.</p>
+
+<p>Buy Northern Lights Marijuana Strain. Northern Lights’ psychoactive effects settle in firmly throughout the body, relaxing muscles and pacifying the mind in dreamy euphoria. Comfortable laziness allows patients to relieve pain and sleeplessness, while its mellow contentment roots out depression and stress. Several different Northern Lights phenotypes circulate the market, but S</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/7913a8f9696c424f74b68ff9aedda33e">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Best quality Royal Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/7913a8f9696c424f74b68ff9aedda33e">
+											<img src="/item-image/7913a8f9696c424f74b68ff9aedda33e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7913a8f9696c424f74b68ff9aedda33e">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7913a8f9696c424f74b68ff9aedda33e">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7913a8f9696c424f74b68ff9aedda33e">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7913a8f9696c424f74b68ff9aedda33e">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Royal Kush, or “The King Among Hybrids,” is an indica dominant hybrid (80% indica/20% sativa OR 90% indica/10% sativa) strain created through a cross of the infamous Afghani X Skunk #1strains. This insanely powerful bud boasts an intense THC level that typically falls above the 25% mark and a myriad of impressively potent indica effects. The high starts in the head with a hazy cerebral rush that leaves you insanely uplifted and euphoric but with a distant introspective feeling that rids the mind of any racing thoughts or pain. This head high slowly begins to ebb throughout the body, leaving you in a state of utter relaxation and drowsiness that slowly creeps up on you before hitting you like a brick wall. The comedown almost always leads to a deep and peaceful sleep that lasts for hours on end without interruption. Because of these often overpowering effects, Royal Kush is said to be perfect for treating chronic stress, nausea, chronic pain, insomnia, and mild to moderate cases of depression. Royal Kush b</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/7de4f15046e64b117a88dcdaca5504f1">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Grand Daddy Purple,
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/7de4f15046e64b117a88dcdaca5504f1">
+											<img src="/item-image/7de4f15046e64b117a88dcdaca5504f1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7de4f15046e64b117a88dcdaca5504f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7de4f15046e64b117a88dcdaca5504f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7de4f15046e64b117a88dcdaca5504f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/7de4f15046e64b117a88dcdaca5504f1">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Grand Daddy Purple, an indica dominant strain and is a cross between Big Bud and Purple Urkle. This blend explains why it has a complex berry and grape aroma while its nugs are oversized with a compact bud structure. The nugs are incredibly dense and fuzzy with deep purple hues that run throughout the buds. Additionally, the nugs are covered by orange hairs and contrast well with its resin-coated buds. What really sets this strain apart from the others is that it is easy to identify by the taste alone. Its taste lingers on the tongue for longer and will help you feel relaxed.
+Buy Grand Daddy Purple. The strain has a serious kick to it and its psychoactive effects are evidently detectable in both body and mind. It manages to deliver an overwhelming feeling of physical relaxation and cerebral euphoria. You will find yourself fixed in one spot while your thoughts float in a dreamy buzz for the duration of Grand Daddy Purple’s effects. Just like any other indica dominant strain, it is primarily used for me</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/a2b932664494419c6aa855e2f7837c70">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Afghan Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/a2b932664494419c6aa855e2f7837c70">
+											<img src="/item-image/a2b932664494419c6aa855e2f7837c70?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a2b932664494419c6aa855e2f7837c70">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a2b932664494419c6aa855e2f7837c70">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a2b932664494419c6aa855e2f7837c70">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a2b932664494419c6aa855e2f7837c70">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Afghan Kush, also known as “Afghan OG,” is another indica strain which was brought from ‘Hindu Kush’ mountain range. This is classified as easy-to-grow marijuana strain and is known for its stereotypical body effects that are typical to indica strains. These effects will last up to 2 to 3 hours.
+Buy Afghan Kush Online. Traditionally, this particular strain will be harvested for giving out higher counts of hashish. The plant will be sturdy with light colored nugs and resinous trichomes. The buds are covered with numerous red or dark orange colored hairs. While the THC levels of Afghan Kush strain are found to be 21.6% (of all cannabinoids), the CBD levels are also high and has good medicinal values. The aroma of this medical marijuana strain will be like a mango orange farm with a pinch of funky odor. The taste of this strain is not at all harsh. This will have a bland and fruity taste. This strain is known to affect the user’s body more than his/her mind which would lead to a feeling of laziness/sl</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/a64b88c4ce0945bd428bcff2db3a6755">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Order Nova OG best of indica 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/a64b88c4ce0945bd428bcff2db3a6755">
+											<img src="/item-image/a64b88c4ce0945bd428bcff2db3a6755?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a64b88c4ce0945bd428bcff2db3a6755">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a64b88c4ce0945bd428bcff2db3a6755">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a64b88c4ce0945bd428bcff2db3a6755">
+										<div class="ui dark-green basic tiny button fluid left aligned">226</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a64b88c4ce0945bd428bcff2db3a6755">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Nova is Canadian LP Tweed’s version of Pennywise, an indica-dominant cannabis strain with an equal ratio of THC and CBD. This combination of cannabinoids offers enhanced therapeutic effects for patients treating pain, anxiety, inflammation, stress disorders, and many other symptoms and conditions. Nova combines genetics from Jack the Ripper and Harlequin, who pass on relaxed and focused effects perfect for daytime medicating or productive afternoons. The aroma is subtle, but sweet woody notes with spicypepper undertones can be detected on the exhale.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/df782e4fb752486973c23d6e74520697">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Oxycontin Online Cheap Without Prescription
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/df782e4fb752486973c23d6e74520697">
+											<img src="/item-image/df782e4fb752486973c23d6e74520697?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/df782e4fb752486973c23d6e74520697">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/df782e4fb752486973c23d6e74520697">
+										<div class="ui dark-green basic tiny button fluid left aligned">200</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/df782e4fb752486973c23d6e74520697">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/df782e4fb752486973c23d6e74520697">
+										<div class="ui dark-green basic tiny button fluid left aligned">400pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy OxyContin Online because it is an opioid pain medication. An opioid is sometimes called a narcotic.OxyContin is used to treat moderate to severe pain that is expected to last for an extended period of time. OxyContin is used for around-the-clock treatment of pain. It is not to be used on an “as-needed” basis for pain.It should be administered every 12 hours. You should not use OxyContin if you have severe asthma or breathing problems, or a blockage in your stomach or intestines. So place your Order HERE and Buy Oxycontin Online Cheap With Discreet Overnight Delivery.</p>
+
+<p>Uses Of Oxycontin
+Oxycontin is basically used for managing mild to moderately severe acute or chronic pain. It has to ameliorate the lifestyle for those suffering from many types of pain. It also helps patients with moderate to severe cancer pain. The controlled release form is a valid alternative to morphine and the first-line treatment for cancer pain. Oxycontin, tends to induce feelings of relaxation and reduced anxiety in those wh</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/e692f8d8205c4cf2582cc35ebeee9046">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Strawberry Banana for pain and good sleep 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/e692f8d8205c4cf2582cc35ebeee9046">
+											<img src="/item-image/e692f8d8205c4cf2582cc35ebeee9046?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e692f8d8205c4cf2582cc35ebeee9046">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e692f8d8205c4cf2582cc35ebeee9046">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e692f8d8205c4cf2582cc35ebeee9046">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e692f8d8205c4cf2582cc35ebeee9046">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This indica dominant hybrid (70%) is a cross of Crocket’s Banana Kush and Strawberry Bubblegum, and was developed by those crazy creative geniuses at Serious Seeds. It is a mainstay on the High Times ‘Strongest Strains on Earth’ list, having been selected three years in a row. On at least one phenotype of the strain (a specimen grown by Greenwolf LA &amp; Green Country Rebellion), average THC levels of 31.62% were detected.</p>
+
+<p>| Don’t let the “tropical” name of Strawberry Banana fool you; with max THC levels pushing 32%, it is an expert-only bud that packs a serious punch.</p>
+
+<p>In all honesty, however, the average THC level of this strain is probably closer to 26-28%, which still makes it one of the most reliably potent marijuana strains in the world. Strawberry Banana is known for its incredible taste, which is akin to, erm, strawberries and bananas. The taste is accompanied by an amazing sweet and fruity scent, as well as a delicious banana exhale.</p>
+
+<p>Strawberry Banana begins with a cerebral head high</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/f26586a2234e4cf250df938574142dec">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Green Crack
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/f26586a2234e4cf250df938574142dec">
+											<img src="/item-image/f26586a2234e4cf250df938574142dec?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f26586a2234e4cf250df938574142dec">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f26586a2234e4cf250df938574142dec">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f26586a2234e4cf250df938574142dec">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f26586a2234e4cf250df938574142dec">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Green Crack Marijuana Strain.
+A perennial favorite, Green Crack is a sativa-dominant hybrid that was bred by inbreeding Skunk #1. Green Crack is usually sativa-dominant, but there’s also a less popular indica-heavy version of the strain. Green Crack got its name from Snoop Dogg, though it’s also known as Green Cush or simply Cush among smokers who prefer not to reference cocaine. This highly addictive strain is massively potent, with top THC levels reaching 24%. It has a sativa/indica ratio of 65:35. The high is decidedly cerebral, with a big mood boost and a jolt of energy. This strain spurs creativity and helps patients get things done. It’s most effective in treating anxiety and depression, along with ADHD, PTSD, and migraines. Green Crack has a sweet flavor with tropical and citrus notes. The buds are dense and tight. Dry mouth occurs frequently, while dry eyes, dizziness, and paranoia, happen less often. It’s most common in the Pacific Northwester, California, Arizona, and Colorado. But it c</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/ffdbdc9cf56044e66835a8f406088964">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Purple Kush for sale 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/ffdbdc9cf56044e66835a8f406088964">
+											<img src="/item-image/ffdbdc9cf56044e66835a8f406088964?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/ffdbdc9cf56044e66835a8f406088964">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/ffdbdc9cf56044e66835a8f406088964">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/ffdbdc9cf56044e66835a8f406088964">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/ffdbdc9cf56044e66835a8f406088964">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Purple Kush is a 100% pure indica strain created as a potent cross between the insanely popular Hindu Kush X Purple Afghani strains. This dank bud was named one of the Top 10 Most Powerful Strains in the World by High Times magazine and boasts a THC level that ranges from 22% on average. Users describe the Purple Kush high as having an immediately uplifting euphoric head high that leaves you completely pain-free and slightly introspective.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/b1fe098d60e146c66b729b82dca2bc4d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Girl Scout Cookies 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/b1fe098d60e146c66b729b82dca2bc4d">
+											<img src="/item-image/b1fe098d60e146c66b729b82dca2bc4d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b1fe098d60e146c66b729b82dca2bc4d">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b1fe098d60e146c66b729b82dca2bc4d">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b1fe098d60e146c66b729b82dca2bc4d">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b1fe098d60e146c66b729b82dca2bc4d">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Girl Scout Cookies Marijuana.
+Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. With a sweet and earthy aroma, Girl Scout Cookies launches you to euphoria’s top floor where full-body relaxation meets a time-bending cerebral space. A little goes a long way with this hybrid, whose THC heights have won Girl Scout Cookies numerous Cannabis Cup awards. Patients needing a strong dose of relief, however, may look to GSC for severe pain, nausea, and appetite loss.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/28867ea0ac82461e48ea81256eddec34">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								White Widow
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/28867ea0ac82461e48ea81256eddec34">
+											<img src="/item-image/28867ea0ac82461e48ea81256eddec34?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/28867ea0ac82461e48ea81256eddec34">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/28867ea0ac82461e48ea81256eddec34">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/28867ea0ac82461e48ea81256eddec34">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/28867ea0ac82461e48ea81256eddec34">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>White Widow is a hybrid strain that many have been familiar with since the early 90’s. This strain has global popularity and can easily be found atop a menu at almost any Amsterdam coffee shop. The prevalence of White Widow has greatly increased due to the television show Weeds and references within the rap industry. This strain holds a pretty balanced 60:40 sativa/indica ratio ( Brazil Sativa x South Indian Indica) that leads one to a cognitive driven high with a relaxing undertone.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/5ed5ea4ec50a4d034aab66c1d38a1203">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Pineapple Kush 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/5ed5ea4ec50a4d034aab66c1d38a1203">
+											<img src="/item-image/5ed5ea4ec50a4d034aab66c1d38a1203?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5ed5ea4ec50a4d034aab66c1d38a1203">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5ed5ea4ec50a4d034aab66c1d38a1203">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5ed5ea4ec50a4d034aab66c1d38a1203">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/5ed5ea4ec50a4d034aab66c1d38a1203">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pineapple Kush is that rarest of finds on the medical marijuana market: a therapeutic strain high in CBD and low in THC. CBD levels top 5-15%, making this an ideal strain for treating epileptic disorders and other problems that require that cannabinoid. At the same time, THC levels are below 3%, and that means children with seizure disorders may be able to safely use Pineapple Kush extracts (consult a doctor or budtender for more information).</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/b5f9eea9201a49ee40c90e04278a1f2c">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Platinum OG Kush 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/b5f9eea9201a49ee40c90e04278a1f2c">
+											<img src="/item-image/b5f9eea9201a49ee40c90e04278a1f2c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b5f9eea9201a49ee40c90e04278a1f2c">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b5f9eea9201a49ee40c90e04278a1f2c">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b5f9eea9201a49ee40c90e04278a1f2c">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/b5f9eea9201a49ee40c90e04278a1f2c">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Platinum OG Kush is a clone only marijuana strain that is reported to be a cross of Master Kush and Afghani. Due to it’s high amount of trichomes, Platinum OG Kush almost takes on a silvery hue that is reminiscent of the highly valuable metal Platinum. Platinum OG Kush is an excellent nighttime strain which will leave you sedated and relaxed, but it also has a nice headiness to it. We suggest using Platinum OG Kush cannabis for insomnia and pain relief.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/40491c8fa63f445d756f80fedb7ee0b5">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Hindu Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/40491c8fa63f445d756f80fedb7ee0b5">
+											<img src="/item-image/40491c8fa63f445d756f80fedb7ee0b5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/40491c8fa63f445d756f80fedb7ee0b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/40491c8fa63f445d756f80fedb7ee0b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/40491c8fa63f445d756f80fedb7ee0b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/40491c8fa63f445d756f80fedb7ee0b5">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Hindu Kush Online, a pure indica strain named after the mountain range stretching 500 miles between Pakistan and Afghanistan where it originated. The harsh climate of its homeland has conditioned this strain to express a thick, protective coat of crystal trichomes cherished by hash makers worldwide. With a subtle sweet and earthy sandalwood aroma, Hindu Kush induces a deep sense of calm that helps bring relief to those suffering pain, nausea, and stress disorders. Buy Hindu Kush Online.
+Buy Marijuana online, Buy cannabis oil online, Buy marijuana wax online, buy shatter online, Buy Marijuana edibles Online, Buy hash online</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/4d04e4cba31040394aee3ae985cf5c49">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Master Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/4d04e4cba31040394aee3ae985cf5c49">
+											<img src="/item-image/4d04e4cba31040394aee3ae985cf5c49?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4d04e4cba31040394aee3ae985cf5c49">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4d04e4cba31040394aee3ae985cf5c49">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4d04e4cba31040394aee3ae985cf5c49">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/4d04e4cba31040394aee3ae985cf5c49">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This potent indica hybrid, with a sativa/indica ratio of 10:90, can reach THC levels of up to 20%, which makes it one of the stronger medical strains around. Master Kush is a crossbreed of an original Hindu Kush strain and a pure skunk strain, though the exact genetics are unclear. These are among the strongest plants in the world. And Master Kush is one of the best-known strains in the world, winner of two Cannabis Cup awards and a personal favorite of Snoop Dogg. It was designed in the Netherlands and remains popular there, while it sells especially well on the West Coast of the United States. It has a pungent but sweet earthy flavor and a light citrus smell that can be hard to detect.</p>
+
+<p>Buy Master Kush Online. The dominant feeling while high is one of total relaxation, along with euphoria and sleepiness, all products of the strain’s genetic heritage. This makes it a good treatment for sleeplessness. Other conditions that benefit from Master Kush include anxiety, mental health problems, and migraines. Ne</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/c3a552599a52438743b4de29e35594ed">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Martian Rocks
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/c3a552599a52438743b4de29e35594ed">
+											<img src="/item-image/c3a552599a52438743b4de29e35594ed?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c3a552599a52438743b4de29e35594ed">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c3a552599a52438743b4de29e35594ed">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c3a552599a52438743b4de29e35594ed">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/c3a552599a52438743b4de29e35594ed">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The world’s strongest bud! Lab tests confirm it at 98.2 % THC. A top shelf-nug is first dipped in hash oil, dusted with fire kief, rolled in a CBD extract, coated in pure THC crystals, doused in CO2 Oil, lovingly smothered in bud budder, generously sprinkled with green crack, followed by a dash of dank dust, and finally a refreshing dip in weed jello-o.Martian rocks are so strong they prove a challenge even for the most experienced smokers. It’s been described as the father of all highs and has a wide fanbase among consumers</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/a4f2923a7f6249077b95bf12f2647de5">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Adderall and Adderall XR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/a4f2923a7f6249077b95bf12f2647de5">
+											<img src="/item-image/a4f2923a7f6249077b95bf12f2647de5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a4f2923a7f6249077b95bf12f2647de5">
+										<div class="ui dark-green basic tiny button fluid left aligned">100 pills </div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a4f2923a7f6249077b95bf12f2647de5">
+										<div class="ui dark-green basic tiny button fluid left aligned">200pills</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a4f2923a7f6249077b95bf12f2647de5">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a4f2923a7f6249077b95bf12f2647de5">
+										<div class="ui dark-green basic tiny button fluid left aligned">400pills</div>
+										<div class="ui basic left pointing label price">1200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy adderall Online – Adderall is a combination drug containing salts of the two enantiomers of amphetamine (Dextroamphetamine and Amphetamine). It a central nervous system stimulant of the phenethylamine class. By salt content, the active ingredients of Adderall are 25% levoamphetamine salts and 75% dextroamphetamine salts. Thus, at therapeutic doses, Adderall causes emotional and cognitive effects such as euphoria, change in desire for sex, increased wakefulness, and improved cognitive control. At these doses, it induces physical effects such as decreased reaction time, fatigue resistance, and increased muscle strength.</p>
+
+<p>Uses
+ADDERALL XR is indicated for the treatment of Attention Deficit Hyperactivity Disorder (ADHD) and narcolepsy.
+Also used as an athletic performance enhancer and cognitive enhancer, and recreationally as an aphrodisiac and euphoriant. Adderall appears to improve brain development and nerve growth. Randomised controlled trials of continuous stimulant therapy for the treatment of ADH</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/f54f3f428dbc4a9d4fadd7a457147f0f">
+								<span class="ui teal tiny label tag right floated">Drugs</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Brass Knuckles (1g) 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/f54f3f428dbc4a9d4fadd7a457147f0f">
+											<img src="/item-image/f54f3f428dbc4a9d4fadd7a457147f0f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f54f3f428dbc4a9d4fadd7a457147f0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 carts </div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f54f3f428dbc4a9d4fadd7a457147f0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 carts </div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f54f3f428dbc4a9d4fadd7a457147f0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 carts </div>
+										<div class="ui basic left pointing label price">750 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/f54f3f428dbc4a9d4fadd7a457147f0f">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 carts </div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We provide the best Brass Knuckles type available for good price place your order and state the flavor you need .</p>
+
+<p>Blue Dream, Gorilla Glue, Tangie, Skywalker OG, Sour Diesel, DO-SI-DOS, Grape God,GSC</p>
+
+<p>And many others just state any flavor you need and that will be provided to you .</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/79fa74d19d0442754a6029898ebc7500">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Grade AAA&#43; Sniff Rocks
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/79fa74d19d0442754a6029898ebc7500">
+											<img src="/item-image/79fa74d19d0442754a6029898ebc7500?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/79fa74d19d0442754a6029898ebc7500">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/79fa74d19d0442754a6029898ebc7500">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/79fa74d19d0442754a6029898ebc7500">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">1100 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/79fa74d19d0442754a6029898ebc7500">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Sniffrocks are an ultimate update to all Rocks, in which a top shelve bud is dipped in CO2 oil and then rolled in a thick coating of hashish ,sprinkled with high THC weed jellow and pure THC crystals or CBD hemp oil . These buds are more powerful than dabs, with excellent flavor .Sniffrocks are rocking the cannabis world developing a one and done reputation for themselves containing the highest percentage of THC in dry mass.after they are made they are left for 2 hrs to freeze.a smoke of this bud is the ultimate pshychedelic experience</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/8b495826ee9c440f671d12e4cd7e27ea">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy top quality Godfather OG
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/8b495826ee9c440f671d12e4cd7e27ea">
+											<img src="/item-image/8b495826ee9c440f671d12e4cd7e27ea?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/8b495826ee9c440f671d12e4cd7e27ea">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/8b495826ee9c440f671d12e4cd7e27ea">
+										<div class="ui dark-green basic tiny button fluid left aligned">114</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/8b495826ee9c440f671d12e4cd7e27ea">
+										<div class="ui dark-green basic tiny button fluid left aligned">226</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/8b495826ee9c440f671d12e4cd7e27ea">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>According to High Times, Godfather OG is the most potent marijuana strain on the planet. This indica dominant hybrid is reported to have a THC content of over 34%! Since it is an activated THC value, there is a good chance that the figure is conservative.</p>
+
+<p>Godfather OG is cultivated by California Herbal Remedies (CHR) and is believed to be a cross of Cherry Pie, OG Kush, and Granddaddy Purps. With this information in hand, it is no surprise to learn that Godfather OG is often referred to as the ‘Don of all Kush’ strains. Even a typical strain should have a THC of over 25%.</p>
+
+<p>Of course, strength means nothing without quality — and Godfather OG has absolutely no shortage of quality.</p>
+
+<p>This strain has won the High Times Cannabis Cup for best Indica strain in the past, and when you smoke the bud, it will hit you with an incredible cerebral high that soon results in a whole-body euphoria. Users tend to feel calm and happy, with the euphoric effects oozing over both mind and body. Godfather OG provides yo</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/e6d00612de644e2a7b65a780a2fee469">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Blue Dream
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/e6d00612de644e2a7b65a780a2fee469">
+											<img src="/item-image/e6d00612de644e2a7b65a780a2fee469?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e6d00612de644e2a7b65a780a2fee469">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e6d00612de644e2a7b65a780a2fee469">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e6d00612de644e2a7b65a780a2fee469">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/e6d00612de644e2a7b65a780a2fee469">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Blue Dream Marijuana Online. Blue Dream is a sativa dominant hybrid cross of Haze and Blueberry. It has one of the most sought after full-bodied flavors of any strain. Blue Dream’s fragrance is sweet, zesty and invigorating to the senses. It has dense popcorn-like buds that glisten a blue hue under the light, complementing the landscape of trichomes and orange hairs.
+Blue Dream marijuana produces a superb tasting high that is as long lasting as it is balanced. It is a great daytime strain. Upon inhalation, you can immediately feel Blue Dream. The effects creep up rather quickly to produce an energetic and focused high. Creativity reportedly flourishes with this strain, making it a favorite amongst artistic cannabis users.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/62f49efbc4d8463d4133a59c3778545d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Orange Kush
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/62f49efbc4d8463d4133a59c3778545d">
+											<img src="/item-image/62f49efbc4d8463d4133a59c3778545d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/62f49efbc4d8463d4133a59c3778545d">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/62f49efbc4d8463d4133a59c3778545d">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/62f49efbc4d8463d4133a59c3778545d">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/62f49efbc4d8463d4133a59c3778545d">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Orange Kush is an Indica dominant cannabis strain that is a cross of Orange Bud and OG Kush. Known for it’s intense high and orange citrus aroma, Orange Kush is perfect for Indica lovers that need something to help them relax after a long day. With it’s dense ample sized buds that are covered in orange hairs, Orange Kush actually has the appearance of being an Orange. This strain is recommended for those needing anxiety and stress relief..</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/maryjanedoesit/item/a3729163144643c3419798bf3a165bf7">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Gelato top quality 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/maryjanedoesit/item/a3729163144643c3419798bf3a165bf7">
+											<img src="/item-image/a3729163144643c3419798bf3a165bf7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a3729163144643c3419798bf3a165bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">30g</div>
+										<div class="ui basic left pointing label price">250 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a3729163144643c3419798bf3a165bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">114g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a3729163144643c3419798bf3a165bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">226g</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/maryjanedoesit/item/a3729163144643c3419798bf3a165bf7">
+										<div class="ui dark-green basic tiny button fluid left aligned">450g</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Gelato Marijuana Online
+Gelato is a slightly indica dominant hybrid (55% indica/45% sativa) strain from a cross of the infamous Sunset Sherbet X Thin Mint Girl Scout Cookies strains. This dank bud is infamous for its insanely delicious flavor and hugely powerful effects that are fueled by a THC level that hits its low point at 20% on average. Gelato has a flavor that’s said to be much like a sweet sherbet, with fruity blueberry and orange flavors. The aroma is just as sickly sweet, with a lavender citrus berry bouquet that has a woody effect as the nugs are broken apart and smoked. Although it has a tasty flavor, Gelato is definitely best loved for its effects.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 433 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

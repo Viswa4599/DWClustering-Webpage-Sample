@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/rushking?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@rushking</h2>
+								<p>silence , secure , 100% guaranteed receip </p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 10 months ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 8 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>1</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/rushking">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/rushking">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/rushking/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">1</span>
+									</a>
+									<a class="item active" href="/store/rushking/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">59</span>
+									</a>
+									<a class="item" href="/store/rushking/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/35a11238466547b87ac2123a10ddc76b">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Tramadol HCL- 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/35a11238466547b87ac2123a10ddc76b">
+											<img src="/item-image/35a11238466547b87ac2123a10ddc76b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/35a11238466547b87ac2123a10ddc76b">
+										<div class="ui dark-green basic tiny button fluid left aligned">tramadol hcl</div>
+										<div class="ui basic left pointing label price">580 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tramadol oral tablet is a prescription drug that’s available as an immediate-release and extended-release tablet. Tramadol also comes as an extended-release oral capsule. Immediate-release drugs are released into the body right away. Extended-release drugs are released into the body slowly over time.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/518fd18711c445e553b3f1a68e38118b">
+								<span class="ui teal tiny label tag right floated">Stimulants</span>
+								Methylenedioxypyrovalerone
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/518fd18711c445e553b3f1a68e38118b">
+											<img src="/item-image/518fd18711c445e553b3f1a68e38118b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/518fd18711c445e553b3f1a68e38118b">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>MDPV (Methylenedioxypyrovalerone) is a psychoactive stimulant narcotic that acts as a norepinephrine-dopamine reuptake inhibitor (NDRI). MDPV is the active ingredient in “bath salts,” a designer drug that is knowingly labeled as ‘not for human consumption’ so that the drug is legally available on the market</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/ec6ff488b7f6408c635a4b686af16836">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Lifter CBD Hemp Flower
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/ec6ff488b7f6408c635a4b686af16836">
+											<img src="/item-image/ec6ff488b7f6408c635a4b686af16836?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/ec6ff488b7f6408c635a4b686af16836">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/ lb</div>
+										<div class="ui basic left pointing label price">1900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>A Colorado Association of Hemp Growers, CBD Hemp Oil extractor’s, Isolate
+producers, all based in and around Pueblo County Colorado.</p>
+
+<p>The Hemp plant is the primary raw material the company uses. The company’s
+primary product line is Hemp Flower, Hemp Crude Oil, Hemp Distillate and Hemp
+Isolate. The company’s products are sold across the United States and Canada and
+other countries. Primary customers are CBD Wholesaler’s, CBD retail stores, along
+with Vape accessory wholesalers and retailers.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/d47545b98d5845864a6502d6155d2b0b">
+								<span class="ui teal tiny label tag right floated">Psychedelics</span>
+								TMA-6
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/d47545b98d5845864a6502d6155d2b0b">
+											<img src="/item-image/d47545b98d5845864a6502d6155d2b0b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/d47545b98d5845864a6502d6155d2b0b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">3500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>TMAs, also known as trimethoxyamphetamines, are a family of isomeric psychedelic hallucinogenic drugs. There exist six different TMAs that differ only in the position of the three methoxy groups: TMA, TMA-2, TMA-3, TMA-4, TMA-5, and TMA-6.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/0cd1125019774abf4c184bde27d4ec97">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								BioSol CBDew Liquid 14% CBD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/0cd1125019774abf4c184bde27d4ec97">
+											<img src="/item-image/0cd1125019774abf4c184bde27d4ec97?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/0cd1125019774abf4c184bde27d4ec97">
+										<div class="ui dark-green basic tiny button fluid left aligned"> per liter</div>
+										<div class="ui basic left pointing label price">5500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>CBD Liquid Created Specifically for Beverages &amp; Consumable Products
+Converted Pure Pharma Grade Quality Isolate per Liter.</p>
+
+<p>BioSol CBDew Liquid is a tasteless and clear formulation developed for infusion into a variety of beverages. The formulation of the final product contains 20% CBD and allows rapid active substance delivery with expectancy of high absorption. We convert pure Pharma grade quality isolate (GMP certified), into a proprietary water soluble formulation that increases bio-availability and efficacy. Biosol CBDew Liquid was specifically developed for infusion into a variety of beverages and consumable products. It can be applied to many other products such as lotions, ointments, and creams.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/90aa7d352fc2447a4cf4b4da79207a1d">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Oramorph (morphine)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/90aa7d352fc2447a4cf4b4da79207a1d">
+											<img src="/item-image/90aa7d352fc2447a4cf4b4da79207a1d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/90aa7d352fc2447a4cf4b4da79207a1d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10mg</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/90aa7d352fc2447a4cf4b4da79207a1d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10mg</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Morphine (Oramorph / Sevredol / Morcap SR / Morphegesic SR / MST Continus / MXL / Zomorph) is an extremely powerful painkilling drug that is produced by …
+MST Continus (Morphine. Sulphate Tablets). - Morphgesic SR. - Zomorph. - Oxycontin. - MXL. And these are examples of opioids that are fast acting: - Oramorph</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/a877db5dcfe848df7e57517c79be7f7c">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								99%&#43; CBD Isolate (1kg MOQ)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/a877db5dcfe848df7e57517c79be7f7c">
+											<img src="/item-image/a877db5dcfe848df7e57517c79be7f7c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/a877db5dcfe848df7e57517c79be7f7c">
+										<div class="ui dark-green basic tiny button fluid left aligned"> (1kg moq)</div>
+										<div class="ui basic left pointing label price">10000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hemp-derived, clean, California made CBD Isolate Powder. Contracts, spot buys, and tolling agreements available. Must provide LOI &amp; POF for orders larger than 5kg.We are looking to expand our network of buyers that share the same values as us. Transparency, trust, and reliability are some of our top priorities. You will quickly learn that we are an easy going, diligent, no BS company if you decide to work with us.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/c1817160a4ad471353c5794e5559be4a">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Tree of Life Botanicals CBD 1700mg Hemp Oil
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/c1817160a4ad471353c5794e5559be4a">
+											<img src="/item-image/c1817160a4ad471353c5794e5559be4a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/c1817160a4ad471353c5794e5559be4a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1700mg</div>
+										<div class="ui basic left pointing label price">999 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Full Spectrum 30ml 1700mg Hemp Oil Dropper.</p>
+
+<p>Ingredients: Caprylic Capric Triglyceride (Fractionated Coconut Oil), Hemp Oil Extract,</p>
+
+<p>*Essential Oil</p>
+
+<p>*Peppermint Flavor: Peppermint Oil. Orange Flavor: Sweet Orange Oil</p>
+
+<p>Hemp CBD Oil Tincture</p>
+
+<p>GET YOUR LIFE BACK!</p>
+
+<p>Improve your health everyday with the all-natural benefits of CBD hemp oil. Our full-spectrum tinctures deliver the best combination of cannabinoids and naturally occurring antioxidants and neuroprotectants. We nurture each plant from seed to sale and control all processes of production to ensure the highest standards and quality are achieved.</p>
+
+<p>Enjoy our tinctures daily to help get your life back!</p>
+
+<p>This Full Spectrum Hemp CBD Oil Tincture are made with Pesticide Free, Non-GMO, 100% Organic Medicinal Hemp Oil extracted from the flower of the hemp plant.</p>
+
+<p>Made in Colorado, USA.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/f26764cecdd84947715578b73866cbd0">
+								<span class="ui teal tiny label tag right floated">Ritalin</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								RITALIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/f26764cecdd84947715578b73866cbd0">
+											<img src="/item-image/f26764cecdd84947715578b73866cbd0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/f26764cecdd84947715578b73866cbd0">
+										<div class="ui dark-green basic tiny button fluid left aligned">20-mg </div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ritalin is the trade name of Methylphenidite, a psychostimulant that is used to treat Attention Deficit Hyperactivity Disorder (ADHD) and narcolepsy. The Food and Drug Administration (FDA) licensed it in 1955 and doctors began prescribing it from the sixties. Today, it is a widely prescribed drug and commonly used to treat ADHD. The drug is produced in Spain, US, Pakistan, and Mexico. It is also available under the brand names of Daytrana, Concerta, and Methylin.</p>
+
+<p>The drug is sold as Ritalin in Australia, Canada, UK, Germany, Spain, and Israel, as Rilatine in Belgium, as Ritalina in Argentina, Brazil, and Portugal, and as Hynidate in Thailand.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/4f27c223b6aa43c95fbc31a43028f754">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Codeine Phosphate (60mg) tablets 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/4f27c223b6aa43c95fbc31a43028f754">
+											<img src="/item-image/4f27c223b6aa43c95fbc31a43028f754?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/4f27c223b6aa43c95fbc31a43028f754">
+										<div class="ui dark-green basic tiny button fluid left aligned">60mg</div>
+										<div class="ui basic left pointing label price">560 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Codeine is a painkiller used to treat pain after an operation or an injury. It is also used as an alternative painkiller when others such as aspirin, ibuprofen and paracetamol have failed. It can even treat diarrhoea, but is only available on prescription.</p>
+
+<p>As a narcotic pain-reliever and cough suppressan it can be combined with Tylenol or aspirin for more effective pain relief.</p>
+
+<p>It is also an opiate to treat mild to moderate degrees of pain and can be addictive so dosages should be taken carefully to avoid severe side effects.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/2c7d4e95dd6f45da58cd8598ba7f0f22">
+								<span class="ui teal tiny label tag right floated">3-MEO-PCP</span>
+								3-MEO-PCP
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/2c7d4e95dd6f45da58cd8598ba7f0f22">
+											<img src="/item-image/2c7d4e95dd6f45da58cd8598ba7f0f22?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/2c7d4e95dd6f45da58cd8598ba7f0f22">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">3600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>3-Methoxyphencyclidine is a dissociative hallucinogen of the arylcyclohexylamine class related to phencyclidine which has been sold online as a designer drug. It acts mainly as an NMDA receptor antagonist, though it has also been found to interact with the sigma σ₁ receptor and the serotonin transporter</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/61f7cef7f37940865691681eefd103d7">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								The Joyful Bar CBD Milk Chocolate Bar 100mg .56oz
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/61f7cef7f37940865691681eefd103d7">
+											<img src="/item-image/61f7cef7f37940865691681eefd103d7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/61f7cef7f37940865691681eefd103d7">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/ pack</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>– FDA Approved
+– Kosher
+– Non GMO
+– Low Sugar
+– Natural Flavors
+– Organic Ingredients
+– Third Party Tested for quality</p>
+
+<p>The Joyful Bar is the most delicious way to get you daily dose of CBD!</p>
+
+<p>Our organically made milk chocolate bar is packed with 100 mg of US-grown hemp derived CBD (10 mg per segment). Low sugar and low-glycemic, this chef crafted chocolate is non-GMO and certified kosher. Only 90 calories for the whole bar, and third party tested for purity.</p>
+
+<p>Our milk chocolate bar is made with 32% pure cocoa and organic milk.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/9bde2f51314847516780e4cdcd037b6a">
+								<span class="ui teal tiny label tag right floated">A-PVP</span>
+								a-PVP 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/9bde2f51314847516780e4cdcd037b6a">
+											<img src="/item-image/9bde2f51314847516780e4cdcd037b6a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/9bde2f51314847516780e4cdcd037b6a">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">2000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>α-Pyrrolidinopentiophenone is a synthetic stimulant of the cathinone class developed in the 1960s that has been sold as a designer drug. Colloquially, it is sometimes called flakka. α-PVP is chemically related to pyrovalerone and is the ketone analog of prolintane.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/229990b9397944926987ae935c7d2ea0">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Relax CBD Balm 200 MG 1.0 OZ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/229990b9397944926987ae935c7d2ea0">
+											<img src="/item-image/229990b9397944926987ae935c7d2ea0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/229990b9397944926987ae935c7d2ea0">
+										<div class="ui dark-green basic tiny button fluid left aligned">50unit</div>
+										<div class="ui basic left pointing label price">1999 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Supercharged proprietary relaxation formula that’s used for multiple purposes, including pain relief, burn relief, and for full body relations.</p>
+
+<p>A supercharged relaxation formula with the soothing aroma of lavender, and the healing effects of infused full spectrum CBD, this product is used for multiple purposes. This is relief and relaxation on a deeper level. Simply apply to tense parts of the body, sit back, and enjoy the bliss.</p>
+
+<p>Ingredients: Isododecane (and) dimethicone / bis-isobutyl, PPG-20 cross polymer, Caprylic / capric triglyceride, Phenyl trimethicone, Helianthus annuus (sunflower) oil, Lavender Bulgarian oil, Cetyl lactate, Crystaphyl, Silica silylate, Full Spectrum CBD derived from hemp.</p>
+
+<p>Keep out of reach of children</p>
+
+<p>Disclaimer: This statement has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult a physician before starting any new treatment.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/42bfdcaed5444cd5448e4e1380120322">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Black Tar Heroin
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/42bfdcaed5444cd5448e4e1380120322">
+											<img src="/item-image/42bfdcaed5444cd5448e4e1380120322?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/42bfdcaed5444cd5448e4e1380120322">
+										<div class="ui dark-green basic tiny button fluid left aligned">50kg</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Heroin is an opioid drug made from morphine, a natural substance taken from the seed pod of the various opium poppy plants grown in Southeast and Southwest Asia, Mexico, and Colombia. Heroin is manufactured from opium poppies cultivated in four primary source areas: South America, Southeast and Southwest Asia, and Mexico. Although Afghanistan produces the majority of the world’s heroin, South American heroin has become the most prevalent type available in the U.S., particularly in the Northeast, South and Midwest. The particular form known as “black tar” from Mexico, a less pure form of heroin, is more commonly found in the western and southwestern United States. This heroin may be sticky like roofing tar or hard like coal, with its color varying from dark brown to black.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/4c6fcffd0ad54abf5674925f77783772">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Roos Anxiety / Muscle Salve 500mg 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/4c6fcffd0ad54abf5674925f77783772">
+											<img src="/item-image/4c6fcffd0ad54abf5674925f77783772?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/4c6fcffd0ad54abf5674925f77783772">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 salve</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>500mg of Full Spectrum CBD Oil</p>
+
+<p>Combined with:</p>
+
+<p>Helichrysum
+Clary Sage
+Patchouli
+Grape Seed Oil
+Shea Butter</p>
+
+<p>Our Salve is formulated from ingredients mined form mother earth to properly heal your body, “AS NATURE INTENDED”.</p>
+
+<p>Using the Full Spectrum CBD Oil</p>
+
+<p>Meaning that the CBD oil we use contains all of the cannabinoids found in the Hemp plant including a variety of essential vitamins, minerals, fatty acids, protein, chlorophyll, terpenes, flavonoids, and fiber. For the widest range and most effective healing properties possible.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/54b2f56660c34d704217c83736e0ac7d">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CBD ISOLATE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/54b2f56660c34d704217c83736e0ac7d">
+											<img src="/item-image/54b2f56660c34d704217c83736e0ac7d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/54b2f56660c34d704217c83736e0ac7d">
+										<div class="ui dark-green basic tiny button fluid left aligned">25 grams</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Bluebird Botanicals is an award winning CBD oil company and manufactures its products according to the FDA’s current Good Manufacturing Practices (cGMPs).</p>
+
+<p>The CBD isolate for sale is a highly purified and crystalline CBD extract derived from USA grown hemp.</p>
+
+<p>96%-99.9% pure CBD in crystalline form
+Industrial hemp-derived
+Non-synthetic/natural
+Sourced from Federal Farm Bill compliant hemp grown without chemical fertilizers or pesticides.
+3rd-party batch testing for CBD isolate
+CBD potency
+Solvents
+Heavy metals
+Pesticides
+Smell/taste – Odorless/flavorless
+Appearance – White/clear crystals
+The Extraction Process</p>
+
+<p>The main steps – our premium hemp cultivars are extracted with an ethanol extraction system. It is then winterized to remove fats. Next, multiple rounds of rotary evaporation are used to remove plant material and other unnecessary components. The extract is then decarboxylated and transformed into a crystalline structure with a proprietary post-processing technique.</p>
+
+<p>3rd Party</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/574cb372c8be4da74abfe0d696591413">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Hale Mary Hemp Flower Strain 13% CBD 0.03% THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/574cb372c8be4da74abfe0d696591413">
+											<img src="/item-image/574cb372c8be4da74abfe0d696591413?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/574cb372c8be4da74abfe0d696591413">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/lb</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Derived from Cherry Wine Hemp Flower
+Pesticide Free
+Grown in Pueblo, CO</p>
+
+<p>Thanks for connecting with Tree of Life Botanicals! We are excited to work with you and we appreciate your interests in this dynamic new medicinal hemp industry that is sweeping our country.</p>
+
+<p>Our company mission is to help people get their lives back and restore their health. We are honest, reliable and, caring; our products are organic, effective and, best-in-class; and our company image is clean, friendly and, professional.</p>
+
+<p>Here are some things I would love for you to know about Tree of Life Botanicals:</p>
+
+<p>We are responsible for the entire production of our hemp oil extract products from soil to oil. It all starts with our in house breeding program which produces proprietary high CBD hemp strains, we own multiple farms and employ our own growers, we own the Supercritical CO2 extraction labs and post processing equipment operated by our trained technicians, we rely on our testing lab to guarantee quality, and all of our product</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/6c84688e05454c8774f23a226121dd0d">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Hydromorphone Hydrochloride 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/6c84688e05454c8774f23a226121dd0d">
+											<img src="/item-image/6c84688e05454c8774f23a226121dd0d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/6c84688e05454c8774f23a226121dd0d">
+										<div class="ui dark-green basic tiny button fluid left aligned">8mg</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hydromorphone Hydrochloride is the hydrochloride salt form of hydromorphone, the hydrogenated ketone of morphine, a semi-synthetic opioid with analgesic effects. Hydromorphone selectively binds the mu-opioid receptor which is linked through G-proteins. Binding stimulates the exchange of guanosine triphosphate (GTP) for guanosine diphosphate (GDP) on the G-protein complex and interacts with and inhibits adenylate cyclase located at the inner surface of the plasma membrane. This leads to a reduction in intracellular cyclic 3’,5’-adenosine monophosphate (cAMP). Further, voltage-gated potassium channels are activated, thereby causing hyperpolarization and reducing neuronal excitability. In addition, the opening of voltage-gated calcium channels is inhibited, thereby leading to an inhibition of calcium entry and a reduction in the release of various neurotransmitters, including GABA, vasopressin, somatostatin, insulin and glucagons.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/74291b827f7444a9491cff34322d2f4c">
+								<span class="ui teal tiny label tag right floated">Prerolled joints</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Roos Raw all Organic Pre-Rolls
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/74291b827f7444a9491cff34322d2f4c">
+											<img src="/item-image/74291b827f7444a9491cff34322d2f4c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/74291b827f7444a9491cff34322d2f4c">
+										<div class="ui dark-green basic tiny button fluid left aligned">per pre-roll</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pure Locally grown CBD.</p>
+
+<p>No preservatives or additives just the smooth taste of natural Terpenes and Cannabinoids from high altitude plants.Our Pre-Rolls are hand made out of locally grown organic Hemp Plants. No preservatives or additives added just smooth taste of natural Terpenes and Cannabinoids from our high altitude plants.</p>
+
+<p>Chose from a wide selection of 100% natural flavors? Each Pre-Roll organically flavored by the strain of Hemp and soil they are grown in.</p>
+
+<p>Our Pre-Rolls are formulated for healing purposes, not to “get you high.” Hemp has a higher concentration of cannabinoids (CBD), these are non-psychoactive compounds. THC is the compound that makes you high. This compound is found in a marijuana plant. Our Pre-Rolls are made with Full spectrum CBD hemp extract with extremely low THC. ie our CBD Hemp products will not get you high.</p>
+
+<p>Our Pre-Rolls are known to be helpful for anxiety, depression, sleep disorders and to help reduce nicotine intake. Also a great method for easy relaxation.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/7e0aac2d292846f84708b1f9a0944468">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								DILANTIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/7e0aac2d292846f84708b1f9a0944468">
+											<img src="/item-image/7e0aac2d292846f84708b1f9a0944468?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/7e0aac2d292846f84708b1f9a0944468">
+										<div class="ui dark-green basic tiny button fluid left aligned">100mg</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Phenytoin, sold under the brand name Dilantin among others, is an anti-seizure medication. It is useful for the prevention of tonic-clonic seizures and focal seizures, but not absence seizures. The intravenous form is used for status epilepticus that does not improve with benzodiazepines.The main benefits of taking Phenytoin which is also known as Dilantin, is that both of these drugs can help in controlling and managing the possibility of someone having an epileptic fit or seizure. These types of drugs are collectively known as anticonvulsants, and due to their nature and the medical conditions they can help manage you are going to need a Doctor to prescribe them to ensure they are the correct type of drug for you.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/8e08509b4cd64ab145255616466ad7d0">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								 THC Shatter
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/8e08509b4cd64ab145255616466ad7d0">
+											<img src="/item-image/8e08509b4cd64ab145255616466ad7d0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/8e08509b4cd64ab145255616466ad7d0">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">999 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Retails for $49.99 Per 1 Gram Container
+Wholesale for $20.00 Per 100 Ordered
+99% THC Shatter (Paperwork Attached)
+This is the longer sample description area where you can describe your products or services in more detail</p>
+
+<p>Recreational License in State
+Locally Grown
+Locally Processed
+Non-GMO
+Testing Results Available
+White-Labeling Available
+Wholesale Non-Packaged Available</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/99c942a334ae43184b0005737c3388a2">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Green Roads – 200mg CBD Froggies (4pcs)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/99c942a334ae43184b0005737c3388a2">
+											<img src="/item-image/99c942a334ae43184b0005737c3388a2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/99c942a334ae43184b0005737c3388a2">
+										<div class="ui dark-green basic tiny button fluid left aligned">100mg </div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Product Facts:</p>
+
+<p>Serving size: 1 froggy
+Serving Per Container: 4
+Dosage: Each froggy has 50mg of CBD</p>
+
+<p>Ingredients:</p>
+
+<p>Corn Syrup
+Sugar
+Gelatin
+Citric Acid
+Natural and Artificial Flavors
+FD&amp;C Red 40
+Yellow 6
+Yellow 5
+Blue 1
+Carnauba Wax
+Gluten Free Anhydrous Hemp Oil Extract
+Hemp Oil</p>
+
+<p>CBD Uses</p>
+
+<p>CBD has been used for thousands of years by doctors to help their patients. At the time, the science behind hemp could not explain why it worked. However, their patients believed it to be a powerful plant with healing abilities.</p>
+
+<p>Now…</p>
+
+<p>Modern day science explains the powers of hemp and why it was used as medicine years ago. The hemp plant produces compounds called cannabinoids. These cannabinoids help create balance in your endocannabinoid system. Learn more.</p>
+
+<p>What Happens If Your Endocannabinoid System Is Out Of Balance?</p>
+
+<p>If your endocannabinoid system is out of balance, it can lead to symptoms such as inflammation, chronic pain, headaches and other, more serious conditions. These conditio</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/c2c384ae8c9b48e046b87ca47f4d969d">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Tree of Life Botanicals CBD 200mg Hemp Balm
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/c2c384ae8c9b48e046b87ca47f4d969d">
+											<img src="/item-image/c2c384ae8c9b48e046b87ca47f4d969d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/c2c384ae8c9b48e046b87ca47f4d969d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 piece</div>
+										<div class="ui basic left pointing label price">649 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hemp 200mg Hemp Infused Balm. 2oz. Jar. Full Spectrum. Sold Individually.</p>
+
+<p>Ingredients: Natural Wax Jelly, Hemp Oil Extract, Coconut Oil, Beeswax, Shea Butter, Argan Kernal Butter, Vitamin E, Candelilla Wax, Fragrance (Parfum*)</p>
+
+<p>Proprietary blend of Essential Oils</p>
+
+<p>Hemp CBD Infused Balms</p>
+
+<p>GET YOUR LIFE BACK!</p>
+
+<p>All of our Ultra High Grade Medicinal Hemp CBD Products are produced, grown and packaged in the great state of Colorado, USA! All three of our Our CBD Infused balms contain a full spectrum profile of all synergistic cannabinoids and terpenes that are naturally present within the flowers and leaves of our proprietary high CBD strain of cannabis. Our balms contain plant sterols, anti-oxidants, terpenes, fatty acids, vitamin E and other beneficial plant compounds found in the hemp plant. Our balms are easily applied to the skin and are rapidly absorbed.</p>
+
+<p>For the best 100% Organic CBD hemp extracts and skincare products, always choose Tree of Life Botanicals.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/c30a4f46240a41ba51af477b5ce8ec94">
+								<span class="ui teal tiny label tag right floated">Fentanyl</span>
+								FENTANYL POWDER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/c30a4f46240a41ba51af477b5ce8ec94">
+											<img src="/item-image/c30a4f46240a41ba51af477b5ce8ec94?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/c30a4f46240a41ba51af477b5ce8ec94">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">850 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buy Fentanyl online,Fentanyl is a powerful synthetic drug, similar to morphine and heroin, its 100 times more potent. Increasing rates of usage and addiction to fentanyl are placing everyone from first responders.Opioid pain medication with a quick onset and short duration of action. Fentanyl is 70 to 110 times more potent than morphine, but some fentanyl analogs, which are designed to resemble the pharmacological effects of the original drug, may be as much as 9,999 times more potent than morphine. buy fentanyl patches online without prescription.</p>
+
+<p>GUARANTEED DELIVERY WORLDWIDE.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/c666ee8fb70c400e45bd3fb0409564a2">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Soda Pop 1 Gram THC Concentrate Cartridges
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/c666ee8fb70c400e45bd3fb0409564a2">
+											<img src="/item-image/c666ee8fb70c400e45bd3fb0409564a2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/c666ee8fb70c400e45bd3fb0409564a2">
+										<div class="ui dark-green basic tiny button fluid left aligned">250 packs</div>
+										<div class="ui basic left pointing label price">5500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>80-90% THC Oil Cartridges
+1 Gram Portions
+Multiple Flavors Available
+For Medical Shops</p>
+
+<p>A medical THC concentrate producer soon to be recreational.</p>
+
+<p><strong>Please note, Discount Pharms does not oversee transactions between customers and vendors. All vendors are expected to be licensed per California state requirements and meet local Cannabis packaging compliance per state and county. All transactions are performed between customers and vendors and will not include Discount Pharms</strong></p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/ce31d036fa6643d67769bee4bcd9da05">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								hex-en Hexen
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/ce31d036fa6643d67769bee4bcd9da05">
+											<img src="/item-image/ce31d036fa6643d67769bee4bcd9da05?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/ce31d036fa6643d67769bee4bcd9da05">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kilo</div>
+										<div class="ui basic left pointing label price">1600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ethyl hexedrone can be a structural analogue in the substituted cathinone hexedrone. The substitution in the nitrogen by getting an ethyl group increases the effectiveness of ethyl hexedrone having a factor of three in comparison with its chemical relation hexedrone.Ethyl hexedrone is the one other part of the large number of compounds known as substituted cathinones. It’s going by alternative names “hexen” and “n-ethyl-hexedrone”. The structural signature in the substituted cathinone kind of compounds can be a phenethylamine backbone by getting an alkyl quantity of various lengths within the alpha carbon near the nitrogen plus a ketone inside the beta position. The cathinones certainly are a beta-keto analogue of amphetamines.It’s hypothesised that ethyl hexedrone can be a noradrenaline-dopamine reuptake inhibitor like the cathinones MDVP and alpha PVP. There isn’t any research confirming its status just like a noradrenaline dopamine ruptake inhibitor.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/d418852a03d14c8e78e222b1947c9233">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ARCOXIA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/d418852a03d14c8e78e222b1947c9233">
+											<img src="/item-image/d418852a03d14c8e78e222b1947c9233?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Etoricoxib is a selective COX-2 inhibitor from Merck &amp; Co. Currently it is approved in more than 80 countries worldwide but not in the US, where the Food and Drug Administration has required additional safety and efficacy data for etoricoxib before it will issue approval.The drug Etorcoxib goes by several different trade names one of which is Arcoxia, and to date is approved in over 80 different countries. It is used as a pain relief for many different ailments including but not limited to treatment of rheumatoid arthritis, osteoarthritis, ankylosing spondylitis, psoriatic arthritis, lower back pain, acute pain and even gout.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/dbf4f97e4b74498d52a0b671e22dcc6f">
+								<span class="ui teal tiny label tag right floated">Amphetamine</span>
+								3-FMC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/dbf4f97e4b74498d52a0b671e22dcc6f">
+											<img src="/item-image/dbf4f97e4b74498d52a0b671e22dcc6f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/dbf4f97e4b74498d52a0b671e22dcc6f">
+										<div class="ui dark-green basic tiny button fluid left aligned">500 gram</div>
+										<div class="ui basic left pointing label price">1880 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>3-Fluoromethcathinone is a chemical compound of the phenethylamine, amphetamine, and cathinone classes that has been sold online as a designer drug. It is a structural isomer of flephedrone. 3-Fluoroisomethcathinone is produced as a by-product when 3-FMC is synthesized, the activity of this compound is unknown</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/e246061d68a94cd741216a4a0b518069">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Opium 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/e246061d68a94cd741216a4a0b518069">
+											<img src="/item-image/e246061d68a94cd741216a4a0b518069?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/e246061d68a94cd741216a4a0b518069">
+										<div class="ui dark-green basic tiny button fluid left aligned">50g</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Opium is a narcotic depressant derived from the seedpod of an opium poppy (Papaver somniferum). As a primary source of morphine and codeine, it is commonly used as an analgesic painkiller. Opium itself is now illegal to possess, especially in its most popular illicit form, heroin. It can be a source of euphoria or peacefulness depending on the amount of use and method</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/f74c0fd3f1a0475745c0952d631ca168">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								KETAMINE HCL CRYSTAL POWDER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/f74c0fd3f1a0475745c0952d631ca168">
+											<img src="/item-image/f74c0fd3f1a0475745c0952d631ca168?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/f74c0fd3f1a0475745c0952d631ca168">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">1800 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ketamine is frequently used in severely injured people and appears to be safe.
+A clinical practice guideline supports the use of ketamine as a dissociative sedative in emergency medicine.
+It is the drug of choice for people in traumatic shock who are at risk of hypotension.
+Low blood pressure is harmful to people with severe head injury and ketamine is least likely to cause low blood pressure, often even able to prevent it.
+ Ketamine is also used for pain management.
+Low doses of ketamine may reduce morphine use, nausea, and vomiting after surgery. Ketamine is used for pain relief. Buy Ketamine HCL Crystal Powder Online Without Prescription.
+Here, you can safely and secure buy ketamine crystal online without prescription. Products are of the best quality and about 98.98% pure and older than 11 years. Packaging is safe and shipping is 100% discreet and delivery is very fast. We ship with FedEx  Buy Ketamine HCL crystal powder Online Here.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/561d79cc6bc34de1740b7868ca66d788">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								THC Concentrates
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/561d79cc6bc34de1740b7868ca66d788">
+											<img src="/item-image/561d79cc6bc34de1740b7868ca66d788?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/561d79cc6bc34de1740b7868ca66d788">
+										<div class="ui dark-green basic tiny button fluid left aligned">500</div>
+										<div class="ui basic left pointing label price">24995 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>$49.99 Per Gram
+Strong THC Shatter
+99% THC Concentrates
+Bulk Discounts on 50 QTY – Contact Us</p>
+
+<p>This is the longer sample description area where you can describe your products or services in more detail</p>
+
+<p>Recreational License in State
+Locally Grown
+Locally Processed
+Non-GMO
+Testing Results Available
+White-Labeling Available
+Wholesale Non-Packaged Available</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/b14387053f0749d376eaec4794d79678">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Biosol 10% CBD Powder
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/b14387053f0749d376eaec4794d79678">
+											<img src="/item-image/b14387053f0749d376eaec4794d79678?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/b14387053f0749d376eaec4794d79678">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/ kilo</div>
+										<div class="ui basic left pointing label price">10000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>CBD Powder Created Specifically for Beverages &amp; Consumable Products
+Pure Pharma Grade Quality Isolate</p>
+
+<p>Biosol CBD Powder is a proprietary formulation of CBD that is the highest bio-available, longest shelf stable CBD product in the market today. We convert pure Pharma grade quality isolate (GMP certified), into a water soluble nano-particle formulation applied in many delivery forms similar to those in the pharma/ nutraceutical arena. The powder is microencapsulated in a cryoprotectant matrix which includes a bio- enhancer and certain GRAS excipients. Biosol CBD Powder is a core ingredient for infusion into a variety of drink, supplement, food, and spices.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/d41ae98ccf3a48ef533797c141ded9dc">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ADDERALL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/d41ae98ccf3a48ef533797c141ded9dc">
+											<img src="/item-image/d41ae98ccf3a48ef533797c141ded9dc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/d41ae98ccf3a48ef533797c141ded9dc">
+										<div class="ui dark-green basic tiny button fluid left aligned">30mg</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Adderall, a drug that comprises amphetamine, acts as a psycho stimulant and is taken by those with narcolepsy and attention deficit hyperactivity disorder (ADHD).</p>
+
+<p>Adderall comprises 4 amphetamines—racemic amphetamine sulphate, racemic amphetamine aspartate monohydrate, dextroamphetamine sulphate, and dextroamphetamine saccharide.</p>
+
+<p>It is available as instant release (IR) medication and extended release (XR) medication.</p>
+
+<p>While the IR variant is used in the treatment of narcolepsy and ADHD, the XR variant is used only in case of ADHD.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/ece7948801a84945567e0697c0c820db">
+								<span class="ui teal tiny label tag right floated">Stimulants</span>
+								MDPV
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/ece7948801a84945567e0697c0c820db">
+											<img src="/item-image/ece7948801a84945567e0697c0c820db?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/ece7948801a84945567e0697c0c820db">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg</div>
+										<div class="ui basic left pointing label price">2600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>MDPV (Methylenedioxypyrovalerone) is a psychoactive stimulant narcotic that acts as a norepinephrine-dopamine reuptake inhibitor (NDRI). MDPV is the active ingredient in “bath salts,” a designer drug that is knowingly labeled as ‘not for human consumption’ so that the drug is legally available on the market.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/7b161e0d53e54eae62728798b6c9d0b1">
+								<span class="ui teal tiny label tag right floated">Empathogens</span>
+								Methylone
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/7b161e0d53e54eae62728798b6c9d0b1">
+											<img src="/item-image/7b161e0d53e54eae62728798b6c9d0b1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/7b161e0d53e54eae62728798b6c9d0b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Methylone is an empathogen and stimulant psychoactive drug. It is a member of the substituted amphetamine, substituted cathinone and substituted methylenedioxyphenethylamine classes. Methylone is the substituted cathinone analog of MDMA and the 3,4-methylenedioxy analog of methcathinone</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/5e7653be0b414a8b46eacb59e869b7b9">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Green Roads – 200mg Fruit Bites
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/5e7653be0b414a8b46eacb59e869b7b9">
+											<img src="/item-image/5e7653be0b414a8b46eacb59e869b7b9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/5e7653be0b414a8b46eacb59e869b7b9">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/ pack</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>– Pharmacist formulated
+– Third party lab tested to ensure that what’s on the label is what’s in the package</p>
+
+<p>Green Roads CBD Fruit Snacks include a moderate dose of CBD and heavy dose of tropical flavor!</p>
+
+<p>Including Green Apple, Grape, Lemon, Black Cherry, Strawberry, and Orange, these snacks are the ideal CBD snack that can be incorporated into anyone’s daily routine.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/6c8c1b5bdbc6483279383ad1c0fe494e">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Ultra Premium Terpinated (Terpine Activated) 250 MG Balm 1.0 OZ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/6c8c1b5bdbc6483279383ad1c0fe494e">
+											<img src="/item-image/6c8c1b5bdbc6483279383ad1c0fe494e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/6c8c1b5bdbc6483279383ad1c0fe494e">
+										<div class="ui dark-green basic tiny button fluid left aligned">50 unit</div>
+										<div class="ui basic left pointing label price">2249 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Our Ultra Premium Terpine Activated balm is one of the most unique products on the marketplace. Packed with 250 mg of CBD, as well as the actual terpenes of the plant, this balm is as powerful as it gets for natural skin therapy and pain relief of many varieties
+Rapidly changing regulations make it hard to ﬁnd reliable sources of information about Hemp Oils / CBD. Our primary goal is to provide the wholesaler with a product that makes their job easier, and to provide the consumer with a brand that they can trust in what is otherwise a murky world of confusion and disinformation.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/3a6c409078294bf76b361f46c7ce51e2">
+								<span class="ui teal tiny label tag right floated">Psychedelics</span>
+								2C-I
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/3a6c409078294bf76b361f46c7ce51e2">
+											<img src="/item-image/3a6c409078294bf76b361f46c7ce51e2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/3a6c409078294bf76b361f46c7ce51e2">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">540 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>2,5-Dimethoxy-4-iodoamphetamine is a psychedelic drug and a substituted amphetamine. Unlike many other substituted amphetamines, however, it is not primarily a stimulant. DOI has a stereocenter and R–DOI is the more active stereoisomer.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/5629c265ab274a4c757a3d825672d091">
+								<span class="ui teal tiny label tag right floated">Benzodiazepines</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ATIVAN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/5629c265ab274a4c757a3d825672d091">
+											<img src="/item-image/5629c265ab274a4c757a3d825672d091?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/5629c265ab274a4c757a3d825672d091">
+										<div class="ui dark-green basic tiny button fluid left aligned"> 2 mg </div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Lorazepam, sold under the brand name Ativan among others, is a benzodiazepine medication. It is used to treat anxiety disorders, trouble sleeping, active seizures including status epilepticus, alcohol withdrawal, and chemotherapy-induced nausea and vomiting.Ativan is the trade name of Lorazepam, a drug that falls in the benzodiazepine group of drugs that act as amnesics, anxiolytics, sedatives, antiemetics, anticonvulsants, and muscle relaxants.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/a64f3d722831472978ad1157f9175060">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Fresh Farms Pure Crystallized CBD Isolate
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/a64f3d722831472978ad1157f9175060">
+											<img src="/item-image/a64f3d722831472978ad1157f9175060?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/a64f3d722831472978ad1157f9175060">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/gram</div>
+										<div class="ui basic left pointing label price">599 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pharmaceutical Grade
+THC Free
+Non GMO
+Full Spectrum
+A+ quality
+Organically grown hemp
+Grown In The U.S.A</p>
+
+<p>Fresh Farms Pure Crystallized CBD Isolate</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/44d5b5ba1eb945077c6af7d8023f7a95">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								CELEBREX
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/44d5b5ba1eb945077c6af7d8023f7a95">
+											<img src="/item-image/44d5b5ba1eb945077c6af7d8023f7a95?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/44d5b5ba1eb945077c6af7d8023f7a95">
+										<div class="ui dark-green basic tiny button fluid left aligned"> 400 mg</div>
+										<div class="ui basic left pointing label price">550 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Celecoxib, sold under the brand name Celebrex among others, is a COX-2 selective nonsteroidal anti-inflammatory drug  You may be interested in taking Celebrex and Celecoxib, which for reference are the exact same drugs just one is the official brand name and the other the generic name, if you are suffering from painful medical conditions such as osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/4c45a31a824849b94fe1366acab333e6">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								 Buprenorphine 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/4c45a31a824849b94fe1366acab333e6">
+											<img src="/item-image/4c45a31a824849b94fe1366acab333e6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/4c45a31a824849b94fe1366acab333e6">
+										<div class="ui dark-green basic tiny button fluid left aligned">10mcg</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>CD
+How Supplied:
+Buprenorphine</p>
+
+<p>5 microgram/hr square patch,
+10 microgram/hr rectangular patch,
+15 microgram/hr rectangular patch,
+20 microgram/hr square patch,
+Beige transdermal matrix patches marked with BuTrans and strength.
+Indications:
+Non-malignant moderate chronic pain when an opioid is necessary.
+Adults:
+Initially one 5 microgram/hr patch.
+Apply patch to non-hairy area of outer arm, chest or back, remove and replace with new patch every 7 days using a different site. Titrate with stronger patches until pain controlled. Do not use more than 2 patches at a time. Use short-acting supplemental analgesics during initiation and titration.
+Children:
+Under 18 years, not recommended.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/f7074fb5fabc43fd415278aef1377106">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								River Rock CBD Hemp Flower
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/f7074fb5fabc43fd415278aef1377106">
+											<img src="/item-image/f7074fb5fabc43fd415278aef1377106?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/f7074fb5fabc43fd415278aef1377106">
+										<div class="ui dark-green basic tiny button fluid left aligned">p/ lb</div>
+										<div class="ui basic left pointing label price">1900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>A Colorado Association of Hemp Growers, CBD Hemp Oil extractor’s, Isolate
+producers, all based in and around Pueblo County Colorado.</p>
+
+<p>The Hemp plant is the primary raw material the company uses. The company’s
+primary product line is Hemp Flower, Hemp Crude Oil, Hemp Distillate and Hemp
+Isolate. The company’s products are sold across the United States and Canada and
+other countries. Primary customers are CBD Wholesaler’s, CBD retail stores, along
+with Vape accessory wholesalers and retailers.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/a54c6500de2048e04a92f68f6ba02722">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								EPHEDRINE POWDER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/a54c6500de2048e04a92f68f6ba02722">
+											<img src="/item-image/a54c6500de2048e04a92f68f6ba02722?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/a54c6500de2048e04a92f68f6ba02722">
+										<div class="ui dark-green basic tiny button fluid left aligned">100g</div>
+										<div class="ui basic left pointing label price">730 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ephedrine for sale.  Ephedrine is used for temporary relief of shortness of breath, chest tightness, and wheezing due to bronchial asthma,It is a central nervous system stimulant used to treat breathing problems,nasal congestion.Ephedrine can as well be used to treat certain sleeping disorders and urine-control problems  .You can buy Ephedrine powder online cheap from us.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/5b12f207137644e86fa41ffe22d3c4ee">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Oxycodone available 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/5b12f207137644e86fa41ffe22d3c4ee">
+											<img src="/item-image/5b12f207137644e86fa41ffe22d3c4ee?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/5b12f207137644e86fa41ffe22d3c4ee">
+										<div class="ui dark-green basic tiny button fluid left aligned">30mg</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This medication is used to help relieve moderate to severe pain. Oxycodone belongs to a class of drugs known as opioid (narcotic) analgesics. It works in the brain to change how your body feels and responds to pain.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/58a5744e1777418047165e423b60a3b0">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								BULK CBD ISOLATE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/58a5744e1777418047165e423b60a3b0">
+											<img src="/item-image/58a5744e1777418047165e423b60a3b0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/58a5744e1777418047165e423b60a3b0">
+										<div class="ui dark-green basic tiny button fluid left aligned">1,000 grams </div>
+										<div class="ui basic left pointing label price">10000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Bulk CBD Isolate – 100 gram, 250 gram, 500 gram, and 1 kilogram (1,000g) tubs of +99% isolated cannabidiol (CBD). Prices for bulk CBD are negotiable.</p>
+
+<p>Inquire with our wholesale team for quantities larger than 1 kilogram (1,000 grams) –</p>
+
+<p>Shipped via UPS. 1-3 business day turnaround for wholesale CBD Isolate orders.</p>
+
+<p>*Credit cards not accepted for bulk CBD isolate.</p>
+
+<p>About Bulk CBD Isolate:
+96%-99.9% pure cannabidiol (CBD) in crystalline form
+Industrial hemp-derived
+Non-synthetic/natural
+Sourced from Federal Farm Bill compliant hemp grown without chemical fertilizers or pesticides.
+Every batch is 3rd party lab tested for:
+Cannabinoid potency
+Solvents
+Heavy metals
+Pesticides
+Appearance – White/clear crystals
+Smell/taste – Odorless/flavorless
+3rd Party Labs CBD Isolate information:</p>
+
+<p>Click the below tab labeled “Test Results” to see COAs for the current batch.</p>
+
+<p>Most third-party laboratories willing to test hemp/cannabis cannot consistently or reliably detect cannabidiol (CBD) a</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/0ad97f27d3ff49e1467abfc2d8148065">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Morphine SULFATE
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/0ad97f27d3ff49e1467abfc2d8148065">
+											<img src="/item-image/0ad97f27d3ff49e1467abfc2d8148065?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/0ad97f27d3ff49e1467abfc2d8148065">
+										<div class="ui dark-green basic tiny button fluid left aligned">morphine</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This medication is used to help relieve moderate to severe pain. Morphine belongs to a class of drugs known as opioid (narcotic) analgesics. It works in the brain to change how your body feels and responds to pain</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/2799fdaf1b91423f641c7073c8700822">
+								<span class="ui teal tiny label tag right floated">Stimulants</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Pentedrone
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/2799fdaf1b91423f641c7073c8700822">
+											<img src="/item-image/2799fdaf1b91423f641c7073c8700822?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/2799fdaf1b91423f641c7073c8700822">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Pentedrone (also known as drone) is a lesser-known novel stimulant substance of the cathinone class. Pentedrone belongs to a group of compounds known as substituted cathinones. Pentedrone acts as a norepinephrine-dopamine reuptake inhibitor (NDRI). Pentedrone</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/28b8adb0a81e489070dacd89beb2dcf4">
+								<span class="ui teal tiny label tag right floated">Psychedelics</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Butylone
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/28b8adb0a81e489070dacd89beb2dcf4">
+											<img src="/item-image/28b8adb0a81e489070dacd89beb2dcf4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/28b8adb0a81e489070dacd89beb2dcf4">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">4000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Butylone, also known as β-keto-N-methylbenzodioxolylbutanamine, is an entactogen, psychedelic, and stimulant psychoactive drug of the phenethylamine chemical class. It is the β-keto analogue of MBDB and the substituted methylenedioxyphenethylamine analogue of buphedrone</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/095dde850238430c7cff4ff7192b493d">
+								<span class="ui teal tiny label tag right floated">Stimulants</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								 2-FMA 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/095dde850238430c7cff4ff7192b493d">
+											<img src="/item-image/095dde850238430c7cff4ff7192b493d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/095dde850238430c7cff4ff7192b493d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 kg</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>2-Fluoromethamphetamine is a stimulant drug of the methamphetamine family which has been used as a designer drug. It is purported to possess little recreational value because less euphoria is produced than other amphetamines. It is said to be a functional stimulant with properties similar to Adderall</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/67da3392fe5a4a72661c45b636500fa9">
+								<span class="ui teal tiny label tag right floated">4-EMC</span>
+								4-EMC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/67da3392fe5a4a72661c45b636500fa9">
+											<img src="/item-image/67da3392fe5a4a72661c45b636500fa9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/67da3392fe5a4a72661c45b636500fa9">
+										<div class="ui dark-green basic tiny button fluid left aligned">500g</div>
+										<div class="ui basic left pointing label price">2500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>4-Ethylmethcathinone is a recreational designer drug of the stimulant and entactogen class. It is a structural isomer of 4-MEC.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/7547e0c8515d4d3e52c18da7d34013a9">
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								THC Cartridges
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/7547e0c8515d4d3e52c18da7d34013a9">
+											<img src="/item-image/7547e0c8515d4d3e52c18da7d34013a9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/7547e0c8515d4d3e52c18da7d34013a9">
+										<div class="ui dark-green basic tiny button fluid left aligned">20  cartridges</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Retails for $79.99 Per 1 Gram Cartridge
+Wholesale for $30.00 Per 100 Ordered
+99% THC Oil (Paperwork Attached)</p>
+
+<p>This is the longer sample description area where you can describe your products or services in more detail</p>
+
+<p>Recreational License in State
+Locally Grown
+Locally Processed
+Non-GMO
+Testing Results Available
+White-Labeling Available
+Wholesale Non-Packaged Available</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/38a97b6e7d934bff6280d47108e858ba">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								AMBIEN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/38a97b6e7d934bff6280d47108e858ba">
+											<img src="/item-image/38a97b6e7d934bff6280d47108e858ba?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/38a97b6e7d934bff6280d47108e858ba">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 mg</div>
+										<div class="ui basic left pointing label price">700 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Zolpidem, sold under the brand name Ambien, among others, is a medication primarily used for the short term treatment of sleeping problems. Guidelines recommend that it be used only after counseling and behavioral changes have been tried.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/5b6d5e0238da4a29695667be115085f8">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ARCOXIA
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/5b6d5e0238da4a29695667be115085f8">
+											<img src="/item-image/5b6d5e0238da4a29695667be115085f8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/5b6d5e0238da4a29695667be115085f8">
+										<div class="ui dark-green basic tiny button fluid left aligned">120mg</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Etoricoxib is a selective COX-2 inhibitor from Merck &amp; Co. Currently it is approved in more than 80 countries worldwide but not in the US, where the Food and Drug Administration has required additional safety and efficacy data for etoricoxib before it will issue approval.The drug Etorcoxib goes by several different trade names one of which is Arcoxia, and to date is approved in over 80 different countries. It is used as a pain relief for many different ailments including but not limited to treatment of rheumatoid arthritis, osteoarthritis, ankylosing spondylitis, psoriatic arthritis, lower back pain, acute pain and even gout.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/648870850b234e547c7d594248ce8810">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Nucynta ER (tapentadol)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/648870850b234e547c7d594248ce8810">
+											<img src="/item-image/648870850b234e547c7d594248ce8810?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/648870850b234e547c7d594248ce8810">
+										<div class="ui dark-green basic tiny button fluid left aligned">50mg</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Tapentadol is a centrally acting opioid analgesic of the benzenoid class with a dual mode of action as an agonist of the μ-opioid receptor and as a norepinephrine reuptake inhibitor. Analgesia occurs within 32 minutes of oral administration, and lasts for 4–6 hours.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/bb7fac5c9edd41a76c68de73af4d7406">
+								<span class="ui teal tiny label tag right floated">Prescription</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								BUSPAR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/bb7fac5c9edd41a76c68de73af4d7406">
+											<img src="/item-image/bb7fac5c9edd41a76c68de73af4d7406?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/bb7fac5c9edd41a76c68de73af4d7406">
+										<div class="ui dark-green basic tiny button fluid left aligned">30 mg</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Buspirone, sold under the brand name Buspar among others, is a medication primarily used to treat anxiety disorders particularly general anxiety disorder. Benefits support its short term use. It is not useful for psychosis. It is taken by mouth, and it may take up to four weeks for an effect</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/3e0cc0932c8c4fd551c084ea3d02009a">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Lifted Lotus CBD Pain Salve 200 MG 2 OZ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/3e0cc0932c8c4fd551c084ea3d02009a">
+											<img src="/item-image/3e0cc0932c8c4fd551c084ea3d02009a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/3e0cc0932c8c4fd551c084ea3d02009a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 p/balm</div>
+										<div class="ui basic left pointing label price">620 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>CBD Wear and Tear Pain Salve
+200 MG
+2 OZ
+Bulk Discounts Available</p>
+
+<p>Organically Grown
+Domestically Processed
+Contact us for Bulk Discounts</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/rushking/item/fe4931a65f6048fa4cebcfbbb10b817c">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								Hydrocodone Available now
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/rushking/item/fe4931a65f6048fa4cebcfbbb10b817c">
+											<img src="/item-image/fe4931a65f6048fa4cebcfbbb10b817c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/rushking/item/fe4931a65f6048fa4cebcfbbb10b817c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10mg</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hydrocodone is used to help relieve severe ongoing pain. Hydrocodone belongs to a class of drugs known as opioid (narcotic) analgesics. It works in the brain to change how your body feels and responds to pain.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 802 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" href="/css/semantic.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link href="/img/favicon.ico" rel="shortcut icon" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input name="subcategory" value="0" type="hidden" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg viewBox="0 0 24 24" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a href="/settings/user" class="item">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a href="/referrals" class="item">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input type="hidden" name="csrf_token" value="" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a class="ui button fluid green tiny" href="/app/download">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a class="item" href="/feed">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item active" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a class="item fluid" href="/settings/language/en">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a href="/settings/language/es" class="item fluid">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a href="/settings/language/rs" class="item fluid">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a class="item fluid" href="/settings/language/tr">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5461.02 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								163.73 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7811.92 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>234.28 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4917.39 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>147.03 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4243.69 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>127.21 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>356329.27 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10686.31 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5461.02 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>163.73 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid divided">
+							<div class="twelve wide column">
+								<div class="segment static ui">
+									<h3 class="ui dividing header capitalize">REST API</h3>
+									<div><h1>Tochka Free Market REST API</h1>
+
+<p>Rest API handles use same endpoints as regular site but with ?json=true added to query path.</p>
+
+<p>List of methods</p>
+
+<ul>
+<li>Captcha</li>
+<li>Login</li>
+<li>Register</li>
+<li>SERP (list items)</li>
+<li>Store Info</li>
+<li>Item Info</li>
+<li>Transaction List</li>
+<li>Transaction Info</li>
+<li>Reply to Transaction Chat</li>
+</ul>
+
+<h2>Captcha</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/captcha/:captcha_id">http://tochka3evlj3sxdv.onion/captcha/:captcha_id</a></h3>
+
+<p>Use captcha_id from both responses to display captcha:</p>
+
+<p><a href="http://tochka3evlj3sxdv.onion/captcha/:captcha_id">http://tochka3evlj3sxdv.onion/captcha/:captcha_id</a></p>
+
+<h2>Login</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/auth/login">http://tochka3evlj3sxdv.onion/api/auth/login</a></h3>
+
+<p>Example:</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/auth/login
+
+{
+    &quot;captcha_id&quot;:&quot;jVnRGZ9sQHzaJVPiv9mY&quot;
+}
+</code></pre>
+
+<p>Captcha id must be used to obtain captcha image on /captcha/:captcha_id route</p>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/auth/login">http://tochka3evlj3sxdv.onion/api/auth/login</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>username</li>
+<li>passphrase</li>
+<li>captcha_id</li>
+<li>captcha</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>&gt; torsocks curl --data &quot;username=test&amp;passphrase=test&amp;captcha_id=9mkx5dXi94QfSTmLbOTI&amp;captcha=7005&quot; http://tochka3evlj3sxdv.onion/api/auth/login
+
+{
+    &quot;api_session&quot;: {
+        &quot;token&quot;: &quot;a6949a9fa5f24de272fbe1e0cab9cdf6&quot;,
+        &quot;end_date&quot;: &quot;2018-03-23T22&quot;,
+        &quot;is_2fa_session&quot;: false,
+        &quot;is_2fa_completed&quot;: false
+    }
+}
+</code></pre>
+
+<p><strong>All subsequent requests must include token get parameter</strong></p>
+
+<h2>Login 2FA</h2>
+
+<h3>POST Response (1st Factor)</h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>username</li>
+<li>passphrase</li>
+<li>captcha_id</li>
+<li>captcha</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>&gt; torsocks curl --data &quot;username=test&amp;passphrase=test&amp;captcha_id=9mkx5dXi94QfSTmLbOTI&amp;captcha=7005&quot; http://tochka3evlj3sxdv.onion/api/auth/login
+
+{
+    &quot;api_session&quot;: {
+        &quot;token&quot;: &quot;a6949a9fa5f24de272fbe1e0cab9cdf6&quot;,
+        &quot;end_date&quot;: &quot;2018-03-23T22&quot;,
+        &quot;is_2fa_session&quot;: true,
+        &quot;is_2fa_completed&quot;: false
+    },
+    &quot;secret_text&quot;: &quot;xxx&quot;
+}
+</code></pre>
+
+<h3>POST Response (2nd Factor)</h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>token</li>
+<li>decryptedmessage</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>&gt; torsocks curl --data &quot;username=test_1&amp;passphrase=test_1&amp;token=a6949a9fa5f24de272fbe1e0cab9cdf6&amp;decryptedmessage=xxx&quot; http://tochka3evlj3sxdv.onion/api/auth/login
+
+{
+    &quot;api_session&quot;: {
+        &quot;token&quot;: &quot;a6949a9fa5f24de272fbe1e0cab9cdf6&quot;,
+        &quot;end_date&quot;: &quot;2018-03-23T22&quot;,
+        &quot;is_2fa_session&quot;: true,
+        &quot;is_2fa_completed&quot;: true
+    }
+}
+</code></pre>
+
+<h2>Register</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/auth/register">http://tochka3evlj3sxdv.onion/api/auth/register</a></h3>
+
+<p>Example:</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/auth/register
+
+{&quot;captcha_id&quot;:&quot;jVnRGZ9sQHzaJVPiv9mY&quot;}
+</code></pre>
+
+<p>Captcha id must be used to obtain captcha image on /captcha/:captcha_id route</p>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/auth/register">http://tochka3evlj3sxdv.onion/api/auth/register</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>username</li>
+<li>passphrase_1</li>
+<li>passphrase_2</li>
+<li>captcha_id</li>
+<li>captcha</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>&gt; torsocks curl --data &quot;username=test&amp;passphrase_1=test&amp;passphrase_2=test&amp;role=seller&amp;captcha_id=CumVFfRdnwEr7VPPbK6s&amp;captcha=6207&quot; http://tochka3evlj3sxdv.onion/auth/login?json=true
+
+{&quot;captcha_id&quot;:&quot;WxA3CXmhiUYs8CJnvSVe&quot;,&quot;error&quot;:&quot;Invalid captcha&quot;} 
+</code></pre>
+
+<h2>Items Categories (Mobile App Version)</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/categories?token=:token">http://tochka3evlj3sxdv.onion/api/categories?token=:token</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; curl http://tochka3evlj3sxdv.onion/api/categories?token=:to
+
+{
+    &quot;selected_package_type&quot;: &quot;mail&quot;,
+    &quot;item_categories&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;parent_id&quot;: 0,
+            &quot;icon&quot;: &quot;&quot;,
+            &quot;price_en&quot;: &quot;Drugs&quot;,
+            &quot;name_ru&quot;: &quot;Психоактивные вещества&quot;,
+            &quot;name_de&quot;: &quot;&quot;,
+            &quot;name_es&quot;: &quot;&quot;,
+            &quot;name_fr&quot;: &quot;&quot;,
+            &quot;name_rs&quot;: &quot;&quot;,
+            &quot;name_tr&quot;: &quot;&quot;,
+            &quot;item_count&quot;: 0,
+            &quot;user_count&quot;: 0,
+            &quot;name&quot;: &quot;Психоактивные вещества&quot;,
+            &quot;subcategories&quot;: [
+                {
+                    &quot;id&quot;: 5,
+                    &quot;parent_id&quot;: 1,
+                    &quot;icon&quot;: &quot;&quot;,
+                    &quot;price_en&quot;: &quot;Stimulants&quot;,
+                    &quot;name_ru&quot;: &quot;Стимуляторы&quot;,
+                    &quot;name_de&quot;: &quot;&quot;,
+                    &quot;name_es&quot;: &quot;&quot;,
+                    &quot;name_fr&quot;: &quot;&quot;,
+                    &quot;name_rs&quot;: &quot;&quot;,
+                    &quot;name_tr&quot;: &quot;&quot;,
+                    &quot;item_count&quot;: 0,
+                    &quot;user_count&quot;: 0,
+                    &quot;name&quot;: &quot;Стимуляторы&quot;,
+                    &quot;subcategories&quot;: [
+                        {
+                            &quot;id&quot;: 116,
+                            &quot;parent_id&quot;: 5,
+                            &quot;icon&quot;: &quot;&quot;,
+                            &quot;price_en&quot;: &quot;Ephedrine&quot;,
+                            &quot;name_ru&quot;: &quot;Эфедрин&quot;,
+                            &quot;name_de&quot;: &quot;&quot;,
+                            &quot;name_es&quot;: &quot;&quot;,
+                            &quot;name_fr&quot;: &quot;&quot;,
+                            &quot;name_rs&quot;: &quot;&quot;,
+                            &quot;name_tr&quot;: &quot;&quot;,
+                            &quot;item_count&quot;: 0,
+                            &quot;user_count&quot;: 0,
+                            &quot;name&quot;: &quot;Эфедрин&quot;,
+                            &quot;subcategories&quot;: null
+                        },
+                    ]
+                }
+            ]
+        }
+    ],
+    &quot;user&quot;: {},
+    &quot;currency_rates&quot;: {}
+}
+</code></pre>
+
+<h2>Countries</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/countries?token=:token">http://tochka3evlj3sxdv.onion/api/countries?token=:token</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/countries?token=:token
+
+{
+    &quot;countries&quot;: [
+        {
+            &quot;name_en&quot;: &quot;Afghanistan&quot;
+        },
+        ...
+    ]
+}
+</code></pre>
+
+<h2>Items SERP</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/serp?token=:token">http://tochka3evlj3sxdv.onion/api/serp?token=:token</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>category</li>
+<li>shipping_to</li>
+<li>shipping_from</li>
+<li>domestic</li>
+<li>page</li>
+</ul>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/serp?token=:token
+
+{
+    &quot;page&quot;: 1,
+    &quot;number_of_pages&quot;: 214,
+    &quot;sort_by&quot;: &quot;popularity&quot;,
+    &quot;city&quot;: &quot;All countries&quot;,
+    &quot;geo_cities&quot;: [
+        {
+            &quot;geonameid&quot;: 3041732,
+            &quot;name&quot;: &quot;Mariehamn&quot;,
+            &quot;country&quot;: &quot;Aland Islands&quot;,
+            &quot;subcountry&quot;: &quot;Mariehamns stad&quot;
+        }
+    ],
+    &quot;selected_package_type&quot;: &quot;all&quot;,
+    &quot;shipping_from_list&quot;: [
+        &quot;&quot;,
+        &quot;Afghanistan&quot;
+    ],
+    &quot;shipping_to_list&quot;: [
+        &quot;Afghanistan&quot;
+        &quot;Worldwide&quot;
+    ],
+    &quot;account&quot;: &quot;all&quot;,
+    &quot;item_categories&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;parent_id&quot;: 0,
+            &quot;icon&quot;: &quot;&quot;,
+            &quot;price_en&quot;: &quot;Drugs&quot;,
+            &quot;name_ru&quot;: &quot;Психоактивные вещества&quot;,
+            &quot;name_de&quot;: &quot;&quot;,
+            &quot;name_es&quot;: &quot;&quot;,
+            &quot;name_fr&quot;: &quot;&quot;,
+            &quot;name_rs&quot;: &quot;&quot;,
+            &quot;name_tr&quot;: &quot;&quot;,
+            &quot;item_count&quot;: 6570,
+            &quot;user_count&quot;: 2242,
+            &quot;Name&quot;: &quot;Drugs&quot;,
+            &quot;subcategories&quot;: [
+                {
+                    &quot;id&quot;: 2,
+                    &quot;parent_id&quot;: 1,
+                    &quot;icon&quot;: &quot;&quot;,
+                    &quot;price_en&quot;: &quot;Cannabis&quot;,
+                    &quot;name_ru&quot;: &quot;Каннабис&quot;,
+                    &quot;name_de&quot;: &quot;&quot;,
+                    &quot;name_es&quot;: &quot;&quot;,
+                    &quot;name_fr&quot;: &quot;&quot;,
+                    &quot;name_rs&quot;: &quot;&quot;,
+                    &quot;name_tr&quot;: &quot;&quot;,
+                    &quot;item_count&quot;: 2845,
+                    &quot;user_count&quot;: 572,
+                    &quot;subcategories&quot;: [
+                        {
+                            &quot;id&quot;: 13,
+                            &quot;parent_id&quot;: 2,
+                            &quot;icon&quot;: &quot;&quot;,
+                            &quot;price_en&quot;: &quot;Buds&quot;,
+                            &quot;name_ru&quot;: &quot;Соцветия&quot;,
+                            &quot;name_de&quot;: &quot;&quot;,
+                            &quot;name_es&quot;: &quot;&quot;,
+                            &quot;name_fr&quot;: &quot;&quot;,
+                            &quot;name_rs&quot;: &quot;&quot;,
+                            &quot;name_tr&quot;: &quot;&quot;,
+                            &quot;item_count&quot;: 2165,
+                            &quot;user_count&quot;: 246
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    &quot;user&quot;: {
+        &quot;username&quot;: &quot;test_user_1&quot;,
+        &quot;registration_date&quot;: &quot;2018-12-0&quot;,
+        &quot;last_login_date&quot;: &quot;2018-12-02T23&quot;,
+        &quot;bitmessage&quot;: &quot;&quot;,
+        &quot;tox&quot;: &quot;&quot;,
+        &quot;email&quot;: &quot;&quot;,
+        &quot;pgp&quot;: &quot;&quot;,
+        &quot;description&quot;: &quot;&quot;,
+        &quot;long_description&quot;: &quot;&quot;,
+        &quot;is_admin&quot;: false,
+        &quot;is_staff&quot;: false,
+        &quot;vendor_level&quot;: 0,
+        &quot;buyer_level&quot;: 1
+    },
+    &quot;serp_items&quot;: [
+        {
+            &quot;item_uuid&quot;: &quot;a3db108d934242c45ecba330961e860f&quot;,
+            &quot;storename&quot;: &quot;dutch-christiana&quot;,
+            &quot;store_description&quot;: &quot;WE SHIP FROM FRANCE WORLDWIDE !!!&quot;,
+            &quot;store_is_suspended&quot;: false,
+            &quot;store_is_trusted&quot;: false,
+            &quot;store_is_allowed_to_sell&quot;: true,
+            &quot;store_is_free_account&quot;: false,
+            &quot;store_is_bronze_account&quot;: false,
+            &quot;store_is_silver_account&quot;: false,
+            &quot;store_is_gold_account&quot;: true,
+            &quot;store_last_login_date&quot;: &quot;2018-11-26&quot;,
+            &quot;store_registraion_date&quot;: &quot;2017-08-2&quot;,
+            &quot;number_of_red_warnings&quot;: 0,
+            &quot;number_of_green_warnings&quot;: 0,
+            &quot;number_of_yellow_warnings&quot;: 0,
+            &quot;item_created_at&quot;: &quot;2017-08-28&quot;,
+            &quot;item_name&quot;: &quot; ★COCAINE★ 90% PURITY UNCUT AAA+ HQ FRANCE SHIPPING&quot;,
+            &quot;item_description&quot;: &quot;HIGHEST RATED VENDOR OF THE 2 BIGGEST MARKETS EVER WITH MORE THEN 10 K OF POSITIVE FEEDBACK (ASK SUPPORT AND ADMIN WILL CONFIRM THIS! FOR PRIVACY REASONS I WILL NOT USE MY OLD PGP AND PROVIDE MY OLD ACCOUNTNAME (SO DONT ASK/GUESS FOR IT)\r\n\r\nSELECT THIS ORDER MULTIPLE TIMES IF YOU WANT MORE !\r\n\r\nSIMPLE PRICES IMPORTANT FOR BULK 100G+ HEROINE/COCAINE/KETAMINE/METH CONTACT ME FOR A BETTER PRICE.\r\n\r\n★MDMA 3.5 EURO A GRAM FROM 10 G +\r\n\r\n★MDMA 7.5 EURO A GRAM FROM 1 G TILL 10 G\r\n\r\n★XTC 1.5 EURO A PILL FOR 10 PILLS +\r\n\r\n★COCAINE 50 EURO A GRAM FROM 1 G +\r\n\r\n★HEROINE 35 EURO A GRAM FROM 1 G +\r\n\r\n★KETAMINE 20 EURO A GRAM FROM 1 G +\r\n\r\n★METH 35 EURO A GRAM FROM 1 G +\r\n\r\n★SPEED 2 EURO A GRAM FROM 10 G +\r\n\r\n★COMMERCE HASH 1.5 EURO A GRAM FROM 100 G +\r\n\r\n★AMNESIA HAZE 7 EURO A GRAM FROM 1 G +\r\n\r\n★AMNESIA HAZE 9 EURO A GRAM FROM 1 G TILL 10 G\r\n\r\nIMPORTANT TO KNOW FOR ALL LISTINGS:\r\n\r\n★ THE PICTURE CAN BE DIFFERENT THEN THE ACTUAL PRODUCT BUT THE QUALITY IS SIMILAIR!\r\n\r\n★ IF YOU WANT ONLY THAT SPECIFIC SHIPPING METHOD THEN PLEASE WRITE IT BELOW YOUR ADRESS!!\r\n\r\n★ IF THERE IS A PROBLEM CONTACT ME BEFORE YOU POST FEEDBACK OR ELSE YOU WILL RECEIVE NO REFUND/SOLUTION. THERE IS ALWAYS A SOLUTION, WE ARE PEOPLE NOT ANIMALS!\r\n\r\n★ WHEN SHOULD YOU BE WORRIED AFTER 14 DAYS (DOMESTIC) 30 DAYS (EU), AFTER 45 DAYS (OUTSIDE EU)\r\n\r\nPLEASE PROVIDE ME YOUR ADRESS THIS WAY:\r\n\r\n★ FIRST AND LASTNAME\r\n\r\n★ ADRESS + STREETNR\r\n\r\n★ POSTAL ZIPPCODE + CITY\r\n\r\n★ COUNTRY (DONT FORGET THIS ONE)\r\n\r\nRefunds:\r\n\r\n50% refund for non arrival if you make a new order of the same amount. This way you get what you paid for and we can compromise our lost with the profit of the new order.\r\n&quot;,
+            &quot;item_category_id&quot;: 11,
+            &quot;item_parent_category_id&quot;: 5,
+            &quot;item_parent_parent_category_id&quot;: 1,
+            &quot;max_price&quot;: 70,
+            &quot;min_price&quot;: 4500,
+            &quot;currency&quot;: &quot;EUR&quot;,
+            &quot;store_score&quot;: 4.56,
+            &quot;item_score&quot;: 4.55,
+            &quot;type&quot;: &quot;mail&quot;,
+            &quot;country_shipping_from&quot;: &quot;France&quot;,
+            &quot;country_shipping_to&quot;: &quot;Worldwide&quot;,
+            &quot;geoname_id&quot;: 0,
+            &quot;store_level&quot;: 301,
+            &quot;vendor_is_online&quot;: false,
+            &quot;vendor_last_login_date&quot;: &quot;6 days ago&quot;,
+            &quot;vendor_registration_date&quot;: &quot;1 year ago&quot;,
+            &quot;price_range&quot;: [
+                &quot;70&quot;,
+                &quot;4500&quot;
+            ],
+            &quot;price&quot;: &quot;&quot;
+        }
+    ],
+    &quot;api_session&quot;: {
+        &quot;token&quot;: &quot;d7cdd58c1bea40335073d29934aff57f&quot;,
+        &quot;end_date&quot;: &quot;2018-12-02&quot;,
+        &quot;is_2fa_session&quot;: false,
+        &quot;is_2fa_completed&quot;: false
+    }
+}
+</code></pre>
+
+<h2>Hot Deals</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/deals?token=:token">http://tochka3evlj3sxdv.onion/api/deals?token=:token</a></h3>
+
+<p>Response is similar to SERP.</p>
+
+<h2>Store Info</h2>
+
+<h2>GET <a href="http://tochka3evlj3sxdv.onion/api/store/:storename">http://tochka3evlj3sxdv.onion/api/store/:storename</a></h2>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/store/:storename
+
+{
+    &quot;items&quot;: [
+        {
+            &quot;uuid&quot;: &quot;9ce56941e0354dae76b9097b78e3e612&quot;,
+            &quot;name&quot;: &quot;Maroc Hash AAA+ High Quality &quot;,
+            &quot;description&quot;: &quot;AAA+ high quality Maroccan Hash&quot;,
+            &quot;category_id&quot;: 4,
+            &quot;number_of_sales&quot;: 0,
+            &quot;number_of_views&quot;: 0,
+            &quot;description_html&quot;: &quot;\u003cp\u003eAAA+ high quality Maroccan Hash\u003c/p\u003e\n&quot;,
+            &quot;short_description_html&quot;: &quot;\u003cp\u003eAAA+ high quality Maroccan Hash\u003c/p\u003e\n&quot;,
+            &quot;packages&quot;: [
+                {
+                    &quot;package_name&quot;: &quot;5 g hash aaa+ high quality&quot;,
+                    &quot;country_shipping_from&quot;: &quot;Spain&quot;,
+                    &quot;country_shipping_to&quot;: &quot;Worldwide&quot;,
+                    &quot;drop_city_id&quot;: 0,
+                    &quot;drop_city&quot;: {
+                        &quot;geonameid&quot;: 0,
+                        &quot;name&quot;: &quot;&quot;,
+                        &quot;country&quot;: &quot;&quot;,
+                        &quot;subcountry&quot;: &quot;&quot;
+                    },
+                    &quot;metro_station&quot;: {
+                        &quot;uuid&quot;: &quot;&quot;,
+                        &quot;city_id&quot;: 0,
+                        &quot;name_en&quot;: &quot;&quot;,
+                        &quot;name_ru&quot;: &quot;&quot;
+                    },
+                    &quot;price_aud&quot;: &quot;45&quot;,
+                    &quot;price_btc&quot;: &quot;45&quot;,
+                    &quot;price_bch&quot;: &quot;45&quot;,
+                    &quot;price_eth&quot;: &quot;45&quot;,
+                    &quot;price_eur&quot;: &quot;45&quot;,
+                    &quot;price_gbp&quot;: &quot;45&quot;,
+                    &quot;price_rub&quot;: &quot;45&quot;,
+                    &quot;price_usd&quot;: &quot;45&quot;,
+                    &quot;hash&quot;: &quot;265ef8ef54&quot;,
+                    &quot;item_name&quot;: &quot;&quot;,
+                    &quot;item_uuid&quot;: &quot;&quot;,
+                    &quot;score&quot;: 0,
+                    &quot;type&quot;: &quot;mail&quot;
+                }
+            ],
+            &quot;rating_reviews&quot;: [
+                {
+                    &quot;uuid&quot;: &quot;a8420804a65540a455d62152ef8dada1&quot;,
+                    &quot;user_uuid&quot;: &quot;87336fcdf10d4a92558b0409ee8723a8&quot;,
+                    &quot;store_uuid&quot;: &quot;ba15479bb7c94e0b49b06993e1d72f62&quot;,
+                    &quot;item_uuid&quot;: &quot;9ce56941e0354dae76b9097b78e3e612&quot;,
+                    &quot;item_score&quot;: 5,
+                    &quot;item_review&quot;: &quot;Very nice hash. \r\nNice stealth. I am outside the EU.&quot;,
+                    &quot;seller_score&quot;: 5,
+                    &quot;seller_review&quot;: &quot;I liked the stealth.\r\nDone only one order.\r\nI am outside EU. I am pleased.&quot;,
+                    &quot;marketplace_score&quot;: 5,
+                    &quot;marketplace_review&quot;: &quot;&quot;,
+                    &quot;created_at&quot;: &quot;2018-10-31&quot;
+                }
+            ],
+            &quot;item_category&quot;: {
+                &quot;id&quot;: 4,
+                &quot;parent_id&quot;: 2,
+                &quot;icon&quot;: &quot;&quot;,
+                &quot;price_en&quot;: &quot;Hash&quot;,
+                &quot;name_ru&quot;: &quot;Гашиш&quot;,
+                &quot;name_de&quot;: &quot;&quot;,
+                &quot;name_es&quot;: &quot;&quot;,
+                &quot;name_fr&quot;: &quot;&quot;,
+                &quot;name_rs&quot;: &quot;&quot;,
+                &quot;name_tr&quot;: &quot;&quot;,
+                &quot;item_count&quot;: 0,
+                &quot;user_count&quot;: 0,
+                &quot;subcategories&quot;: null,
+                &quot;Name&quot;: &quot;Hash&quot;,
+                &quot;SubViewItemCategories&quot;: null
+            },
+            &quot;score&quot;: 5
+        }
+    ],
+    &quot;store&quot;: {
+        &quot;storename&quot;: &quot;dutch-christiana&quot;,
+        &quot;short_description&quot;: &quot;WE SHIP FROM FRANCE WORLDWIDE !!!&quot;,
+        &quot;long_description&quot;: &quot;FRANCE, BELGIUM, HOLLAND AND SOON GERMANY SHIPPING\r\n\r\n! NO USA !\r\n\r\nHIGHEST RATED VENDOR OF THE 2 BIGGEST MARKETS EVER WITH MORE THEN 10 K OF POSITIVE FEEDBACK (ASK SUPPORT AND ADMIN WILL CONFIRM THIS! FOR PRIVACY REASONS I WILL NOT USE MY OLD PGP AND PROVIDE MY OLD ACCOUNTNAME (SO DONT ASK/GUESS FOR IT)\r\n\r\n-----------------------------------------------------------------------------------------------\r\n\r\nORDERPROCESS:\r\n\r\n* VACUUM\r\n\r\n* ANTISCAN BAG\r\n\r\n* CLEANING WITH ANTI SMELL\r\n\r\n* SPRAYING WITH ANTI DOG SMELL\r\n\r\n* HIGH QUALITY STEALTH\r\n\r\n-----------------------------------------------------------------------------------------------\r\n\r\nFOR BULK 100G+ HEROINE/COCAINE/KETAMINE/METH CONTACT ME FOR A BETTER PRICE.\r\n\r\n* MDMA \r\n* XTC \r\n* COCAINE \r\n* HEROINE \r\n* KETAMINE \r\n* METH \r\n* SPEED \r\n* COMMERCE HASH \r\n* AMNESIA HAZE\r\n* LSD \r\n-----------------------------------------------------------------------------------------------\r\n\r\nIMPORTANT TO KNOW FOR ALL LISTINGS:\r\n\r\n* THE PICTURE COULD BE DIFFERENT THEN THE ACTUAL PRODUCT BUT THE QUALITY IS SIMILAIR!\r\n\r\n* IF YOU WANT ONLY THAT SPECIFIC SHIPPING METHOD THEN PLEASE WRITE IT BELOW YOUR ADRESS!!\r\n\r\n* IF THERE IS A PROBLEM CONTACT ME BEFORE YOU POST FEEDBACK OR ELSE YOU WILL RECEIVE NO REFUND/SOLUTION. THERE IS ALWAYS A SOLUTION, WE ARE PEOPLE NOT ANIMALS!\r\n\r\n* WHEN SHOULD YOU BE WORRIED AFTER 14 DAYS (DOMESTIC) 30 DAYS (EU), AFTER 45 DAYS (OUTSIDE EU)\r\n\r\n-----------------------------------------------------------------------------------------------\r\n\r\nPLEASE PROVIDE ME YOUR ADRESS THIS WAY:\r\n\r\n* FIRST AND LASTNAME\r\n\r\n* ADRESS + STREETNR\r\n\r\n* POSTAL ZIPPCODE + CITY\r\n\r\n* COUNTRY (DONT FORGET THIS ONE)\r\n\r\n-----------------------------------------------------------------------------------------------\r\n\r\nRefunds:\r\n\r\n50% refund for non arrival if you make a new order of the same amount. This way you get what you paid for and we can compromise our lost with the profit of the new order.\r\n\r\nNO REFUND/RESHIP/NEGATIVE FEEBDACK FOR COUNTRIES OUTSIDE EU AND THE SCANDINAVIAN ISLANDS.\r\n&quot;,
+        &quot;pgp&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\r\n\r\nmQENBFmnQi8BCADhzapuHSH9hZm2ydnZ7hE4OiQOu+eskxxKutzdlM6mRGlcdKNd\r\nCM7zjh4zhtGhiiLYYo4YNeI9xcTWEIC/9S5fftA3dGguzG+IS4TdJuetoKhqbqQE\r\nCYwgi0iabcfH5V0K+NGoEoZysVS8o5BRR0jvIRFvksNpzb3k1jFVhwXIoyC8Pn0s\r\nIjgFdNYtwLPrIhLDupZtJ8ZRyUEpo2VESMg4PZQZ79TwpT+n91SLYB9C78k74y84\r\nXNZ8NqTSuL7BcxcvY7Mli1g1HtunkhqAxlM/wewvTQ+L3zW5e25fwVb7hK/bP8h1\r\nre1sG5pB3dTfbehAYkEuUH/zmTrkivFMkfGlABEBAAG0Gk5FV0VTVCA8TkVXRVNU\r\nQE5FV0VTVC5DT0M+iQFOBBMBCgA4FiEEPUVLx5n3XMkPJr3SzOgi5by1ZQcFAlmn\r\nQi8CGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AACgkQzOgi5by1ZQeZzgf8CBhc\r\nhG2AlGmVn40OUC93eSrmJoCYiIikW1wCcIh4FOrhrfPOFEwYEp4L2nxUGygO2jZ+\r\nRk3Uy0wTPeiEqrF1RnGDt9lylcBsGJrNtLg1WS93EwflpZIU5P2eeaI8qlx5IzZi\r\nFGTMJt6OEhLVHJdGG4bvsdI88r5Xtu0o9wWu6Oz4Dsttbn3BmOy7oKA5nGt9ZJnv\r\ne1HDBsPi76HafYDuD6/ogQ2St1Wn6todxetSn+cjDM45+vkUbNeQCQL9rj/hKxYC\r\nPaTLQmB5hNLXmNqhcLvaYQ8FdFpn5A0pNOB5ChqHpsSvZb25Ih+rzly19oF59yya\r\nhxVbIOThD4ZVnRsDELkBDQRZp0IvAQgA2P2yN9IzzQbdAZtabd1C1M+NmVFfeU2W\r\nYHT/he49V9U3i7oraIe8ovcVpQ2I8GNUxm59isqsOzy8KCAIooaJps0tGGOGTEww\r\nPWdLBYgySbL22pRB7WH6kODkKOMlcTz7jXK3QD82ibRq/cHEGGtQs3L5cRa3r1ut\r\nShU3I8iRYq7LItBr8XvwKpIz+lVQ7D+tkEFovYon2eDEGXghPBtrWMgr81/ZE/2D\r\nuYL+EOPUv4fEMao77Q/DYtQEeNxxgW75unyxP2k2xfDtTYiCOwaYrvmnnK8AFcj8\r\nI5nnpEpRdjCHa9/12CZnL8iH2pOtkZfna6MH9OmxKGMO7U5qBAiYzwARAQABiQE2\r\nBBgBCgAgFiEEPUVLx5n3XMkPJr3SzOgi5by1ZQcFAlmnQi8CGwwACgkQzOgi5by1\r\nZQeIzwgAvEVuUKcitk2A0p3FOZuMH/fihvjsM9Pfp5s2CIP0ylVdQp6gNHmgMXDw\r\nj0V7ETY9Yjj/jtK43wHYsuzy6tuEaQnLDIkfHPZuBYEbdI5IKDCATVvUW5ul0UeF\r\nfv0UNQ5BL883qGkLHR70pEKP5+y53ccL2Yqgl4RyfekaJTemLeEj4OZdXXo6c9uK\r\n8WaqKIb9lRYTFua4Ws8bD9LR5Y1/D0kKQqql3q5+xHYwKZQSfcHonPy5tDtP44MP\r\nI3jL++MTowDmLAgdxfVxziAkzFvKk8b8wwayg9XBQLxO6puMwBow8Ag/qyYUNEI/\r\niGlw/xjBSlGBwERAyolShXMNkpN3uA==\r\n=ZAuS\r\n-----END PGP PUBLIC KEY BLOCK-----\r&quot;,
+        &quot;is_suspended&quot;: false,
+        &quot;is_trusted&quot;: true,
+        &quot;is_allowed_to_sell&quot;: false,
+        &quot;is_on_vacation&quot;: false,
+        &quot;is_gold_account&quot;: true,
+        &quot;is_bronze_account&quot;: false,
+        &quot;is_silver_account&quot;: true,
+        &quot;is_free_account&quot;: true,
+        &quot;warnings&quot;: [
+            {
+                &quot;severety&quot;: &quot;NEW&quot;,
+                &quot;text&quot;: &quot;I made a request for $ 340 and I asked about 2 or 4 times for him if he had the request and he did not answer me if he had or not I then made the request and waited, after 2 days he answers me that he does not have in stock to cancel, so that bitcoin had already varied, I asked to send this value in mdma and I had no return and I went to look at the site, when I look at the site my btc had returned, and the bitcoin gave a variety when I bought it was 4300 and now it is 3800 and it was returned the same amount of btc.&quot;,
+                &quot;is_approved&quot;: false,
+                &quot;reporter_uuid&quot;: &quot;3882799c054b4cef65a7085ab88d2a00&quot;,
+                &quot;created_at&quot;: &quot;2018-11-27&quot;,
+            }
+        ],
+        &quot;rating_reviews&quot;: [
+            {
+                &quot;uuid&quot;: &quot;015bf0271c4b41eb5bd4e249fd7f3a3c&quot;,
+                &quot;user_uuid&quot;: &quot;b7f38e6a71414d32435320e6ab80a7fd&quot;,
+                &quot;store_uuid&quot;: &quot;ba15479bb7c94e0b49b06993e1d72f62&quot;,
+                &quot;item_uuid&quot;: &quot;3419406be18b46a162a277ff58a15e54&quot;,
+                &quot;item_score&quot;: 5,
+                &quot;item_review&quot;: &quot;&quot;,
+                &quot;seller_score&quot;: 5,
+                &quot;seller_review&quot;: &quot;&quot;,
+                &quot;marketplace_score&quot;: 5,
+                &quot;marketplace_review&quot;: &quot;&quot;,
+                &quot;created_at&quot;: &quot;2018-06-16&quot;
+            }
+        ]
+        &quot;shipping_options&quot;: [
+            {
+                &quot;ID&quot;: 5149,
+                &quot;CreatedAt&quot;: &quot;2018-06-29&quot;,
+                &quot;UpdatedAt&quot;: &quot;2018-12-06&quot;,
+                &quot;DeletedAt&quot;: null,
+                &quot;name&quot;: &quot;FRANCE - WORLWIDE&quot;,
+                &quot;price_usd&quot;: 20,
+                &quot;price_rub&quot;: 0,
+                &quot;price_gbp&quot;: 0,
+                &quot;price_eur&quot;: 0,
+                &quot;price_aud&quot;: 0,
+                &quot;StoreUuid&quot;: &quot;ba15479bb7c94e0b49b06993e1d72f62&quot;
+            }
+        ],
+        &quot;last_login_date&quot;: &quot;2018-11-26&quot;,
+        &quot;registration_date&quot;: &quot;2017-08-2&quot;
+        &quot;level&quot;: 313
+    },
+    &quot;user&quot;: {
+        &quot;username&quot;: &quot;xxxx&quot;,
+        &quot;registration_date&quot;: &quot;2015-06-18&quot;,
+        &quot;last_login_date&quot;: &quot;2018-12-11T12&quot;,
+        &quot;bitmessage&quot;: &quot;&quot;,
+        &quot;tox&quot;: &quot;&quot;,
+        &quot;email&quot;: &quot;earthling@jabber.otr.im&quot;,
+        &quot;pgp&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\r\nVersion: GnuPG v2\r\n\r\n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\r\nKzAc7Ezb\r\n=N3Wu\r\n-----END PGP PUBLIC KEY BLOCK-----\r&quot;,
+        &quot;description&quot;: &quot;Mere mortal&quot;,
+        &quot;long_description&quot;: &quot;## Open a ticket for help or support.\r\n\r\n---\r\n\r\nI'm a founder and developer of Tochka and keep it running for almost 4 years.\r\n\r\nI'm interested in scaling team for building a large-scale fintech operation in field of underground economics. \r\n\r\nI'm looking for people who are interested in joining a team, preferably with solid tech background. \r\n\r\nPM me for business opportunities, and if you're interested in our operations and generally if you're on same boat with me on terms of vision.&quot;,
+        &quot;is_admin&quot;: true,
+        &quot;is_staff&quot;: false,
+        &quot;vendor_level&quot;: 45,
+        &quot;buyer_level&quot;: 0
+    }
+}
+</code></pre>
+
+<p><strong>All subsequent responses will include objects &ldquo;store&rdquo;, &ldquo;user&rdquo; which represent store related to a request and user making request.</strong></p>
+
+<h2>Item Details</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/store/:storename/item/:item_uuid">http://tochka3evlj3sxdv.onion/api/store/:storename/item/:item_uuid</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/store/:storename/item/:item_uuid 
+
+{
+    &quot;item&quot;: {
+        &quot;uuid&quot;: &quot;9ce56941e0354dae76b9097b78e3e612&quot;,
+        &quot;name&quot;: &quot;Maroc Hash AAA+ High Quality &quot;,
+        &quot;description&quot;: &quot;AAA+ high quality Maroccan Hash&quot;,
+        &quot;category_id&quot;: 4,
+        &quot;number_of_sales&quot;: 0,
+        &quot;number_of_views&quot;: 0,
+        &quot;description_html&quot;: &quot;\u003cp\u003eAAA+ high quality Maroccan Hash\u003c/p\u003e\n&quot;,
+        &quot;short_description_html&quot;: &quot;\u003cp\u003eAAA+ high quality Maroccan Hash\u003c/p\u003e\n&quot;,
+        &quot;packages&quot;: [
+            {
+                &quot;package_name&quot;: &quot;5 g hash aaa+ high quality&quot;,
+                &quot;country_shipping_from&quot;: &quot;Spain&quot;,
+                &quot;country_shipping_to&quot;: &quot;Worldwide&quot;,
+                &quot;drop_city_id&quot;: 0,
+                &quot;drop_city&quot;: {
+                    &quot;geonameid&quot;: 0,
+                    &quot;name&quot;: &quot;&quot;,
+                    &quot;country&quot;: &quot;&quot;,
+                    &quot;subcountry&quot;: &quot;&quot;
+                },
+                &quot;metro_station&quot;: {
+                    &quot;uuid&quot;: &quot;&quot;,
+                    &quot;city_id&quot;: 0,
+                    &quot;name_en&quot;: &quot;&quot;,
+                    &quot;name_ru&quot;: &quot;&quot;
+                },
+                &quot;price_aud&quot;: &quot;45&quot;,
+                &quot;price_btc&quot;: &quot;45&quot;,
+                &quot;price_bch&quot;: &quot;45&quot;,
+                &quot;price_eth&quot;: &quot;45&quot;,
+                &quot;price_eur&quot;: &quot;45&quot;,
+                &quot;price_gbp&quot;: &quot;45&quot;,
+                &quot;price_rub&quot;: &quot;45&quot;,
+                &quot;price_usd&quot;: &quot;45&quot;,
+                &quot;hash&quot;: &quot;265ef8ef54&quot;,
+                &quot;score&quot;: 0,
+                &quot;type&quot;: &quot;mail&quot;
+            }
+        ]
+        &quot;rating_reviews&quot;: [
+            {
+                &quot;item_score&quot;: 5,
+                &quot;item_review&quot;: &quot;Very nice hash. \r\nNice stealth. I am outside the EU.&quot;,
+                &quot;seller_score&quot;: 5,
+                &quot;seller_review&quot;: &quot;I liked the stealth.\r\nDone only one order.\r\nI am outside EU. I am pleased.&quot;,
+                &quot;marketplace_score&quot;: 5,
+                &quot;marketplace_review&quot;: &quot;&quot;,
+                &quot;created_at&quot;: &quot;2018-10-31&quot;
+            }
+        ],
+        &quot;item_category&quot;: {
+            &quot;id&quot;: 4,
+            &quot;parent_id&quot;: 2,
+            &quot;icon&quot;: &quot;&quot;,
+            &quot;price_en&quot;: &quot;Hash&quot;,
+            &quot;name_ru&quot;: &quot;Гашиш&quot;,
+            &quot;name_de&quot;: &quot;&quot;,
+            &quot;name_es&quot;: &quot;&quot;,
+            &quot;name_fr&quot;: &quot;&quot;,
+            &quot;name_rs&quot;: &quot;&quot;,
+            &quot;name_tr&quot;: &quot;&quot;,
+            &quot;item_count&quot;: 0,
+            &quot;user_count&quot;: 0,
+            &quot;subcategories&quot;: null,
+            &quot;Name&quot;: &quot;Hash&quot;,
+            &quot;SubViewItemCategories&quot;: null
+        },
+        &quot;score&quot;: 5
+    }
+}
+</code></pre>
+
+<h2>Package Reservation</h2>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/user/:username/item/:item_uuid/package/:hash">http://tochka3evlj3sxdv.onion/api/user/:username/item/:item_uuid/package/:hash</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>shipping_id</li>
+<li>quantity</li>
+<li>type [bitcoin,bitcoin_cash,ethereum]</li>
+<li>shipping_address</li>
+</ul>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/user/:username/item/:item_uuid/package/:hash --data &quot;shipping_id=:shipping_id&amp;quantity=:quantity&amp;type=:type&amp;shipping_address=:shipping_address&quot;
+</code></pre>
+
+<h2>transactions List Reservation</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/transactions">http://tochka3evlj3sxdv.onion/api/transactions</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/transactions
+
+{
+    &quot;transaction_statuses&quot;: [
+        {
+            &quot;amount&quot;: 0.3036861982905228,
+            &quot;buyer_username&quot;: &quot;xxxx&quot;,
+            &quot;created_at&quot;: &quot;2018-02-14&quot;,
+            &quot;current_shipping_status&quot;: &quot;DISPATCH PENDING&quot;,
+            &quot;current_status&quot;: &quot;FAILED&quot;,
+            &quot;description&quot;: &quot;xxx :: xxx x 1&quot;,
+            &quot;type&quot;: &quot;ethereum&quot;,
+            &quot;updated_at&quot;: &quot;2018-02-15&quot;,
+            &quot;uuid&quot;: &quot;0xf0971709d0bd2cec450c523d50f4b528802acfda&quot;,
+            &quot;vendor_username&quot;: &quot;drugs-park&quot;,
+            &quot;updated_at_string&quot;: &quot;15.02.2018 11:14&quot;,
+            &quot;created_at_string&quot;: &quot;14.02.2018 23:12&quot;
+        },
+        ...
+    ]
+}
+</code></pre>
+
+<h2>Transaction List</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/transactions/?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/?token=:token</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/transactions/?token=:token
+
+{
+    &quot;number_of_pages&quot;: 1,
+    &quot;transaction_statuses&quot;: [
+        {
+            &quot;amount&quot;: 0.04958546550835019,
+            &quot;buyer_username&quot;: &quot;test1230&quot;,
+            &quot;created_at&quot;: &quot;2018-05-2&quot;,
+            &quot;current_shipping_status&quot;: &quot;DISPATCH PENDING&quot;,
+            &quot;current_status&quot;: &quot;FAILED&quot;,
+            &quot;description&quot;: &quot;â˜…COCAINEâ˜… 90% PURITY UNCUT AAA+ HQ NL/BE/DE SHIPPING :: 0.25 GRAM PREMIUM AAA+ HQ x 1&quot;,
+            &quot;number_of_messages&quot;: 1,
+            &quot;type&quot;: &quot;ethereum&quot;,
+            &quot;updated_at&quot;: &quot;2018-05-25&quot;,
+            &quot;uuid&quot;: &quot;0xf7f9b1e0cb45edc2947f7d9a662f278180461557&quot;,
+            &quot;vendor_username&quot;: &quot;dutch-christiana&quot;,
+            &quot;updated_at_string&quot;: &quot;25.05.2018 22:23&quot;,
+            &quot;created_at_string&quot;: &quot;25.05.2018 10:21&quot;
+        }
+    ],
+    &quot;api_session&quot;: {
+        &quot;token&quot;: &quot;8f29a2da0ed948c85b4506162473e4d6&quot;,
+        &quot;end_date&quot;: &quot;2018-06-10&quot;,
+        &quot;is_2fa_session&quot;: false,
+        &quot;is_2fa_completed&quot;: false
+    }
+}
+</code></pre>
+
+<h2>Transaction Details</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token
+
+{
+    &quot;captcha_id&quot;: &quot;CQN5BvdYr2PL5Zf3Tipa&quot;,
+    &quot;thread&quot;: {
+        &quot;uuid&quot;: &quot;idd&quot;,
+        &quot;is_read_by_reciever&quot;: false,
+        &quot;section&quot;: &quot;&quot;,
+        &quot;section_id&quot;: 0,
+        &quot;parent_uuid&quot;: &quot;&quot;,
+        &quot;title&quot;: &quot;Transaction thread @txid&quot;,
+        &quot;text&quot;: &quot;&quot;,
+        &quot;type&quot;: &quot;transaction&quot;,
+        &quot;is_encrypted&quot;: false,
+        &quot;has_image&quot;: false,
+        &quot;created_at&quot;: &quot;2018-05-25&quot;,
+        &quot;updated_at&quot;: &quot;2018-05-25&quot;,
+        &quot;deleted_at&quot;: null,
+        &quot;sender&quot;: {
+            &quot;username&quot;: &quot;test1230&quot;,
+            &quot;registration_date&quot;: &quot;2018-04-&quot;,
+            &quot;last_login_date&quot;: &quot;2018-06-13&quot;,
+            &quot;bitmessage&quot;: &quot;&quot;,
+            &quot;tox&quot;: &quot;&quot;,
+            &quot;email&quot;: &quot;&quot;,
+            &quot;pgp&quot;: &quot;&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;long_description&quot;: &quot;&quot;,
+            &quot;is_premium&quot;: false,
+            &quot;is_premium_plus&quot;: false,
+            &quot;is_possible_scammer&quot;: false,
+            &quot;vacation_mode&quot;: false,
+            &quot;is_seller&quot;: false,
+            &quot;is_trustedseller&quot;: false,
+            &quot;is_moderator&quot;: false,
+            &quot;is_admin&quot;: false,
+            &quot;is_staff&quot;: false
+        },
+        &quot;text_html&quot;: &quot;&quot;,
+        &quot;messages&quot;: [
+            {
+                &quot;uuid&quot;: &quot;idd&quot;,
+                &quot;is_read_by_reciever&quot;: false,
+                &quot;section&quot;: &quot;&quot;,
+                &quot;section_id&quot;: 0,
+                &quot;parent_uuid&quot;: &quot;&quot;,
+                &quot;title&quot;: &quot;Transaction thread @txid&quot;,
+                &quot;text&quot;: &quot;&quot;,
+                &quot;type&quot;: &quot;transaction&quot;,
+                &quot;is_encrypted&quot;: false,
+                &quot;has_image&quot;: false,
+                &quot;created_at&quot;: &quot;2018-05-25&quot;,
+                &quot;updated_at&quot;: &quot;2018-05-25&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;sender&quot;: {
+                    &quot;username&quot;: &quot;test1230&quot;,
+                    &quot;registration_date&quot;: &quot;2018-04-&quot;,
+                    &quot;last_login_date&quot;: &quot;2018-06-13&quot;,
+                    &quot;bitmessage&quot;: &quot;&quot;,
+                    &quot;tox&quot;: &quot;&quot;,
+                    &quot;email&quot;: &quot;&quot;,
+                    &quot;pgp&quot;: &quot;&quot;,
+                    &quot;description&quot;: &quot;&quot;,
+                    &quot;long_description&quot;: &quot;&quot;,
+                    &quot;is_premium&quot;: false,
+                    &quot;is_premium_plus&quot;: false,
+                    &quot;is_possible_scammer&quot;: false,
+                    &quot;vacation_mode&quot;: false,
+                    &quot;is_seller&quot;: false,
+                    &quot;is_trustedseller&quot;: false,
+                    &quot;is_moderator&quot;: false,
+                    &quot;is_admin&quot;: false,
+                    &quot;is_staff&quot;: false
+                },
+                &quot;text_html&quot;: &quot;&quot;
+            },
+            {
+                &quot;uuid&quot;: &quot;idd-eefaa4e003da45a66668f115a7336cc1&quot;,
+                &quot;is_read_by_reciever&quot;: false,
+                &quot;section&quot;: &quot;&quot;,
+                &quot;section_id&quot;: 0,
+                &quot;parent_uuid&quot;: &quot;idd&quot;,
+                &quot;title&quot;: &quot;&quot;,
+                &quot;text&quot;: &quot;fghfgh&quot;,
+                &quot;type&quot;: &quot;transaction&quot;,
+                &quot;is_encrypted&quot;: false,
+                &quot;has_image&quot;: false,
+                &quot;created_at&quot;: &quot;2018-05-25&quot;,
+                &quot;updated_at&quot;: &quot;2018-05-25&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;sender&quot;: {
+                    &quot;username&quot;: &quot;test1230&quot;,
+                    &quot;registration_date&quot;: &quot;2018-04-&quot;,
+                    &quot;last_login_date&quot;: &quot;2018-06-13&quot;,
+                    &quot;bitmessage&quot;: &quot;&quot;,
+                    &quot;tox&quot;: &quot;&quot;,
+                    &quot;email&quot;: &quot;&quot;,
+                    &quot;pgp&quot;: &quot;&quot;,
+                    &quot;description&quot;: &quot;&quot;,
+                    &quot;long_description&quot;: &quot;&quot;,
+                    &quot;is_premium&quot;: false,
+                    &quot;is_premium_plus&quot;: false,
+                    &quot;is_possible_scammer&quot;: false,
+                    &quot;vacation_mode&quot;: false,
+                    &quot;is_seller&quot;: false,
+                    &quot;is_trustedseller&quot;: false,
+                    &quot;is_moderator&quot;: false,
+                    &quot;is_admin&quot;: false,
+                    &quot;is_staff&quot;: false
+                },
+                &quot;text_html&quot;: &quot;\u003cp\u003efghfgh\u003c/p\u003e\n&quot;
+            }
+        ],
+        &quot;number_of_messages&quot;: 2,
+        &quot;number_of_unread_messages&quot;: 0,
+        &quot;is_read&quot;: false
+    },
+    &quot;transaction&quot;: {
+        &quot;uuid&quot;: &quot;txid&quot;,
+        &quot;transaction_status&quot;: [
+            {
+                &quot;ID&quot;: 153508,
+                &quot;CreatedAt&quot;: &quot;2018-05-25&quot;,
+                &quot;UpdatedAt&quot;: &quot;2018-05-25&quot;,
+                &quot;DeletedAt&quot;: null,
+                &quot;time&quot;: &quot;2018-05-2&quot;,
+                &quot;amount&quot;: 0,
+                &quot;status&quot;: &quot;PENDING&quot;,
+                &quot;comment&quot;: &quot;&quot;
+            },
+            {
+                &quot;ID&quot;: 153684,
+                &quot;CreatedAt&quot;: &quot;2018-05-25&quot;,
+                &quot;UpdatedAt&quot;: &quot;2018-05-25&quot;,
+                &quot;DeletedAt&quot;: null,
+                &quot;time&quot;: &quot;2018-05-25&quot;,
+                &quot;amount&quot;: 0,
+                &quot;status&quot;: &quot;FAILED&quot;,
+                &quot;comment&quot;: &quot;Escrow failed automatically&quot;
+            }
+        ],
+        &quot;shipping_status&quot;: [],
+        &quot;description&quot;: &quot;desc&quot;,
+        &quot;type&quot;: &quot;ethereum&quot;,
+        &quot;ethereum_transcation_uuid&quot;: &quot;txid&quot;,
+        &quot;dispute_uuid&quot;: &quot;&quot;,
+        &quot;ethereum_transcation&quot;: {
+            &quot;uuid&quot;: &quot;txid&quot;,
+            &quot;amount&quot;: 0.04958546550835019
+        },
+        &quot;vendor&quot;: {
+            &quot;username&quot;: &quot;dutch-christiana&quot;,
+            &quot;registration_date&quot;: &quot;2017-08-2&quot;,
+            &quot;last_login_date&quot;: &quot;2018-06-04&quot;,
+            &quot;bitmessage&quot;: &quot;&quot;,
+            &quot;tox&quot;: &quot;&quot;,
+            &quot;email&quot;: &quot;&quot;,
+            &quot;pgp&quot;: &quot;fdd&quot;,
+            &quot;description&quot;: &quot;ddd&quot;,
+            &quot;long_description&quot;: &quot;dddd&quot;,
+            &quot;is_premium&quot;: true,
+            &quot;is_premium_plus&quot;: true,
+            &quot;is_possible_scammer&quot;: false,
+            &quot;vacation_mode&quot;: false,
+            &quot;is_seller&quot;: true,
+            &quot;is_trustedseller&quot;: true,
+            &quot;is_moderator&quot;: false,
+            &quot;is_admin&quot;: false,
+            &quot;is_staff&quot;: false
+        },
+        &quot;buyer&quot;: {
+            &quot;username&quot;: &quot;test1230&quot;,
+            &quot;registration_date&quot;: &quot;2018-04-&quot;,
+            &quot;last_login_date&quot;: &quot;2018-06-13&quot;,
+            &quot;bitmessage&quot;: &quot;&quot;,
+            &quot;tox&quot;: &quot;&quot;,
+            &quot;email&quot;: &quot;&quot;,
+            &quot;pgp&quot;: &quot;&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;long_description&quot;: &quot;&quot;,
+            &quot;is_premium&quot;: false,
+            &quot;is_premium_plus&quot;: false,
+            &quot;is_possible_scammer&quot;: false,
+            &quot;vacation_mode&quot;: false,
+            &quot;is_seller&quot;: false,
+            &quot;is_trustedseller&quot;: false,
+            &quot;is_moderator&quot;: false,
+            &quot;is_admin&quot;: false,
+            &quot;is_staff&quot;: false
+        },
+        &quot;amount&quot;: &quot;0.049585&quot;,
+        &quot;amount_to_pay&quot;: &quot;0.049585&quot;,
+        &quot;current_amount_paid&quot;: &quot;0&quot;,
+        &quot;created_at_string&quot;: &quot;25.05.2018 10:21&quot;,
+        &quot;current_payment_status&quot;: &quot;FAILED&quot;,
+        &quot;current_shipping_status&quot;: &quot;DISPATCH PENDING&quot;,
+        &quot;fe_allowed&quot;: true,
+        &quot;is_failed&quot;: true,
+        &quot;number_of_messages&quot;: 2,
+        &quot;transaction_status_list&quot;: [
+            {
+                &quot;time&quot;: &quot;2 weeks ago&quot;,
+                &quot;amount&quot;: 0,
+                &quot;status&quot;: &quot;PENDING&quot;,
+                &quot;comment&quot;: &quot;&quot;
+            },
+            {
+                &quot;time&quot;: &quot;2 weeks ago&quot;,
+                &quot;amount&quot;: 0,
+                &quot;status&quot;: &quot;FAILED&quot;,
+                &quot;comment&quot;: &quot;Escrow failed automatically&quot;
+            }
+        ]
+    },
+    &quot;api_session&quot;: {
+        &quot;token&quot;: &quot;8f29a2da0ed948c85b4506162473e4d6&quot;,
+        &quot;end_date&quot;: &quot;2018-06-10&quot;,
+        &quot;is_2fa_session&quot;: false,
+        &quot;is_2fa_completed&quot;: false
+    }
+}
+</code></pre>
+
+<h2>Transaction Chat</h2>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>text</li>
+</ul>
+
+<p>Example:</p>
+
+<blockquote>
+<p>torsocks curl &ndash;data &ldquo;text=hello&rdquo; <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid?token=:token</a></p>
+</blockquote>
+
+<h2>Release transaction</h2>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid/release?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid/release?token=:token</a></h3>
+
+<p>Example:</p>
+
+<blockquote>
+<p>torsocks curl &ndash;data &ldquo;text=hello&rdquo; <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid/release?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid/release?token=:token</a></p>
+</blockquote>
+
+<h2>Cancel transaction</h2>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid/cancel?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid/cancel?token=:token</a></h3>
+
+<p>Example:</p>
+
+<blockquote>
+<p>torsocks curl &ndash;data &ldquo;text=hello&rdquo; <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid/cancel?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid/cancel?token=:token</a></p>
+</blockquote>
+
+<h2>Set shipped status</h2>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid/shipped?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid/shipped?token=:token</a></h3>
+
+<p>Example:</p>
+
+<blockquote>
+<p>torsocks curl &ndash;data &ldquo;text=hello&rdquo; <a href="http://tochka3evlj3sxdv.onion/api/transactions/:uuid/shipped?token=:token">http://tochka3evlj3sxdv.onion/api/transactions/:uuid/shipped?token=:token</a></p>
+</blockquote>
+
+<h2>Wallet List &amp; Balances</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/wallet">http://tochka3evlj3sxdv.onion/api/wallet</a></h3>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/wallet
+
+{
+    &quot;btc_balance&quot;: {
+        &quot;balance&quot;: 0.00503501,
+        &quot;unconfirmed_balance&quot;: 0
+    },
+    &quot;btc_wallet&quot;: {
+        &quot;public_key&quot;: &quot;xxxx&quot;,
+        &quot;created_at&quot;: &quot;2016-09-28&quot;,
+        &quot;updated_at&quot;: &quot;2018-07-10&quot;
+    },
+    &quot;eth_balance&quot;: {
+        &quot;balance&quot;: 0
+    },
+    &quot;eth_wallet&quot;: {
+        &quot;public_key&quot;: &quot;xxxx&quot;,
+        &quot;updated_at&quot;: &quot;2018-07-10&quot;
+    },
+    &quot;bch_balance&quot;: {
+        &quot;balance&quot;: 0.00114601,
+        &quot;unconfirmed_balance&quot;: 0
+    },
+    &quot;bch_wallet&quot;: {
+        &quot;public_key&quot;: &quot;xxxx&quot;,
+        &quot;created_at&quot;: &quot;2016-09-28&quot;,
+        &quot;updated_at&quot;: &quot;2018-07-1&quot;
+    },
+    captcha_id: &quot;xxx&quot;
+}
+</code></pre>
+
+<h2>Bitcoin Withdraw</h2>
+
+<h3>GET <a href="http://tochka3evlj3sxdv.onion/api/wallet/bitcoin/send">http://tochka3evlj3sxdv.onion/api/wallet/bitcoin/send</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>captcha_id</li>
+<li>captcha</li>
+<li>amount</li>
+<li>address</li>
+</ul>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl http://tochka3evlj3sxdv.onion/api/wallet/bitcoin/send?token=:token --data &quot;captcha_id=:captcha_id&amp;captcha=:captcha&amp;amount=:amount&amp;address=:address&quot;
+</code></pre>
+
+<p>TODO: Add Response (returns transaction receipt)</p>
+
+<h2>Ethereum Withdraw</h2>
+
+<h2>User Profile</h2>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/settings">http://tochka3evlj3sxdv.onion/api/settings</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>bitcoin (BTC address)</li>
+<li>ethereum (ETH address)</li>
+<li>description (string)</li>
+<li>long_description (string)</li>
+<li>2fa (string <sup>1</sup>&frasl;<sub>0</sub>)</li>
+<li>old_password (string)</li>
+<li>new_password (string)</li>
+<li>avatar_image (file png or jpeg)</li>
+</ul>
+
+<p>Scenarios:</p>
+
+<ul>
+<li>In case if user changes password old_password are required.</li>
+<li>Description and Long Description represent status and profile description</li>
+<li>Avatar update: avatar_image</li>
+</ul>
+
+<h2>User PGPKey</h2>
+
+<p><strong>Step 1</strong></p>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/settings/pgp/step1">http://tochka3evlj3sxdv.onion/api/settings/pgp/step1</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>pgp_public_key (PGP Public Key)</li>
+</ul>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl -d &quot;pgp_public_key=xxxx&quot; http://tochka3evlj3sxdv.onion/api/settings/pgp/step1
+
+{
+    &quot;secret_text&quot;: &quot;sddasdasda&quot;
+}
+</code></pre>
+
+<p><strong>Step 1</strong></p>
+
+<p>User should post decrypted secret_text in secret_text field</p>
+
+<h3>POST <a href="http://tochka3evlj3sxdv.onion/api/settings/pgp/step2">http://tochka3evlj3sxdv.onion/api/settings/pgp/step2</a></h3>
+
+<p>Parameters:</p>
+
+<ul>
+<li>pgp_public_key (PGP Public Key)</li>
+<li>secret_text (Decrypted secret text)</li>
+</ul>
+
+<p>Example</p>
+
+<pre><code>&gt; torsocks curl -d &quot;pgp_public_key=xxxx&amp;secret_text=ssss&quot; http://tochka3evlj3sxdv.onion/api/settings/pgp/step2
+
+{
+    &quot;secret_text&quot;: &quot;sddasdasda&quot;
+}
+</code></pre>
+</div>
+								</div>
+							</div>
+							<div class="four wide column t-left-menu-items">
+								<div class="ui vertical fluid menu tiny basic secondary">
+									<a class="item capitalize" href="/help/01_terms_of_service">terms of service</a>
+									<a class="item capitalize" href="/help/03_how_to_sell">how to sell</a>
+									<a class="item capitalize" href="/help/04_how_to_buy">how to buy</a>
+									<a class="item capitalize" href="/help/05_about_marketplace">about marketplace</a>
+									<a class="item capitalize" href="/help/06_quality_control">quality control</a>
+									<a class="item capitalize" href="/help/07_disputes">disputes</a>
+									<a class="item capitalize" href="/help/08_vendor_levels">vendor levels</a>
+									<a class="item capitalize" href="/help/09_REST_API">REST API</a>
+									<a class="item capitalize" href="/help/10_how_to_stay_safe">how to stay safe</a>
+									<a class="item capitalize" href="/help/11_how_front_page_works">how front page works</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/" class="item">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 765 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

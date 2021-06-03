@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/loganempire?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@loganempire</h2>
+								<p></p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 month ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 10 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label brown">Bronze Account</span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/loganempire">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/loganempire">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/loganempire/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">0</span>
+									</a>
+									<a class="item active" href="/store/loganempire/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">12</span>
+									</a>
+									<a class="item" href="/store/loganempire/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/1d0a6f11dd43453b4bea7d50dc5de108">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								GELATO MARIJUANA STRAIN (BULK ORDER FREE SHIPPING)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/1d0a6f11dd43453b4bea7d50dc5de108">
+											<img src="/item-image/1d0a6f11dd43453b4bea7d50dc5de108?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/1d0a6f11dd43453b4bea7d50dc5de108">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pounds</div>
+										<div class="ui basic left pointing label price">3140 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire</p>
+
+
+
+
+
+<p>Strain type: Hybrid</p>
+
+<p>Parent strains: Sunset Sherbet</p>
+
+<p>Backstory: Gelato (also referred to as “Larry Bird”) is another tantalizing hybrid cannabis strain from Cookie Fam Genetics. This Bay Area native tends to bloom in dark purple hues illuminated by fiery orange hairs and a shining white coat of crystal resin. Novice consumers may want to approach this THC powerhouse with caution.</p>
+
+<p>Why we love it: A great dessert strain, Gelato is a sweet, floral bud with hints of fruit flavors that lead to extreme euphoria.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/326a32d8e6164be147f9b0e051fd3754">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								G13 BUD AVALAIBLE FOR FREE SHIPPING
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/326a32d8e6164be147f9b0e051fd3754">
+											<img src="/item-image/326a32d8e6164be147f9b0e051fd3754?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/326a32d8e6164be147f9b0e051fd3754">
+										<div class="ui dark-green basic tiny button fluid left aligned">1.5 pounds</div>
+										<div class="ui basic left pointing label price">2380 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire</p>
+
+
+
+
+
+<p>Strain type: Indica</p>
+
+<p>Parent strains: Unknown</p>
+
+<p>Backstory: G13 is a very strong indica strain that is the subject of many urban legends. According to some accounts, the CIA, FBI, and other agencies gathered the best strains of marijuana from breeders all over the world. At a super-secret installation at the University of Mississippi, they bred many new super-hybrids in the late 1960s. Allegedly, a single cutting of this plant was liberated by an unnamed technician and bred for the masses. And although the legends are probably not true, it’s absolutely true that G13 delivers effects like no other.</p>
+
+<p>Why we love it: A fabled strain known for the legends of its origins, G13 is a knockout indica—and if it was actually smuggled out of a government lab, we’re definitely glad it was.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/8885b879ceb14d8f62cd0fbeaed8a0d3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								&#34;PROMO&#34; FRUITY PEBBLES BUD ( FREE SHIPPING)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/8885b879ceb14d8f62cd0fbeaed8a0d3">
+											<img src="/item-image/8885b879ceb14d8f62cd0fbeaed8a0d3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/8885b879ceb14d8f62cd0fbeaed8a0d3">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 lb</div>
+										<div class="ui basic left pointing label price">1540 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome loganempire</p>
+
+
+
+
+
+<p>Parent strains: Green Ribbon, Granddaddy Purple, Tahoe Alien</p>
+
+<p>Backstory: Fruity Pebbles (aka Fruity Pebbles OG) by Alien Genetics was originally a limited-time offering from the breeder. This sweet hybrid borrows a mix of great genetics to create a tropical, berry flavor reminiscent of the cereal it’s named for. The euphoric effects will keep you happy when you’re stressed—pour yourself a bowl of Fruity Pebbles anytime.</p>
+
+<p>Why we love it: It’s a mellow, uplifting hybrid strain whose aroma of fruity breakfast cereal is so distinctive, you have to try it to believe it.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/aa6f6e4ceffe47a15db807b5f8d88633">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								AFGHANI INDICA 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/aa6f6e4ceffe47a15db807b5f8d88633">
+											<img src="/item-image/aa6f6e4ceffe47a15db807b5f8d88633?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/aa6f6e4ceffe47a15db807b5f8d88633">
+										<div class="ui dark-green basic tiny button fluid left aligned">6 ounces</div>
+										<div class="ui basic left pointing label price">980 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire
+Strain type: Indica</p>
+
+<p>Parent strains: None; landrace strain</p>
+
+<p>Backstory: Afghani is a heavy indica strain named after its geographic origin, where the earliest varieties of cannabis are believed to have grown. Breeders worldwide have come to treasure Afghani for its heavy resin production.</p>
+
+<p>Why we love it: It’s an Afghan landrace strain with famous sedation qualities and generous resin production.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/28ba8873439c482e745e0d836474d572">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								GHOST TRAIN HAZE BUD STRAIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/28ba8873439c482e745e0d836474d572">
+											<img src="/item-image/28ba8873439c482e745e0d836474d572?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/28ba8873439c482e745e0d836474d572">
+										<div class="ui dark-green basic tiny button fluid left aligned">100grams</div>
+										<div class="ui basic left pointing label price">900 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire</p>
+
+
+
+
+
+<p>Strain type: Sativa</p>
+
+<p>Parent strains: Ghost OG, Neville’s Wreck</p>
+
+<p>Backstory: First bred by Rare Dankness, Ghost Train Haze is a sativa cross, but unlike typical sativas, the plant grows dense buds blanketed in white, crystal-capped trichomes. With a sour citrus and floral aroma, Ghost Train Haze delivers a potent dose of THC.</p>
+
+<p>Why we love it: It’s a potent, uplifting sativa from Rare Dankness. GTH is popular in Colorado and has an invigorating aroma that mixes citrus notes and floral fragrance.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/3f2bfd3826d5440e579039841aed2996">
+								<span class="ui teal tiny label tag right floated">Bank Accounts</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								BUY CREDIT CARD/FAST BANK TRANSFER/WU TRANSFER WITH MTCN AT GOOD PRICES 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/3f2bfd3826d5440e579039841aed2996">
+											<img src="/item-image/3f2bfd3826d5440e579039841aed2996?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/3f2bfd3826d5440e579039841aed2996">
+										<div class="ui dark-green basic tiny button fluid left aligned">$2300</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/3f2bfd3826d5440e579039841aed2996">
+										<div class="ui dark-green basic tiny button fluid left aligned">$5000</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire</p>
+
+
+
+
+
+<p>HIGH BALANCE PHYSICAL CREDIT CARDS with ATM PIN FOR CASHOUT</p>
+
+<p>ATM card with Pin 2300$ Balance = 500$ ATM card with Pin 7000$ Balance = 1180$</p>
+
+<p>ATM card with Pin 6000€ Balance = €1050 ATM card with Pin 8000€ Balance = €1300</p>
+
+<p>ATM card 2300£ = £500 ATM card 10000£ = £2500</p>
+
+<p>we have a replacement policy for bad cvv. All our cvv are inspected before sale.</p>
+
+<p>WESTERN UNION TRANSFER SERVICE (WU TRANSFER) We store a number of Western Union account from all countries around the</p>
+
+<p>world – We transfer money to all countries / territories in the world that have Western Union. – We can transfer big</p>
+
+<p>amount. You can receive this money in your country / territory. – Please note for new Customers we only accept to provide</p>
+
+<p>MTCN within 2 - 12 hours. We process a series of transfers to our exchange agents who then relay the funds to you. The</p>
+
+<p>result is that you receive clean funds. This makes it very safe and the service is very</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/5d2455fc9bb2493c42d2ab170e353d1e">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ACDC TOP GARDE A&#43; BUD STRAIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/5d2455fc9bb2493c42d2ab170e353d1e">
+											<img src="/item-image/5d2455fc9bb2493c42d2ab170e353d1e?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/5d2455fc9bb2493c42d2ab170e353d1e">
+										<div class="ui dark-green basic tiny button fluid left aligned">1.5</div>
+										<div class="ui basic left pointing label price">1980 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Strain type: Hybrid</p>
+
+<p>Parent strains: Cannatonic</p>
+
+<p>Backstory: A sativa-dominant phenotype of the high-CBD cannabis strain Cannatonic, the most remarkable characteristic of ACDC is its THC:CBD ratio of 1:20. That ratio means that this strain induces almost no psychoactive effects. Tests have put ACDC’s CBD content as high as 19%, which is almost unheard of.</p>
+
+<p>Why we love it: It’s a light-footed CBD strain with almost no THC to cloud your mind.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/d4299a60674343f85e06c2782620df09">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								ACAPULCO GOLD MARIJUANA STRAIN
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/d4299a60674343f85e06c2782620df09">
+											<img src="/item-image/d4299a60674343f85e06c2782620df09?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/d4299a60674343f85e06c2782620df09">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pounnds</div>
+										<div class="ui basic left pointing label price">2860 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire
+Strain type: Sativa</p>
+
+<p>Parent strains: Mexican</p>
+
+<p>Backstory: One of the best-known strains, Acapulco Gold has been likened to dinner at a five-star restaurant. It resembles a gold nugget, and aromas of burnt toffee linger when the bud is broken up.</p>
+
+<p>Why we love it: A Mexican landrace prized for its happy, stimulating buzz, Acapulco Gold has a reputation as one of the best cannabis strains ever created.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/f8831d35aa4448aa47fdc06548a5193a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								GRANDDADDY PURPLE STRAIN 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/f8831d35aa4448aa47fdc06548a5193a">
+											<img src="/item-image/f8831d35aa4448aa47fdc06548a5193a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/f8831d35aa4448aa47fdc06548a5193a">
+										<div class="ui dark-green basic tiny button fluid left aligned">2.5 pounds</div>
+										<div class="ui basic left pointing label price">3474 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire
+Strain type: Indica</p>
+
+<p>Parent strains: Purple Urkle, Big Bud</p>
+
+<p>Backstory: Introduced in 2003 by Ken Estes, Granddaddy Purple (or GDP) is a famous indica cross: The California staple inherits a complex grape and berry aroma from its Purple Urkle parent, while Big Bud passes on its oversized, compact bud structure. GDP flowers bloom in shades of deep purple, a contrastive backdrop for its snow-like dusting of white crystal resin. Its potent psychoactive effects are clearly detectable in both mind and body, and growers particularly love GDP for its massive yields.</p>
+
+<p>Why we love it: King among indicas, this flavorful bud offers berry flavors and pacifying effects. Its purpled foliage is one of the most beautiful cannabis blooms out there.</p>
+
+<p>Find Granddaddy Purple Near You</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/b952c9ead1bc43f85a263f91276054b1">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								PROMO AK 47 HYBRID
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/b952c9ead1bc43f85a263f91276054b1">
+											<img src="/item-image/b952c9ead1bc43f85a263f91276054b1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/b952c9ead1bc43f85a263f91276054b1">
+										<div class="ui dark-green basic tiny button fluid left aligned">4 ounces</div>
+										<div class="ui basic left pointing label price">1000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire
+Strain type: Hybrid</p>
+
+<p>Parent strains: South American, Mexican, Thai, Afghani</p>
+
+<p>Backstory: Don’t let its intense name fool you: AK-47 will leave you relaxed and mellow. While its scent is sour and earthy, its sweet floral notes can only be fully realized in the taste. Created in 1992 by Serious Seeds, AK-47 has won numerous Cannabis Cup awards around the world.</p>
+
+<p>Why we love it: “It’s a hybrid strain with rich genetic heritage and bold, mood-brightening effects.”</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/aff08d38a1f146e9755f728a65b8848b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								EWOK STRAIN 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/aff08d38a1f146e9755f728a65b8848b">
+											<img src="/item-image/aff08d38a1f146e9755f728a65b8848b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/aff08d38a1f146e9755f728a65b8848b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1</div>
+										<div class="ui basic left pointing label price">1230 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Strain type: Hybrid</p>
+
+<p>Parent strains: Albert Walker, Tahoe Alien</p>
+
+<p>Backstory: Ewok was the Hybrid winner of the 2013 Seattle High Times Cannabis Cup. Bred by Alien Genetics, it’s a fast-growing plant with a short vegetative cycle that produces large yields of frost-covered buds as hairy as the Star Wars Ewoks themselves. Pungent fruity notes of tangerine and lemon introduce Ewok’s strong cerebrally-focused effects, which promote relaxation and stress relief.</p>
+
+<p>Why we love it: Ewok, a Pacific Northwest favorite, carries a pungent, sweet aroma and melts away stress.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/loganempire/item/039fdebda6e14c1b596f9644922a3bf0">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								LAVENDER HAZE BUD
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/loganempire/item/039fdebda6e14c1b596f9644922a3bf0">
+											<img src="/item-image/039fdebda6e14c1b596f9644922a3bf0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/loganempire/item/039fdebda6e14c1b596f9644922a3bf0">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 lb</div>
+										<div class="ui basic left pointing label price">1570 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>welcome to loganempire
+Strain type: Indica</p>
+
+<p>Parent strains: Super Skunk, South Asian Indica, Afghani, Hawaiian</p>
+
+<p>Backstory: Built of strains from around the world, Lavender by Soma Seeds (sometimes referred to as Lavender Kush) has dense buds that give off a floral and spicy aroma. It has a dark purple coloration that stretches all the way to the ends of its leaves.</p>
+
+<p>Why we love it: One word: relaxation. The linalool-laden terpene profile that gives this strain its name and aroma washes over the consumer like a bubble bath.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 245 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" href="/css/semantic.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link href="/img/favicon.ico" rel="shortcut icon" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input name="subcategory" value="0" type="hidden" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg viewBox="0 0 24 24" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a href="/settings/user" class="item">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a href="/referrals" class="item">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input type="hidden" name="csrf_token" value="" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a class="ui button fluid green tiny" href="/app/download">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a class="item" href="/feed">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item active" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a class="item fluid" href="/settings/language/en">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a href="/settings/language/es" class="item fluid">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a href="/settings/language/rs" class="item fluid">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a class="item fluid" href="/settings/language/tr">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid divided">
+							<div class="twelve wide column">
+								<div class="segment static ui">
+									<h3 class="ui dividing header capitalize">how to stay safe</h3>
+									<div><h1>Overview</h1>
+
+<ol>
+<li>Remaining anonymous (recommended)</li>
+<li>Buying behaviours (recommended)</li>
+<li>If you order large amounts or if you&rsquo;re in a country with strong anti-drug laws (advanced)</li>
+</ol>
+
+<h2>1. Remaining anonymous</h2>
+
+<ul>
+<li>Seperate identities (recommended)
+
+<ul>
+<li>Dont login to clearnet (regular web sites) sites with Tor Browser, this makes your tor connection tied to an account you access through clearnet browser.</li>
+</ul></li>
+<li>Keeping Tor Browser secure (recommended)
+
+<ul>
+<li>Never maximize the window</li>
+<li>Don&rsquo;t install extensions</li>
+<li>Regularly update Tor browser</li>
+</ul></li>
+<li>Get onion adress for Tochka from trusted site (recommended)
+
+<ul>
+<li>You can find our onion at our clearnet site <a href="https://www.tochkafreemarket.com/">https://www.tochkafreemarket.com/</a> (If you can&rsquo;t remember adress, Google: &ldquo;tochka free market&rdquo;)</li>
+</ul></li>
+<li>Don&rsquo;t communicate with vendors/users outside the platform, for example via wickr (recommended)</li>
+<li><a href="#vpn">Possibly use VPN</a> (advanced)</li>
+<li><a href="https://www.funkyspacemonkey.com/whonix-the-beginners-guide">Possibly use Whonix or Tails </a>(advanced)</li>
+</ul>
+
+<h2>2. Buying behaviours</h2>
+
+<ul>
+<li>Never buy outside the Darknet Market
+
+<ul>
+<li>If you buy outside Tochka, we don&rsquo;t hold the bitcoins until you recieve the products. Also, we and the vendor have a reputation to uphold within Tochka&rsquo;s grounds, which you immediately loose if you buy on the vendor&rsquo;s site or just transfer bitcoin&rsquo;s to his wallet.</li>
+</ul></li>
+<li>Encrypt you communication with vendors
+
+<ul>
+<li><a href="https://darknetmarkets.org/guides/pgp-tutorial-for-newbs/">Guide how to encrypt messages, for windows users</a></li>
+<li><a href="https://darknetmarkets.org/guides/basic-guide-to-pgp-on-linux/">Guide how to encrypt messages, for linux users</a></li>
+</ul></li>
+<li>Buy from reputable vendors
+
+<ul>
+<li>Even if we do our best to remove fraudelent vendors, some still get through. Always check the vendors reviews and which rating the vendor has to minimize risk. And most important of all, never finalize early i.e. don&rsquo;t release the payment before you have recived the product. If a vendor tries to push you to finalize early,  <a href="/support/new">report it to the staff</a>.</li>
+<li>If you don&rsquo;t recive your ordered product within 6 days, <a href="/support/new">make a dispute</a>.</li>
+<li>You can see how classify vendors <a href="/help/08_vendor_levels">here</a></li>
+</ul></li>
+</ul>
+
+<h3>3. Security beyond normal buying</h3>
+
+<p>Some beginning tips for new users are laid out, here – some are from personal experiences and others from stories across the web:</p>
+
+<ul>
+<li>Remember to use your biological name because nothing draws more attention than a fake name; however, use a drop system: this is where you employ a chain of houses through where the item travels after having been shipped or a P.O. Box which you can get for almost no money and even a faux name (be sure to have the forged documents to back your case up).</li>
+<li>If you do end up deciding to use a faux name, ensure you’ve got real-looking document forgeries to back that up, should confrontation occur. Fake identification, plus utility-bill scans are mostly sufficient to open up a P.O. box under said faux name.</li>
+<li>Be patient when you can, during the majority of the time. Tochka Free Market isn’t Amazon – things do often have totally unexpected delays; vendors usually mark ordered items as shipped immediately upon receiving the notification, even though they only ship the day after then. Weather and holidays can significantly delay otherwise-proper shipping/delivery time. The only time you should rebut an order’s shipment after not arriving, is once you have waited, in the least, 14 days after the failed expected delivery, or around when Auto-finalize is almost activated.</li>
+<li>Encrypt all you can, including messages you send. It’s worth this small extra effort to avoid penitentiary time.</li>
+<li>Should there be any negative experience with a vendor, try to message them, prior to giving a bad review. Chances are that the vendor will go to extreme lengths to make sure you get what you need, and have it all sorted sufficiently. Be as kind and polite as you can; it will move you farther in the process of getting stuff done.</li>
+<li>No one should ever know you make purchases on DNMs. This includes not telling your friends or even close family.
+Anything in the market that looks too great to be true, is, in all probability, a scam.</li>
+</ul>
+
+<h4><span id="vpn">Using VPN Service</span></h4>
+
+<p>Every time you use your computer your IP address is shown which reveals your actual physical address which means you can be traced very easily. A VPN must be used along with Tor (Tor is the free browser explained below) to make your online activity anonymous. When using a VPN Service it will hide your identity and location while also encrypting all of you internet traffic from everyone including your internet service provider. This technology will also protect you from identity theft and hacking when using free wifi because everything is encrypted. Any time you are searching for music, movies to download, pirated content, drugs or anything illegal then you should be using a VPN to fly under the radar. The law is trying to monitor everything we do now so don’t make it easy for them, don’t end up like the original mastermind of Silk Road and get busted. This is a must have in your anonymous arsenal.</p>
+
+<p>Your first-ever step in buying something via any marketplace whatsoever, is properly setting-up your digital environment. Following below is a bare standard minimum in order to stay safe when buying personal items. After you are done, make sure you glance at the Security Tutorials section for several additional tips in security.</p>
+</div>
+								</div>
+							</div>
+							<div class="four wide column t-left-menu-items">
+								<div class="ui vertical fluid menu tiny basic secondary">
+									<a class="item capitalize" href="/help/01_terms_of_service">terms of service</a>
+									<a class="item capitalize" href="/help/03_how_to_sell">how to sell</a>
+									<a class="item capitalize" href="/help/04_how_to_buy">how to buy</a>
+									<a class="item capitalize" href="/help/05_about_marketplace">about marketplace</a>
+									<a class="item capitalize" href="/help/06_quality_control">quality control</a>
+									<a class="item capitalize" href="/help/07_disputes">disputes</a>
+									<a class="item capitalize" href="/help/08_vendor_levels">vendor levels</a>
+									<a class="item capitalize" href="/help/09_REST_API">REST API</a>
+									<a class="item capitalize" href="/help/10_how_to_stay_safe">how to stay safe</a>
+									<a class="item capitalize" href="/help/11_how_front_page_works">how front page works</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/" class="item">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 316 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

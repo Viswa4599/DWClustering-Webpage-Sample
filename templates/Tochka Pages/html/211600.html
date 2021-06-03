@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/soul_growers?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@soul_growers</h2>
+								<p>coming from dream with 4.99 rating / 350 transactions</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 year ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 14 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.84</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/soul_growers">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/soul_growers">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/soul_growers/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">6</span>
+									</a>
+									<a class="item active" href="/store/soul_growers/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">12</span>
+									</a>
+									<a class="item" href="/store/soul_growers/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/a1c04583b5d44aae589136dd9b09a067">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								ROSIN / SHO by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/a1c04583b5d44aae589136dd9b09a067">
+											<img src="/item-image/a1c04583b5d44aae589136dd9b09a067?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a1c04583b5d44aae589136dd9b09a067">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 gram</div>
+										<div class="ui basic left pointing label price">73 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a1c04583b5d44aae589136dd9b09a067">
+										<div class="ui dark-green basic tiny button fluid left aligned">2,5 gram</div>
+										<div class="ui basic left pointing label price">157 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a1c04583b5d44aae589136dd9b09a067">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">292 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a1c04583b5d44aae589136dd9b09a067">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">538 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ROSIN ❤️ SOLVENTLESS HASH OIL BY SOUL GROWERS®</p>
+
+<p>FRESHLY MADE WITH ONLY OUR BEST INGREDIENDS, JUST FOR YOU, STRONGEST SHIT!!</p>
+
+<p>Rosin has gained popularity in recent memory, producing rosin involves the use of heat and high pressure to isolate the resinous essential oils from trichome heads to create a solid form of resin.</p>
+
+<p>Because solvents are not introduced in the process, the chemical structure of terpenes and cannabinoids within the flower are unaltered, which is why rosin is often considered one of the purest and most flavorful forms of concentrate.</p>
+
+<p>Colour, aroma, flavor and taste of rosin vary greatly, depending on many factors, ask for more info.</p>
+
+<p>How to Consume Concentrates:</p>
+
+<p>Like flower, there are many ways to consume concentrates. Some are more effective than others, but ultimately it’s a simple matter of</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/12f300b03d4a41a377088f35ba901462">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>4</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								RED DRAGON by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/12f300b03d4a41a377088f35ba901462">
+											<img src="/item-image/12f300b03d4a41a377088f35ba901462?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/12f300b03d4a41a377088f35ba901462">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">79 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/12f300b03d4a41a377088f35ba901462">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">146 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/12f300b03d4a41a377088f35ba901462">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">247 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ RED DRAGON ❤️ QUALITY  10 / 10  INDOOR - HYDROPONIC - HIGHEST GRADE</p>
+
+<p>Genetics:                  West Himalayan Kush X Utopia Haze</p>
+
+<p>Flavors:            sweet, berry, earty</p>
+
+<p>Effect:             happy, giggly, relaxed</p>
+
+<p>Structure:      medium nuggets,  hard and compact</p>
+
+<p>Red Dragon is one exotic flower. A Barney’s Farm cross between a West Himalayan Kush and Utopia Haze (a Brazilian sativa), this hybrid is a strain for connoisseurs. Featuring a sweet, fruity aroma, Red Dragon offers consumers a truly different cannabis experience. Slightly sativa-dominant, this strain is giggly and upbeat. Great for those suffering from depression or stress, Red Dragon has a very happy and uplifting effect.</p>
+
+<p>♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/1f03826dbc004e07783167b5ccfa5d1a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								VANILLA KUSH by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/1f03826dbc004e07783167b5ccfa5d1a">
+											<img src="/item-image/1f03826dbc004e07783167b5ccfa5d1a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/1f03826dbc004e07783167b5ccfa5d1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/1f03826dbc004e07783167b5ccfa5d1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">124 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/1f03826dbc004e07783167b5ccfa5d1a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">224 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ VANILLA KUSH ❤️ QUALITY  9 / 10    INDOOR - HYDROPONIC - HIGH GRADE</p>
+
+<p>Genetics:               80% Indica / 20% Sativa</p>
+
+<p>Flavors:            vanilla - sweet - spicy</p>
+
+<p>Effect:         relaxed - happy - creative</p>
+
+<p>Structure:      big buds -  compact but not too hard</p>
+
+<p>Bred from Afghan and Kashmir strains, this Kush beauty is a gift to the senses with her notes of vanilla, lavender, and a hint of citrus.
+This strain has a high THC content often measuring over 20%, making it a potent choice that might be strong for new users.</p>
+
+<p>Most patients will find they can overcome the couch-lock this strain may try to provide, which can make it great for daytime pain relief. Users may find that Vanilla Kush can help fight depression and other mood disorders. Others will seek it for the other bodily effects that may help fight insomnia, arthritis and nau</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/76fe7a0dfe834c9455ef31a689876aa3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								BLUEBERRY OG by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/76fe7a0dfe834c9455ef31a689876aa3">
+											<img src="/item-image/76fe7a0dfe834c9455ef31a689876aa3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/76fe7a0dfe834c9455ef31a689876aa3">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/76fe7a0dfe834c9455ef31a689876aa3">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">124 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/76fe7a0dfe834c9455ef31a689876aa3">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">224 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ BLUEBERRY OG ❤️ QUALITY  9 / 10 - INDOOR - HYDROPONIC - HIGH GRADE</p>
+
+<p>Genetics:               70% Indica  30% Sativa  - Blueberry x OG Kush</p>
+
+<p>Flavors:            berry, sweet, woody</p>
+
+<p>Effect:             happy, relaxed, giggly</p>
+
+<p>Structure:      small and medium buds - hard and compact</p>
+
+<p>Blueberry OG is a DJ Short Blueberry phenotype with exceptional CBD yielding qualities combined with the indica-dominant legend, OG Kush. This potent, award-winning union doesn’t pack much in the way of psychoactivity, but its anti-anxiety and anti-inflammatory effects make up for any lack of headiness. With flavors of sweet camphor and sandalwood, this strain elevates the consumer’s mood and promotes an overall sense of well being.  </p>
+
+<p>♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥�</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/b9ae1d56a6cf4d686483c454ea417b2d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GORILLA COOKIE by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/b9ae1d56a6cf4d686483c454ea417b2d">
+											<img src="/item-image/b9ae1d56a6cf4d686483c454ea417b2d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/b9ae1d56a6cf4d686483c454ea417b2d">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">79 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/b9ae1d56a6cf4d686483c454ea417b2d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">146 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/b9ae1d56a6cf4d686483c454ea417b2d">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">236 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸GORILLA COOKIE ❤️ QUALITY  9,5 / 10 - INDOOR - HYDROPONIC - HIGHEST GRADE</p>
+
+<p>Genetics:                 Gorilla Glue #4 X Thin Mint Girl Scout Cookies</p>
+
+<p>Flavors:            sweet, mint, earty</p>
+
+<p>Effect:             relxed, euphoric, happy</p>
+
+<p>Structure:      medium and small  nuggets - extreme flavourful, hard and compact</p>
+
+<p>Gorilla Cookies is the powerful union of Gorilla Glue #4 and Thin Mint Girl Scout Cookies. The pungent Gorilla Glue aroma is loud, but Thin Mint’s exotic terpene profile adds nuance to the bouquet. Both parents were bred for potency and that shows in the resin-coated buds that harden like stones after curing. Enjoy this one-hitter quitter with care, as the effects will alter the trajectory of your entire day. Gorilla Cookies is a quality strain for managing physical pain, nausea, and stress.</p>
+
+<p>♥︎♥︎♥︎♥</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/caed2cdf033043697e0a9528201039f5">
+								<span class="ui teal tiny label tag right floated">Hash</span>
+								GOLDEN KIEF HASH POWDER / DRY SIFT  by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/caed2cdf033043697e0a9528201039f5">
+											<img src="/item-image/caed2cdf033043697e0a9528201039f5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/caed2cdf033043697e0a9528201039f5">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/caed2cdf033043697e0a9528201039f5">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">124 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/caed2cdf033043697e0a9528201039f5">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">224 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with
+BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ GOLDEN KIEF ❤️ HIGH QUALITY / 150 micron extraction!</p>
+
+<p>100% clean product, only resinous trichomes of cannabis.
+Kief contains a much higher concentration of psychoactive cannabinoids, such as THC,
+than that of the cannabis flowers from which it is derived.</p>
+
+<p>Very clean smoke, because the used material was cured for many month!</p>
+
+<p>♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/6c130d8c2a3e45fd6c7100d950f0b6e9">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								THC OIL / RSO by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/6c130d8c2a3e45fd6c7100d950f0b6e9">
+											<img src="/item-image/6c130d8c2a3e45fd6c7100d950f0b6e9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/6c130d8c2a3e45fd6c7100d950f0b6e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">2,5 gram</div>
+										<div class="ui basic left pointing label price">62 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/6c130d8c2a3e45fd6c7100d950f0b6e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">112 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/6c130d8c2a3e45fd6c7100d950f0b6e9">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">202 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸THC OIL (RICK SIMPSON ) ❤️ BY SOUL GROWERS®</p>
+
+<p>Carefully extracted with Rick Simpson method from high quality indica indoor material, very strong stuff!!</p>
+
+<p>Rick Simpson Oil (RSO) is an extract that is beloved among many medical cannabis patients for its therapeutic benefits. RSO is a plant extract that was discovered by none other than Rick Simpson himself.</p>
+
+<p>RSO refers to extremely potent decarboxylated extracts produced from strong sedative Indica strains, which have THC levels in the 60%-90% range. RSO is a form of cannabis that has many known medical applications</p>
+
+<p>For THC-rich oils, it’s not recommended to start with anything greater than 1-5mg or ~0.2 ml. Be sure to increase dose amounts in small increments!!</p>
+
+<p>♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/88f27e93044c460b68ad36d144ba5b06">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								MOONROCKS by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/88f27e93044c460b68ad36d144ba5b06">
+											<img src="/item-image/88f27e93044c460b68ad36d144ba5b06?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/88f27e93044c460b68ad36d144ba5b06">
+										<div class="ui dark-green basic tiny button fluid left aligned">2,5 gram</div>
+										<div class="ui basic left pointing label price">62 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/88f27e93044c460b68ad36d144ba5b06">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">112 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/88f27e93044c460b68ad36d144ba5b06">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">202 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/88f27e93044c460b68ad36d144ba5b06">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">336 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ MOONROCKS ❤️ HIGHEST QUALITY BY SOUL GROWERS®</p>
+
+<p>FRESHLY MADE WITH ONLY OUR BEST INGREDIENDS, JUST FOR YOU, ULTRA STRONG SHIT!!</p>
+
+<p>MoonRocks are something special, madeof our best cannabis products !
+Combining regular buds with oil and kief, these babies pack a big, potent punch.
+You can choose between different strains with the shipping, ask for detailed info!</p>
+
+<p>HOW TO SMOKE MOON/SUN ROCKS?!</p>
+
+<p>Smoking Moon or SunRocks is a little different to smoking regular flower, here are some tips to enjoy them properly.</p>
+
+<p>💡1  Don’t grind them: A regular herb grinder will butcher these buds and likely struggle with their sticky texture. Instead, use your fingers or scissors to gently break them apart.</p>
+
+<p>💡2  Use a pipe, bong, or bubbler: At 60-80% THC, you don’t need a lot of these Rocks to get you flying. Hence, it’s</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/a26d163a00ed440174e11acdbb84d1e6">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								SUNROCKS by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/a26d163a00ed440174e11acdbb84d1e6">
+											<img src="/item-image/a26d163a00ed440174e11acdbb84d1e6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a26d163a00ed440174e11acdbb84d1e6">
+										<div class="ui dark-green basic tiny button fluid left aligned">2,5 gram</div>
+										<div class="ui basic left pointing label price">90 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a26d163a00ed440174e11acdbb84d1e6">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">157 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/a26d163a00ed440174e11acdbb84d1e6">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">292 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with
+BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸SUNROCKS ❤️  HIGHEST QUALITY BY SOUL GROWERS®</p>
+
+<p>FRESHLY MADE WITH ONLY OUR BEST INGREDIENDS, JUST FOR YOU, ULTRA STRONG SHIT!!
+Sun Rocks, the upgrade to Moon Rocks.</p>
+
+<p>Top shelf nuggets, combined with highest quality rosin (SHO)</p>
+
+<p>SUNROCKS OR MOONROCKS?
+They don’t necessarily look the same, and neither should they.
+These things perform at a completely different level, and this is because of the meticulous way in which their ingredients are selected and combined.</p>
+
+<p>Apart from having an extremely high potency, the taste is also a lot more intense, offering a more pleasing experience than just smoking straight BHO; you can smoke a joint comfortably instead of just one devastating drag, making for an amazing mental effect as well as a delicious taste experience.</p>
+
+<p>HOW TO SMOKE MOON/SUN ROCKS?!</p>
+
+<p>Smoking Moon or S</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/2e86a641168e498d6a37a718c29576d6">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								PHANTOM OG by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/2e86a641168e498d6a37a718c29576d6">
+											<img src="/item-image/2e86a641168e498d6a37a718c29576d6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/2e86a641168e498d6a37a718c29576d6">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/2e86a641168e498d6a37a718c29576d6">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">124 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/2e86a641168e498d6a37a718c29576d6">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">224 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ PHANTOM OG  ❤️  QUALITY  9 / 10     INDOOR - HYDROPONIC - HIGH GRADE</p>
+
+<p>Genetics:               70% Indica 30% Sativa</p>
+
+<p>Flavors:            menthol, lemon, pine</p>
+
+<p>Effect:             relaxed, euphoric, happy</p>
+
+<p>Structure:      medium and big buds - mostly hard and compact</p>
+
+<p>Phantom OG is an indica-dominant strain that begins with heightened energy and ends with a crash of full-body relaxation. Beyond its OG Kush genes, Phantom OG’s lineage is largely unknown, although many claim it’s related to the “Planetary Kush” series which includes Earth OG, Jupiter OG, Mars OG, and others.</p>
+
+<p>Its aroma is a rich combination of pine and lemon accented by a subtle menthol flavor. The initial euphoric jolt launches you into a happy, dreamy state of mind with fits of giggles and fixated concentration. Over time, you may notice some mental jamming</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/6afade704dff454d6d7b0ec29d4bc8a3">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								GELATO by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/6afade704dff454d6d7b0ec29d4bc8a3">
+											<img src="/item-image/6afade704dff454d6d7b0ec29d4bc8a3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/6afade704dff454d6d7b0ec29d4bc8a3">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">79 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/6afade704dff454d6d7b0ec29d4bc8a3">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">146 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/6afade704dff454d6d7b0ec29d4bc8a3">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">247 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES
+with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸GELATO ❤️ QUALITY  10 / 10
+INDOOR - HYDROPONIC - HIGHEST GRADE</p>
+
+<p>Genetics:                 Thin Mint Girl Scout Cookies X Sunset Sherbet</p>
+
+<p>Flavors:            sweet, citrus, earthy</p>
+
+<p>Effect:             relaxed, euphoric, happy</p>
+
+<p>Structure:      medium nuggets, sticky as hell - hard and compact, just wonderful :)</p>
+
+<p>Gelato (also referred to as “Larry Bird”) is another tantalizing hybrid cannabis strain from Cookie Fam Genetics, following in the footsteps of its parents Sunset Sherbet and Thin Mint GSC. This Bay Area, California native gets its name from the fruity, dessert-like aroma, a common genetic thread among the Cookie family. Her buds tend to bloom in dark purple hues illuminated by fiery orange hairs and a shining white coat of crystal resin. Novice consumers may want to approach this THC powerhouse with caution, but those armed</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/soul_growers/item/b4bd236aa3a84d925bc0a8abbf6a378a">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								AMNESIA LEMON by soul_growers
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/soul_growers/item/b4bd236aa3a84d925bc0a8abbf6a378a">
+											<img src="/item-image/b4bd236aa3a84d925bc0a8abbf6a378a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/b4bd236aa3a84d925bc0a8abbf6a378a">
+										<div class="ui dark-green basic tiny button fluid left aligned">5 gram</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/b4bd236aa3a84d925bc0a8abbf6a378a">
+										<div class="ui dark-green basic tiny button fluid left aligned">10 gram</div>
+										<div class="ui basic left pointing label price">124 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/soul_growers/item/b4bd236aa3a84d925bc0a8abbf6a378a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20 gram</div>
+										<div class="ui basic left pointing label price">224 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hello FRIENDS, WELCOME to SOULGROWERS!</p>
+
+<p>Here you find TOP QUALITY CANNABIS PRODUCTS for EXCELLENT PRICES with BEST AVAILABLE STEALTH shipping and FRIENDLY CUSTOMER SERVICE</p>
+
+<p>⫸ AMNESIA LEMON ❤️ SATIVA PHENO - QUALITY  9 / 10 - INDOOR - HYDROPONIC - HIGH GRADE</p>
+
+<p>Genetics:               70% Sativa 30% Indica  - Amnesia Haze X Lemon Skunk</p>
+
+<p>Flavors:            lemon, sweet, woody</p>
+
+<p>Effect:             uplifting, euphoric, cerebral</p>
+
+<p>Structure:      medium and big buds - hard and compact</p>
+
+<p>Amnesia Lemon is an Indica- Sativa marijuana hybrid, we offer the Sativa Phenotype, wich is good for daytime.
+Amnesia Lemon induces euphoric cerebral high, characterized by increase in energy, creativity, imagination. Relieves stress.</p>
+
+<p>♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥�</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 522 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

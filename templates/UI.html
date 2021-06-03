@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Template Clusterer
+        </title>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1,shrink-to-fit =no">
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--Chart.js-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+    </head>
+    <style>
+        .send-button{
+        background: #54C7C3;
+        width:100%;
+        font-weight: 600;
+        color:#fff;
+        padding: 8px 25px;
+        }
+
+
+    </style>
+    <script>
+         window.data = {{ sizes|safe }};
+         window.centers = {{ centers |safe}};
+         window.ncs = {{ncs |safe}};
+         window.x = {{ x|safe}};
+         window.y = {{ y|safe}};
+         window.flag = {{flag|safe}};
+    </script>
+    <script>
+        window.onload = function() {
+        
+        var dataPointsclus =  [];
+        
+        var clusterchart = new CanvasJS.Chart("chartContainer1", {
+            animationEnabled: false,
+            theme: "light2",
+            title: {
+                text: "Cluster Sizes"
+            },
+            //axisX:{
+             //   interval:1
+           // },
+
+            axisY: {
+                title: "Tochka Clusters",
+                titleFontSize: 24,
+             //   interval : 1
+            },
+            data: [{
+                type: "bubble",
+                showInLegend: true,
+                legendText: "Size of Bubble Represents Number of Pages in that Cluster",
+                legendMarkerType: "circle",
+                legendMarkerColor: "grey",
+                toolTipContent: " <b> Center: {name}</b> <br/> Cluster Size: {z}",
+                dataPoints: dataPointsclus
+            }]
+        });
+        var len = Object.keys(data).length;
+        for(var i =0;i<len;i++){
+            var random = Math.random()*10;
+            zval = i
+            zval.toString()
+            dataPointsclus.push({x:x[i],y:y[i],z:data['size'+zval],name:centers['center'+zval]});
+            //dataPointsclus.push({x:i,y:(i+2),z:(i+3)})
+        }
+        clusterchart.render();
+        }
+    </script>
+    <body style="background-color:ivory">
+    <div class="container">
+    <div  class="jumbotron text-center">
+        <h1>
+            Real Time Clusterer
+        </h1>
+        <div class="header-title">
+        <h2 class="wv-heading--title">
+           Enter Clustering Parameters below
+        </h2>
+        </div>
+    <br> 
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="myform form ">
+            <form action="./home" method="post">
+                {% csrf_token %} 
+                <label>Sample Size: </label>
+                <input id="sample" type="number" name="sample">
+                <br>
+                <label>Threshold: </label>
+                <input id="threshold" type="number" name="threshold">
+                <br>
+                <label>K value: </label>
+                <input id="kval" type="number" name="kval">
+                <br>
+                <label>Recheck: </label>
+                <input id="recheck" type="number" name="recheck">
+                <br>
+                <br>
+                <button type="submit" class=" btn btn-block send-button tx-tfm">Begin Clustering</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+        {% if flag == 1 %}
+        <div class="container">
+            <div class="alert alert-success">
+                <strong>Clustering Succesfully completed in {{time}} seconds</strong> 
+            </div>
+            <h2>
+              Cluster Information
+            <h2>
+            <div class = 'row'>
+            <div class = 'col-md-4'>
+            <h3>Cluster Centers</h3>
+
+            {% for key,value in centers.items %}
+                <form method="post" action="./{{value}}/" class="inline" target="_blank" >
+                    {% csrf_token %} 
+                    <input type="hidden">
+                    <button type="submit" name="pagenum" class="btn btn-link" value="{{value}}" class="link-button">
+                        {{key}} : {{value}}
+                    </button>
+                </form>
+            {% endfor %}
+            </div>
+            <div class = 'col-md-4'>
+            {% if mgflag != 1 %}   
+            <h3>Nearest Centers</h3>
+            {% for key,value in ncs.items %}
+              <h4>Nearest of {{key}}: Center {{value}}</h4>
+              
+              <form action = './home' method="post"  class="inline">
+                {% csrf_token %} 
+              <button type="submit" name="pagenum" class="btn btn-danger" value = "merge{{key}}{{value}}">
+                Merge
+             </button>
+            </form>
+            
+            <br> 
+            {% endfor %}
+            {% endif %}
+        </div>
+       </div>
+            <div class = 'col-sm-12'>
+                <div id="chartContainer1" style="height: 470px; width: 900px;"></div>
+                <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            </div>
+        </div>
+
+        {% endif %}
+    </body>
+</html>

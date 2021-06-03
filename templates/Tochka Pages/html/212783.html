@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/wochris?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@wochris</h2>
+								<p>HQ WEED - 1$ WORLDWIDE SHIPPING - CANNABIS IS OUR PASSION SINCE 1989</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 4 months ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 9 hours ago</span>
+								</div>
+								<br />
+								<span class="ui label grey">Silver Account</span>
+								<span class="ui label">Verified </span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.3</span>
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/wochris">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/wochris">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/wochris/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">10</span>
+									</a>
+									<a class="item active" href="/store/wochris/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">27</span>
+									</a>
+									<a class="item" href="/store/wochris/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/d1ebfbf57ddd43965830c1daeea866bb">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								MEDICAL CANNABIS EMERGENCY ELIXER / 10ML / THC 30% / PAIN KILLER / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/d1ebfbf57ddd43965830c1daeea866bb">
+											<img src="/item-image/d1ebfbf57ddd43965830c1daeea866bb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/d1ebfbf57ddd43965830c1daeea866bb">
+										<div class="ui dark-green basic tiny button fluid left aligned">1spray</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/d1ebfbf57ddd43965830c1daeea866bb">
+										<div class="ui dark-green basic tiny button fluid left aligned">5sprays</div>
+										<div class="ui basic left pointing label price">112 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/d1ebfbf57ddd43965830c1daeea866bb">
+										<div class="ui dark-green basic tiny button fluid left aligned">10sprays</div>
+										<div class="ui basic left pointing label price">168 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>This is a high quality Cannabiselixir-Spray made of alimental Alcohol and 25% THC organic Cannabisoil and helps against following diseases:</p>
+
+<p>Parkinson , Turrets , Pain - relief , Fibromialgia , ADHD , Anorexia , Anxiety</p>
+
+<p>Content Materials : Alimental Alkohol and Cannabis ( 25 % )</p>
+
+<p>Once sprayed in the mouth it will helps immediately.</p>
+
+<p>If you need more information about taking the product adapted to a specific disease do not hesitate to contact us.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Golden Lemon / Indica / THC 20% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+											<img src="/item-image/e097e2e50b4d49d057ea2543b277a1fc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/e097e2e50b4d49d057ea2543b277a1fc">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The Golden Lemons marijuana strain is a 60%/40% Indica dominant hybrid. The bud was bred by DNA Genetics. These cannabis plants take 8-9 weeks to finish flowering. The herb rewards with high yields of highly resinous buds. The strain is favored by hash and concentrates lovers due to easily extracted crystals and amazing aroma. As the name suggests, Golden Lemons marijuana has over the top citrus and old school Kush flavor. The strain is very potent, suited for seasoned cannabis connoisseurs.</p>
+
+<p>Type of High</p>
+
+<p>Golden Lemons marijuana hits hard and induces bright, sizzling euphoria of the mind followed by numbing body buzz. Promotes relaxation, laziness, and sleep. Helps with stress, insomnia, chronic pain, poor appetite, muscle spasms, and tightness.</p>
+
+<p>Genetics</p>
+
+<p>Golden Lemons cannabis strain is a cross between Jew Gold Cut and Lemon Skunk.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Indica Dominant Hybrid 40% Sativa / 60% Indica</p>
+
+<p>THC 20%</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/ca4962cfb32149104fa7b82bf9b9a310">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								MEDICAL SUPER THC CAPSULES / 24% THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/ca4962cfb32149104fa7b82bf9b9a310">
+											<img src="/item-image/ca4962cfb32149104fa7b82bf9b9a310?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/ca4962cfb32149104fa7b82bf9b9a310">
+										<div class="ui dark-green basic tiny button fluid left aligned">20capsules</div>
+										<div class="ui basic left pointing label price">45 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/ca4962cfb32149104fa7b82bf9b9a310">
+										<div class="ui dark-green basic tiny button fluid left aligned">50capsules</div>
+										<div class="ui basic left pointing label price">96 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/ca4962cfb32149104fa7b82bf9b9a310">
+										<div class="ui dark-green basic tiny button fluid left aligned">100capsules</div>
+										<div class="ui basic left pointing label price">168 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>These ( 01 sized ) capsules are filled with pure organic cannabis that has been activated in the oven for at least 40 Minuets at 115 degrees.</p>
+
+<p>The cannabis inside is High Quality Indica with high THC and CBD level.</p>
+
+<p>We only use vegetarian capsules.</p>
+
+<p>They are as filled as much as possible.</p>
+
+<p>We advice to take the first time only one capsule, the effect must start normally about in one hour (depends on if your stomache is empty or filled).</p>
+
+<p>The Capsules have healing effects on the following diseases:</p>
+
+
+sleeping problems
+pain
+Fibromylagie
+Parkinson
+Erythromelalgie
+
+
+<p>If you need more information about taking the product adapted to a specific disease do not hesitate to contact us.</p>
+
+<p>Fasten your Seatbelts and enjoy the flight ;-)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/db801f06f5fb42ae4718b3d951a55b71">
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								HEALING THC DOG COOKIES / 7pcs / 1-Week Cure
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/db801f06f5fb42ae4718b3d951a55b71">
+											<img src="/item-image/db801f06f5fb42ae4718b3d951a55b71?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/db801f06f5fb42ae4718b3d951a55b71">
+										<div class="ui dark-green basic tiny button fluid left aligned">one cure (7pcs)</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>1 Week - HEALING CURE FOR DOGS - 7 Cookies</p>
+
+<p>The Dog is Mankinds best friend since a couple of hundred years - and so we wanted to evolve
+also a cure for our best friends.</p>
+
+<p>We offer here a 7-Days Cure for Dogs against all diseases like depressions, loss of appetite and more.</p>
+
+<p>We recommend to use the Cookies in the following Dosis:</p>
+
+<p>“normal” dieseas:
+Feed your Dog a whole Cookie once a Day (best before go to sleep).</p>
+
+<p>Cancer:
+Feed your Dog a whole Cookie twice a Day.</p>
+
+<p>ADVICE:
+Start to feed your Dog for 3-4 Days only a half cookie to get him used to the THC.</p>
+
+<p>-&gt; The size of the dog doesnt matter in the dosage since all dogs have the same number of receptors. &lt;-</p>
+
+<p>The Cookies are made of:</p>
+
+
+minced beef
+Eggs
+Water
+wholemeal flour
+cold pressed olive oil
+Marijuana Oil
+
+
+<p>-&gt;! Please, Dont hesitate to contact us if you got Questions !&lt;-</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/959239f8775241ef6548698df67967d2">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								100ml Cannabis-Coco Cookingoil / 10% THC / BAKE &amp; COOK &amp; GET HIGH
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/959239f8775241ef6548698df67967d2">
+											<img src="/item-image/959239f8775241ef6548698df67967d2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/959239f8775241ef6548698df67967d2">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 piece</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/959239f8775241ef6548698df67967d2">
+										<div class="ui dark-green basic tiny button fluid left aligned">2 pieces</div>
+										<div class="ui basic left pointing label price">49 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We offer here a Cannabis-Coco Cookingoil with 10% THC to make Brownies, Cakes, Tea,
+Smoothies and all kind of Food.</p>
+
+<p>-&gt; Please boil the oil in a water bath before use to obtain a liquid form &lt;-</p>
+
+<p>For Example you can use the whole 100ml to make a Cake of 500 gramms.</p>
+
+<p>The Oil is produced of biological &amp; ecological Coconut Oil &amp; finest Cannabis Oil with 10% THC.</p>
+
+<p>Lets bake and get high!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/c64247675bdf4c0d5f3b4696e6cb7473">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								50ml / MEDICAL THC-COCONUT CREAM / HEALING &amp; PAINKILLING CREAM / EGOLOGICAL &amp; BIOLOGICAL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/c64247675bdf4c0d5f3b4696e6cb7473">
+											<img src="/item-image/c64247675bdf4c0d5f3b4696e6cb7473?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/c64247675bdf4c0d5f3b4696e6cb7473">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 piece</div>
+										<div class="ui basic left pointing label price">28 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We offer here a healing and painkilling Cannabis Coconut Cream, it relieves pains
+and can be used as medicine against following diseases: joint pain, arthritis, rheumatism,
+migraine, sleeping-diseas and many others.</p>
+
+<p>50ml content.</p>
+
+<p>Made of ecolgical and biological Coconut-Oil and the best Cannabis-Extracts also biological and ecological.</p>
+
+<p>Very strong medical product!</p>
+
+<p>For more information about the healing effects of this product contact us.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Kushberry Indica / THC 22% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+											<img src="/item-image/a7d1340fba054faf5e189d647be5d28d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a7d1340fba054faf5e189d647be5d28d">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Kushberry cannabis strain is an Indica dominant hybrid by DNA Genetics with a THC average of 22% that has won at the 2008 Spannabis Cup. Large buds with highlighted tones have an overall dark green colouring. The flavour is magnificently floral and aromatic, while the aroma is woodsy citrus and earthy soil. this strain can treat insomnia, chronic pain, stress, chemo symptoms migraines, and anxiety. Ideal for evening usage.</p>
+
+<p>Type of High</p>
+
+<p>Kushberry cannabis strain’s high will make you feel much better than your present mood, blending mind and body effects without unwanted couch-lock or psychedelic effects, but a drowsiness may occur.</p>
+
+<p>Genetics</p>
+
+<p>Breeder: DNA Genetics</p>
+
+<p>Lineage: Kushberry cannabis strain is a cross between Blueberry and OG Kush cannabis strains.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Indica Dominant Hybrid (30% Sativa / 70% Indica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/a5ec0e2ea08241d255146441ea342e45">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>3.67</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">E-Liquid</span>
+								46,5 % THC CANNABIS E-JUICE / E-LIQUID / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/a5ec0e2ea08241d255146441ea342e45">
+											<img src="/item-image/a5ec0e2ea08241d255146441ea342e45?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a5ec0e2ea08241d255146441ea342e45">
+										<div class="ui dark-green basic tiny button fluid left aligned">1bottle</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a5ec0e2ea08241d255146441ea342e45">
+										<div class="ui dark-green basic tiny button fluid left aligned">2bottles</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/a5ec0e2ea08241d255146441ea342e45">
+										<div class="ui dark-green basic tiny button fluid left aligned">3bottles</div>
+										<div class="ui basic left pointing label price">157 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>THC Cannabis e-juice / e-liquid</p>
+
+<p>this liquid is made by our laboratory in Spain. Original Cannabis e-juice made from top quality ingredients and best THC concentrate extracted from top marijuana/cannabis strains. No extra add-on, just pure vape-juice. Very efficient.</p>
+
+<p>Ingredients :</p>
+
+<p>Vegetable glycerin
+Propylene glycol</p>
+
+<p>Rick Simpson Oil ( own production and tests with 88% THC )</p>
+
+<p>This process leaves an very smooth tasting and high potent version of the Cannabis e-juice.
+This will work with all of the E-cigarettes on the market today.</p>
+
+<p>The quality is very high as with all our products.</p>
+
+<p>The e-juice / e-liquid is sold in 10ml bottles.</p>
+
+<p>THC = 46,5 %</p>
+
+<p>lets vape!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/266c8cdea0be4c35436463149151cbe5">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								MEDICAL CBD OIL (10%) / 10ml / HIGH QUALITY / PAINKILLER
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/266c8cdea0be4c35436463149151cbe5">
+											<img src="/item-image/266c8cdea0be4c35436463149151cbe5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/266c8cdea0be4c35436463149151cbe5">
+										<div class="ui dark-green basic tiny button fluid left aligned">10ml</div>
+										<div class="ui basic left pointing label price">101 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>You are looking for a 100% organic cannabidiol product? without any additional chemicals ? and high content of CBD ? - if you seek a formula which can act as a shield for your body and will offer you huge benefits for the mind and the body - Something that you can use daily , easily , safely and with absolute accuracy.</p>
+
+<p>Here is exactly what you need!</p>
+
+<p>Wochris presents cannabidiol oil in a bottle of 10ml and 10% concentration of CBD .</p>
+
+<p>The cannabidiol oil increases the health and well being of the human organism.</p>
+
+<p>The cannabidiol oil of wochris produced in Spain from organic hemp.</p>
+
+
+Without use of pesticides and herbicides
+No synthetic ingredients
+Produced from 100% pure and clean products
+We make daily quality controls for a maximum of purity and the highest quality.
+
+
+<p>This product contains a special dropper, to provide you a precise dosage. So you can fluctuate daily dose, depending on your needs.</p>
+
+<p>Components</p>
+
+
+Cold pressed Hemp Seed Oil
+cannabidiol
+terpenes
+Vitamin E
+Na
+
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/2d0fa3adcce64e704e56943754ec8399">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								1.5G SAMPLE PACK / HQ / Choose of 12 Strains
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/2d0fa3adcce64e704e56943754ec8399">
+											<img src="/item-image/2d0fa3adcce64e704e56943754ec8399?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/2d0fa3adcce64e704e56943754ec8399">
+										<div class="ui dark-green basic tiny button fluid left aligned">sample pack</div>
+										<div class="ui basic left pointing label price">15 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Here you can get a Sample Pack of our biological and egological Indoor-Strains.</p>
+
+<p>The Sample contains 1.5G.</p>
+
+<p>You can choose between our 12 Strains (please write your wish in a message to us after purchase)</p>
+
+<p>KUSHBERRY INDICA - 22% THC</p>
+
+<p>BLACK JACK - 24% THC</p>
+
+<p>MOBY DICK - 24% THC</p>
+
+<p>LAVANDER - 22% THC</p>
+
+<p>DUTCH CHEESE - 25% THC</p>
+
+<p>STRAWBERRY AMNESIA - 20% THC</p>
+
+<p>Dr Greenthumb’s Em-Dog by B-Real - 27% THC</p>
+
+<p>Super Bud by Greenhouse Seeds - 17% THC</p>
+
+<p>Y Griega by Medical Seeds - 28% THC</p>
+
+<p>BLUE DREAM - 18,5% THC</p>
+
+<p>GOLDEN LEMON - 20% THC</p>
+
+<p>CREAM MANDARIN - 22% THC</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Strawberry Amnesia / Sativa / THC 20% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+											<img src="/item-image/3f0dfbd1ab664a707e470bea870cfe56?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/3f0dfbd1ab664a707e470bea870cfe56">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Strawberry Amnesia cannabis strain by Dinafem is a 70⁄30 Sativa with a THC range of 20-22%. I tastes just like ripe, juicy strawberries in the ideal season, while the aroma is similar with added herbs and earthiness. A strawberry flavor pleasantly arrives in the smoke. Nugs are piecey with orange hairs and abundant amber trichomes. Strawberry Amnesia can treat migraines, eye pressure, fatigue, and depression. Best for daytime usage.</p>
+
+<p>Genetics</p>
+
+<p>Genetics: Strawberry Amnesia cannabis strain is a cross between Strawberry Cough and Amnesia cannabis strains.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Sativa Dominant Hybrid (70% Sativa / 30% Indica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/411030fd9659473c73f15cb7c33a1b7a">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								GUMMY BEARS / 10% THC / KIWI FLAVOR
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/411030fd9659473c73f15cb7c33a1b7a">
+											<img src="/item-image/411030fd9659473c73f15cb7c33a1b7a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/411030fd9659473c73f15cb7c33a1b7a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20pcs</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/411030fd9659473c73f15cb7c33a1b7a">
+										<div class="ui dark-green basic tiny button fluid left aligned">50pcs</div>
+										<div class="ui basic left pointing label price">62 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/411030fd9659473c73f15cb7c33a1b7a">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pcs</div>
+										<div class="ui basic left pointing label price">112 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Welcome at wochris online-shop,</p>
+
+<p>currently we are selling amazing THC Based GummyBears !</p>
+
+<p>Those Gummy Bears are the best in Europe.</p>
+
+<p>10 % THC per Gummy Bear.</p>
+
+<p>Very potent product.</p>
+
+<p>Gummy Bears are homemade of organic gelatine, made in the same way as Haribo gummy bears.</p>
+
+<p>Our gummies are Strain Specific ( Black Jack ) and Hand Infused with TOP quality concentrate ( RSO Oil ).</p>
+
+<p>One Gummy Bear has a weight of 1 Gram.</p>
+
+<p>Made fresh every couple of days by our chef with the best ingredients.</p>
+
+<p>Allergy friendly (NO nuts, soy, milk or gluten.)</p>
+
+<p>The flavour is Kiwi.</p>
+
+<p>We recommend to take max. 2 Pieces at once so you wont get too High.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Lavender / Indica / THC 22% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+											<img src="/item-image/4fb0559e01ae4a9f72bdef9536775dcd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/4fb0559e01ae4a9f72bdef9536775dcd">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">221 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Lavender cannabis strain is a 60⁄40 Indica dominant hybrid created. This weed is also known as Lavender Kush. Lavender is perfect for beginner growers as its’ easy to grow both indoors and outdoors. The biggest yields are achieved in dry conditions. The buds are covered in dark purple leaves and strongly smell of lavender and spices. Due to high THC count not advised for rookies. Lavender marijuana strain is mostly available on the West Coast. Good for evening and nighttime use.</p>
+
+<p>Type of High</p>
+
+<p>Lavender marijuana strain induces moderate uplifting cerebral euphoria followed by mind-body relaxation. May cause eye &amp; mouth dryness. Relieves stress, stimulates appetite, alleviates nausea, provides good pain control. Promotes sleep and sedation.</p>
+
+<p>Genetics</p>
+
+<p>Aka: Lavender Best. Lavender cannabis strain is a three-way cross between Super Skunk, Big Skunk Korean, and Afghani Hawaiian.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Indica Dominant Hybrid (40% Sativa / 60% Indica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Black Jack / Indica / THC 24% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+											<img src="/item-image/506c950c9cf94d0070d968bb3fcc2a74?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/506c950c9cf94d0070d968bb3fcc2a74">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">221 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Black Jack marijuana strain is a 70⁄30 Indica dominant marijuana hybrid. This bud is known for high potency and long lasting effects due to high THC content. With 24% THC levels, the herb is not advised for beginners. Users with low tolerance should be mindful of the dose. The buds are large, dense, and elongated. The nugs are covered by numerous sticky trichomes. Black Jack marijuana alleviates many medical symptoms and is good for evening and night time use due to sedative effect.</p>
+
+<p>Type of High</p>
+
+<p>Black Jack marijuana induces uplifting cerebral high followed by body relaxing. Uplifts mood, alleviates depression, relieves stress, stimulates appetite. Promotes sleep, controls pain, helps with muscle cramps and tightness.</p>
+
+<p>Genetics</p>
+
+<p>Aka: Jack Black or Blackjack.</p>
+
+<p>Lineage: Black Domina and Jock Horror strains.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Indica Dominant Hybrid (30% Sativa / 70% Indica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Cream Mandarin / Sativa / THC 22% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+											<img src="/item-image/518239d5651d4f9f62dd836994956193?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/518239d5651d4f9f62dd836994956193">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cream Mandarin cannabis strain is a pure Sativa with 22% THC levels. It is a 100%, organic Ruderalis strain. The flavour is sugary sweet, with notes of syrupy citrus and tangy but smooth cream. The aroma is more mellow with creamy citrus and earth hints. Buds have fluffy bodies with fire toned hair and the occasional gold trichomes. It can treat insomnia, pain, inflammation, nausea and ADD/ADHD. Ideal for daytime and evening usage.</p>
+
+<p>Type of High</p>
+
+<p>Cream Mandarin cannabis strain’s high provides a long-lasting couch locked that will leave you in a blissful stone and sense of well-being. Get ready to a heavy body experience.</p>
+
+<p>Genetics</p>
+
+<p>Lineage: Cream Mandarin cannabis strain is a cross between Cream Caramel and Ice Cool cannabis strains.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Pure Sativa</p>
+
+<p>THC 19%</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Dr Greenthumb&#39;s Em-Dog by B-Real / HYBRID (&#43;Indica) / 27% THC
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+											<img src="/item-image/528dda80706c455e744038e35d79db53?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/528dda80706c455e744038e35d79db53">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dr Greenthumb’s Em-Dog by B-Real of “Cypress Hill” cannabis seeds by Humboldt Seed Organization is a feminized cannabis strain that derives from the cross between OG Kush and Chem#4.
+The result is a strong and robust Indica-dominant hybrid. It produces extraordinary medium-sized plants with a resistant structure and average distance between nodes that yield large buds coated with resin.
+Dr Greenthumb’s Em-Dog owes its existence to Keif Sweat, famous breeder friend of B-Real, member of the American rap band known as “Cypress Hill”. It oozes great quality as well as some excellent features worth a try.
+The flavour and aroma of Dr Greenthumb’s Em-Dog are intense and fruity, with hints of pine wood, exotic fruits, lemon and diesel fuel.</p>
+
+<p>Type of High</p>
+
+<p>The effect it provides is powerful but rather balanced,
+as it starts with a cerebral high that evolves into a long-lasting feeling of relaxation.</p>
+
+<p>Genetics</p>
+
+<p>Cross between OG Kush and Chem#4.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>70% Indica / 30% Sativa</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/5b4c29b905aa431058ae85539964095b">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								30ml Medical THC OLIVE OIL / 30% THC / ECOLOGICAL &amp; BIOLGOCIAL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/5b4c29b905aa431058ae85539964095b">
+											<img src="/item-image/5b4c29b905aa431058ae85539964095b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/5b4c29b905aa431058ae85539964095b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1piece (30ml)</div>
+										<div class="ui basic left pointing label price">41 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We offer here a 30ml THC-Extraction Oil with 30% THC combinated with cold pressed extra virgin olive oil.</p>
+
+<p>The THC-Extraction Oil cames from our finest medical Bud Channel+.</p>
+
+<p>The cold pressed extra virgin olive oil is biological and ecological also handmade,
+we import it from Sicily and get it from a sicilian family which is making over 30 Years traditional italian olive oils.</p>
+
+<p>You wont get a similiar quality product on Darknet.</p>
+
+<p>Way of Use:</p>
+
+<p>This medical product is primarily used to treat hypertension (take one coffespoon before going to sleep) but also helps with the following diseas:</p>
+
+<p>Pains, muscle tension, sleep diseas, epilepsy, toret syndrome, multiple serosis, osteoarthritis, arthritis
+accompanying to chemotherapy, fibromyalgia.</p>
+
+<p>If you have questions about the healing effect of the product or for a special problem dont hesitate to contact us.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Dutch Cheese / Sativa / THC 25% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+											<img src="/item-image/74a010d0ec6747e766fdb623df7a469c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/74a010d0ec6747e766fdb623df7a469c">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Dutch Cheese cannabis strain is a 60⁄40 Sativa leaning blend. By combining the best Cheese genetics which other strains, this new hybrid improves potency and yield, but still holds onto its cheesy essence. Many sticky side buds show inter-nodal spacing which helps prevent mold in this heavy yielder. Suitable for daytime or evening usage.</p>
+
+<p>Type of High</p>
+
+<p>Dutch Cheese cannabis strain’s high will wash over your mind and body like crushed velvet. It gives an intense cerebral flash filled with smiles, followed by a certain Indica stone in the second half of the high.</p>
+
+<p>Genetics</p>
+
+<p>Lineage: Dutch Cheese cannabis strain is a cross between Cheese and Euforia cannabis strains.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Sativa Dominant Hybrid (65% Sativa / 35% Indica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/8387ee7af58945a9795608009d0207a5">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								30ml / MEDICAL THC EXTRACTION OIL / 20% THC / ECOLOGICAL &amp; BIOLOGICAL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/8387ee7af58945a9795608009d0207a5">
+											<img src="/item-image/8387ee7af58945a9795608009d0207a5?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/8387ee7af58945a9795608009d0207a5">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 piece</div>
+										<div class="ui basic left pointing label price">68 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We offer here a high quality THC extraction oil made of biological and egological Marijuhana.</p>
+
+<p>Against parkinson, multipleskerose, diabetis, bone formation, arthritis, rheumatism and more…</p>
+
+<p>Contact us if you need more information about the healing effects.</p>
+
+<p>Way of Use:</p>
+
+<p>Take 3 drops under your tongue every morning and before going to sleep.</p>
+
+<p>To get the best healing effect you should combinate THC and CBD Oil in a relation of 1:1.</p>
+
+<p>If you take more then the recommended dose you will feel a narcotic effect.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Super Bud by Greenhouse Seeds / HYBRID (&#43;Indica) / 17% THC / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+											<img src="/item-image/90a40baf219e44637026851c462134a4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/90a40baf219e44637026851c462134a4">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Green House Seeds’ Super Bud is the result of crossing two highly prized genes; the high-yielding Big Bud and the legendary Skunk marijuana variety. The result is a hemp plant with high yield capacity.
+Its trichomes have a THC content of 17.33%, a CBN content of 1.93% and a CBD content of 1.93%, which is why Super Bud can also be used for medicinal purposes. Its long, broad, dark green leaves are typical of Indica varieties.</p>
+
+<p>It has a sweet, fruity aroma.</p>
+
+<p>Type of High</p>
+
+<p>Their effect is strong and downright numbing, ideal to stimulate the appetite and to relax body and mind, as well as to give people with sleep disorders quiet dreams.</p>
+
+<p>Genetics</p>
+
+<p>Big Bud x Skunk</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>80% Indica / 20% Sativa</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/aceb1e20c13940915deb23a2e408702b">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								RSO / FECO / Phoenix Tears / THC 88% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/aceb1e20c13940915deb23a2e408702b">
+											<img src="/item-image/aceb1e20c13940915deb23a2e408702b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/aceb1e20c13940915deb23a2e408702b">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">79 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/aceb1e20c13940915deb23a2e408702b">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">146 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/aceb1e20c13940915deb23a2e408702b">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">370 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Rick Simpson Oil - FECO - Phoenix Tears - High Quality</p>
+
+<p>Full spectrum cannabis oil for cancer treatment!</p>
+
+<p>This is full-blooded cannabis oil extracted with food-grade ethanol alcohol. Made from the genetic Indica reserve flowers, extremely high in terpinene. Tested - 88% THC and rich in CBD, produced from organically grown Marijuhana.</p>
+
+<p>This oil has been used in numerous people with complaints and diseases such as cancer, PTSD, autoimmune diseases, MS, pain, depression, all kinds of complaints and neurological diseases. This preparation is a natural miracle cure.</p>
+
+<p>We recommend to consume a daily large dose of rice grain (best in the evening as the product can be very narcotic).</p>
+
+<p>This product is a sleep aid for us and many people.</p>
+
+<p>Through and through this medicine is a very strong painkiller and an effective sleep aid.</p>
+
+<p>When the recommended rice grain large dose is exceeded, naturally narcotic states can be achieved.</p>
+
+<p>Fasten your seat belt and enjoy the flight!</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/192b832f829d43f77accf615af919387">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>1</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Blue Dream / Hybrid / THC 18,5% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/192b832f829d43f77accf615af919387">
+											<img src="/item-image/192b832f829d43f77accf615af919387?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/192b832f829d43f77accf615af919387">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/192b832f829d43f77accf615af919387">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/192b832f829d43f77accf615af919387">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/192b832f829d43f77accf615af919387">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/192b832f829d43f77accf615af919387">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The Blue Dream by wochris is a feminised cannabis variety with sativa dominance, which is a very popular hybrid in America at the moment. The Strain is 30% Indica / 70% Sativa and comes with a THC level of 18,5 % of THC.</p>
+
+<p>Type of High</p>
+
+<p>“Taste, aroma and effect go beyond the limits of imagination”</p>
+
+<p>The Blue Dream is a marijuana hybrid whose aroma is strongly reminiscent of haze, citrus fruits and cedar. On the palate it has intense notes of lemon, pine, frankincense, sweet fruit and haze. It is a cannabis variety with a strong, long-lasting effect and a cerebrally stimulating and clear feeling.</p>
+
+<p>Genetics</p>
+
+<p>Lineage: Blue Dream Cannabis strain is a cross between Blueberry  and Super Silver Haze.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Hybrid 70% Sativa / 30% Indica</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Y Griega by Medical Seeds / HYBRID (&#43;Sativa) / 28% THC / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+											<img src="/item-image/1b6a22ae30804f2649b66b7b7e6f5f3c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/1b6a22ae30804f2649b66b7b7e6f5f3c">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Unlike other sativas, this plant surprises us with a robust production of buds, large and extremely resinous, who arrive to cover the stems resin.
+In a recent analysis done by CANNA Research with a gas chromatography, Y Griega has received an incredible 28% of THC: A figure that speaks for itself.
+This plant maintains a classic haze scent, combined with a slight sweet touch that makes it stand out.</p>
+
+<p>Type of High</p>
+
+<p>Its effect begins with an energy jolt slowly fired in a state of alertness and relaxation. Especially recommended for diseases requiring high levels of THC as glaucoma.</p>
+
+<p>Genetics</p>
+
+<p>Kali Mist x Amnesia Haze</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>20% Indica / 80% Sativa</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								Mobby Dick / Sativa / THC 24% / HQ
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+											<img src="/item-image/80a7dc438130419f49053270cbc009f7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+										<div class="ui dark-green basic tiny button fluid left aligned">1g</div>
+										<div class="ui basic left pointing label price">16 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+										<div class="ui dark-green basic tiny button fluid left aligned">2g</div>
+										<div class="ui basic left pointing label price">27 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+										<div class="ui dark-green basic tiny button fluid left aligned">5g</div>
+										<div class="ui basic left pointing label price">56 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+										<div class="ui dark-green basic tiny button fluid left aligned">10g</div>
+										<div class="ui basic left pointing label price">107 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/80a7dc438130419f49053270cbc009f7">
+										<div class="ui dark-green basic tiny button fluid left aligned">20g</div>
+										<div class="ui basic left pointing label price">191 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Moby Dick cannabis strain is a Sativa dominant hybrid . It has a high THC content that can be too much for some. This one has 24 %. Moby Dick has 2 phenotypes with 60% being Sativa dominant and 40% being Indica dominant. Flavours include lemon, cedar, and Haze with incense accents. Buds taste and smell sweet. It can treat appetite loss, pain, and nausea. Good for day and evening time usage.</p>
+
+<p>Type of High</p>
+
+<p>Moby Dick cannabis strain’s high consists of a euphoric head high. Laughter and creativity are followed by deep body relaxation, serious munchies, laziness, and eventual sleep.</p>
+
+<p>Genetics</p>
+
+<p>Aka: Moby Big</p>
+
+<p>Genetics: Moby Dick cannabis strain is a cross between White Widow and Haze cannabis strains.</p>
+
+<p>Indica / Sativa Ratio</p>
+
+<p>Sativa Dominant Hybrid (75% Sativa / 25% Indica)</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/eb02ec0c380642b841b1abaff06effd1">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								4G / MEDICAL CANNABIS-COCONUT LIP BALM / ECOLOGICAL AND BIOLOGICAL
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/eb02ec0c380642b841b1abaff06effd1">
+											<img src="/item-image/eb02ec0c380642b841b1abaff06effd1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/eb02ec0c380642b841b1abaff06effd1">
+										<div class="ui dark-green basic tiny button fluid left aligned">1 piece</div>
+										<div class="ui basic left pointing label price">14 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>MEDICAL CANNABIS-COCONUT LIP BALM</p>
+
+<p>ECOLOGICAL AND BIOLOGICAL</p>
+
+<p>We offer here a Medical Lip Balm made of biological and ecological Coconut,- and Cannabis-Oil.</p>
+
+<p>4 Gramms of content.</p>
+
+<p>THE BEST SOLUTION AGAINST DRY LIPS.</p>
+
+<p>The THC regenerates damaged skin cells and the coconut oil refreshes and greases dry skin and give your lips a natural shine.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/efdb7b36dad445bb44a739194cc174a3">
+								<div class="ui label floated right tiny">
+									<i class="icon thumbs up"></i>
+									<span>5</span>
+								</div>
+								<span class="ui teal tiny label tag right floated">Edibles</span>
+								2 Pack Super Brownie / Double Strength / not for Beginners
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/efdb7b36dad445bb44a739194cc174a3">
+											<img src="/item-image/efdb7b36dad445bb44a739194cc174a3?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/efdb7b36dad445bb44a739194cc174a3">
+										<div class="ui dark-green basic tiny button fluid left aligned">double pack</div>
+										<div class="ui basic left pointing label price">34 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Super Brownie 2-Pack</p>
+
+<p>Brownie 2-pack is made from Black Jack Indica Strain DOUBLE STRENGTH!!</p>
+
+<p>This order is for 2 of our finest Chocolate Super Brownies but with twice as much cannabutter!</p>
+
+<p>These are only for those who know they want a BIG edible experience…not recommended for first try.</p>
+
+<p>1 Brownie is usually enough for one person though it depends on your tolerance levels.</p>
+
+<p>Do not drive or operate machinery after taking one of these – please!
+Every Brownie has a wight of 85 Gram.
+The perfect remedy that naturally alleviates pain, stress and
+depression.</p>
+
+<p>Ingredients: Flour, Eggs, Dark chocolate, Cannabis Butter, Sugar, Vanilla</p>
+
+<p>Product is vacuum packed.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/wochris/item/0bef5a7b1c0249b959fedcc718e244af">
+								<span class="ui teal tiny label tag right floated">Other</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								TIPS :)
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/wochris/item/0bef5a7b1c0249b959fedcc718e244af">
+											<img src="/item-image/0bef5a7b1c0249b959fedcc718e244af?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/wochris/item/0bef5a7b1c0249b959fedcc718e244af">
+										<div class="ui dark-green basic tiny button fluid left aligned">tip</div>
+										<div class="ui basic left pointing label price">2 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Hi Customers,</p>
+
+<p>If you statisfied with our Service you are welcome to leave a little Tip.  :)</p>
+
+<p>Thank you :)</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 406 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

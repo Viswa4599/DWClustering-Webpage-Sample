@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a href="/" class="item header-logo header">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form class="ui input icon fluid" method="GET" action="/marketplace">
+					<input type="hidden" name="category" value="0" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input value="" type="hidden" name="csrf_token" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a href="/app/download" class="ui button fluid green tiny">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a href="/feed" class="item">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a href="/settings/language/en" class="item fluid">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a href="/settings/language/tr" class="item fluid">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/moilayer?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@moilayer</h2>
+								<p></p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 3 weeks ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 1 week ago</span>
+								</div>
+								<br />
+								<span class="ui label orange">Gold Account</span>
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									1 lvl
+								</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/moilayer">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/moilayer">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item" href="/store/moilayer/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">0</span>
+									</a>
+									<a class="item active" href="/store/moilayer/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">40</span>
+									</a>
+									<a class="item" href="/store/moilayer/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/59c4257b9ad94bfc776ef2146427ba8c">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Grape Ape buds 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/59c4257b9ad94bfc776ef2146427ba8c">
+											<img src="/item-image/59c4257b9ad94bfc776ef2146427ba8c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/59c4257b9ad94bfc776ef2146427ba8c">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Grape Ape buds can help treat many muscular aches and pains throughout the body. It can also ameliorate conditions like anxiety, depression, ADD, and ADHD. Grape Ape weed is an Indica which can be used for nausea, lack of appetite, and insomnia.contact back if interested</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/4ac352e1788042ab7480a227d0df2fe4">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Hawaiian Kush Good Flavor 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/4ac352e1788042ab7480a227d0df2fe4">
+											<img src="/item-image/4ac352e1788042ab7480a227d0df2fe4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/4ac352e1788042ab7480a227d0df2fe4">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>The tropical-fruit tasting bud has creative, unwinding, and cerebral happy effects. Hawaiian Kush is just one of many Hawaiian strains. Hawaiian Purple Kush is a 80⁄20 indica dominant hybrid. The buds are very fuzzy in trichomes with light green and some purple buds.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/3e20602fb71440804b7fcdabb5955360">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Platinum Kush 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/3e20602fb71440804b7fcdabb5955360">
+											<img src="/item-image/3e20602fb71440804b7fcdabb5955360?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/3e20602fb71440804b7fcdabb5955360">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Platinum Kush is a resinous strain worthy of its lofty title. This popular indica-dominant hybrid is derived from rock-solid OG Kush genetics and carries its parent strain’s memorable aroma. This is also a bud with serious bag appeal, often showing off vivid purple leaves.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/00f4aee3a455405952371beb454d8570">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Loud Dream Bud
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/00f4aee3a455405952371beb454d8570">
+											<img src="/item-image/00f4aee3a455405952371beb454d8570?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/00f4aee3a455405952371beb454d8570">
+										<div class="ui dark-green basic tiny button fluid left aligned">28</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Loud Dream is a hybrid strain, This plant is a rare sativa back cross of the world-famous hybrid, Blue Dream. There is some debate over whether or not this strain produces predominantly indica or sativa effects.
+However, A zippy sativa, this strain comes on fast and strong. Taking a few puffs of this strain is like sipping on an espresso, Loud Dream is energetic, spunky, and makes for a great wake ‘n bake bud.
+The THC levels in this strain are astronomical, often featuring between 26 and 28% of the psychoactive. While many of the world’s most potent strains have some heavy indica effects, this strain produces an impressive amount of resin for a high-energy sativa hybrid.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/49cc22ba02f549646bd43555766d99b8">
+								<span class="ui teal tiny label tag right floated">Ephedrine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Quality Ephedrine Hcl Crystal Powder ( 99% Purity ) 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/49cc22ba02f549646bd43555766d99b8">
+											<img src="/item-image/49cc22ba02f549646bd43555766d99b8?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/49cc22ba02f549646bd43555766d99b8">
+										<div class="ui dark-green basic tiny button fluid left aligned">1kg</div>
+										<div class="ui basic left pointing label price">1500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ephedrine Powder is a decongestant and bronchodilator. It works by reducing swelling and constricting blood vessels in the nasal passages and widening the lung airways, allowing you to breathe more easily.description Ephedrine Sulfate Injection, USP is a sterile solution of 50 mg ephedrine sulfate in water for injection. Ephedrine occurs as fine, white, odorless crystals or powder and darkens on exposure to light we have best quality chemical product and 100% lab tested.discreet shipping and overnight delivery.contact for more details.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/3d9aa6c972314eed71b1446c37823082">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Granddaddy Purple For Sale 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/3d9aa6c972314eed71b1446c37823082">
+											<img src="/item-image/3d9aa6c972314eed71b1446c37823082?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/3d9aa6c972314eed71b1446c37823082">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Top Quality Grade A Granddaddy Purple top strain with good flavor nice aroma and will kill the stress, pain and  depression makes you relax for long lasting period contact back if interested.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/ea9b8aff9e2d476563d35095641fe8cb">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Sour Diesel For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/ea9b8aff9e2d476563d35095641fe8cb">
+											<img src="/item-image/ea9b8aff9e2d476563d35095641fe8cb?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/ea9b8aff9e2d476563d35095641fe8cb">
+										<div class="ui dark-green basic tiny button fluid left aligned">28g</div>
+										<div class="ui basic left pointing label price">200 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Top Grade A Sour Diesel Strains Available is an invigorating sativa-dominant strain named after its pungent, diesel-like aroma.Its reduce stress, pain, and depression fade away in long-lasting relief and many other functions contact back if interested.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/4585538e4acd4bb459ac104cd246a1fe">
+								<span class="ui teal tiny label tag right floated">Mephedrone</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Buy Quality Mephedrone Powder 99% Purity 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/4585538e4acd4bb459ac104cd246a1fe">
+											<img src="/item-image/4585538e4acd4bb459ac104cd246a1fe?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/4585538e4acd4bb459ac104cd246a1fe">
+										<div class="ui dark-green basic tiny button fluid left aligned">25gram</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Mephedrone, also known as 4-methyl methcathinone or 4-methyl ephedrone, is a synthetic stimulant drug of the amphetamine and cathinone classes. Slang names include bath salts, drone, M-CAT, White Magic and meow meow.We have top quality mephedrone powder and our purity is 99% It comes in the form of tablets or a powder,which users can swallow, snort or inject, producing similar effects to MDMA, amphetamines and cocaine.In addition to its stimulant effects, mephedrone produces side effects, of which teeth grinding is the most common.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/56b532dbde3349905e5deca6eef2d89b">
+								<span class="ui teal tiny label tag right floated">Valium</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Valium 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/56b532dbde3349905e5deca6eef2d89b">
+											<img src="/item-image/56b532dbde3349905e5deca6eef2d89b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/56b532dbde3349905e5deca6eef2d89b">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>We have top quality pain relief Meds,Diazepam, first marketed as Valium, is a medicine of the benzodiazepine family that typically produces a calming effect. Wikipedia Molar mass: 284.7 g/mol Formula: C16H13ClN2O Bioavailability: 76% (64–97%) by mouth, 81% (62–98%) rectal Excretion: Kidney Trade name: Valium, Vazepam, others Elimination half-life: (50 hours); 20–100 hours (36–200 hours for main active metabolite desmethyldiazepam)Diazepam interested contact back for more information</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/59c35b39a89b497677f6aa4a7be2a199">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Norco Tablets
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/59c35b39a89b497677f6aa4a7be2a199">
+											<img src="/item-image/59c35b39a89b497677f6aa4a7be2a199?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/59c35b39a89b497677f6aa4a7be2a199">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Norco 10mg/325 is the brand name for a prescription medication that combines hydrocodone, an opioid (narcotic) pain reliever with acetaminophen. As you probabaly know, acetaminophen is an over-the-counter (OTC) non-opioid pain reliever. It’s often sold under the brand name Tylenol and also is a common active ingredient in OTC cough, cold, and fever medications.Norco 10mg Tablet works by blocking the action of cyclooxygenase in the body; works in the brain to change how the body feels and responds to pain. we handle discreet shipment and 100% reliable interested do contact back for more information</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/74f42b3f55194d8b64fb0b3c6b2853c2">
+								<span class="ui teal tiny label tag right floated">Opioids</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Opana 40mg Available 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/74f42b3f55194d8b64fb0b3c6b2853c2">
+											<img src="/item-image/74f42b3f55194d8b64fb0b3c6b2853c2?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/74f42b3f55194d8b64fb0b3c6b2853c2">
+										<div class="ui dark-green basic tiny button fluid left aligned">300pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>OPANA (oxymorphone hydrochloride) tablet is an opioid agonist available in 5 mg and 10 mg tablet strengths for oral administration. The chemical name for oxymorphone hydrochloride is 4, 5α-epoxy-3, 14-dihydroxy-17-methylmorphinan-6-one hydrochloride. The molecular weight is 337.80. The molecular formula is C17H19NO4. HCl and it has the following chemical structure. contact back if interested we offer reliable shipment worldwide</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/7bc1711ef34642ec6a72c6cfa8e6814d">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Pineapple Express For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/7bc1711ef34642ec6a72c6cfa8e6814d">
+											<img src="/item-image/7bc1711ef34642ec6a72c6cfa8e6814d?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/7bc1711ef34642ec6a72c6cfa8e6814d">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I got top grade medical marijuana ( Pineapple Express ) with good quality nice aroma i can recommend for stoners and patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/871fc3e151dc4dbc7c42fc2528959187">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Good Quality Blue Cheese Bud
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/871fc3e151dc4dbc7c42fc2528959187">
+											<img src="/item-image/871fc3e151dc4dbc7c42fc2528959187?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/871fc3e151dc4dbc7c42fc2528959187">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Blue Cheese marijuana is a sweet, popular, favorite marijuana strain. It is a cross between the male Blueberry and the female Cheese marijuana strains, hence the name. It is a strong Indica with potent relaxation properties.
+Genetic: 80% Indica / 20% Sativa
+Aromas, Fragrance: Pungent, dank, blueberry, …
+Flavors: Sweet, blueberry, cheese, blue cheese
+Origin: Cross of Blueberry and Cheese strains
+contact if interested</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/8a1193e7d6c54c59610bec9cd1460d21">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Very Good Quality Gorilla Glue #4 Bud 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/8a1193e7d6c54c59610bec9cd1460d21">
+											<img src="/item-image/8a1193e7d6c54c59610bec9cd1460d21?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/8a1193e7d6c54c59610bec9cd1460d21">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Gorilla Glue #4 (also known as GG4) created by GG strains is a Sativa-dominant hybrid, a multiple award-winning strain, famous for its high THC content. It averages 18 to 25 percent THC, but you may find it as high as 32 percent at some dispensaries. The CBD is very low, ranging between 0.05 and 0.1 percent.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/907837f958c5411b6d9c7409f3c906ac">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								1Gram Heavy Hitters
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/907837f958c5411b6d9c7409f3c906ac">
+											<img src="/item-image/907837f958c5411b6d9c7409f3c906ac?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/907837f958c5411b6d9c7409f3c906ac">
+										<div class="ui dark-green basic tiny button fluid left aligned">10gram</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Heavy Hitters is the Original SoCal vape that gives smokers the best-tasting and most enjoyable high. With our proprietary blend of terpenes and our proprietary cannabinoid profile, our carts boast True Ceramic heating elements with Cold-Filtered distillate for clean taste and potency.</p>
+
+<p>Available  FLAVORS</p>
+
+<p>og kush
+sour diesel
+white widow
+granddaddy purple
+hindu kush
+*blue cheese
+*NYC diesel
+*cinderella 99
+*Head Cheese
+*Matt’s OGT
+*SFV OG Kush
+*Super Lemon Haze
+*Master Yoga
+*Northen lights
+*purple kush
+*bubba kush
+*la confidential
+*blueberry
+*trains wreck
+*blue dream
+*sour diesel
+*purple haze
+*casey jones
+*Durban Poison
+*Jack Herer.
+*G13 Haze</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/bca512488b154e3c48f5678cf0a06af6">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Bubba Kush Available 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/bca512488b154e3c48f5678cf0a06af6">
+											<img src="/item-image/bca512488b154e3c48f5678cf0a06af6?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/bca512488b154e3c48f5678cf0a06af6">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Bubba Kush is an indica strain that has gained notoriety in the U.S. and beyond for its heavy tranquilizing effects. Sweet hashish flavors with subtle notes of chocolate and coffee come through on the exhale, delighting the palate as powerful relaxation takes over contact back if interested</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/648301daf24f42ba5f1ee0e88e6b116b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Strawberry Cough For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/648301daf24f42ba5f1ee0e88e6b116b">
+											<img src="/item-image/648301daf24f42ba5f1ee0e88e6b116b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/648301daf24f42ba5f1ee0e88e6b116b">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I grow top grade A Strains with good quality nice aroma i can recommend for stoners and patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/af886a19b7b849b155a0df4a8ce77153">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Grade A Northern Light Kush For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/af886a19b7b849b155a0df4a8ce77153">
+											<img src="/item-image/af886a19b7b849b155a0df4a8ce77153?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/af886a19b7b849b155a0df4a8ce77153">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I grow top grade A Strains Northern Light kush with good quality nice aroma i can recommend for stoners and patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/6210565c4c45450a47909e17785bc643">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Strain Amnesia Haze
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/6210565c4c45450a47909e17785bc643">
+											<img src="/item-image/6210565c4c45450a47909e17785bc643?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/6210565c4c45450a47909e17785bc643">
+										<div class="ui dark-green basic tiny button fluid left aligned">113</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Amnesia Haze has a somewhat misleading name: it’s a sativa-dominant hybrid that, despite its potency, won’t leave you with a severely impaired memory. contact back if interested</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/3f569c8c8b4a4dd6562bf6ea83467b9c">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Durban Poison Buds
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/3f569c8c8b4a4dd6562bf6ea83467b9c">
+											<img src="/item-image/3f569c8c8b4a4dd6562bf6ea83467b9c?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/3f569c8c8b4a4dd6562bf6ea83467b9c">
+										<div class="ui dark-green basic tiny button fluid left aligned">113</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Durban Poison buds are valued for their stimulatory effects.Adverse effects: Durban Poison Kush strains h…
+Origin / ancestry: Durban Poison Type: Durban …Strain name info: Durban Poison Marijuana Str…
+May Relieve: Durban Poison buds are valued</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/f4c20f429ad1420b648ca7ef8645d07a">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								1 Gram Mario Carts Vape Cartridge
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/f4c20f429ad1420b648ca7ef8645d07a">
+											<img src="/item-image/f4c20f429ad1420b648ca7ef8645d07a?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/f4c20f429ad1420b648ca7ef8645d07a">
+										<div class="ui dark-green basic tiny button fluid left aligned">20gram</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Thick Oil Cartridge 510 380mAh Pen Preheat Twist Variable Voltage Battery Bottom Charging Vape Pen
+AVAILABLE FLAVORS</p>
+
+<p>og kush
+sour diesel
+white widow
+granddaddy purple
+hindu kush
+*blue cheese
+*NYC diesel
+*cinderella 99
+*Head Cheese
+*Matt’s OGT
+*SFV OG Kush
+*Super Lemon Haze
+*Master Yoga
+*Northen lights
+*purple kush
+*bubba kush
+*la confidential
+*blueberry</p>
+
+<p>*trains wreck
+*blue dream
+*sour diesel
+*purple haze
+*casey jones
+*Durban Poison
+*Jack Herer.
+*G13 Haze</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/5bccb0e40b8048786b61d9c9436841dc">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Moonrocks For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/5bccb0e40b8048786b61d9c9436841dc">
+											<img src="/item-image/5bccb0e40b8048786b61d9c9436841dc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/5bccb0e40b8048786b61d9c9436841dc">
+										<div class="ui dark-green basic tiny button fluid left aligned">28g</div>
+										<div class="ui basic left pointing label price">350 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I got top grade Moonrocks with good quality and nice aroma i can recommend for patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/5e7c2a6ccbbd48e057416776c78a9f80">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Good High Quality Godfather OG Bud
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/5e7c2a6ccbbd48e057416776c78a9f80">
+											<img src="/item-image/5e7c2a6ccbbd48e057416776c78a9f80?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/5e7c2a6ccbbd48e057416776c78a9f80">
+										<div class="ui dark-green basic tiny button fluid left aligned">113</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Godfather OG is an indica dominant strain crossed from OG Kush and Granddaddy Purple that is known to promote sleep interested contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/c7a682f9b2c04c6b7bdcfce1c1bfabe9">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Best Quality Cinderella 99 Bud
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/c7a682f9b2c04c6b7bdcfce1c1bfabe9">
+											<img src="/item-image/c7a682f9b2c04c6b7bdcfce1c1bfabe9?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/c7a682f9b2c04c6b7bdcfce1c1bfabe9">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Cinderella 99, often referred to as C99, is a Sativa-dominant hybrid that tastes of fruit with dank undertones and has a THC count of nearly 22%. Users should be aware that it can take up to 15 minutes for its full effect to be felt once ingested interested contact me back</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/3636b1b5343645da57670085c8ef55e1">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Master Yoda Bud
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/3636b1b5343645da57670085c8ef55e1">
+											<img src="/item-image/3636b1b5343645da57670085c8ef55e1?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/3636b1b5343645da57670085c8ef55e1">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I got top grade A Master Yoda medical marijuana with good quality nice aroma i can recommend for stoners and patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/96d381e80582428650c23a5f6b25a2fd">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Blue Dream Bud
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/96d381e80582428650c23a5f6b25a2fd">
+											<img src="/item-image/96d381e80582428650c23a5f6b25a2fd?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/96d381e80582428650c23a5f6b25a2fd">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Blue Dream is extremely popular due to its ability to invigorate without overwhelming.
+Origin / ancestry: Blue Dream Type: Blue Dream …
+Strain name info: Blue Dream Marijuana Strain…
+May Relieve: Blue Dream buds are known contact back for more info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/b7a2832c286c40f66c269946d5585301">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Afghani Skunk Bud 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/b7a2832c286c40f66c269946d5585301">
+											<img src="/item-image/b7a2832c286c40f66c269946d5585301?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/b7a2832c286c40f66c269946d5585301">
+										<div class="ui dark-green basic tiny button fluid left aligned">113</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Afghani Skunk,” is produced by marrying Skunk with Afghani marijuana strain. It was first created in the U.S. and is an Indica dominant strain. It has an Indica/ Sativa content of 85⁄15 and a THC level of around 17 to 18 percent</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/3a601f51c4e44ece40e827482919e6a0">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								1 Gram 710 king pens
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/3a601f51c4e44ece40e827482919e6a0">
+											<img src="/item-image/3a601f51c4e44ece40e827482919e6a0?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/3a601f51c4e44ece40e827482919e6a0">
+										<div class="ui dark-green basic tiny button fluid left aligned">15gram</div>
+										<div class="ui basic left pointing label price">650 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Famous for cerebral and body highs; Well balanced indica/sativa cross; Known for its sweet tastes; Perfect for all-around .
+AVAILABLE  FLAVORS
+og kush
+sour diesel
+white widow
+granddaddy purple
+hindu kush
+*blue cheese
+*NYC diesel
+*cinderella 99
+*Head Cheese
+*Matt’s OGT
+*SFV OG Kush
+*Super Lemon Haze
+*Master Yoga
+*Northen lights
+*purple kush
+*bubba kush
+*la confidential
+*blueberry</p>
+
+<p>*trains wreck
+*blue dream
+*sour diesel
+*purple haze
+*casey jones
+*Durban Poison
+*Jack Herer.
+*G13 Haze</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/3bf8cd75b34c4f58655e0ecf7eb629a7">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Grade A Quality Black Domina Bud 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/3bf8cd75b34c4f58655e0ecf7eb629a7">
+											<img src="/item-image/3bf8cd75b34c4f58655e0ecf7eb629a7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/3bf8cd75b34c4f58655e0ecf7eb629a7">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Black Domina and designed it to be especially suitable for hydroponics in an indoor setting.
+INDICA / SATIVA %: 100% Indica
+ORIGIN: Northern Lights, Ortega, Hash Plant, …
+EFFECTS: Relaxed – 10; Euphoric – 9; Happy – …
+Contact back if interested for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/e87e673599ff4a5b55c78ac65de25889">
+								<span class="ui teal tiny label tag right floated">Ecstasy</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Ecstasy for Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/e87e673599ff4a5b55c78ac65de25889">
+											<img src="/item-image/e87e673599ff4a5b55c78ac65de25889?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/e87e673599ff4a5b55c78ac65de25889">
+										<div class="ui dark-green basic tiny button fluid left aligned">100pills</div>
+										<div class="ui basic left pointing label price">500 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>ecstasy, is a psychoactive drug primarily used as a recreational drug. The desired effects include altered sensations and increased energy, empathy, and pleasure.</p>
+
+<p>We can stamp any color design and potency pills if you order bulk.</p>
+
+<p>100% satisfaction.</p>
+
+<p>For bulk orders can provide special delivery service and conditions</p>
+
+<p>Feel free to contact if any questions</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/7eeda0a7024248107f6d7665b2f6ae8b">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								OG KUSH FOR SALE 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/7eeda0a7024248107f6d7665b2f6ae8b">
+											<img src="/item-image/7eeda0a7024248107f6d7665b2f6ae8b?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/7eeda0a7024248107f6d7665b2f6ae8b">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I got top grade medical marijuana with good quality nice aroma i can recommend for patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/147bb75e2c0d4acb4603535d39fa7fa7">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Grade A White Widow 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/147bb75e2c0d4acb4603535d39fa7fa7">
+											<img src="/item-image/147bb75e2c0d4acb4603535d39fa7fa7?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/147bb75e2c0d4acb4603535d39fa7fa7">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I grow medical marijuana with good quality nice aroma i can recommend for patients suffering from cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/d68cf351f37a44ba679613574e8f79af">
+								<span class="ui teal tiny label tag right floated">Adderall</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Adderall Pills For Sale
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/d68cf351f37a44ba679613574e8f79af">
+											<img src="/item-image/d68cf351f37a44ba679613574e8f79af?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/d68cf351f37a44ba679613574e8f79af">
+										<div class="ui dark-green basic tiny button fluid left aligned">15 pills</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Adderall Pills For Sale We handle reliable delivery once order is confirm interested parties should contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/e59ce785d62241ce5d2803db0aa5d8ea">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Grade AAA Gelato Bud 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/e59ce785d62241ce5d2803db0aa5d8ea">
+											<img src="/item-image/e59ce785d62241ce5d2803db0aa5d8ea?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/e59ce785d62241ce5d2803db0aa5d8ea">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">400 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Top Grade AAA Gelato Bud , which produces delicious weed strains which are sweet to smell and taste. Gelato is a cross between Thin Mint Girl Scout Cookies pot, and Sunset Sherbet weed. It has balanced Indica and Sativa properties, making it a good medical strain contact back if interested to taste this strain</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/19a21c78b2474cd8544102ab89de7456">
+								<span class="ui teal tiny label tag right floated">Buds</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Top Quality Girl Scoot Cookies For Sale 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/19a21c78b2474cd8544102ab89de7456">
+											<img src="/item-image/19a21c78b2474cd8544102ab89de7456?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/19a21c78b2474cd8544102ab89de7456">
+										<div class="ui dark-green basic tiny button fluid left aligned">113g</div>
+										<div class="ui basic left pointing label price">450 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I got top grade medical marijuana girls scoot cookies with good quality nice aroma and It has so far be approved as one of the best strain for lack of appetite i can recommend for stoners and patients suffering from Cancer, anxiety, depression ,migraine, stress,pain and insomnia relief interested parties contact back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/55ef34d1c73e4285506e118b539730a4">
+								<span class="ui teal tiny label tag right floated">Cannabis</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Exotic Carts
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/55ef34d1c73e4285506e118b539730a4">
+											<img src="/item-image/55ef34d1c73e4285506e118b539730a4?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/55ef34d1c73e4285506e118b539730a4">
+										<div class="ui dark-green basic tiny button fluid left aligned">30grams</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>I got 1gram Exotic carts available and good flavors include Sour Diesel, white Widow, Northern Light,Blueberry,Pineapple Express, Mimosa, Lemonade, Purple Punch, Blueberry Kush, Gorilla Glue interested contct back for info</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/c005d25c4597424b6baf96c3d9937a8f">
+								<span class="ui teal tiny label tag right floated">Oil</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								1 Gram Brass Knuckles For Sale 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/c005d25c4597424b6baf96c3d9937a8f">
+											<img src="/item-image/c005d25c4597424b6baf96c3d9937a8f?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/c005d25c4597424b6baf96c3d9937a8f">
+										<div class="ui dark-green basic tiny button fluid left aligned">15</div>
+										<div class="ui basic left pointing label price">600 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>AVAILABLE FLAVORS</p>
+
+<p>og kush
+sour diesel
+white widow
+granddaddy purple
+hindu kush
+*blue cheese
+*NYC diesel
+*cinderella 99
+*Head Cheese
+*Matt’s OGT
+*SFV OG Kush
+*Super Lemon Haze
+*Master Yoga
+*Northen lights
+*purple kush
+*bubba kush
+*la confidential
+*blueberry
+*trains wreck
+*blue dream
+*sour diesel
+*purple haze
+*casey jones
+*Durban Poison
+*Jack Herer.
+*G13 Haze</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/582549f875f7425c491666440ec14358">
+								<span class="ui teal tiny label tag right floated">MDMA</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								High Quality MDMA 90% 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/582549f875f7425c491666440ec14358">
+											<img src="/item-image/582549f875f7425c491666440ec14358?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/582549f875f7425c491666440ec14358">
+										<div class="ui dark-green basic tiny button fluid left aligned">1000</div>
+										<div class="ui basic left pointing label price">4000 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>HIGHEST QUALITY MDMA CRYSTALS (90%, highest percentage of pure MDMA possible), lab and personally tested. Perfect for the (after) party. No added substances, just pure MDMA. Uncut, clear crystals, best quality you can find!We send all orders out as soon as possible. Most orders are sent out within a few hours. All our products are genuine and as described.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/e905886ce2f64d2f713b51e4cb20f648">
+								<span class="ui teal tiny label tag right floated">Ketamine</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								High Purity crystal ketamine 90%
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/e905886ce2f64d2f713b51e4cb20f648">
+											<img src="/item-image/e905886ce2f64d2f713b51e4cb20f648?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/e905886ce2f64d2f713b51e4cb20f648">
+										<div class="ui dark-green basic tiny button fluid left aligned">100gram</div>
+										<div class="ui basic left pointing label price">1300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Ketamine is a medication mainly used for starting and maintaining anesthesia. It induces a trance-like state while providing pain relief, sedation, and memory loss. Other uses include for chronic pain and for sedation in intensive care. Heart function, breathing, and airway reflexes generally remain functional. This is very strong and potent made from a licensed chemist testing back at 90% contact back if interested to make an order.</p>
+</div>
+							</div>
+						</div>
+						<div class="ui segment">
+							<h3 class="ui header dividing" href="/store/moilayer/item/fe58ffd6689d47ed4a46652089b012dc">
+								<span class="ui teal tiny label tag right floated">Xanax</span>
+								<span class="ui red tiny label right floated">Approval Pending</span>
+								Xanax Bar Available 
+							</h3>
+							<div class="ui two column grid">
+								<div class="ui column center aligned">
+									<div class="ui image">
+										<a href="/store/moilayer/item/fe58ffd6689d47ed4a46652089b012dc">
+											<img src="/item-image/fe58ffd6689d47ed4a46652089b012dc?size=300x300" class="ui image x300 rounded" />
+										</a>
+									</div>
+								</div>
+								<div class="ui column">
+									<a class="ui labeled button tiny fluid" href="/store/moilayer/item/fe58ffd6689d47ed4a46652089b012dc">
+										<div class="ui dark-green basic tiny button fluid left aligned">100</div>
+										<div class="ui basic left pointing label price">300 USD
+										</div>
+									</a>
+									<div class="spacer"></div>
+								</div>
+							</div>
+							<div class="ui section divider"></div>
+							<div>
+								<div class="h50"><p>Xanax is a brand name for the drug alprazolam, which belongs to a group of drugs called benzodiazepines. Xanax is used to treat anxiety and panic disorders and is the single most prescribed psychiatric medication in the United States. we do worldwide shipment and 100% reliable.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a href="http://34n4am6fxu4dnv66.onion/blog" class="item">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market" class="item">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 720 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

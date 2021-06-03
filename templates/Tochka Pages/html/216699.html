@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/semantic.css" />
+		<link rel="stylesheet" type="text/css" href="/css/tochka.css" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<title>Tochka Free Market</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="ui container grid header-main">
+			<div class="three wide column header-logo">
+				<div class="ui menu tiny vertical secondary fluid">
+					<a class="item header-logo header" href="/">
+						<span>T</span>
+						<span class="dark-green point">•</span>
+						<span>c</span>
+						<span>h</span>
+						<span>k</span>
+						<span>a</span>
+					</a>
+				</div>
+			</div>
+			<div class="ten wide column top-search top-search-marketplace">
+				<form method="GET" action="/marketplace" class="ui input icon fluid">
+					<input name="category" value="0" type="hidden" />
+					<input type="hidden" name="subcategory" value="0" />
+					<input type="text" name="query" placeholder="What are you looking for?" value="" />
+					<i class="icon search"></i>
+				</form>
+			</div>
+			<div class="three wide column messages-container">
+				<div class="messages">
+					<a href="/payments">
+						<div class="message-block first-message-block">
+							<svg viewBox="0 0 576 512" width="25" height="29">
+								<path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Orders</span>
+						</div>
+					</a>
+					<a href="/messages?section=inbox">
+						<div class="message-block second-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+								>
+								<path d="M21 7h-3c0-1.65-1.35-3-3-3h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3v3l3-3c0 1.65 1.35 3 3 3h8l3 3v-3h1c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3zm-18 8c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12c.542 0 1 .458 1 1v1h-6.5c-1.379 0-2.5 1.121-2.5 2.5v4.5h-4zm19 2c0 .542-.458 1-1 1h-12c-.542 0-1-.458-1-1v-6.5c0-.827.673-1.5 1.5-1.5h11.5c.542 0 1 .458 1 1v7z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Messages</span>
+						</div>
+					</a>
+					<a href="/support">
+						<div class="message-block third-message-block">
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="29" viewBox="0 0 24 24">
+								<path d="M4,2C2.9,2 2,2.9 2,4V16C2,17.1 2.9,18 4,18H8V21C8,21.55 8.45,22 9,22H9.5V22C9.75,22 10,21.9 10.2,21.71L13.9,18H20C21.1,18 22,17.1 22,16V4C22,2.89 21.1,2 20,2H4M4,4H20V16H13.08L10,19.08V16H4V4M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69C0.21,7.69 6.57,7.69 11.24,7.69C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z"></path>
+							</svg>
+							<span class="number">0</span>
+							<span class="description">Support</span>
+						</div>
+					</a>
+				</div>
+				<div class="account user-menu-container">
+					<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+					<span>Account</span>
+					<div class="ui segment user-menu">
+						<h3 class="ui dividing header">
+							
+							<img src="/user-avatar/ravenburger?size=small" class="ui image circular" />
+							@ravenburger
+						</h3>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>User</strong>
+							</span>
+							<a class="item" href="/user/ravenburger">
+								<i class="icon user"></i>
+								My Account
+							</a>
+							<a class="item" href="/settings/user">
+								<i class="ui icon settings"></i>
+								Settings
+							</a>
+							<a class="item" href="/referrals">
+								<i class="icon level up"></i>
+								Referrals
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Wallet</strong>
+							</span>
+							<a class="item" href="/wallet/bitcoin/receive">
+								Bitcoin
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+							<a class="item" href="/wallet/ethereum/receive">
+								Ethereum
+								<span class="ui label tiny dark-green">0 </span>
+							</a>
+						</div>
+						<div class="ui section divider"></div>
+						<form class="ui form" action="/auth/logout" method="post">
+							<input type="hidden" name="csrf_token" value="" />
+							<button class="ui button red fluid tiny" type="submit">
+								<i class="icon sign out fluid"></i>
+								Sign Out      
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column">
+				<div class="tochka-container ui grid divided">
+					<div class="three wide column tochka-left menu">
+						<a class="ui button fluid green tiny" href="/app/download">Download Tochka Mobile App for Android</a>
+						<div class="ui menu tiny vertical secondary fluid">
+							<a class="item" href="/marketplace">
+								<i class="ui icon shop"></i>
+								Marketplace
+							</a>
+							<a class="item active" href="/vendors">
+								<i class="ui icon users"></i>
+								Vendors
+							</a>
+							<a class="item" href="/board">
+								Board
+								<i class="icon users"></i>
+							</a>
+							<a class="item" href="/feed">
+								Feed
+								<i class="icon feed"></i>
+							</a>
+							<a class="item" href="/help">
+								<i class="ui icon info"></i>
+								Help
+							</a>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<i class="united kingdom flag"></i>
+								English
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/language/de">
+										
+										<i class="germany flag"></i>
+										Deutsche
+									</a>
+									<a class="item fluid" href="/settings/language/en">
+										
+										<i class="united kingdom flag"></i>
+										English
+									</a>
+									<a class="item fluid" href="/settings/language/es">
+										
+										<i class="spain flag"></i>
+										Español
+									</a>
+									<a class="item fluid" href="/settings/language/fr">
+										
+										<i class="france flag"></i>
+										Français
+									</a>
+									<a class="item fluid" href="/settings/language/it">
+										
+										<i class="italy flag"></i>
+										Italiano
+									</a>
+									<a class="item fluid" href="/settings/language/ru">
+										
+										<i class="russia flag"></i>
+										Русский
+									</a>
+									<a class="item fluid" href="/settings/language/rs">
+										
+										<i class="serbia flag"></i>
+										Srpski
+									</a>
+									<a class="item fluid" href="/settings/language/tr">
+										
+										<i class="turkey flag"></i>
+										Türkçe
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+						<div class="ui menu tiny vertical secondary fluid">
+							<span class="item">
+								<strong>Currency Rates</strong>
+							</span>
+							<span class="item">
+								5258.36 
+								<span class="ui label tiny dark-green">BTC</span>
+							</span>
+							<span class="item">
+								155.38 
+								<span class="ui label tiny dark-green">ETH</span>
+							</span>
+						</div>
+						<div class="ui menu fluid tiny">
+							<div class="ui simple dropdown item fluid">
+								<strong>USD</strong>
+								<div class="menu fluid">
+									<a class="item fluid" href="/settings/currency/AUD">
+										<strong>AUD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>7485.14 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>218.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/EUR">
+										<strong>EUR</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4694.9 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>138.46 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/GBP">
+										<strong>GBP</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>4066.86 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>119.89 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/RUB">
+										<strong>RUB</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>347041.51 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>10234.25 </span>
+										</div>
+									</a>
+									<a class="item fluid" href="/settings/currency/USD">
+										<strong>USD</strong>
+										<div class="cryptoRate">
+											<strong>BTC</strong>
+											<span>5258.36 </span>
+										</div>
+										<div class="cryptoRate">
+											<strong>ETH</strong>
+											<span>155.38 </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui section divider left-menu"></div>
+					</div>
+					<div class="thirteen wide column">
+						<div class="ui grid segment store-header grey inverted">
+							<div class="four wide column">
+								<img src="/user-avatar/legit_vendor?size=200x200" class="ui image rounded avatar" />
+							</div>
+							<div class="nine wide column">
+								<h2>@legit_vendor</h2>
+								<p>Rising Vendor ★ SHIPPING &amp; STEALTH ★</p>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Registered 1 year ago</span>
+								</div>
+								<div class="date">
+									<i class="icon wait"></i>
+									<span>Last seen 6 days ago</span>
+								</div>
+								<br />
+								<span class="ui label teal dark-green">
+									<i class="icon level up"></i>
+									25 lvl
+								</span>
+								<span class="ui label dark-green">
+									<i class="icon thumbs up"></i>
+									<span>4.57</span>
+								</span>
+								<span class="ui teal label">Insured</span>
+							</div>
+							<div class="three wide column">
+								<a class="ui right floated big dark-green button" href="/messages/legit_vendor">PM</a>
+							</div>
+							<div class="sixteen wide column black inverted">
+								<div class="ui menu pointing secondary inverted four item">
+									<a class="item" href="/store/legit_vendor">
+										
+										<i class="icon info"></i>
+										About
+									</a>
+									<a class="item active" href="/store/legit_vendor/reviews">
+										<i class="icon thumbs up"></i>
+										Reviews
+										<span class="ui label circular tiny">41</span>
+									</a>
+									<a class="item" href="/store/legit_vendor/items">
+										
+										<i class="icon cart"></i>
+										Items
+										<span class="ui label circular tiny">18</span>
+									</a>
+									<a class="item" href="/store/legit_vendor/warnings">
+										
+										<i class="icon exclamation"></i>
+										Warnings
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="segment ui">
+							<h3 class="ui dividing header">Reviews</h3>
+							<div class="ui comments">
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/motionlessregret">
+										<img src="/user-avatar/motionlessregret?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/motionlessregret">@motionlessregret</a>
+										<div class="metadata">
+											<span class="date">5 days ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Not received.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>3</span>
+									</span>
+									<a class="avatar" href="/user/putmanj575">
+										<img src="/user-avatar/putmanj575?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/putmanj575">@putmanj575</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/dsf3r">
+										<img src="/user-avatar/dsf3r?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dsf3r">@dsf3r</a>
+										<div class="metadata">
+											<span class="date">1 week ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Trusted!</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/davidoff">
+										<img src="/user-avatar/davidoff?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/davidoff">@davidoff</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> Everything about this guy is just A1 great communication, quality delivery, and Pharma Grade Oxy&#39;s</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/snowman99">
+										<img src="/user-avatar/snowman99?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/snowman99">@snowman99</a>
+										<div class="metadata">
+											<span class="date">2 weeks ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Seller was MIA. Inactive. ******Returened....trying to reorder</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/noheanihipali">
+										<img src="/user-avatar/noheanihipali?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/noheanihipali">@noheanihipali</a>
+										<div class="metadata">
+											<span class="date">4 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Didn&#39;t get item (or update) after a week, not waiting on a package, it&#39;s a DIGITAL item. Vendor has been active multiple times since then. I started a dispute, and waited a day to check again, since MAYBE I&#39;d have my order by then, and still nothing. My m</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/smithos">
+										<img src="/user-avatar/smithos?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/smithos">@smithos</a>
+										<div class="metadata">
+											<span class="date">6 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Reliable Vendor as it says </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/debonnair">
+										<img src="/user-avatar/debonnair?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/debonnair">@debonnair</a>
+										<div class="metadata">
+											<span class="date">6 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Came back as promised and so far still reliable </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>1</span>
+									</span>
+									<a class="avatar" href="/user/desertcyclone83">
+										<img src="/user-avatar/desertcyclone83?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/desertcyclone83">@desertcyclone83</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Ordered package over 3 weeks ago and was confidently told my pack would arrive a week ago last Thursday or Friday, then for sure last Monday. No package and no communication with vendor. I let order Finalize to try and be fair, help them out and in return</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/unpoint0">
+										<img src="/user-avatar/unpoint0?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/unpoint0">@unpoint0</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Nice Amazon Gift Card tricks,
+and 2nd time ordering
+Great Vendor</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/dreamertenn">
+										<img src="/user-avatar/dreamertenn?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/dreamertenn">@dreamertenn</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">undisputed </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/catnmouse">
+										<img src="/user-avatar/catnmouse?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/catnmouse">@catnmouse</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top man that&#39;s all I can say, I promised ya 5000 Oxy A215 order right 
+Ok gimme a week and its done 
+Keep everything for me </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/akajozi">
+										<img src="/user-avatar/akajozi?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/akajozi">@akajozi</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Thumbs Up buddy
+you on point </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/nikkoshens">
+										<img src="/user-avatar/nikkoshens?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nikkoshens">@nikkoshens</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> Everything was perfect! potent product and absolutely no breaks. Def a recommend </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/nathanios">
+										<img src="/user-avatar/nathanios?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nathanios">@nathanios</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> Excellent quality, speedy delivery as always, good stuff </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/milikkcieh">
+										<img src="/user-avatar/milikkcieh?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/milikkcieh">@milikkcieh</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> Perfect yet again. Top quality, NDD, great stealth. Thank you - sorry for the late feedback :-) </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/tekashi99">
+										<img src="/user-avatar/tekashi99?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/tekashi99">@tekashi99</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> excellent service again, you can definitely rely on this guy </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/inkheart">
+										<img src="/user-avatar/inkheart?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/inkheart">@inkheart</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> everything was str8 gucci...stealth, delivery time, quality A fucking &#43;&#43;&#43;&#43;&#43;&#43;&#43; </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/famisakes">
+										<img src="/user-avatar/famisakes?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/famisakes">@famisakes</a>
+										<div class="metadata">
+											<span class="date">7 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">good quality xanax GG249 got me blackout 
+Hope I can order 5000 bars next time</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/sheriffpike">
+										<img src="/user-avatar/sheriffpike?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/sheriffpike">@sheriffpike</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> Great vendor! Fast shipping and legitimate product. Thank you! </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/daveapleyu">
+										<img src="/user-avatar/daveapleyu?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/daveapleyu">@daveapleyu</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Amazing seller!!! I&#39;ll be ordering more items from them soon! Everything was perfect, Thank you! </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/rainray">
+										<img src="/user-avatar/rainray?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/rainray">@rainray</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Simply the best all around. Be sure to stock up while Legitz has them in stock, impossible to find a better vendor than this. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/melviheck">
+										<img src="/user-avatar/melviheck?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/melviheck">@melviheck</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Real Oxy!! Therse are from the pharmacy for sure. Super quick shipping on every order It it comes in 2 or 3 days max! Seiously perfct, this is why he has 5 stars. Thank you so much SUNNY!! You made my day again! My vendor foe life. Good stesalth tool A&#43;&#43;&#43;</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/tumurph">
+										<img src="/user-avatar/tumurph?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/tumurph">@tumurph</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">thanks man, great delivery and product is pharma grade</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/vikingdom">
+										<img src="/user-avatar/vikingdom?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/vikingdom">@vikingdom</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Top notch ID 
+</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/kr3msgotchabro">
+										<img src="/user-avatar/kr3msgotchabro?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/kr3msgotchabro">@kr3msgotchabro</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">This vendor is one of the kindest , fast responsive and informative out here.many many thanks to you mate Always let&#39;s me know when my item has been shippe</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/nakiele1">
+										<img src="/user-avatar/nakiele1?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/nakiele1">@nakiele1</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">ID looks pretty damn solid and I have alerady gotten it passed multiple people. Communication is fantastic and quick. Shipping was discrete and stealth although it was a tad slow, but then again, still arrived in the estimated time window I was given. 10/</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/bluemoon567">
+										<img src="/user-avatar/bluemoon567?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/bluemoon567">@bluemoon567</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Would 100% recommend. ID is very very very close to the real deal. Hologram, Font, and colors are all at a very high standard. The seller is very good at making the IDs and would recommend him to anyone looking to buy one. Worth every dollar. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/otendo17">
+										<img src="/user-avatar/otendo17?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/otendo17">@otendo17</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">thx bro</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/hakinset">
+										<img src="/user-avatar/hakinset?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/hakinset">@hakinset</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> excellent Vendor !!!!!!!!!! </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/mrmaniac">
+										<img src="/user-avatar/mrmaniac?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/mrmaniac">@mrmaniac</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text"> Sorry for delayed review! Fast shipping, quality product! - Highly recommend. </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/havenna">
+										<img src="/user-avatar/havenna?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/havenna">@havenna</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Reliable guy </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/emtee">
+										<img src="/user-avatar/emtee?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/emtee">@emtee</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">new vendor. Fast shipping</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/smithos">
+										<img src="/user-avatar/smithos?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/smithos">@smithos</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Great communication and support
+I recommend them for the best Australian ID </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/debonnair">
+										<img src="/user-avatar/debonnair?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/debonnair">@debonnair</a>
+										<div class="metadata">
+											<span class="date">8 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">thanks man this is exactly what i have been looking for am gonna come back for more let me prepare the cash hope you can handle 400 - 600 pieces
+</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/perrozzo036">
+										<img src="/user-avatar/perrozzo036?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/perrozzo036">@perrozzo036</a>
+										<div class="metadata">
+											<span class="date">9 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Great Vendor and real oxycodone A215 tabs as advertised </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/defoareal">
+										<img src="/user-avatar/defoareal?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/defoareal">@defoareal</a>
+										<div class="metadata">
+											<span class="date">9 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Awesome seller, fantastic communication, easy transaction, 2FA Powder product exactly as described! What more do I need to say?</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/unpoint0">
+										<img src="/user-avatar/unpoint0?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/unpoint0">@unpoint0</a>
+										<div class="metadata">
+											<span class="date">9 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Trustworthy new vendor. Communication was excellent and shipping was crazy fast. 5/5 on all accounts. Thank you.</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/mrmanical">
+										<img src="/user-avatar/mrmanical?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/mrmanical">@mrmanical</a>
+										<div class="metadata">
+											<span class="date">9 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">Great vendor! Totally recommendable! Best 2FA powder I&#39;ve had to order 
+Hope you can support 5kg</pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<span class="ui label tiny right floated red">SMALL TRANSACTION</span>
+									<a class="avatar" href="/user/mikechinn">
+										<img src="/user-avatar/mikechinn?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/mikechinn">@mikechinn</a>
+										<div class="metadata">
+											<span class="date">9 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">I recommend </pre>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<span class="ui label tiny right floated dark-green">
+										<i class="icon thumbs up"></i>
+										<span>5</span>
+									</span>
+									<a class="avatar" href="/user/davidoff">
+										<img src="/user-avatar/davidoff?size=small" />
+									</a>
+									<div class="content">
+										<a class="author" href="/user/davidoff">@davidoff</a>
+										<div class="metadata">
+											<span class="date">10 months ago</span>
+										</div>
+										<div class="text">
+											<pre class="text">-</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sixteen wide column footer-v2">
+				<div class="ui grid first">
+					<div class="three-and-a-half wide column">
+						<h3>Learn How to Buy</h3>
+						<ul>
+							<a href="/help/04_how_to_buy">
+								<li>How to Buy</li>
+							</a>
+							<a href="/help/04_how_to_buy#buy-bitcoins">
+								<li>Buying Bitcoins</li>
+							</a>
+							<a href="/help/04_how_to_buy#bitcoin-wallet">
+								<li>Transfer Bitcoins to Your Wallet</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Make Money with Us</h3>
+						<ul>
+							<a href="/help/03_how_to_sell">
+								<li>How to Sell at Tochka</li>
+							</a>
+							<a href="/referrals">
+								<li>Refer Friends & Earn Commision</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Let us Help You</h3>
+						<ul>
+							<a href="/support/new">
+								<li>Help & Contact</li>
+							</a>
+							<a href="/help/10_how_to_stay_safe">
+								<li>Staying Safe</li>
+							</a>
+							<a href="/support/new">
+								<li>Make a Dispute</li>
+							</a>
+							<a href="/help/11_how_front_page_works">
+								<li>How front-page ranking works</li>
+							</a>
+						</ul>
+					</div>
+					<div class="three-and-a-half wide column">
+						<h3>Get to Know us</h3>
+						<ul>
+							<a href="/help/05_about_marketplace">
+								<li>About Tochka</li>
+							</a>
+							<a href="/shoutbox?section=news">
+								<li>News</li>
+							</a>
+							<a href="/help/06_quality_control">
+								<li>Vendor Quality Control</li>
+							</a>
+							<a href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">
+								<li>Open-Source that Tochka Runs On</li>
+							</a>
+							<a href="/help/09_REST_API">
+								<li>REST Api for Tochka</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="ui grid">
+					<div class="thirteen wide column second">
+						<div class="ui menu tiny horizontal secondary fluid">
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/blog">
+								<i class="ui icon feed"></i>
+								Blog
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/wiki">
+								<i class="ui icon info"></i>
+								Wiki
+							</a>
+							<a class="item" href="http://34n4am6fxu4dnv66.onion/ico">
+								<i class="ui selected radio icon"></i>
+								ICO
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/">
+								<i class="ui github icon"></i>
+								Source Code
+							</a>
+							<a class="item" href="http://qxklmrhx7qkzais6.onion/Tochka/tochka-free-market">Tochka is Open-Source Software subject to the MIT License</a>
+							<span class="item">
+								<i>Page rendered in 617 ms</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
